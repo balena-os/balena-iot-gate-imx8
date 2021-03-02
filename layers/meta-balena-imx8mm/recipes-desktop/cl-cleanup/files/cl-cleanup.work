@@ -1,0 +1,49 @@
+#!/bin/bash
+
+set +o history; history -c
+
+YESNO="Files to be removed:"
+i=1
+
+for f in "ssh keys" "persistent net rules" "bash history" "system log" "user dot files";do
+YESNO+="\n$((i++)) $f"
+done 
+
+dialog --title "These steps will be invoked before 'shutdown' :" --yes-label "Clean Up & Shutdown" --no-label "Exit" --yesno "${YESNO}" 12 80 || exit 0
+
+# Clean-Up Persistent net rules
+PERS_NET_RULES="etc/udev/rules.d/70-persistent-net.rules"
+[ -f /${PERS_NET_RULES} ] && ( rm -rf /${PERS_NET_RULES} )
+echo "Clean up "${PERS_NET_RULES}" [OK]"
+
+# Clean up keypair
+for ssh_dir in /etc/ssh /var/run/ssh;do
+[ -d ${ssh_dir} ] && ( rm -rf ${ssh_dir}/ssh_* )
+done
+echo "Clean up keypair [OK]"
+
+# Clean up root
+for user_dir in /root /home/root /home/compulab;do
+[ -f ${user_dir}/.bash_history ] && ( : > ${user_dir}/.bash_history )
+for file in .ssh .e .config .cache .ccache .aiur .xsession-errors .xsession-errors.old .fluxbox .mplayer .kde .local .gtkrc-2.0 .lesshst .Xauthority .pki .chromium .viminfo .vim .mozilla .gnupg .dmrc .ICEauthority
+do
+[ -e ${user_dir}/${file} ] && ( rm -rf ${user_dir}/${file} )
+done
+done
+
+echo "Clean up root home  dir [OK]"
+
+rm -rf /var/log
+install -d /var/log -m 0755
+
+echo "Clean up /var/log [OK]"
+
+rm -rf /var/cache/apt
+echo "Clean up /var/cache/apt [OK]"
+
+[[ -n ${POFF} ]] && shutdown -P now
+cat << eof
+Set POFF=Yes for poweroff after cl-cleanup
+eof
+
+exit 0

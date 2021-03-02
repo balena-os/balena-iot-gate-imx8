@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DIR=$(dirname $(realpath -s $0))
+
+GOV=${DIR}/gov
+BUF=${DIR}/buf
+GPU=${DIR}/gpu
+CPU=${DIR}/cpu
+MEM=${DIR}/mem
+
+BG=(${GOV} ${BUF} ${CPU} ${GPU})
+FG=(${MEM})
+
+for p in ${BG[@]};do
+[[ -f ${p} ]] && chmod a+x ${p}
+[[ -e ${p} ]] && ${p} &
+done
+
+sleep 3
+
+for p in ${FG[@]};do
+[[ -f ${p} ]] && chmod a+x ${p}
+[[ -e ${p} ]] && ${p}
+done

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# read options file if available
+options=$(dirname $(realpath -s $0))"/opt"
+[[ -f ${options} ]] && . ${options}
+
+buf_sleep=${buf_sleep:-30}
+drop=/proc/sys/vm/drop_caches
+echo 4 > ${drop}
+while [ 1 ];do
+    for i in $(seq 1 3);do
+        echo ${i} > ${drop}
+    done
+sleep ${buf_sleep}
+done

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CompuLab Stress Test Tool
+Commen=System Stress Test
+Exec=/opt/compulab/cl-stest/cl-test
+Icon=/usr/share/applications/cl-stest.png
+Terminal=true
+Type=Application
+Categories=GTK;System;CompuLab Stress Test Tool;

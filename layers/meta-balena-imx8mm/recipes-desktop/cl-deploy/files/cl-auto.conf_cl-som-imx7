@@ -1,0 +1,2 @@
+DST=/dev/mmcblk2
+QUIET=Yes

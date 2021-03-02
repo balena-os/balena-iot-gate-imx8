@@ -1,0 +1,9 @@
+#!/bin/bash
+
+WORK=/opt/compulab/cl-stest/work
+
+[[ ! -t 0 ]] && EXEC="xterm -e" || EXEC="source"
+# Prevent spanning another xterm if we in
+[[ ${TERM} = "xterm" ]] && EXEC="source"
+
+${EXEC} ${WORK}

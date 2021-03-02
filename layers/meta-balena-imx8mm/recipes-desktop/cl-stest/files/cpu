@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# read options file if available
+options=$(dirname $(realpath -s $0))"/opt"
+[[ -f ${options} ]] && . ${options}
+
+cpu_count=${cpu_count:-3}
+cpu_time=${cpu_time:-3000}
+cpu_sleep=${cpu_sleep:-60}
+pid_bg=""
+
+function_xz() {
+[[ -n ${pid_bg} ]] && kill -9 ${pid_bg} &>/dev/null
+pid_bg=""
+for i in $(seq 1 ${cpu_count});do
+    xz -9c /dev/urandom > /dev/null &
+    pid_bg+=$!" "
+done
+}
+
+cpu_loops=$((${cpu_time}/${cpu_sleep}))
+
+for i in $(seq 0 ${cpu_loops});do
+    function_xz
+    sleep ${cpu_sleep}
+done
+
+kill -9 ${pid_bg} &>/dev/null
+echo "Survived ..."

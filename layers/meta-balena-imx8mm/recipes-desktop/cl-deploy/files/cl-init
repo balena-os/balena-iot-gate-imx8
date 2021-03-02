@@ -1,0 +1,62 @@
+#!/bin/bash
+
+CL_FUNCTIONS=/usr/share/cl-deploy/cl-functions.inc
+if [[ ! -f ${CL_FUNCTIONS} ]];then
+cat << eof
+The package library file ${CL_FUNCTIONS} is not found.
+Reinstall the cl-deploy package.
+eof
+exit 3
+fi
+
+source ${CL_FUNCTIONS}
+
+set -m
+
+rcfile=/usr/share/cl-deploy/cl-auto.bashrc
+MAIN_CMD=/usr/local/bin/cl-auto
+
+reboot_cpl () {
+  sync;sync;sync
+  for cmd in s u b;do
+  echo ${cmd} > /proc/sysrq-trigger
+  done
+}
+
+main () {
+
+if [ -x ${MAIN_CMD} ];then
+  ${MAIN_CMD} ; res=$?
+  FAIL_REASON="${MAIN_CMD} failed with error=$res"
+else
+  FAIL_REASON="${MAIN_CMD} not found/executable"
+  res=2
+fi
+
+return $res
+}
+
+pre_main() {
+
+dmesg -D
+prepare_fs
+mount / -o remount,rw
+
+}
+
+pre_main
+
+if main; then
+cat << eof
+	Rebooting in 3 seconds...
+eof
+	sleep 3
+else
+cat << eof
+	Could not issue the main().
+	${FAIL_REASON}
+eof
+	bash --rcfile ${rcfile}
+fi
+
+reboot_cpl

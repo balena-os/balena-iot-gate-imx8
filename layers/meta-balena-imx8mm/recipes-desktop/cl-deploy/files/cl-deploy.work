@@ -1,0 +1,452 @@
+#!/bin/bash
+
+SRC=${SRC:=''}
+DST=${DST:=''}
+SCAN_ALL=${SCAN_ALL:=1}
+dialog_app=dialog
+[[ -n ${QUIET} ]] && dialog_app='true || '${dialog_app}
+[[ -n ${DEBUG} ]] && set -x
+
+CL_DEPLOY_MTD=/usr/local/bin/cl-deploy.mtd
+CL_DEPLOY_PLATFORM=/usr/local/bin/cl-deploy.platform
+MKTEMP=/var/run
+
+declare -a sw_array='dialog pv bunzip2 gunzip xz sfdisk partprobe'
+
+validate_sw() {
+for sw in $sw_array; do
+    command -v ${sw} &>/dev/null
+    if [ $? -ne 0 ]; then
+cat << eom
+    Make sure that all required tools: "${sw_array[@]}" are installed.
+    ${sw} is missing
+eom
+    exit 2
+    fi
+done
+}
+
+validate_sw
+
+source_block_device() {
+
+# Make sure that the source device does not have
+# an extended partition
+local extended=$(sfdisk -l ${SRC} | awk '($0~/Extended/)&&($0="yes")')
+if [[ -n ${extended} ]]; then
+cat << eom
+
+    !!! Unsupported configuration !!!
+    Source device ${SRC}
+    contains an extended partition.
+    Exiting ...
+
+eom
+exit 0
+fi
+
+cat << eom
+
+    Clonning Block Device
+    Started: ${SRC} ==> ${DST}
+
+eom
+
+# Clone partition table
+sfdisk --dump ${SRC} | sfdisk ${DST}
+# Get & Expand last partition
+last_part=$(sfdisk -l ${SRC} | awk -v var=${SRC}${SPART} ' END { gsub(var,"",$1); print $1 }')
+echo ",+" | sfdisk --no-reread --force -N ${last_part} ${DST}
+partprobe ${DST}
+
+part_info=$(blkid ${SRC}* | awk -F":" -v var=${SRC}${SPART} '($1~var)&&(gsub(var,"",$1))&&(gsub(/ /,";",$2))&&(gsub(/ /,"",$0))&&($0="part="$0)')
+
+for P in ${part_info};do
+    eval ${P}
+    [[ ${TYPE} = "ext"* ]] && OPT=" -F" || OPT=""
+    mkfs.${TYPE} ${OPT} ${DST}${DPART}${part}
+    mount ${DST}${DPART}${part} ${mdst}
+    TARGET=$(findmnt ${SRC}${SPART}${part} --output TARGET --noheadings)
+    [[ -n ${TARGET} ]] && mount -B ${TARGET} ${msrc} || mount ${SRC}${SPART}${part} ${msrc}
+    prompt="[ ${SRC}${SPART}${part} => ${DST}${DPART}${part} ]"
+    tar -C ${msrc} -cf - . 2>/dev/null | pv -N "${prompt}"| tar -C ${mdst} -xf - 2>/dev/null
+    umount ${msrc}
+    umount ${mdst}
+done
+
+cat << eom
+
+    Done: ${SRC} ==> ${DST}
+
+eom
+
+}
+
+source_tar_ball() {
+cat << eom
+
+    Deploying tar-ball
+    Started: ${SRC} ==> ${DST}
+
+eom
+
+    create_cl_layout
+
+    tar_info=$(file ${SRC} | awk '(/bzip2|gzip|zx/)&&($0=$2)')
+    [[ ${tar_info} = bzip2 ]] && filter=j
+    [[ ${tar_info} = gzip ]] && filter=z
+    [[ ${tar_info} = xz ]] && filter=J
+
+    mount ${DST}${DPART}2 ${mdst}
+    prompt="[ ${SRC} => ${DST}${DPART}2 ]"
+    pv ${SRC} | tar -C ${mdst} -x${filter}f - 2>/dev/null
+
+    if [[ -d ${mdst}/boot ]];then
+        local boot_dir=$(mktemp -p ${MKTEMP} -d)
+        mount ${DST}${DPART}1 ${boot_dir}
+        cp -a ${mdst}/boot/* ${boot_dir}
+        umount ${boot_dir}
+        rm -rf ${boot_dir}
+    fi
+
+    umount ${mdst}
+
+cat << eom
+
+    Done: ${SRC} ==> ${DST}
+
+eom
+}
+
+last_part_x() {
+    LAST=$(sfdisk -l ${DST} | awk -v var=${DST}${DPART} ' END { gsub(var,"",$1); print $1 }')
+    echo ",+" | sfdisk -N ${LAST} ${DST}
+    partprobe ${DST}
+    resize2fs ${DST}${DPART}${LAST}
+}
+
+source_diskimage() {
+cat << eom
+
+    Deploying diskimage
+    Started: ${SRC} ==> ${DST}
+
+eom
+
+    prompt="[ ${SRC} => ${DST} ]"
+    ${DECOMPRESSOR} -dc ${SRC} | pv -N "${prompt}" | dd of=${DST} bs=1M
+    partprobe ${DST}
+
+    [[ -n ${LPLUS} ]] && last_part_x
+
+cat << eom
+
+    Done: ${SRC} ==> ${DST}
+
+eom
+}
+
+source_file() {
+eval $(file ${SRC} | awk '($0=tolower($0))&&($0="arc="$2)')
+case $arc in
+	bzip2|gzip|xz)
+	export DECOMPRESSOR=${arc}
+	type=$(${arc} -dc ${SRC} | file - | awk '(/archive/)&&($0="tar_ball")||($0="diskimage")')
+	source_${type}
+	;;
+	*)
+	echo "Invalid file type $arc ..."
+	;;
+esac
+}
+
+source_directory() {
+cat << eom
+
+    Deploying directory
+    Started: ${SRC} ==> ${DST}
+
+eom
+
+    create_cl_layout
+
+    declare -a src_parts=(: /boot /)
+    declare -a dst_parts='1 2'
+
+    for P in $dst_parts; do
+        # Source partition is not a directory, then skip it.
+        [[ ! -d ${SRC}${SPART}${src_parts[P]} ]] && continue
+        mount -B -o ro ${SRC}${SPART}${src_parts[P]} ${msrc}
+        if [[ $? -eq 0 ]];then
+            mount ${DST}${DPART}${P} ${mdst}
+            prompt="[ ${SRC}${SPART}${src_parts[P]} => ${DST}${DPART}${P} ]"
+            tar -C ${msrc} -cf - . 2>/dev/null | pv -N "${prompt}"| tar -C ${mdst} -xf - 2>/dev/null
+            umount ${mdst}
+            umount ${msrc}
+        else
+cat << eom
+
+    Non-mountable source ${SRC}${src_parts[P]} device
+    Skip it & Continue ...
+
+eom
+
+        fi
+    done
+
+cat << eom
+
+    Done: ${SRC} ==> ${DST}
+
+eom
+}
+
+create_cl_layout() {
+    # Boot partition size im MB
+    local _size=32
+    # Start offset 1M
+    local _start=1
+    local soc=$(udevadm info -ap /sys/devices/soc0 | awk -F"\"" '(/soc_id/)&&($0=tolower($2))')
+    # mx8 soc must have 8M offset in order to provide a room for the u-boot environment
+    # storred at 4M offest
+    # increased boot partition size as well (the same as in the yocto machine conf file)
+    case $soc in
+        i.mx8mq|i.mx8mm)
+        _start=8
+        _size=64
+        ;;
+        *)
+        ;;
+    esac
+
+    local _start1=0
+
+    # Mega -> Block
+    _size=$(($_size << 11))
+    _start=$(($_start << 11))
+    _start1=$(($_start + $_size))
+
+unit_opt=$(sfdisk --help | awk '(/unit/&&!/deprecated/)&&($0=" -uS")')
+
+sfdisk --force ${unit_opt} ${DST} << eosfdisk
+${_start},${_size},0x83
+${_start1},,0x83
+eosfdisk
+partprobe ${DST}
+
+    mkfs.ext2 -F -L boot ${DST}${DPART}1
+    mkfs.ext4 -F -L rootfs ${DST}${DPART}2
+}
+
+unmount_destination() {
+    local _arg=$(awk -v var=${DST} '{ ($0~var)&&(P=$1" "P) } END { print P }' /proc/mounts)
+    if [[ -n ${_arg} ]];then
+        umount ${_arg} &>/dev/null
+        [[ $? -eq 0 ]] && return
+
+        local DIALOG="Destination device ${DST} unmount failed:"
+        ${dialog_app} --backtitle "${DIALOG}" --title " WARNING: Exiting " --msgbox "${DIALOG}" 10 80
+        exit
+    fi
+}
+
+target_block_device() {
+    unmount_destination
+    [[ -b ${SRC} ]] && source_block_device
+    [[ -d ${SRC} ]] && source_directory
+    [[ -f ${SRC} ]] && source_file
+}
+
+target_mtd_device () {
+    if [[ -f ${CL_DEPLOY_MTD} ]];then
+        source ${CL_DEPLOY_MTD}
+	if [[ -z ${MTD_DEPLOY_STATUS} ]];then
+	SUCCESS_EXIT=''
+	fi
+    else
+        local DIALOG="MTD deployment method is not provided."
+        ${dialog_app} --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nExiting ..." 10 60
+        SUCCESS_EXIT=''
+    fi
+}
+
+success_reboot() {
+[[ -z ${QUIET} ]] && reboot
+cat << eom
+	 #####  #     #  #####   #####  #######  #####   #####
+	#     # #     # #     # #     # #       #     # #     #
+	#       #     # #       #       #       #       #
+	 #####  #     # #       #       #####    #####   #####
+	      # #     # #       #       #             #       #
+	#     # #     # #     # #     # #       #     # #     #
+	 #####   #####   #####   #####  #######  #####   #####
+eom
+}
+
+success_exit() {
+    # Issue a platfor specific script
+    [[ -f ${CL_DEPLOY_PLATFORM} ]] && source ${CL_DEPLOY_PLATFORM}
+
+    local DIALOG="Finished with success"
+    local MESSAGE="Boot media has been deployed on ${DST}\n\nWould you like to reboot the device now?"
+    ${dialog_app} --backtitle "${DIALOG}" --yesno "${MESSAGE}" 10 80 && success_reboot
+}
+
+msg_exit() {
+# 1-message, 2-exit code
+cat << eom
+$1
+eom
+exit $2
+}
+
+validate_devices() {
+[[ -b ${SRC} || -d ${SRC} || -f ${SRC} ]] || msg_exit "Invalid SRC=${SRC}, exiting with errno=1" 1
+[[ -b ${DST} || -c ${DST} ]] || msg_exit "Invalid DST=${DST}, exiting with errno=2" 2
+[[ ${DST} == ${BOOT} ]] && msg_exit "Invalid DST=${DST} is equal to BOOT=${BOOT}, exiting with errno=3" 3
+}
+
+select_directory() {
+	local DIALOG="Select a directory:"
+	_SELECT=$(${dialog_app} --backtitle "${DIALOG}" --dselect / 15 80 --stdout)
+}
+
+select_file() {
+	local DIALOG="Select a ${1}:"
+	while [ 1 ];do
+	_SELECT=$(${dialog_app} --backtitle "${DIALOG}" --fselect / 15 80  --stdout)
+	# Empty=Cancel, then exit
+	[[ -z ${_SELECT} ]] && break;
+
+	if [[ ! -f ${_SELECT} ]];then
+		DIALOG="Invalid selection ${_SELECT} : try again ..."
+	else
+		eval $(file ${_SELECT} | awk '($0=tolower($0))&&(/bzip2|gzip|xz/)&&($0="arc="$2)')
+		[[ -n ${arc} ]] && break;
+		DIALOG="Invalid file format ${_SELECT}: try again ..."
+	fi
+	done
+}
+
+select_tarball() {
+	select_file "tarball"
+}
+
+select_diskimage() {
+	select_file "diskimage"
+}
+
+get_all_device() {
+    local ignored=${1:--na-}
+    local min_size_inb=${2:-2048}
+    local all_devs=$(ls /sys/class/block/*/size | awk -F"/" '((/mmc|sd/)&&($0=$5))')
+    unset avail_devs; declare -a avail_devs
+    local i=0
+    for dev in ${all_devs};do
+	[[ -e /sys/class/block/${dev}/partition ]] && continue
+	block_dev=$(udevadm info -n "/dev/"${dev} | awk -F "block" '(/DEVPATH/)&&(split($2,a,"/"))&&($0=a[2])')
+	[[ ${ignore} =~ ${block_dev} ]] && continue
+	[[ ${avail_devs[@]} =~ ${block_dev} ]] && continue
+	avail_devs[${i}]="/dev/${block_dev} "
+	((i++))
+    done
+    if [[ ${MTD} = 'YES' ]];then
+        # Figure out whether an mtd device is available
+        # res=$(awk '(/rootfs|linux/)&&(gsub(/:/,""))&&(gsub(/\"/,"")&&($0=$NF"="$1))' ORS="; " /proc/mtd)
+        res=$(awk '(/rootfs|linux|kernel|dtb/)&&(gsub(/:/,""))&&(gsub(/\"/,"")&&($0=$NF"="$1))' ORS="; " /proc/mtd)
+        eval ${res}
+        [[ -n ${rootfs} && -n ${linux} ]] && avail_devs[${rootfs}]="/dev/${rootfs} "
+        [[ -n ${rootfs} && -n ${kernel} && -n {dtb} ]] && avail_devs[${rootfs}]="/dev/${rootfs} "
+    fi
+
+    if [[ ${#avail_devs[@]} -ne 0 ]];then
+        local rlist=''
+        for adev in ${avail_devs[@]};do
+            rlist+=${adev}" OFF "
+        done
+        for i in $(seq 3 $#);do
+            eval j=\$${i}
+            rlist+=${j}" OFF "
+        done
+        _SELECT=$(${dialog_app} --backtitle "Select a ${type} device" --no-items --radiolist "Available Devices:" 12 80 12 ${rlist} --stdout)
+    fi
+}
+
+# If source is provided by the caller,
+# then use it. Skip this select ${dialog_app}.
+if [[ -z ${SRC} ]];then
+    _SELECT=''
+    ignore=$([[ -n ${DST} ]] && basename ${DST} || echo -n "-")
+    type="source"; MTD='NO'; get_all_device ${ignore} 0 directory tarball diskimage
+    SRC=${_SELECT}
+    [[ ${SRC} = 'directory' || ${SRC} = 'tarball' || ${SRC} = 'diskimage' ]] && select_${SRC}
+    SRC=${_SELECT}
+fi
+
+# For some reason a source still not selected
+# Warning & Exit
+if [[ -z ${SRC} ]];then
+    DIALOG='No source device'
+    ${dialog_app} --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key for exit." 10 80
+    exit 2
+fi
+
+# If destination is provided by the caller,
+# then use it. Skip this select ${dialog_app}.
+if [[ -z ${DST} ]];then
+    _SELECT=''
+
+    for ign in ${SRC} ${BOOT}; do
+    ignore+=$([[ -b ${ign} ]] && basename ${ign})":"
+    done
+
+    [[ -f ${CL_DEPLOY_MTD} ]] && MTD='YES' || MTD='NO'
+    type="destination"; get_all_device ${ignore}
+    DST=${_SELECT}
+fi
+
+# For some reason a destination still not selected
+# Warning & Exit
+if [[ -z ${DST} ]];then
+    DIALOG='No destination device'
+    ${dialog_app} --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key for exit." 10 80
+    exit 2
+fi
+
+# this is a special case when the destination provided only
+if [[ ${SRC} = "-" && ${LPLUS} = "+" && -n ${DST} ]]; then
+	last_part_x
+	exit 0
+fi
+
+validate_devices
+
+if [[ -n ${EMUL} ]];then
+# Does nothing, just returns the SRC and DST to the caller.
+[ $(basename -- $BASH_SOURCE) == $(basename -- $0) ] && exit || return
+fi
+
+# if we got here then all paramteres are valid
+# last preparation before the start
+[[ ${DST} =~ "mmc" || ${DST} =~ "loop" ]] && DPART='p' || DPART=''
+[[ ${SRC} =~ "mmc" || ${SRC} =~ "loop" ]] && SPART='p' || SPART=''
+
+msrc=$(mktemp -p ${MKTEMP} -d)
+mdst=$(mktemp -p ${MKTEMP} -d)
+
+SUCCESS_EXIT=success_exit
+
+if [ -z ${UDEV}  ];then
+[ -f /etc/init.d/udev ] && /etc/init.d/udev stop
+which systemctl >/dev/null && systemctl stop systemd-udevd*
+fi
+
+DIALOG="Start Deployment"
+MESSAGE="Src: ${SRC} -> Dst: ${DST}\n\nAll data on ${DST} will be destroyed"
+${dialog_app} --backtitle "${DIALOG}" --title " WARNING  " --yesno "${MESSAGE}" 10 80 || exit
+
+[[ ${DST} =~ "mtd" ]] && target_mtd_device || target_block_device
+
+${SUCCESS_EXIT}
+
+exit

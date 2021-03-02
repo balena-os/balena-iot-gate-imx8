@@ -1,0 +1,4 @@
+# Destination is the module inthernal media.
+# Autoinstaller how to:
+## cp /usr/share/cl-deploy/cl-auto.conf.sample /etc/cl-auto.conf
+## cl-auto -A

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+CL_FUNCTIONS=/usr/share/cl-deploy/cl-functions.inc
+if [[ ! -f ${CL_FUNCTIONS} ]];then
+cat << eof
+The package library file ${CL_FUNCTIONS} is not found.
+Reinstall the cl-deploy package.
+eof
+exit 3
+fi
+
+source ${CL_FUNCTIONS}
+
+prepare_fs
+
+echo 1 > /proc/sys/kernel/sysrq
+
+sync;sync;sync
+for cmd in s u b;do echo ${cmd} > /proc/sysrq-trigger ; done

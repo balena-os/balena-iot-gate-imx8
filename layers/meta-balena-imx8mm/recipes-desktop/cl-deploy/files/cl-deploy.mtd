@@ -1,0 +1,253 @@
+#!/bin/bash -xv
+
+MTD_DEPLOY_STATUS=""
+
+zimage=zImage
+
+fdt_file_cl_som_imx6ul=imx6ul=imx6ul-sbc-imx6ul-wilink.dtb
+
+fdt_file_cl_som_imx6_qp=imx6qp-sbc-imx6-hdmi.dtb
+fdt_file_cl_som_imx6_q=imx6q-sbc-imx6-hdmi.dtb
+
+fdt_file_cm_fx6_evk_q=imx6q-sbc-fx6-hdmi.dtb
+fdt_file_cm_fx6_evk_dl=imx6dl-sbc-fx6-hdmi.dtb
+
+eval $(udevadm info -ap /sys/devices/soc0 | awk '(/revision|soc_id/)&&(gsub(/ |ATTR{|}=/,""))' ORS=";")
+
+fdt_file=''
+
+[[ ${soc_id} = 'i.MX6QP' && ${revision} = '2.0' ]] && fdt_file=${fdt_file_cl_som_imx6_qp}
+[[ ${soc_id} = 'i.MX6Q' && ${revision} = '1.5' ]] && fdt_file=${fdt_file_cl_som_imx6_q}
+[[ ${soc_id} = 'i.MX6Q' && ${revision} = '1.2' ]] && fdt_file=${fdt_file_cm_fx6_evk_q}
+
+if [[ -z ${fdt_file} ]];then
+eval $(fw_printenv | awk -F"=" '(/dtb$/)&&($0="fdt_file="$2)')
+fi
+
+msrc=/tmp/src
+mdst=/tmp/dst
+msrcboot=${msrc}/boot
+msrcroot=${msrc}/root
+
+to_do=main_init
+
+terminate() {
+
+    umount ${msrcboot} ${msrcroot}
+    to_do=''
+
+}
+
+main_init() {
+
+    to_do=validate_src
+
+}
+
+_deploy_block_dir() {
+
+    prompt="[ ${SRC} => ${DST} ]"
+    tar -C ${msrcroot} -cf - . 2>/dev/null | pv -N "${prompt}"| tar -C ${mdst} -xf - 2>/dev/null
+
+}
+
+_deploy_tar() {
+
+    eval $(file ${SRC} | awk '(/bzip|gzip/)&&($0="filter=--"$2)')
+    prompt="[ ${SRC} => ${DST} ]"
+    pv ${SRC} | tar -C ${mdst} ${filter} -xf - 2>/dev/null
+
+}
+
+_source_mount() {
+
+    mkdir -p ${msrcboot} ${msrcroot}
+
+    ${DO_MOUNT} ${SRC}${SPART}${BOOT} ${msrcboot}; if [[ $? -ne 0 ]];then
+    DIALOG="Mount failed, device: ${SRC}${SPART}${BOOT}  ... "
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    ${DO_MOUNT} ${SRC}${SPART}${ROOT} ${msrcroot}; if [[ $? -ne 0 ]];then
+    DIALOG="Mount failed, device: ${SRC}${SPART}${ROOT}  ... "
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    if [[ ! -f ${msrcboot}/${zimage} || ! -f ${msrcboot}/${fdt_file} ]];then
+    DIALOG="Kernel or device tree file is not found on the device: ${SRC}${SPART}${BOOT}  ... "
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    zimage=${msrcboot}/${zimage}
+    fdt_file=${msrcboot}/${fdt_file}
+
+    DO_DEPLOY=_deploy_block_dir
+    to_do=ubi_init
+}
+
+_source_block_device() {
+
+    DO_MOUNT='mount'
+    BOOT=1;ROOT=2
+    _source_mount
+
+}
+
+_source_directory() {
+
+    DO_MOUNT='mount -B -o ro '
+    BOOT=/boot;ROOT=/
+    _source_mount
+
+}
+
+_source_tar_ball() {
+
+    zimage=${mdst}/boot/${zimage}
+    fdt_file=${mdst}/boot/${fdt_file}
+
+    DO_DEPLOY=_deploy_tar
+    to_do=ubi_init
+
+}
+
+validate_src () {
+
+    to_do=terminate
+
+    [[ -b ${SRC} ]] && _source_block_device
+    [[ -d ${SRC} ]] && _source_directory
+    [[ -f ${SRC} ]] && _source_tar_ball
+
+}
+
+ubi_linux() {
+
+    to_do=ubi_fini
+
+    if [[ ! -e ${zimage} || ! -e ${fdt_file} ]];then
+    [[ ! -e ${zimage} ]] && DIALOG=" Kernel ${zimage} not found."
+    [[ ! -e ${fdt_file} ]] && DIALOG+=" Device tree  ${fdt_file} not found."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    # Layout#1
+    [[ -n ${kernel} ]] && linux=${kernel}
+
+    flash_erase /dev/${linux} 0 0; if [[ $? -ne 0 ]];then
+    DIALOG="flash_erase /dev/${linux} failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    nandwrite -p /dev/${linux} ${zimage}; if [[ $? -ne 0 ]];then
+    DIALOG="nandwrite -p /dev/${linux} ${zimage} failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+if [[ -n ${dtb} ]]; then
+
+    flash_erase /dev/${dtb} 0 0; if [[ $? -ne 0 ]];then
+    DIALOG="flash_erase /dev/${dtb} failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    nandwrite -p /dev/${dtb} ${fdt_file}; if [[ $? -ne 0 ]];then
+    DIALOG="nandwrite -p /dev/${dtb} ${fdt_file} failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+else
+    nandwrite -p /dev/${linux} -s 0x780000 ${fdt_file}; if [[ $? -ne 0 ]];then
+    DIALOG="nandwrite -p /dev/${linux} -s 0x780000 ${fdt_file} failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+fi
+
+MTD_DEPLOY_STATUS="Done"
+
+}
+
+ubi_rootfs() {
+
+    to_do=ubi_fini
+
+    ubiformat /dev/${rootfs}; if [[ $? -ne 0 ]];then
+    DIALOG="ubiformat /dev/${rootfs} failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key for exit." 10 80
+    return
+    fi
+
+    ubiattach --dev-path=/dev/${rootfs} --devn=0; if [[ $? -ne 0 ]];then
+    DIALOG="ubiattach /dev/${rootfs} failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    ubimkvol /dev/ubi0 -m -N rootfs; if [[ $? -ne 0 ]];then
+    DIALOG="ubimkvol /dev/ubi0 failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    mkdir -p ${mdst}
+    mount -t ubifs ubi0:rootfs ${mdst}; if [[ $? -ne 0 ]];then
+    DIALOG="mount -t ubi0 failed ..."
+    dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${DIALOG}\nPess any key to exit." 10 80
+    return
+    fi
+
+    DIALOG="Deploy rootfs  ..."
+    dialog --backtitle "${DIALOG}" --infobox "${DIALOG} .... " 10 80
+
+    ${DO_DEPLOY}
+
+    to_do=ubi_linux
+
+}
+
+ubi_init() {
+
+    to_do=ubi_rootfs
+
+}
+
+ubi_fini() {
+
+    umount ${mdst} &>/dev/null
+    ubidetach -d 0 &>/dev/null
+
+    to_do=terminate
+
+}
+
+# Unmount all ubi volumes
+awk '(/ubi/)&&($0="umount "$2)'  /proc/mounts | sh -x
+
+# UBI Device to work with
+UBI=0
+ubinfo -d ${UBI} &>/dev/null; if [[ $? -eq 0 ]];then
+    ubidetach -d ${UBI}; if [[ $? -ne 0 ]];then
+        DIALOG="Detach Failed ..."
+        MESSAGE="UBIDetach ${UBI} failed\nPess any key to exit."
+        dialog --backtitle "${DIALOG}" --title " WARNING " --msgbox "${MESSAGE}" 10 80
+        exit 0
+    fi
+fi
+
+set -xv
+
+while [ ! -z ${to_do} ]
+do
+    $to_do
+done
+
+echo "Nothing to do ... Exiting ..."

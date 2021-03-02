@@ -1,0 +1,33 @@
+[submodule "balena-yocto-scripts"]
+	path = balena-yocto-scripts
+	url = https://github.com/balena-os/balena-yocto-scripts.git
+[submodule "layers/poky"]
+	path = layers/poky
+	url = https://github.com/balena-os/poky
+[submodule "layers/meta-rust"]
+	path = layers/meta-rust
+	url = https://github.com/meta-rust/meta-rust.git
+[submodule "layers/meta-freescale"]
+	path = layers/meta-freescale
+	url = https://github.com/Freescale/meta-freescale.git
+[submodule "layers/meta-freescale-3rdparty"]
+	path = layers/meta-freescale-3rdparty
+	url = https://github.com/Freescale/meta-freescale-3rdparty.git
+[submodule "meta-freescale-distro"]
+	path = layers/meta-freescale-distro
+	url = https://github.com/Freescale/meta-freescale-distro.git
+[submodule "meta-compulab"]
+	path = layers/meta-compulab
+	url = https://github.com/compulab-yokneam/meta-compulab.git
+[submodule "meta-compulab-bsp"]
+	path = layers/meta-compulab-bsp
+	url =  https://github.com/compulab-yokneam/meta-compulab-bsp.git
+[submodule "layers/meta-openembedded"]
+	path = layers/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded.git
+[submodule "layers/meta-balena"]
+	path = layers/meta-balena
+	url = https://github.com/balena-os/meta-balena.git
+[submodule "layers/meta-bsp-imx8mm"]
+	path = layers/meta-bsp-imx8mm
+	url = https://github.com/compulab-yokneam/meta-bsp-imx8mm.git

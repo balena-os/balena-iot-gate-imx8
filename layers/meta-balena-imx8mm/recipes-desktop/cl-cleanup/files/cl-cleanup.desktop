@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CompuLab CleanUp Tool
+Comment=CompuLab CleanUp
+Exec=/usr/local/bin/cl-cleanup
+Icon=/usr/share/applications/cl-cleanup.png
+Terminal=true
+Type=Application
+Categories=GTK;System;CompuLab CleanUp Tool;

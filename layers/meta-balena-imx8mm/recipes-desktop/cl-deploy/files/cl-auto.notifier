@@ -1,0 +1,13 @@
+# cl-auto.notifier
+
+external_okay_exit() {
+cat << eof
+Issuing ${FUNCNAME[0]} with $@
+eof
+}
+
+external_error_exit() {
+cat << eof
+Issuing ${FUNCNAME[0]} with $@
+eof
+}

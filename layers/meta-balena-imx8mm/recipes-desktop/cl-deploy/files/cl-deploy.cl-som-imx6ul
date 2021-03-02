@@ -1,0 +1,79 @@
+#!/bin/bash
+
+[ $(basename -- $BASH_SOURCE) == $(basename -- $0) ] && EXIT="exit" || EXIT="return"
+
+# The very 1-st sanity check before we start
+[[ ! ${DST} =~ 'mmcblk' && ! ${DST} =~ 'mtd' ]] && ${EXIT}
+
+com0=$(which flash_unlock)
+com1=$(which fw_setenv)
+mtd_dev=/dev/mtd2
+
+if [[ $DST =~ 'mmcblk' ]];then
+# MMC/eMMC case
+if [[ $DST =~ 'mmcblk1' ]];then
+mmcdev=1; dtb="-wilink"
+else
+mmcdev=0; dtb=""
+fi
+
+declare -a env=("mmcdev ${mmcdev}" "mmcroot /dev/mmcblk${mmcdev}p2 rootwait rw" "fdt_file imx6ul-sbc-imx6ul${dtb}.dtb")
+
+else
+# MTD Case
+
+declare -a env=("loadimage nand read \${loadaddr} 0 800000" "loadfdt nand read \${fdt_addr} 780000 10000" \
+"bootargs console=ttymxc2,115200 root=ubi0:rootfs rw rootfstype=ubifs ubi.mtd=rootfs ip=dhcp" \
+"bootcmd run loadimage; run loadfdt; bootz \${loadaddr} - \${fdt_addr}")
+
+fi
+
+line=$(seq 1 75 | awk '$0="="' ORS="")
+
+DIALOG+="\n${line}"
+i=0
+
+if [[ -c ${mtd_dev}  && ! -z ${com0} && ! -z ${com1} ]];then
+
+com0+=' '${mtd_dev}' '0
+com1+=' '
+
+i=0
+while [ $i -lt ${#env[@]} ]
+do
+    var=${env[i]};
+    var=${var/ /=};
+    ((i++))
+DIALOG+="\n"$var
+done
+DIALOG+="\n${line}"
+
+dialog --title \
+	"Update Boot Environment" --yesno \
+	"Boot Environment to update: ${DIALOG}\nWould you like to update the device boot environment now?" 15 80
+
+if [ $? -eq 0 ];then
+i=0
+while [ $i -lt ${#env[@]} ]
+do
+    $com0
+    $com1 ${env[i]};
+    ((i++))
+done
+fi
+
+else
+
+while [ $i -lt ${#env[@]} ]
+do
+    var='setenv '${env[i]};
+    ((i++))
+DIALOG+="\n"$var
+done
+DIALOG+="\n${line}"
+
+dialog --title \
+	"Update Boot Environment" --msgbox \
+	"Next boot stop in U-boot and issue: ${DIALOG}\n" 10 80
+
+fi

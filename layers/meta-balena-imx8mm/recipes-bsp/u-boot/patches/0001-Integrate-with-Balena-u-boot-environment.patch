@@ -1,0 +1,76 @@
+From ed99604cec39623751846b278103fdc656d8b7d6 Mon Sep 17 00:00:00 2001
+From: Vicentiu Galanopulo <vicentiu@balena.io>
+Date: Mon, 1 Mar 2021 12:57:29 +0100
+Subject: [PATCH] Integrate with Balena u-boot environment
+
+Integrated u-boot with Balena environment
+and added unzipping of the kernel image.
+
+Upstream-Status: Inappropriate [configuration]
+Signed-off-by: Vicentiu Galanopulo  <vicentiu@balena.io>
+
+---
+ configs/iot-gate-imx8_defconfig |  5 +++++
+ include/configs/iot-gate-imx8.h | 17 ++++++++++++-----
+ 2 files changed, 17 insertions(+), 5 deletions(-)
+
+diff --git a/configs/iot-gate-imx8_defconfig b/configs/iot-gate-imx8_defconfig
+index aa88e7956f..af4877876a 100644
+--- a/configs/iot-gate-imx8_defconfig
++++ b/configs/iot-gate-imx8_defconfig
+@@ -98,3 +98,8 @@ CONFIG_EXT4_WRITE=y
+ CONFIG_FAT_WRITE=y
+ CONFIG_OF_LIBFDT_OVERLAY=y
+ # CONFIG_EFI_LOADER is not set
++CONFIG_CMD_UNZIP=y
++CONFIG_CMD_IMPORTENV=y
++CONFIG_PARTITION_UUIDS=y
++CONFIG_CMD_PART=y
++CONFIG_CMD_FS_UUID=y
+\ No newline at end of file
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index 9774949456..3436120e99 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -22,7 +22,8 @@
+ 	CONFIG_MFG_ENV_SETTINGS \
+ 	"autoload=off\0" \
+ 	"script=boot.scr\0" \
+-	"image=Image\0" \
++	"image=Image.gz\0" \
++	"zip_addr=0x70480000\0" \
+ 	"fdt_addr=0x43000000\0"	\
+ 	"fdt_high=0xffffffffffffffff\0"	\
+ 	"initrd_high=0xffffffffffffffff\0" \
+@@ -30,18 +31,24 @@
+ 	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0\0" \
+ 	"emmc_ul=setenv boot_dev_str eMMC; run boot_try_msg; " \
+ 	"setenv iface mmc; setenv dev 2; setenv part 1;" \
+-	"setenv bootargs ${bootargs_common} root=/dev/mmcblk2p2 " \
+-	"${root_opt};\0" \
++	"setenv bootargs ${bootargs_common} " \
++	"${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"usb_ul=setenv boot_dev_str USB; run boot_try_msg; usb reset; " \
+ 	"setenv iface usb; setenv dev 0; setenv part 1; " \
+-	"setenv bootargs ${bootargs_common} root=/dev/sda2 ${root_opt};\0" \
++	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
+-	"ulimage=load ${iface} ${dev}:${part} ${loadaddr} ${image}\0" \
++	"ulimage=load ${iface} ${dev}:${part} ${zip_addr} ${image}; unzip ${zip_addr} ${loadaddr}\0" \
+ 	"ulfdt=load ${iface} ${dev}:${part} ${fdt_addr} ${fdt_file};\0" \
+ 	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
+ 	"source;\0" \
+ 	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
+ #define CONFIG_BOOTCOMMAND \
++	"setenv resin_kernel_load_addr ${loadaddr};" \
++	"run resin_set_kernel_root; run set_os_cmdline; " \
++	"setenv usbdev ${resin_dev_index};" \
++	"setenv usbbootpart ${resin_boot_part};" \
++	"setenv mmcdev ${resin_dev_index};" \
++	"setenv mmcbootpart ${resin_boot_part};" \
+ 	"for src in usb_ul emmc_ul; do " \
+ 		"run ${src}; " \
+ 		"if run ulbootscript; then " \
+-- 
+2.17.1
+

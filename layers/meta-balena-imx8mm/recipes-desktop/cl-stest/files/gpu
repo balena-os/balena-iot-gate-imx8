@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# read options file if available
+options=$(dirname $(realpath -s $0))"/opt"
+[[ -f ${options} ]] && . ${options}
+
+gpu_count=${gpu_count:-4}
+gpu_time=${gpu_time:-300}
+gpu_ia=${gpu_ia:-no}
+pid_bg=""
+
+tut=/opt/viv_samples/vdk/tutorial4_es20
+# exit if there is no such the file
+[[ -f ${tut} ]] || exit 0
+cd /opt/viv_samples/vdk
+
+for p in $(seq 0 ${gpu_count});do
+    ${tut} -h 800 -w 600 &
+    pid_bg+=$!" "
+done
+cd -
+
+if [[ ${gpu_ia} = "yes" ]];then
+    for i in $(seq 0 ${gpu_time});do
+        echo -n "."; sleep 1
+    done
+else
+    sleep ${gpu_time}
+fi
+
+kill -9 ${pid_bg}
+echo "Survived ..."

@@ -1,0 +1,136 @@
+#!/bin/bash
+
+conf=/etc/cl-auto.conf
+sample=/usr/share/cl-deploy/cl-auto.conf.sample
+helper=/usr/local/bin/cl-deploy.helper
+
+notifier=/usr/share/cl-deploy/cl-auto.notifier
+inc_file=/usr/share/cl-deploy/cl-auto.inc
+
+[[ -f ${notifier} ]] && source ${notifier}
+[[ -f ${inc_file} ]] && source ${inc_file}
+
+caller_name=init
+timeout=${timeout:-5}
+good_timeout=${good_timeout:-600}
+
+export DIALOGOPTS='--ascii-lines --no-shadow --backtitle "Autoinstaller"'
+
+okay_exit() {
+[[ $(ps -o comm= $PPID) == ${caller_name} ]] || exit 0
+command -v external_okay_exit &>/dev/null
+[[ $? -eq 0 ]] && external_okay_exit $@
+
+local dialog_msg="Stop in U-Boot and remove the ${SRC} media.
+Waiting ${good_timeout} seconds ..."
+local declare emsg=( [1]='terminated' [255]='expared' )
+
+dialog --yes-label "Reboot" --no-label "Stop" --timeout ${good_timeout} --title "cl-deploy: status [ okay ]" --yesno "${dialog_msg}" 10 60 2>/dev/null
+res=$?
+LINE=$(line 60)
+[[ ${res} -ne 0 ]] && cat << eof
+${LINE}
+
+        Good timeout has been ${emsg[${res}]}.
+        Exiting to shell.
+
+${LINE}
+eof
+exit ${res}
+}
+
+error_exit() {
+command -v external_error_exit &>/dev/null
+[[ $? -eq 0 ]] && external_error_exit $@
+
+cat << eof
+Error :${1}
+eof
+exit ${2}
+}
+
+info_box() {
+LINE=$(line 50)
+cat << eof
+Configuration file ${conf} parameters:
+${LINE}
+$(cat ${conf})
+${LINE}
+Press any key for terminating ...
+eof
+}
+
+main() {
+if [ -f ${conf} ];then
+    dialog --ok-label "Stop Auto Installer" --timeout ${timeout} --title "cl-deploy will get started in ${timeout} seconds" --msgbox "$(info_box)" 15 60
+    if [ $? -eq 0 ];then
+        exit_msg="Installation aborted by user"
+        res=1
+    else
+        export $(awk '!/^#/' ${conf})
+        cl-deploy; res=$?
+        [[ ${res} -eq 0 && -z ${EQUAL} ]] && cl-deploy.helper -d ${DST} -a off
+        [[ ${res} -ne 0 ]] && exit_msg="cl-deploy has failed"
+    fi
+else
+	exit_msg="Configuration file ${conf} not found
+	use ${sample} as an example.
+	Issue: $0 -c"
+	res=1
+fi
+
+[[ ${res} -eq 0 ]] || error_exit "${exit_msg}" ${res} && okay_exit
+}
+
+usage() {
+LINE=$(line 80)
+cat << EOF 1>&2
+Usage: $0
+Run w/out parameters make it start in an interactive mode that makes use of the ${conf} file.
+Multiple options is not supported.
+Options:
+	[ -h ] print this help and the ${sample} file
+	[ -A ] eanble autoinstall mode
+	[ -a ] disable autoinstall mode
+	[ -c ] copy sample file to ${conf}
+
+${sample} :
+${LINE}
+$(cat ${sample})
+${LINE}
+EOF
+exit 1
+}
+
+copy_sample_config() {
+[[ -f ${sample} ]] || error_exit "${sample} not found, reinstall the cl-auto package" 2
+awk '(!/#/)&&(NF)' ${sample} > ${conf}
+}
+
+while getopts ":aAch" o ; do
+	case "${o}" in
+	A)
+		${helper} -a on
+		exit 0;
+		;;
+	a)
+		${helper} -a off
+		exit 0;
+		;;
+	c)
+		copy_sample_config
+		exit 0;
+		;;
+	h)
+        usage
+		exit 0;
+		;;
+	*)
+		;;
+	esac
+done
+shift $((OPTIND-1))
+
+main
+
+exit 0

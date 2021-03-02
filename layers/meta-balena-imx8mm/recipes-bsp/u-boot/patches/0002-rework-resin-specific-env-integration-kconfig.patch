@@ -1,0 +1,36 @@
+From 2f79eefaaf30ede4993c69afd30a1216f0888ab1 Mon Sep 17 00:00:00 2001
+From: Vicentiu Galanopulo <vicentiu@balena.io>
+Date: Thu, 11 Feb 2021 17:23:18 +0100
+Subject: [PATCH] Rework resin-specific-env-integration-kconfig.patch
+
+Patch coming from meta-balena did not apply and needed a rework
+
+Upstream-Status: Inappropriate [configuration]
+Signed-off-by: Vicentiu Galanopulo  <vicentiu@balena.io>
+---
+ include/env_default.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/include/env_default.h b/include/env_default.h
+index 56a8bae39a..d66471cd84 100644
+--- a/include/env_default.h
++++ b/include/env_default.h
+@@ -8,6 +8,7 @@
+  */
+ 
+ #include <env_callback.h>
++#include <env_resin.h>
+ 
+ #ifdef DEFAULT_ENV_INSTANCE_EMBEDDED
+ env_t embedded_environment __UBOOT_ENV_SECTION__(environment) = {
+@@ -21,6 +22,7 @@ static char default_environment[] = {
+ #else
+ const uchar default_environment[] = {
+ #endif
++	RESIN_ENV
+ #ifndef CONFIG_USE_DEFAULT_ENV_FILE
+ #ifdef	CONFIG_ENV_CALLBACK_LIST_DEFAULT
+ 	ENV_CALLBACK_VAR "=" CONFIG_ENV_CALLBACK_LIST_DEFAULT "\0"
+-- 
+2.17.1
+

@@ -1,0 +1,55 @@
+#!/bin/bash
+
+dialog_app='dialog '
+[[ -n ${QUIET} ]] && dialog_app='true || '${dialog_app}
+
+function get_boot_loader() {
+RADIO=$(ls /boot/ | awk '(/uboot|flash/)&&($0=$1" OFF ")' ORS="")
+SELECT=$(dialog --no-items --backtitle "Select a U-Boot file:" --radiolist "Available U-Boot files:" 12 80 12 ${RADIO} --stdout)
+[[ -z ${SELECT} ]] && exit
+
+export IMX_BOOT=/boot/${SELECT}
+}
+
+function get_boot_device() {
+RADIO=$(ls /sys/class/block/mmcblk[[:digit:]]boot[[:digit:]]/size /sys/class/block/mmcblk[[:digit:]]/size | awk -F"/" '($0=$5" OFF ")' ORS="")
+if [[ ! -z ${RADIO} ]];then
+SELECT=$(dialog --no-items --backtitle "Select a boot device:" --radiolist "Available boot devices:" 12 80 12 ${RADIO} --stdout)
+[[ -z ${SELECT} ]] && exit
+else
+SELECT=null
+fi
+
+export IMX_DEV=/dev/${SELECT}
+}
+
+function mmc_update() {
+N=$(cat <<< ${_device} | awk -F"boot" '/boot/ { print $2+1 }')
+N=${N:-0}
+
+export CMD="mmc bootpart enable ${N} 0 /dev/${_device}"
+${CMD}
+}
+
+[[ -n ${IMX_BOOT} && -f ${IMX_BOOT} ]] || get_boot_loader
+[[ -n ${IMX_DEV} && -b ${IMX_DEV} ]] || get_boot_device
+
+_device=$(basename ${IMX_DEV})
+mmc_update
+
+
+TITLE+=${CMD}";"
+
+force_ro=$(cat /sys/class/block/${_device}/force_ro)
+echo 0 > /sys/class/block/${_device}/force_ro
+
+CMD="dd if=${IMX_BOOT} of=${IMX_DEV} bs=1K seek=##SEEK##"
+TITLE+=${CMD}";"
+
+${CMD} 2>&1 | ${dialog_app} --backtitle "${TITLE}" --programbox "U Boot flash result:" 12 80
+
+command -v cl-migrate-env >/dev/null && cl-migrate-env ${IMX_DEV}
+
+echo ${force_ro} > /sys/class/block/${_device}/force_ro
+
+exit 0

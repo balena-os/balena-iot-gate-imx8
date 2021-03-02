@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# read options file if available
+options=$(dirname $(realpath -s $0))"/opt"
+[[ -f ${options} ]] && . ${options}
+
+mem_loops=${mem_loops:-4}
+status="..."
+
+function verify_memory() {
+# Calculate 1/2 available before each loop
+# if not default set
+MEM_SIZE=${mem_size:-$(printf "%.0f" $(free -m | awk '(/Mem:/)&&($0=$4/2)'))}
+memtester ${MEM_SIZE} 1
+ret=$?
+
+# Ignore memory allocation errors
+if [ ${ret} -ge 130 ];then
+    status="iterrupted"
+    return 0
+fi
+
+if [ ${ret} -ne 0 ];then
+    echo "Memory test [FAILED - ${ret}]"
+    exit 1
+fi
+
+status="passed"
+return 0
+}
+
+for i in $(seq 1 ${mem_loops});do
+    status="started"
+    echo "Memtest ${i}/${mem_loops}"
+    verify_memory
+    echo "Memtest ${i}/${mem_loops} ${status}"
+done
+
+echo "Memtest [OKAY]"

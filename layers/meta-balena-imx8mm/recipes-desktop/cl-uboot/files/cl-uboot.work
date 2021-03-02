@@ -1,0 +1,135 @@
+#!/bin/bash
+
+file=/boot/u-boot.imx
+device=mtd0
+device_file=/dev/${device}
+offset=0x400
+line=$(seq 1 72 | awk '$0="-"' ORS="")
+
+mtd_unlock() {
+flash_unlock /dev/mtd2 0
+}
+
+if [ ! -e "${file}" ]; then
+TITLE="WARNING"
+DIALOG="Source File:\n"
+DIALOG+="	${file}\n"
+DIALOG+="\n${line}\n"
+DIALOG+="	!Not Found!\n"
+DIALOG+="	Exiting ...\n"
+dialog --backtitle "${TITLE}" --title "${TITLE}" --msgbox "${DIALOG}" 15 80
+exit 2
+fi
+
+if [ ! -c ${device_file} ];then
+TITLE="WARNING"
+DIALOG="Detination SPI Flash:\n"
+DIALOG+="	${device_file}\n"
+DIALOG+="\n${line}\n"
+DIALOG+="	!Not Found!\n"
+DIALOG+="	Exiting ...\n"
+dialog --backtitle "${TITLE}" --title "${TITLE}" --msgbox "${DIALOG}" 15 80
+exit 2
+fi
+
+# This creates File/Size variables
+eval $(stat -c Size=%s";"File=%n 2>/dev/null $(readlink -f ${file}))
+
+mtd_dev_size=$(awk -v dev=${device} '($0~dev)&&($0="0x"$2)' /proc/mtd)
+
+# validate
+mtd_read_file=/tmp/mtd-read-${offset}-${Size}
+mtd_debug read ${device_file} ${offset} ${Size} ${mtd_read_file} &>/dev/null
+
+version1=$(strings ${File} | awk '(/^U-Boot.*\(/)')
+if [ -z "${version1}" ];then
+TITLE="WARNING"
+DIALOG="Source File:\n"
+DIALOG+="	${File}\n"
+DIALOG+="\n${line}\n"
+DIALOG+="	!CORRUPTED!\n"
+DIALOG+="	Exiting ...\n"
+dialog --backtitle "${TITLE}" --title "${TITLE}" --msgbox "${DIALOG}" 15 80
+exit 3
+fi
+
+if [[ -z ${FORCE} ]];then
+diff ${File} ${mtd_read_file} &>/dev/null
+if [ $? -eq 0 ]; then
+
+TITLE="NOTICE"
+DIALOG="Source File:\n"
+DIALOG+="	${File}\n"
+DIALOG+="Detination SPI Flash:\n"
+DIALOG+="	${device_file}\n"
+DIALOG+="Version:\n"
+DIALOG+="	${version1}\n"
+DIALOG+="\n${line}\n"
+DIALOG+="U-Boot versions match, nothing to do. Exiting ...\n"
+dialog --backtitle "${TITLE}" --title "${TITLE}" --msgbox "${DIALOG}" 15 80
+exit 0
+fi
+fi
+
+version2=$(strings ${mtd_read_file} | awk '(/^U-Boot.*\(/)')
+[ -z "${version2}" ] && version2="--N/A--"
+
+TITLE="Start U-Boot Update"
+[[ -n ${FORCE} ]] && TITLE+=" : Forced"
+DIALOG="Source File:\n"
+DIALOG+="	${File}\n"
+DIALOG+="	${version1}\n"
+DIALOG+="\n${line}\n"
+DIALOG+="Detination SPI Flash:\n"
+DIALOG+="	${device_file}\n"
+DIALOG+="	${version2}\n"
+DIALOG+="\n${line}\n"
+DIALOG+="Warning: All data on the SPI Flash will be destroyed"
+
+dialog --backtitle "${TITLE}" --title "${TITLE}" --yesno "${DIALOG}" 16 80 || exit
+
+set -xv
+# Unlock the flash first.
+mtd_unlock
+
+# erase
+mtd_debug erase ${device_file} 0x0 ${mtd_dev_size}
+
+# write
+mtd_debug write ${device_file} ${offset} ${Size} ${File}
+
+# read
+mtd_debug read ${device_file} ${offset} ${Size} ${mtd_read_file} &>/dev/null
+
+# validate
+diff ${File} ${mtd_read_file} &>/dev/null
+
+if [ $? -eq 0 ]; then
+# Good Case
+TITLE="Finished with success"
+DIALOG="Updated SPI Flash:\n"
+DIALOG+="	${device_file}\n"
+DIALOG+="	${version1}\n"
+DIALOG+="\n${line}\n"
+DIALOG+="Reboot the device, stop in U-Boot:\n"
+DIALOG+="	Issue: version\n"
+DIALOG+="\n${line}\n"
+dialog --title "${TITLE}" --title "${TITLE}" --msgbox "${DIALOG}" 15 80
+exit 0
+fi
+
+# Bad Case: Something went wrong if we got here
+cat << eom | dialog --title "Recovery" --programbox 20 80
+Update SPI Flash: failed!
+${line}
+Recovery procedure must be invoked:
+1) Create a recovery mmc card:
+# dd if=${File} of=/dev/mmcblk2 bs=512 seek=2
+2) Reboot the device with the E1 jumper on
+3) Stop in U-Boot and issue:
+# mmc dev 2
+# load mmc 2:2 0x12000000 boot/u-boot.imx
+# sf probe ; sf erase 0 0x80000 ; sf write 0x12000000 0x400 \${filesize}
+eom
+
+set +xv

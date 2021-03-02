@@ -1,0 +1,20 @@
+# MEM
+mem_loops=16
+mem_size=384
+
+# GPU
+gpu_count=3
+gpu_time=3000
+gpu_ia=no
+
+# CPU
+cpu_count=3
+cpu_time=3000
+cpu_sleep=60
+
+termination_function() {
+[[ -n "${pid_bg}" ]] && kill -9 ${pid_bg}
+exit
+}
+
+trap 'termination_function' SIGINT

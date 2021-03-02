@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CompuLab U-Boot Tool
+Comment=U-Boot Flash Tool
+Exec=/usr/local/bin/cl-uboot
+Icon=/usr/share/applications/cl-uboot.png
+Terminal=true
+Type=Application
+Categories=GTK;System;CompuLab U-Boot Tool;

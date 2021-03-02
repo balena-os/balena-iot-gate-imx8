@@ -1,0 +1,216 @@
+#!/bin/bash
+
+CL_FUNCTIONS=/usr/share/cl-deploy/cl-functions.inc
+if [[ ! -f ${CL_FUNCTIONS} ]];then
+cat << eof
+The package library file ${CL_FUNCTIONS} is not found.
+Reinstall the cl-deploy package.
+eof
+exit 3
+fi
+
+source ${CL_FUNCTIONS}
+
+usage() {
+cat << EOF 1>&2
+Usage: $0
+Run w/out parameters makes it work in an interactive mode.
+Options:
+	[ -h ] print this help
+	[ -s <source> ] 
+		source: block device, directory, tarball, diskimage.
+	[ -d <destination> ]
+		destination: block device.
+	[ -e ] emulation: create a command line for a non-interactive run.
+		Example: $0 -e
+	[ -u <on|off> ] Turn off a udev daemon or keep it working during the deployment process.
+	[ -q ] quiet: Run a non-interactive mode.
+		Requires a source and a destination to be provided in the command line.
+	[ -a <on|off> ] autoinstall mode on/off.
+		Example:
+			Enable the autoinstall mode on the specified device.
+			$0 -d /dev/mmcblk2 -a on
+			Disable the autoinstall mode on the boot device.
+			$0 -a off
+
+Examples for diffrerent sources:
+
+	block device -> block device
+	# source:      /dev/mmcblk2
+	# destination: /dev/mmcblk0
+	# Duplicates partition table
+	# expandes the latest partition till the end of the media
+	# copies the partition's content one-by-one
+$0 -s /dev/mmcblk2 -d /dev/mmcblk0 -q
+
+	directory/tarball -> block device
+	# source: / or /path/to/rootfs.tar.bz2
+	# destination: /dev/mmcblk0
+	# Creates the CopmpuLab layout on the destination device
+	# 1-st boot partition   ~ [ 32M, 64M ]
+	# 2-nd rootfs partition ~ [ destination media size - boot partititon size ]
+	## mkfs.ext2 -L boot /dev/mmcblk0p1; mkfs.ext4 -L rootfs /dev/mmcblk0p2
+	## mkdir /media/dst; mount /dev/mmcblk0p2 /media/dst
+	## mkdir /media/dst/boot;  mount /dev/mmcblk0p1 /media/dst/boot
+	## if source is a directory
+	## tar -C / -cpf - . | tar -C /media/dst -xf -
+$0 -s / -d /dev/mmcblk0 -q
+
+	# if source is a tarball
+	## tar -C /media/dst -xjf /path/to/rootfs.tar.bz2
+$0 -s /path/to/rootfs.tar.bz -d /dev/mmcblk0 -q
+
+	disk image -> block device
+	# source: /path/to/disk.img.gz
+	# destination: /dev/sda
+	# Copies the entire image to the destination using a block copy 'dd'
+$0 -s /path/to/disk.img.gz -d /dev/sda -q
+EOF
+exit 1
+}
+
+dist_init=/sbin/init
+save_init_d=/usr/share/cl-deploy
+auto_init=/usr/local/bin/cl-init
+
+do_mount() {
+
+mpoint=$(findmnt --source ${part} -n | awk '($0=$1)')
+if [[ -z ${mpoint} ]];then
+mpoint=$(mktemp -d)
+mount ${part} ${mpoint}
+do_umount="umount ${part}"
+else
+do_umount=''
+fi
+
+export do_umount mpoint
+}
+
+
+do_on() {
+if [[ ! -L ${mpoint}/${save_init_d}/init ]];then
+cp -a ${mpoint}/${dist_init} ${mpoint}/${save_init_d}/
+fi
+ln -fs ${auto_init} ${mpoint}/${dist_init}
+cat << eof
+	Autoinstall mode has been enabled successfully.
+	Init: $(file ${mpoint}/${dist_init})
+eof
+}
+
+do_off() {
+if [[ -L ${mpoint}/${save_init_d}/init ]];then
+# ln -fs ${auto_init} ${mpoint}/${dist_init}
+unlink ${mpoint}/${dist_init}
+mv ${mpoint}/${save_init_d}/init ${mpoint}/sbin/
+fi
+
+cat << eof
+	Autoinstall mode has been disabled successfully.
+	Init: $(file ${mpoint}/${dist_init})
+eof
+}
+
+do_auto() {
+# 1st -- device; 2nd -- action { on, off }
+local dev_name=${1}
+local action=${2}
+
+[[ ${action} == 'on' || ${action} == 'off' ]] || error_exit "Invalid action: ${action}" 22
+
+local part=$(get_part_by_number ${dev_name} 2)
+
+[[ -z ${part} ]] && error_exit "Partition not found" 22
+
+do_mount ${part}
+
+[[ ${action} == 'on' ]] && do_on || do_off
+
+${do_umount}
+}
+
+auto_on() {
+local dev_name=''
+local action='on'
+[[ -n ${DST} ]] && dev_name=${DST} || dev_name=$(get_root_device)
+
+do_auto ${dev_name} ${action}
+}
+
+auto_off() {
+local dev_name=''
+local action='off'
+[[ -n ${DST} ]] && dev_name=${DST} || dev_name=$(get_root_device)
+
+do_auto ${dev_name} ${action}
+}
+
+while getopts ":s:d:u:qlhea:" o ; do
+	case "${o}" in
+	s)
+		export SRC=${OPTARG}
+		;;
+	d)
+		export DST=${OPTARG}
+		;;
+	q)
+		# A non-interactive mode
+		# it is up to the user to provide SRC and DST
+		export QUIET='Yes'
+		;;
+	e)
+		# Emulation run: works in interactive mode
+		# asks for all parametres, prints the command line 
+		# for a non-interactive run and exits.
+		export EMUL='Yes'
+		;;
+	u)
+		u=${OPTARG}
+		[[ $u == 'on' || $u == 'off'  ]] || usage
+		[[ $u == 'on' ]] && export UDEV='on'
+		;;
+	l)
+		# Expand the destination last partition
+		export PLUS='+'
+		;;
+	a)
+		a=${OPTARG}
+		[[ $a == 'on' || $a == 'off'  ]] || usage
+		[[ $a == 'on' ]] && auto_on || auto_off
+        sync;sync;sync
+        exit 0
+		;;
+	h)
+		usage
+		;;
+	:)
+		echo Missing ${OPTARG} argument
+		usage
+		;;
+	?)
+		echo Invalid option ${OPTARG}
+		usage
+		;;
+	esac
+done
+shift $((OPTIND-1))
+
+source ${WORK}
+
+if [[ -n ${EMUL} ]];then
+cat << eom
+The currrent scenario can be carried out in a non-interactive mode:
+Helper way:
+	$0 -s ${SRC} -d ${DST} -q
+
+Worker way:
+	SRC=${SRC} DST=${DST} QUIET=Yes cl-deploy.work
+
+Sample /etc/cl-auto.conf:
+SRC=${SRC} DST=${DST} QUIET=Yes
+
+eom
+fi
+
+exit 0
