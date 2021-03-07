@@ -3,6 +3,8 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/patches:"
 UBOOT_KCONFIG_SUPPORT = "1"
 inherit resin-u-boot
 
+DEPENDS = "bison-native"
+
 SRC_URI_remove = " \
 	file://resin-specific-env-integration-kconfig.patch \
 "
