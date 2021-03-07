@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.71.5+rev2
+## (2021-03-07)
+
+* Fix u-boot compile error that needed bison-native dependency [Florin Sarbu]
+
 # v2.71.5+rev1
 ## (2021-03-05)
 
