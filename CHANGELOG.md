@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.71.5+rev3
+## (2021-03-08)
+
+* Add u-boot-script for u-boot re-writing [Vicentiu Galanopulo]
+
 # v2.71.5+rev2
 ## (2021-03-07)
 
