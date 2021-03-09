@@ -12,7 +12,7 @@ uboot_file="imx-boot-iot-gate-imx8-sd.bin-flash_evk"
 uboot_block_size=1024
 uboot_seek_blocks=33
 
-device="/dev/mmcblk0"
+device="/dev/mmcblk2"
 
 update_files="uboot"
 
