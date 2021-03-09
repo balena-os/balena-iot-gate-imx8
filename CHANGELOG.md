@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.71.5+rev5
+## (2021-03-09)
+
+* Add flash_evk to boot partition [Vicentiu Galanopulo]
+
 # v2.71.5+rev4
 ## (2021-03-09)
 
