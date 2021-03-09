@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.71.5+rev4
+## (2021-03-09)
+
+* Update RESIN_BOOT_PARTITION_FILES [Vicentiu Galanopulo]
+
 # v2.71.5+rev3
 ## (2021-03-08)
 
