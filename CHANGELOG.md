@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.71.5+rev6
+## (2021-03-09)
+
+* Set correct mmcblk device for hostappupdate [Vicentiu Galanopulo]
+
 # v2.71.5+rev5
 ## (2021-03-09)
 
