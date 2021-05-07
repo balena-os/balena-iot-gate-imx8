@@ -12,13 +12,13 @@ BALENA_STORAGE = "overlay2"
 #DEVELOPMENT_IMAGE = "1"
 
 # Set this to make build system generate resinhup bundles
-#RESINHUP ?= "yes"
+#BALENAHUP ?= "yes"
 
 # Set this to change the supervisor tag used
 #SUPERVISOR_TAG ?= "master"
 
 # Compress final raw image
-#RESIN_RAW_IMG_COMPRESSION ?= "xz"
+#BALENA_RAW_IMG_COMPRESSION ?= "xz"
 
 # Parallelism Options
 BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"

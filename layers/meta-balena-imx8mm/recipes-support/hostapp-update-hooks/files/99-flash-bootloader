@@ -12,7 +12,7 @@ uboot_file="imx-boot-iot-gate-imx8-sd.bin-flash_evk"
 uboot_block_size=1024
 uboot_seek_blocks=33
 
-device="/dev/mmcblk2"
+device="/dev/mmcblk2boot0"
 
 update_files="uboot"
 
@@ -33,7 +33,9 @@ for i in $update_files; do
 
         if [ ! "$existing_md5sum" = "$update_md5sum" ]; then
                 echo "Flashing $current_update_file to $device"
+		echo 0 > /sys/block/mmcblk2boot0/force_ro
                 dd if=/resin-boot/$current_update_file of=$device conv=fdatasync seek=$seek_blocks bs=$block_size
+		echo 1 > /sys/block/mmcblk2boot0/force_ro
         fi
 done
 
