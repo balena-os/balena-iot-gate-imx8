@@ -1,0 +1,38 @@
+From dc64e2c17bd52f5f9f2ca804969b1ffb98b6f164 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Fri, 7 May 2021 14:14:53 +0200
+Subject: [PATCH 2/2] iot-gate-imx8: Load kernel and fdt from root partition
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ include/configs/iot-gate-imx8.h | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index 16cf6f7dcc..f39ae454f9 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -39,8 +39,8 @@
+ 	"setenv iface usb; setenv dev 0; setenv part 1; " \
+ 	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
+-	"ulimage=load ${iface} ${dev}:${part} ${zip_addr} ${image}; unzip ${zip_addr} ${loadaddr}\0" \
+-	"ulfdt=load ${iface} ${dev}:${part} ${fdt_addr} ${fdt_file};\0" \
++	"ulimage=load ${iface} ${resin_dev_index}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr}\0" \
++	"ulfdt=load ${iface} ${resin_dev_index}:${resin_root_part} ${fdt_addr} boot/${fdt_file};\0" \
+ 	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
+ 	"source;\0" \
+ 	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
+@@ -50,7 +50,7 @@
+ 	"setenv usbdev ${resin_dev_index};" \
+ 	"setenv usbbootpart ${resin_boot_part};" \
+ 	"setenv mmcdev ${resin_dev_index};" \
+-	"setenv mmcbootpart ${resin_boot_part};" \
++	"setenv mmcbootpart ${resin_root_part};" \
+ 	"for src in usb_ul emmc_ul; do " \
+ 		"run ${src}; " \
+ 		"if run ulbootscript; then " \
+-- 
+2.17.1
+
