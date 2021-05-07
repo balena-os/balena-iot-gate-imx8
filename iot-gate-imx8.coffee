@@ -28,18 +28,18 @@ module.exports =
         ].concat(postProvisioningInstructions)
 
         gettingStartedLink:
-                windows: 'http://docs.resin.io/cl-som-imx8/nodejs/getting-started/#adding-your-first-device'
-                osx: 'http://docs.resin.io/cl-som-imx8/getting-started/#adding-your-first-device'
-                linux: 'http://docs.resin.io/cl-som-imx8/getting-started/#adding-your-first-device'
+                windows: 'http://docs.balena.io/iot-gate-imx8/nodejs/getting-started/#adding-your-first-device'
+                osx: 'http://docs.balena.io/iot-gate-imx8/getting-started/#adding-your-first-device'
+                linux: 'http://docs.balena.io/iot-gate-imx8/getting-started/#adding-your-first-device'
 
         supportsBlink: false
 
         yocto:
                 machine: 'iot-gate-imx8'
-                image: 'resin-image-flasher'
-                fstype: 'resinos-img'
+                image: 'balena-image-flasher'
+                fstype: 'balenaos-img'
                 version: 'yocto-dunfell'
-                deployArtifact: 'resin-image-flasher-iot-gate-imx8.resinos-img'
+                deployArtifact: 'balena-image-flasher-iot-gate-imx8.balenaos-img'
                 compressed: true
 
         options: [ networkOptions.group ]
