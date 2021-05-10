@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.75.0+rev2
+## (2021-05-10)
+
+* conf/layer: Remove vendor console resize scripts [Alexandru Costache]
+
 # v2.75.0+rev1
 ## (2021-05-07)
 
