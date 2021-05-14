@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.75.0+rev3
+## (2021-05-14)
+
+* Fix typo that prevented setting the preferred provider as u-boot-compulab-fw-utils for u-boot-fw-utils [Florin Sarbu]
+
 # v2.75.0+rev2
 ## (2021-05-10)
 
