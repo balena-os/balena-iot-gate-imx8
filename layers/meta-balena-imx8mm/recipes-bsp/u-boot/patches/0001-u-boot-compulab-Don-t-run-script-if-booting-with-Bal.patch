@@ -1,0 +1,42 @@
+From 1c5d1c01fb0e4194244dab8b8e840924c8c19d2f Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Tue, 6 Jul 2021 14:45:56 +0200
+Subject: [PATCH] u-boot-compulab: Don't run script if booting with Balena
+ u-boot
+
+The upstream Compulab u-boot script checks if the u-boot present in the second
+partition matches the one on the boot devices and if not, updates
+the latter and reboots the board, causing a bootcount increment. And this causes
+issues when booting in a new OS after the hostOS update.
+
+Let's not run this script when booting a BalenaOS
+u-boot.
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ include/configs/iot-gate-imx8.h | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index f39ae454f9..368eca4fed 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -53,14 +53,10 @@
+ 	"setenv mmcbootpart ${resin_root_part};" \
+ 	"for src in usb_ul emmc_ul; do " \
+ 		"run ${src}; " \
+-		"if run ulbootscript; then " \
+-			"run bootscript; " \
+-		"else " \
+ 			"if run ulimage; then " \
+ 				"if run ulfdt; then " \
+ 					"echo Booting from ${boot_dev_str} script ...; " \
+ 					"booti ${loadaddr} - ${fdt_addr}; " \
+ 				"fi; " \
+ 			"fi; " \
+-		"fi; " \
+ 	"done; "
+-- 
+2.17.1
+

@@ -16,6 +16,7 @@ SRC_URI_append = " \
 	file://0002-iot-gate-imx8-Load-kernel-and-fdt-from-root-partitio.patch \
 	file://0003-rework-resin-specific-env-integration-kconfig.patch \
 	file://0004-config-Distinguish-Balena-build.patch \
+	file://0001-u-boot-compulab-Don-t-run-script-if-booting-with-Bal.patch \
 "
 
 BALENA_UBOOT_DEVICE_TYPES_prepend = " usb "
