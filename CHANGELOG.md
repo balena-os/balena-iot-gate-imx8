@@ -1,6 +1,66 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.80.5+rev1
+## (2021-07-06)
+
+
+<details>
+<summary> Update meta-balena from v2.79.7 to v2.80.5 [Alexandru Costache] </summary>
+
+> ## meta-balena-2.80.5
+> ### (2021-06-17)
+> 
+> * update-balena-supervisor: Improve obtaining the supervisor directory name [Alexandru Costache]
+> * Update balena-supervisor from v12.7.0 to v12.8.7 [Miguel Casqueira]
+> 
+> ## meta-balena-2.80.4
+> ### (2021-06-14)
+> 
+> * kernel-headers-test: simplify example module Makefile [Joseph Kogut]
+> 
+> ## meta-balena-2.80.3
+> ### (2021-06-10)
+> 
+> * Add oneshot service to migrate supervisor state config [Kyle Harding]
+> 
+> ## meta-balena-2.80.2
+> ### (2021-06-09)
+> 
+> * update-balena-supervisor: Refactor script to ensure target version is ran [Alexandru Costache]
+> 
+> ## meta-balena-2.80.1
+> ### (2021-06-07)
+> 
+> * bluez5: Disable PnP Device Information service [Zahari Petkov]
+> 
+> ## meta-balena-2.80.0
+> ### (2021-06-07)
+> 
+> * Revert Go 1.16 recipes [Joseph Kogut]
+> 
+> ## meta-balena-2.79.10
+> ### (2021-06-03)
+> 
+> * supervisor: Remove symlink to legacy resin sysconfig [Kyle Harding]
+> * hostapp-update-hooks: Migrate resin-supervisor to balena-supervisor [Kyle Harding]
+> * supervisor: Remove legacy resin supervisor container [Kyle Harding]
+> 
+> ## meta-balena-2.79.9
+> ### (2021-06-03)
+> 
+> * hostapp-update-hooks: Sync to disk when hook is done [Alex Gonzalez]
+> * extract-balena-ca: Sync changes to disk in case of power loss [Alex Gonzalez]
+> * resin-net-config: Make sure to sync changes to disk in case of power loss [Alex Gonzalez]
+> 
+> ## meta-balena-2.79.8
+> ### (2021-06-02)
+> 
+> * bluez: Set policy configuration to AutoEnable [Alex Gonzalez]
+> * bluez5: Replace executable path directory in unit file [Alex Gonzalez]
+> 
+</details>
+
 # v2.79.7+rev1
 ## (2021-06-02)
 
