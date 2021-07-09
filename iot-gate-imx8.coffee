@@ -1,6 +1,6 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
- 
+
 IOT_GATE_IMX8_FLASH = 'Insert USB STICK. Device will automatically boot from USB'
  
 postProvisioningInstructions = [
@@ -21,8 +21,8 @@ module.exports =
                 postProvisioning: postProvisioningInstructions
  
         instructions: [
-                instructions.ETCHER_SD
-                instructions.EJECT_SD
+                instructions.ETCHER_USB
+                instructions.EJECT_USB
                 instructions.FLASHER_WARNING
                 IOT_GATE_IMX8_FLASH
         ].concat(postProvisioningInstructions)
