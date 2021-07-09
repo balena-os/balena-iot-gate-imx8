@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.80.5+rev3
+## (2021-07-09)
+
+* iot-gate-imx8: Fix provisioning instructions [Alexandru Costache]
+
 # v2.80.5+rev2
 ## (2021-07-07)
 
