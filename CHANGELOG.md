@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.80.5+rev5
+## (2021-07-12)
+
+* balena-image: Install imx-boot in the boot partition [Alexandru Costache]
+
 # v2.80.5+rev4
 ## (2021-07-09)
 
