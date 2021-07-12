@@ -7,7 +7,7 @@ BALENA_BOOT_PARTITION_FILES = " \
     sb-iotgimx8.dtb:/sb-iotgimx8.dtb \
     sb-iotgimx8-can.dtb:/sb-iotgimx8-can.dtb \
     sb-iotgimx8-ied.dtb:/sb-iotgimx8-ied.dtb \
-    imx-boot-${MACHINE}-sd.bin-flash_evk:/ \
+    imx-boot-${MACHINE}-sd.bin-flash_evk:/imx-boot-${MACHINE}-sd.bin-flash_evk \
 "
 
 IMAGE_CMD_balenaos-img_append () {
