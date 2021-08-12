@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.82.2+rev2
+## (2021-08-11)
+
+* Add NFSD built-in module [Alex Gonzalez]
+
 # v2.82.2+rev1
 ## (2021-07-13)
 
