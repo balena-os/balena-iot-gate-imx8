@@ -8,5 +8,6 @@ do_install_append() {
 
 BALENA_CONFIGS_append = " nfsd"
 BALENA_CONFIGS[nfsd] = " \
-    CONFIG_NFSD=y \
+    CONFIG_NFSD=m \
+    CONFIG_NFS_ACL_SUPPORT=y \
 "
