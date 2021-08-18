@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.82.10+rev2
+## (2021-08-18)
+
+* Add NSFD support as a kernel module [Kyle Harding]
+
 # v2.82.10+rev1
 ## (2021-08-13)
 
