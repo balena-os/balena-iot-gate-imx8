@@ -15,7 +15,6 @@ module.exports =
         name: 'Compulab IOT-GATE-iMX8'
         arch: 'aarch64'
         state: 'released'
-        private: false
  
         stateInstructions:
                 postProvisioning: postProvisioningInstructions
