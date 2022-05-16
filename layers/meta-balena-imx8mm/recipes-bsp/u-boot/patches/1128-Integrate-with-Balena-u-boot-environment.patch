@@ -1,7 +1,7 @@
-From 6eee55df809e40cec60c82a8ff4ba9846d2a3da9 Mon Sep 17 00:00:00 2001
-From: Vicentiu Galanopulo <vicentiu@balena.io>
-Date: Mon, 1 Mar 2021 12:57:29 +0100
-Subject: [PATCH 1/2] Integrate with Balena u-boot environment
+From cfbd831f0301b0bc3bfd2becace8e4d223bb5680 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Mon, 16 May 2022 16:12:16 +0200
+Subject: [PATCH] Integrate with Balena u-boot environment
 
 Integrated u-boot with Balena environment
 and added unzipping of the kernel image.
@@ -10,24 +10,33 @@ Increased default env size.
 Upstream-Status: Inappropriate [configuration]
 Signed-off-by: Vicentiu Galanopulo  <vicentiu@balena.io>
 ---
- configs/iot-gate-imx8_defconfig |  5 +++++
+ configs/iot-gate-imx8.config    | 10 +++++++++-
  include/configs/iot-gate-imx8.h | 19 ++++++++++++++-----
- 2 files changed, 19 insertions(+), 5 deletions(-)
+ 2 files changed, 23 insertions(+), 6 deletions(-)
 
-diff --git a/configs/iot-gate-imx8_defconfig b/configs/iot-gate-imx8_defconfig
-index aa88e7956f..af4877876a 100644
---- a/configs/iot-gate-imx8_defconfig
-+++ b/configs/iot-gate-imx8_defconfig
-@@ -98,3 +98,8 @@ CONFIG_EXT4_WRITE=y
- CONFIG_FAT_WRITE=y
- CONFIG_OF_LIBFDT_OVERLAY=y
- # CONFIG_EFI_LOADER is not set
+diff --git a/configs/iot-gate-imx8.config b/configs/iot-gate-imx8.config
+index ebaa232b88..cb4d5fe548 100644
+--- a/configs/iot-gate-imx8.config
++++ b/configs/iot-gate-imx8.config
+@@ -1,5 +1,5 @@
+ CONFIG_TARGET_IOT_GATE_IMX8=y
+-CONFIG_LOCALVERSION="-iot-gate-imx8-3.0"
++CONFIG_LOCALVERSION="-iot-gate-imx8-3.0 Balena build"
+ CONFIG_DEFAULT_FDT_FILE="sb-iotgimx8-can.dtb"
+ CONFIG_DEFAULT_DEVICE_TREE="iot-gate-imx8"
+ CONFIG_DM_PCA953X=n
+@@ -16,3 +16,11 @@ CONFIG_CMD_PCA953X=y
+ CONFIG_DM_PCA953X=y
+ CONFIG_SYS_PROMPT="IOT-GATE-iMX8 => "
+ CONFIG_USB_ETHER_SMSC95XX=y
 +CONFIG_CMD_UNZIP=y
 +CONFIG_CMD_IMPORTENV=y
++CONFIG_CMD_EXPORTENV=y
++CONFIG_CMD_SETEXPR=y
 +CONFIG_PARTITION_UUIDS=y
 +CONFIG_CMD_PART=y
 +CONFIG_CMD_FS_UUID=y
-\ No newline at end of file
++
 diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
 index 9774949456..16cf6f7dcc 100644
 --- a/include/configs/iot-gate-imx8.h

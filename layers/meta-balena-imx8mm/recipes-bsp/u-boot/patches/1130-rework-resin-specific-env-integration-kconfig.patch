@@ -1,7 +1,7 @@
-From 2f79eefaaf30ede4993c69afd30a1216f0888ab1 Mon Sep 17 00:00:00 2001
-From: Vicentiu Galanopulo <vicentiu@balena.io>
-Date: Thu, 11 Feb 2021 17:23:18 +0100
-Subject: [PATCH] Rework resin-specific-env-integration-kconfig.patch
+From 5e5f7c85e78c399a953949c9f020c2a4434dd062 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Mon, 16 May 2022 09:58:24 +0200
+Subject: [PATCH 3/4] Rework resin-specific-env-integration-kconfig.patch
 
 Patch coming from meta-balena did not apply and needed a rework
 
@@ -12,18 +12,18 @@ Signed-off-by: Vicentiu Galanopulo  <vicentiu@balena.io>
  1 file changed, 2 insertions(+)
 
 diff --git a/include/env_default.h b/include/env_default.h
-index 56a8bae39a..d66471cd84 100644
+index ea31a8eddf..d08b5054db 100644
 --- a/include/env_default.h
 +++ b/include/env_default.h
-@@ -8,6 +8,7 @@
-  */
+@@ -9,6 +9,7 @@
  
  #include <env_callback.h>
+ #include <linux/stringify.h>
 +#include <env_resin.h>
  
  #ifdef DEFAULT_ENV_INSTANCE_EMBEDDED
  env_t embedded_environment __UBOOT_ENV_SECTION__(environment) = {
-@@ -21,6 +22,7 @@ static char default_environment[] = {
+@@ -24,6 +25,7 @@ uchar default_environment[] = {
  #else
  const uchar default_environment[] = {
  #endif
