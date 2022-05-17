@@ -1,6 +1,20 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.98.12
+## (2022-05-17)
+
+
+<details>
+<summary> Update balena-yocto-scripts to v1.19.4 [Alexandru Costache] </summary>
+
+> ## balena-yocto-scripts-1.19.4
+> ### (2022-04-28)
+> 
+> * balena-api.inc: fix 'fatal: unsafe repository' [Florin Sarbu]
+> 
+</details>
+
 # v2.85.2+rev8
 ## (2022-04-26)
 
