@@ -1,6 +1,11 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.98.25+rev1
+## (2022-05-17)
+
+* linux-compulab: Fix module version mismatch [Alexandru Costache]
+
 # v2.98.25
 ## (2022-05-17)
 
