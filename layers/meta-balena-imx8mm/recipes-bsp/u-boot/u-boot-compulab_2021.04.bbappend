@@ -58,3 +58,6 @@ SRC_URI_append = " \
 	file://1130-rework-resin-specific-env-integration-kconfig.patch \
 	file://1132-u-boot-compulab-Don-t-run-script-if-booting-with-Bal.patch \
 "
+
+do_configure[nostamp] = "1"
+do_compile[nostamp] = "1"
