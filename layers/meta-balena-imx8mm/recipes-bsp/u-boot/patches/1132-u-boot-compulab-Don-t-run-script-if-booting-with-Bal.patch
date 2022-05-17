@@ -1,7 +1,7 @@
-From 1c5d1c01fb0e4194244dab8b8e840924c8c19d2f Mon Sep 17 00:00:00 2001
+From 0033cfa66e1add321e8798cf8a03f6c09f892e53 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Tue, 6 Jul 2021 14:45:56 +0200
-Subject: [PATCH] u-boot-compulab: Don't run script if booting with Balena
+Date: Mon, 16 May 2022 10:04:46 +0200
+Subject: [PATCH] u-boot-compulab: Don't run script if booting with Balena 
  u-boot
 
 The upstream Compulab u-boot script checks if the u-boot present in the second
@@ -19,7 +19,7 @@ Signed-off-by: Alexandru Costache <alexandru@balena.io>
  1 file changed, 4 deletions(-)
 
 diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
-index f39ae454f9..368eca4fed 100644
+index e536a5f7a6..1fab1658c6 100644
 --- a/include/configs/iot-gate-imx8.h
 +++ b/include/configs/iot-gate-imx8.h
 @@ -53,14 +53,10 @@

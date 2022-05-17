@@ -1,7 +1,7 @@
-From dc64e2c17bd52f5f9f2ca804969b1ffb98b6f164 Mon Sep 17 00:00:00 2001
+From 7971f43394b92617ceb2c4dd1b1a817f1dfaf57c Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
 Date: Fri, 7 May 2021 14:14:53 +0200
-Subject: [PATCH 2/2] iot-gate-imx8: Load kernel and fdt from root partition
+Subject: [PATCH 2/4] iot-gate-imx8: Load kernel and fdt from root partition
 
 Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
@@ -10,7 +10,7 @@ Signed-off-by: Alexandru Costache <alexandru@balena.io>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
-index 16cf6f7dcc..f39ae454f9 100644
+index 16cf6f7dcc..e536a5f7a6 100644
 --- a/include/configs/iot-gate-imx8.h
 +++ b/include/configs/iot-gate-imx8.h
 @@ -39,8 +39,8 @@
