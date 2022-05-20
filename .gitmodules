@@ -31,3 +31,6 @@
 [submodule "layers/meta-bsp-imx8mm"]
 	path = layers/meta-bsp-imx8mm
 	url = https://github.com/compulab-yokneam/meta-bsp-imx8mm.git
+[submodule "contracts"]
+	path = contracts
+	url = https://github.com/balena-io/contracts.git
