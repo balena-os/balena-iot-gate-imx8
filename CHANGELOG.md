@@ -1,6 +1,20 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.98.28+rev3
+## (2022-05-21)
+
+
+<details>
+<summary> Update contracts to 6ffb1c8d87c8d0940405cbbc954aa625b4b1f94a [Renovate Bot] </summary>
+
+> ## contracts-1.13.75
+> ### (2022-05-21)
+> 
+> * jetson-xavier-agx: Update L4T in base images [Alexandru Costache]
+> 
+</details>
+
 # v2.98.28+rev2
 ## (2022-05-20)
 
