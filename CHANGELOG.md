@@ -1,6 +1,25 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.100.0+rev2
+## (2022-07-27)
+
+
+<details>
+<summary> Update contracts to 9db49d2fbb34542f53bf496135c32cccf5df487c [renovate[bot]] </summary>
+
+> ## contracts-2.0.7
+> ### (2022-07-19)
+> 
+> * hw.device-type: fix tdpzu9 device name [Francois]
+> 
+> ## contracts-2.0.6
+> ### (2022-07-17)
+> 
+> * hw.device-type: Add correct tdpzu9 board [Florin Sarbu]
+> 
+</details>
+
 # v2.100.0+rev1
 ## (2022-07-14)
 
