@@ -1,6 +1,33 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.101.2
+## (2022-08-05)
+
+
+<details>
+<summary> Update layers/meta-balena to 3c505918b2cbf72f607a3ccc65cc3853fd3a636e [renovate[bot]] </summary>
+
+> ## meta-balena-2.101.2
+> ### (2022-08-05)
+> 
+> * DRY the HUP smoke tests [Leandro Motta Barros]
+> * Check volume contents over HUPs [Leandro Motta Barros]
+> 
+</details>
+
+
+<details>
+<summary> Update layers/meta-balena to 7a62296718a363abd393107933f30e611ec27d1e [renovate[bot]] </summary>
+
+> ## meta-balena-2.101.2
+> ### (2022-08-05)
+> 
+> * DRY the HUP smoke tests [Leandro Motta Barros]
+> * Check volume contents over HUPs [Leandro Motta Barros]
+> 
+</details>
+
 # v2.101.0+rev1
 ## (2022-08-03)
 
