@@ -1,6 +1,32 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.101.8
+## (2022-08-23)
+
+
+<details>
+<summary> Update layers/meta-balena to ab80d0fbfbd28e10b7aa14739203a680d37815bd [renovate[bot]] </summary>
+
+> ## meta-balena-2.101.8
+> ### (2022-08-23)
+> 
+> * Update balena-io/balena-supervisor to v14.0.14 [renovate[bot]]
+> 
+</details>
+
+* Update contracts to 39a79c43f1b8ab4426d7a9c1cdeb9a9514101061 [renovate[bot]]
+
+<details>
+<summary> Update layers/meta-balena to 61b53fbb8b667de54707cc6aa94fd79674958856 [renovate[bot]] </summary>
+
+> ## meta-balena-2.101.8
+> ### (2022-08-23)
+> 
+> * Update balena-io/balena-supervisor to v14.0.14 [renovate[bot]]
+> 
+</details>
+
 # v2.101.6
 ## (2022-08-16)
 
