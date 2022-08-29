@@ -1,6 +1,22 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.102.1
+## (2022-08-29)
+
+
+<details>
+<summary> Update layers/meta-balena to 59f3caaab340bf15bf562b60e1f7315c437e1297 [renovate[bot]] </summary>
+
+> ## meta-balena-2.102.1
+> ### (2022-08-29)
+> 
+> * meta-balena-thud: initramfs: Fix building with latest meta-balena [Alex Gonzalez]
+> 
+</details>
+
+* Update contracts to 3bd4b2097a2796afc9a56a580e555982aad4f10b [renovate[bot]]
+
 # v2.102.0
 ## (2022-08-26)
 
