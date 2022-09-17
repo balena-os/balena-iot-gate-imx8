@@ -1,6 +1,35 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.103.3
+## (2022-09-16)
+
+
+<details>
+<summary> Update layers/meta-balena to a17b3251407b74e424a6bcf7850783975c366cf0 [renovate[bot]] </summary>
+
+> ## meta-balena-2.103.3
+> ### (2022-09-15)
+> 
+> * resin-init-flasher: skip array members not matching a named array [Joseph Kogut]
+> * resin-init-flasher: support pattern matching of devices [Joseph Kogut]
+> 
+</details>
+
+
+<details>
+<summary> Update layers/meta-balena to 81b94e873538faf4684977bafc501d3565288751 [renovate[bot]] </summary>
+
+> ## meta-balena-2.103.3
+> ### (2022-09-15)
+> 
+> * resin-init-flasher: skip array members not matching a named array [Joseph Kogut]
+> * resin-init-flasher: support pattern matching of devices [Joseph Kogut]
+> 
+</details>
+
+* Update contracts to 7ea918011dc38f509a7ae3bce30c3391bc839dd9 [renovate[bot]]
+
 # v2.103.1
 ## (2022-09-14)
 
