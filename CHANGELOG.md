@@ -1,6 +1,29 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.105.10
+## (2022-10-13)
+
+
+<details>
+<summary> Update contracts to 6f3ccc3060c64de164d6fd60a0bc65b2d8ceb5d3 [renovate[bot]] </summary>
+
+> ## contracts-2.0.19
+> ### (2022-10-05)
+> 
+> * Update dotnet 6.0 and 3.1 to latest version [Trong Nghia Nguyen]
+> * Add Python v3.10.7 v3.9.14 v3.8.14 and v3.7.14 [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.18
+> ### (2022-10-05)
+> 
+> * Switch from balenaCI to flowzone [Trong Nghia Nguyen]
+> 
+</details>
+
+* Update build and deploy workflow to v0.0.12 [Alex Gonzalez]
+* Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81 [renovate[bot]]
+
 # v2.105.8
 ## (2022-10-11)
 
