@@ -1,0 +1,2074 @@
+- commits:
+    - subject: Switch from balenaCI to flowzone
+      hash: 5b4f0cb122ded4a08dd8b7e50ffc1bf896ee798c
+      body: ""
+      footer:
+        Changelog-entry: Switch from balenaCI to flowzone
+        changelog-entry: Switch from balenaCI to flowzone
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.105.10+rev1
+  title: ""
+  date: 2022-10-14T16:32:42.039Z
+- version: 2.105.10
+  date: 2022-10-13T13:49:23Z
+  commits:
+    - hash: 903d8e4e4fb73d00b077a55783f7feecf43a176f
+      author: Alex Gonzalez
+      footers:
+        changelog-entry: Update build and deploy workflow to v0.0.12
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      subject: "build_and_deploy: update to v0.0.12"
+      body: |-
+        This update identifies test job names with the default prefix `test`
+        instead of a hardcoded `testbot-`.
+    - hash: d0d927f80d996da5fcd97df3aa6eae32537acfac
+      author: renovate[bot]
+      subject: Update layers/meta-balena digest to 0bc9280
+      body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81
+    - hash: 043259074d826925c06f858577fad5ce1facef33
+      author: renovate[bot]
+      subject: Update contracts digest to 6f3ccc3
+      body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 6f3ccc3060c64de164d6fd60a0bc65b2d8ceb5d3
+- version: 2.105.8
+- date: 2022-10-11T17:24:56Z
+- commits:
+    - hash: 6c025760970825039c740f5ca33c770ff23030e5
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to ee77950
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to ee77950ea892204938cf5681c9550952b423ede0
+- version: 2.105.2+rev1
+- date: 2022-09-27T21:10:42Z
+- commits:
+    - hash: c474ed3ee69c71e6b8cf46df7603e02e8fff9e48
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to 766eb75
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 766eb7591fe2b2f2cbc36af68d58627057f38193
+- version: 2.105.2
+- date: 2022-09-22T18:40:11Z
+- commits:
+    - hash: 01856e4dfbf0c76299fbe935e24360790a1036df
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to d17b086
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to d17b08668a56aa67c7b55594c3c910e66fbd4baf
+- version: 2.105.1
+- date: 2022-09-21T22:20:19Z
+- commits:
+    - hash: 79fec580eea3a26699d5cffdfd265d36533a66b6
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to ce91b3f
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to ce91b3f1807f5dc1d1ee861a164957215757d8a0
+- version: 2.105.0+rev1
+- date: 2022-09-21T12:29:50Z
+- commits:
+    - hash: 8dd9ffe0e57058117ef3ea9375c60feb393171cb
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to f2ace72
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to f2ace726406411ac4202d114ec8264a1a2c7af97
+- version: 2.105.0
+- date: 2022-09-21T02:16:59Z
+- commits:
+    - hash: 033b2793353e211b8360688561f1ff19c5212b1d
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to d767299
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to d767299d6d830f3c310a691ca8b5fc543a4215e5
+- version: 2.104.1
+- date: 2022-09-20T15:35:01Z
+- commits:
+    - hash: 295c9806f256bfce0e4a097ab8345be4cedfd699
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 226aa0d
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 226aa0d60a8e7d69ae2b17c5bc3efff1559a6bda
+- version: 2.104.0
+- date: 2022-09-20T03:13:09Z
+- commits:
+    - hash: 63b7a5dc4108aa221146200deb53507785106157
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 09435bc
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 09435bc8b96abc8fcd245eaa5e1ead0fe626cae5
+- commits:
+    - hash: 725cad47bd809b149238b98f7a7d87cefcfb5689
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 0dc6186
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 0dc61866fa0970f997f60955ab1a4c3dd48783a5
+- version: 2.103.3
+- date: 2022-09-17T01:01:02Z
+- commits:
+    - hash: e42b5ef595ec823538ad6684787df8026b7c066f
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to a17b325
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to a17b3251407b74e424a6bcf7850783975c366cf0
+- commits:
+    - hash: 8b45358221e7f520171b4017c4b3eb669fa21db0
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 81b94e8
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 81b94e873538faf4684977bafc501d3565288751
+- commits:
+    - hash: 840ad7abf0fc99a384042a3e8b1bc53cfb051d20
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to 7ea9180
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 7ea918011dc38f509a7ae3bce30c3391bc839dd9
+- version: 2.103.1
+- date: 2022-09-14T18:11:12Z
+- commits:
+    - hash: 2b4eda1ce4cf729d8efb4a3b6bbcdb7a9cca4f18
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 2f207a3
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 2f207a3dbc3f142d4d1e0b9fdbd6136bcfb40dac
+- version: 2.103.0
+- date: 2022-09-13T00:18:48Z
+- commits:
+    - hash: 9da9644584e0ddbbeca70b3911b88561ee80e8f8
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to d9b45ab
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to d9b45ab299777f08e8384a1e4b29c7ee4ef7822c
+- version: 2.102.6
+- date: 2022-09-08T00:45:12Z
+- commits:
+    - hash: cbc5d98e1d50948fc6b1413a694eb6a6abaf48f8
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 6e63144
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 6e63144eb5d665dc51958e0aa791256c48cc0522
+- version: 2.102.4+rev1
+- date: 2022-09-06T07:13:54Z
+- commits:
+    - hash: 02e7a11b6ef7f6cc93bb05d2db1ac4351e822d15
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to e752059
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to e7520599758cae5f507d7189a3415e95e2ff0309
+- version: 2.102.4
+- date: 2022-09-03T02:35:08Z
+- commits:
+    - hash: faa12bb0b950980ce4236bd3cfc4efaae28be1ac
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 6089949
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 608994976c4d5d4f1f4558245f6abc375ac0c0c7
+- version: 2.102.3
+- date: 2022-08-30T21:21:12Z
+- commits:
+    - hash: 4cfcf61411466dfe238c50e0a69b9bdef8c16d82
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to a24e525
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to a24e52592b2fbc1c60e6a6fc39c61470219f61b1
+- version: 2.102.1
+- date: 2022-08-29T16:16:23Z
+- commits:
+    - hash: f5be7998e7f278996bd7f2b98c92b50bcb16bb54
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 59f3caa
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 59f3caaab340bf15bf562b60e1f7315c437e1297
+- commits:
+    - hash: af9b6b64e12d018a095193db315ad40d02be4f9f
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to 3bd4b20
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 3bd4b2097a2796afc9a56a580e555982aad4f10b
+- version: 2.102.0
+- date: 2022-08-27T01:05:57Z
+- commits:
+    - hash: f0230438d9e57dfdaa3c7b377cf92667719f44f6
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 09dd67e
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 09dd67ef6a3abd1e9048bb39a2b9a02dc3af18c3
+- version: 2.101.11
+- date: 2022-08-25T13:00:00Z
+- commits:
+    - hash: 0f7955c7e1d903527e40edf890c14a8bbd0ca105
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 094cc17
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 094cc1766365844e9e4dcf46f4f247cad0231715
+- version: 2.101.10
+- date: 2022-08-23T19:53:18Z
+- commits:
+    - hash: f6f5c22aa9e7529c498138afbe0fe7ef3c4398af
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to a1084cf
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to a1084cfc437eb601cbb9f3de7822d916e08351de
+- version: 2.101.9
+- date: 2022-08-23T13:12:05Z
+- commits:
+    - hash: ca942840dfb081f7f557375a96e9cdc6bb4d4084
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to f2de8e3
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to f2de8e3d438671ac740bfa2119ab881afc5d2101
+- version: 2.101.8
+- date: 2022-08-23T05:51:00Z
+- commits:
+    - hash: 7611a0e0167b2e88c927413789d6db5d45a6d895
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to ab80d0f
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to ab80d0fbfbd28e10b7aa14739203a680d37815bd
+- commits:
+    - hash: 54d90e5dc2f33d098cda12fd3e16416f71ee9118
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to 39a79c4
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 39a79c43f1b8ab4426d7a9c1cdeb9a9514101061
+- commits:
+    - hash: 154a52a8ab608fc057a7a40dc0f1e41daa58af29
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 61b53fb
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 61b53fbb8b667de54707cc6aa94fd79674958856
+- version: 2.101.6
+- date: 2022-08-16T15:24:52Z
+- commits:
+    - hash: 389ebe4f4556be8ae931ad01261b33c5495e7e9a
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 7dfa6d2
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 7dfa6d2abc3795d47a8a6cdb30bc540ee110e7ee
+- commits:
+    - hash: a2422b6c0049d24d095a035110a43649e9dd9a18
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Modify layer ordering
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "bblayers: Modify layer ordering"
+- commits:
+    - body: |-
+        Yocto classes and conf files ignore layer priorities and are parsed
+        in order instead.
+- version: 2.101.5
+- date: 2022-08-15T15:20:52Z
+- commits:
+    - hash: bb82b5819611d80aaace549ad2081734b625a07c
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 771593f
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 771593f49920c4ae0ef101d2328f03f033449a9e
+- version: 2.101.4+rev1
+- date: 2022-08-11T15:04:57Z
+- commits:
+    - hash: f3c7123c8111ee2b569d5b5056a9aa50887f1e5f
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update balena-yocto-scripts digest to 9980750
+- commits:
+    - body: >-
+        Update balena-yocto-scripts
+
+        Changelog-entry: Update balena-yocto-scripts to 99807501efffc8c5034c88361049650a02511a78
+- version: 2.101.4
+- date: 2022-08-11T13:23:23Z
+- commits:
+    - hash: 49eff8267b7bac86a0269b9d361a1d935112c855
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 9d73da9
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 9d73da96e59bcbef4b626a090436caefb2834584
+- version: 2.101.3+rev1
+- date: 2022-08-11T01:17:51Z
+- commits:
+    - hash: f27fd056e6a681d81c69367d39c3bb27a85ac584
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to 91807ae
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 91807ae538dccedb69877eed28ae6752287e2f21
+- version: 2.101.3
+- date: 2022-08-06T07:44:35Z
+- commits:
+    - hash: e972be5e7eb083140ad400fca0da9ee9d90cb263
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to afcbee0
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to afcbee0c5dad04f02ba2a3ecb5d6d7db21f7ebe4
+- version: 2.101.2+rev1
+- date: 2022-08-05T23:02:02Z
+- commits:
+    - hash: 167bb513a30ed5fa1449ee6977f778e2fbdd9b39
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to 3d13365
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 3d133659481f38ee1bba63d3835a231c70c11eec
+- version: 2.101.2
+- date: 2022-08-05T19:42:45Z
+- commits:
+    - hash: 904440b4c6464883bcfff6bb81f96e645c13981a
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 3c50591
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 3c505918b2cbf72f607a3ccc65cc3853fd3a636e
+- commits:
+    - hash: 11c37e3e8645008b468d66ed7d1b66516fd59bda
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to 7a62296
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 7a62296718a363abd393107933f30e611ec27d1e
+- version: 2.101.0+rev1
+- date: 2022-08-03T15:16:54Z
+- commits:
+    - hash: abb74a68fcb94ec4de98af666af0e358a505a056
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Update build and deploy workflow to v0.0.9
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "build_and_deploy: update to v0.0.9"
+- commits:
+    - body: |-
+        This update will deploy as final when automation tests have been passed
+        for the previous merge commit.
+- commits:
+    - hash: a3ec0b1a3a02f49d61a82159823f278241f368c7
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Remove final argument from build and deploy workflow
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "workflows: build and deploy: Remove final argument"
+- commits:
+    - body: The final argument is now filled up dynamically.
+- version: 2.101.0
+- date: 2022-08-03T07:14:46Z
+- commits:
+    - hash: f1197024a9416f2fac5913a0a95b3a851164412f
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to c233b41
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to c233b4107fc25b08e963e2419b40263409d2de9e
+- version: 2.100.0+rev4
+- date: 2022-08-03T03:22:10Z
+- commits:
+    - hash: 075e652b88b635ab8a074119176272de05b6bd6b
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update balena-yocto-scripts digest to 09e4514
+- commits:
+    - body: >-
+        Update balena-yocto-scripts
+
+        Changelog-entry: Update balena-yocto-scripts to 09e4514953fed499a69c224b47969fd2c3fb7ab8
+- version: 2.100.0+rev3
+- date: 2022-08-03T02:23:09Z
+- commits:
+    - hash: a3e2cff89e1daa8d5fddad347cf4f0d9f1bea476
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to b48eaf2
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to b48eaf24e3b0cf67116e4adbe1a12d349825fda5
+- version: 2.100.0+rev2
+- date: 2022-08-02T10:11:16Z
+- commits:
+    - hash: 623b0be34831c6ea1c862c652bb0fa6c9063f7a5
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to 9db49d2
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 9db49d2fbb34542f53bf496135c32cccf5df487c
+- version: 2.100.0+rev1
+- date: 2022-07-15T01:03:35Z
+- commits:
+    - hash: 5368d61f4ad9ba36dbace349417bcd8f35d15774
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update contracts digest to e6f7ecd
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to e6f7ecd2977facdc5ee141b4bb7dc2719001df45
+- version: 2.100.0
+- date: 2022-07-14T23:03:22Z
+- commits:
+    - hash: 7f9be30c258294bc5d2494b8f69d84e0d93c087f
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update layers/meta-balena digest to d824f26
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to d824f26f501ed881ae048c709f14792ee8d657ca
+- version: 2.98.42+rev2
+- date: 2022-07-14T20:16:05Z
+- commits:
+    - hash: c4c021cde024619d62acd45a7f535d1d10eebf21
+- commits:
+    - author: renovate[bot]
+- commits:
+    - subject: Update balena-yocto-scripts digest to 5e003d5
+- commits:
+    - body: >-
+        Update balena-yocto-scripts
+
+        Changelog-entry: Update balena-yocto-scripts to 5e003d52ac8e118af3cce662362d45f780ade704
+- version: 2.98.42+rev1
+- date: 2022-07-14T13:37:43Z
+- commits:
+    - hash: 67e80e03839733b74a71932e7bec15179fa45837
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Update build and deploy workflow to support ESR tags
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "workflows: Update build and deploy to 0.0.6"
+- commits:
+    - body: This adds support for build and deploy of ESR tags.
+- version: 2.98.42
+- date: 2022-06-07T17:22:35Z
+- commits:
+    - hash: 91307763757ad443178e82cffb29058e6a23eaad
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 3a62a83
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 3a62a83ec12b05377b46d46bee9661b8b6b4a090
+- version: 2.98.40+rev2
+- date: 2022-06-07T12:43:03Z
+- commits:
+    - hash: e59bfc26d1ebf5a5f871cb3585c8abb394f5e1f0
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Add build and deploy workflow
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "workflows: Add build and deploy on release tag workflow"
+- commits:
+    - body: >-
+        This workflow will launch a Jenkins build and draft deploy job when a new
+
+        tag is made.
+- version: 2.98.40+rev1
+- date: 2022-06-05T14:20:56Z
+- commits:
+    - hash: 01c18cea43b84964e3ecfbba58ca7ea88d10539d
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update contracts digest to 58bcfbc
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 58bcfbc0b0237177c51db2d7120e61d70e9c415b
+- version: 2.98.40
+- date: 2022-06-04T23:04:33Z
+- commits:
+    - hash: 7627d85d4d68ec16f6ccd37689d8a14cd36b05e8
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to efd8306
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to efd8306a7a838b600d2cbf77a4ecfbd30ba9324a
+- version: 2.98.39
+- date: 2022-06-04T19:03:52Z
+- commits:
+    - hash: f9f73b61c37a93458f71ae158adbd233deca8ee7
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 82f6128
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 82f6128a170dd68e671e30278a4f98398f5d1034
+- version: 2.98.38
+- date: 2022-06-04T16:03:25Z
+- commits:
+    - hash: 536671f98abb3be40b986061d7ecc74f90ae130c
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 653c85c
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 653c85c0b332b740100c527667df6e184a1482c5
+- version: 2.98.37
+- date: 2022-06-04T03:01:33Z
+- commits:
+    - hash: 8d3b3e7191cd402faf1609372fb542d950368b81
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to bef2872
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to bef2872f224d9483910a5cc58110f269faf483c7
+- version: 2.98.35+rev1
+- date: 2022-06-03T13:20:54Z
+- commits:
+    - hash: 484d9c2b4e55cb7cac91f7d02fd404d1e67ca5b2
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update contracts digest to bba65f2
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to bba65f2a1904e5ccc61e25793c8b4be1f02f3942
+- version: 2.98.35
+- date: 2022-06-03T00:57:38Z
+- commits:
+    - hash: d810540134b62da54d24de80d103d96a3d0400d9
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to ff147b2
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to ff147b2a19933df0c16fb37cb7bb294e77caa985
+- version: 2.98.34
+- date: 2022-06-01T23:53:40Z
+- commits:
+    - hash: 68a22f00ef85b544265dc4f5ee9de3a9b9dd92ad
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 5bd9f32
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 5bd9f32d3ac9eb7eafb6eca9dd7ccc700fdacea3
+- commits:
+    - hash: e8fcd04a9a19a5df7928f3ffa2db8aa8cbd762d6
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update balena-yocto-scripts digest to 8cce34e
+- commits:
+    - body: >-
+        Update balena-yocto-scripts
+
+        Changelog-entry: Update balena-yocto-scripts to 8cce34e9763389eb59e4e375c532c81eb592fc1e
+- version: 2.98.33
+- date: 2022-05-28T18:38:26Z
+- commits:
+    - hash: 56d3c5e0a69e1953bbd572b5389b1d2052015e17
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 95c96e0
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 95c96e0624507fd9701912c67d3ae5ec5dbdf6f9
+- version: 2.98.32
+- date: 2022-05-27T22:35:09Z
+- commits:
+    - hash: e27e238c84c30db80008aa9ef1e1d4618b241243
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to cc2bc32
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to cc2bc321c33d9c2af1f4566793e16b075e425a7c
+- version: 2.98.31+rev1
+- date: 2022-05-27T16:34:17Z
+- commits:
+    - hash: f286865b699f698498b5374b634340c0d2aa08f7
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update contracts digest to 35dea15
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 35dea15031cf273d469171f81ed24c394332caf5
+- version: 2.98.31
+- date: 2022-05-26T22:24:27Z
+- commits:
+    - hash: baefd8502b7a3b4f2dc05438147d27e435f7cc20
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 7ae4278
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 7ae427858052ddad086a32a7458e301103d02013
+- version: 2.98.30
+- date: 2022-05-26T19:11:31Z
+- commits:
+    - hash: 61e7f4dd5c2ffd8b5ab3932dd043b5fe6b2902ba
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 5590394
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 55903947dc4dbbf7a0a1c5626ba6c8eaa1b09f67
+- version: 2.98.29+rev1
+- date: 2022-05-24T20:25:33Z
+- commits:
+    - hash: 6cacd155e14d475066896520f1d5b29ea0d2bedc
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update contracts digest to f251e05
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to f251e053b36b3a6d14cd022b9745e478dcad9a6a
+- version: 2.98.29
+- date: 2022-05-24T18:25:14Z
+- commits:
+    - hash: 724b9b7fda968f86493ad1b69ce24de020617bf7
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to c8f7eb1
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to c8f7eb1fdd6b342cc816e7b2b7e0c60634de2e87
+- version: 2.98.28+rev4
+- date: 2022-05-24T15:24:47Z
+- commits:
+    - hash: 5409a5e6a2e771283e896c30105cec697d2ea8c2
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update balena-yocto-scripts digest to 7b2a899
+- commits:
+    - body: >-
+        Update balena-yocto-scripts
+
+        Changelog-entry: Update balena-yocto-scripts to 7b2a89987f196ec4261d240a88c1790c55b366b0
+- version: 2.98.28+rev3
+- date: 2022-05-21T13:35:04Z
+- commits:
+    - hash: b3f7326afc0e02aa67176b520842011cf17653c9
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update contracts digest to 6ffb1c8
+- commits:
+    - body: >-
+        Update contracts
+
+        Changelog-entry: Update contracts to 6ffb1c8d87c8d0940405cbbc954aa625b4b1f94a
+- version: 2.98.28+rev2
+- date: 2022-05-20T22:14:34Z
+- commits:
+    - hash: 103d37b2c44520dbf2e7657317c39dca219b93df
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update balena-yocto-scripts digest to ae2cc2c
+- commits:
+    - body: >-
+        Update balena-yocto-scripts
+
+        Changelog-entry: Update balena-yocto-scripts to ae2cc2c2a69beec1c39333dd08624e4fec02c6e4
+- version: 2.98.28+rev1
+- date: 2022-05-20T19:35:15Z
+- commits:
+    - hash: 1c9f5ec32d95f1f2b0f94b790416644826a79fda
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Add contracts submodule
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: Add contracts submodule
+- commits:
+    - body: This is used to build and deploy an OS contract to the fleet.
+- version: 2.98.28
+- date: 2022-05-20T18:13:58Z
+- commits:
+    - hash: 92e5210c7df959a062c2c0ee58eecc54d27a1fe7
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 7e98e8f
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 7e98e8f49aee1f5538da16ff564c7d8fb009800e
+- version: 2.98.27
+- date: 2022-05-18T16:45:46Z
+- commits:
+    - hash: 95090aad1049328174062e0c759201923410a2da
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 7ca0039
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 7ca0039a8faf417f55cbd72b85a346e6407da04f
+- version: 2.98.26
+- date: 2022-05-17T20:45:27Z
+- commits:
+    - hash: 9f4f0cbfea01f56e436093f3b2c92954f1154514
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to 5399363
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to 5399363b3758860b22ac93a4406d62de5d88b229
+- version: 2.98.25+rev1
+- date: 2022-05-17T14:43:23Z
+- commits:
+    - hash: 8bc7bc3f0beae272da93d886c177c7167e186bab
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: "linux-compulab: Fix module version mismatch"
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "linux-compulab: Fix module version mismatch"
+- commits:
+    - body: null
+- version: 2.98.25
+- date: 2022-05-17T11:44:30Z
+- commits:
+    - hash: 79c15ae690c4bc0feaac72a2d76510fb6f72c456
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update layers/meta-balena digest to b6e9352
+- commits:
+    - body: >-
+        Update layers/meta-balena
+
+        Changelog-entry: Update layers/meta-balena to b6e9352e8784e433c647811d532d7ab3e2ee05e2
+- version: 2.98.12
+- date: 2022-05-17T10:02:45Z
+- commits:
+    - hash: b482990fda3e03c4ed8d35cff9f75e875c74ceea
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "u-boot-compulab: Update device recipe append"
+- commits:
+    - body: null
+- commits:
+    - hash: 71a8c17449067fd85a6cf191260b12d3963cdc09
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "meta-freescale-3rdparty: Update to iot-gate-imx8_r3.0"
+- commits:
+    - body: null
+- commits:
+    - hash: a63f2f238719b7223b7751a9207b7c9e6ee0791e
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "meta-freescale: Update to iot-gate-imx8_r3.0 revision"
+- commits:
+    - body: null
+- commits:
+    - hash: c857f027fd3d4583871965e980db55318c882588
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "meta-compulab-bsp: Update to iot-gate-imx8_r3.0 revision"
+- commits:
+    - body: null
+- commits:
+    - hash: 42d08c355bedb019cd0a2e8767f9fc33bd0ae21b
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "meta-compulab: Update to iot-gate-imx8_r3.0 revision"
+- commits:
+    - body: null
+- commits:
+    - hash: 7484daa6ada082c3551f902a720aff8ebdbe00a5
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.98.12"
+- commits:
+    - body: |-
+        Update meta-balena from 2.85.2 to 2.98.12
+        Changelog-entry: Update meta-balena from v2.85.2 to v2.98.12
+        Alexandru Costache <alexandru@balena.io>
+- commits:
+    - hash: 8f59fc3499dc0c615743d9c31cc6493c411c6656
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "u-boot-compulab: Remove old append"
+- commits:
+    - body: null
+- commits:
+    - hash: a22c34b4fa4583161e407d4cb02a435514579c85
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "linux-compulab: Update recipe append for newer kernel"
+- commits:
+    - body: null
+- commits:
+    - hash: 4e20753a21521d83c2b9423acbf7cfb5c8239f8f
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "meta-bsp-imx8mm: Update to iot-gate-imx8_r3.0 release"
+- commits:
+    - body: null
+- commits:
+    - hash: ad0f53da91de52bb128a6969212a174ff615e93e
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.19.4
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.19.4"
+- commits:
+    - body: Update balena-yocto-scripts from v1.19.3 to v1.19.4
+- commits:
+    - hash: 8413308bd2124db91b31597306a10b3a91ba2588
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "u-boot: Rework patches for u-boot update to 2021.04"
+- commits:
+    - body: null
+- commits:
+    - hash: 09a53a66ac205396aa2f2687263f11588f5e5e37
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "conf/layer: Fix layer name"
+- commits:
+    - body: null
+- commits:
+    - hash: cefcae66873a628564a04999170b6a183c735b17
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "conf/samples: Update OS_DEVELOPMENT flag"
+- commits:
+    - body: null
+- commits:
+    - hash: 2482ccab1e1e606585c65184f98d56b9bbe14303
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "recipes-bsp/imx-atf: Ensure this package is not re-used from sstate"
+- commits:
+    - body: null
+- commits:
+    - hash: f8260cb26a58c970cab2d005977a77034536ffd8
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "u-boot-compulab: Ensure this package is not reused from sstate"
+- commits:
+    - body: null
+- commits:
+    - hash: 24cc784669a3b599a0aba47a8685f8cef0d2e154
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "imx-boot: ensure u-boot changes are always picked up"
+- commits:
+    - body: and not re-used from sstate
+- commits:
+    - hash: 2055b1fab406b350e0baa25bceb5958162173313
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "balena-image: Install sdma firmware for uarts"
+- commits:
+    - body: |-
+        With the newer kernel, if the sdma firmware is not
+        loaded the kernel will crash each time ttymxc0, 1
+        or 3 are opened.
+- version: 2.85.2+rev8
+- date: 2022-04-27T07:22:26Z
+- commits:
+    - hash: 4623c886630ff448f782ce2a8c077a108f2c7849
+- commits:
+    - author: Renovate Bot
+- commits:
+    - subject: Update balena-yocto-scripts digest to 13da1d2
+- commits:
+    - body: >-
+        Update balena-yocto-scripts
+
+        Changelog-entry: Update balena-yocto-scripts to 13da1d2fd4483ba9a2cf9d3d7146985bbd720c6b
+- version: 2.85.2+rev7
+- date: 2022-03-29T15:25:40Z
+- commits:
+    - hash: 98aefe8be52dd541b267136bbb631efbedaa5cee
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Add renovate configuration
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: Add renovate configuration
+- commits:
+    - body: null
+- commits:
+    - hash: 52a7497422fb258d91eee3a8d20230a34f05e451
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Specify full path in repo.yml upstreams
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "repo.yml: Specify full path in upstream"
+- commits:
+    - body: |-
+        This is required so that versionist can automatically include nested
+        changelogs from renovate PRs.
+- commits:
+    - hash: 19d5fa82d0f0c497c854f6148fc9b67c4535bd26
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.17.2
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.17.2"
+- commits:
+    - body: Update balena-yocto-scripts from v1.17.0 to v1.17.2
+- version: 2.85.2+rev6
+- date: 2022-01-20T15:38:10Z
+- commits:
+    - hash: c17331cd7bf21f7821592849c1df5debb0a08fec
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.17.0
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.17.0"
+- commits:
+    - body: Update balena-yocto-scripts from v1.16.3 to v1.17.0
+- version: 2.85.2+rev5
+- date: 2022-01-18T09:36:16Z
+- commits:
+    - hash: 7726c5d2139a24981fe8e0b1ff3273a565193e5b
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.16.3
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.16.3"
+- commits:
+    - body: Update balena-yocto-scripts from v1.16.2 to v1.16.3
+- version: 2.85.2+rev4
+- date: 2022-01-17T09:57:31Z
+- commits:
+    - hash: 8c67335661ef52f9cf62180876c10ab27c42bd83
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.16.2
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.16.2"
+- commits:
+    - body: Update balena-yocto-scripts from v1.16.1 to v1.16.2
+- version: 2.85.2+rev3
+- date: 2022-01-12T12:41:21Z
+- commits:
+    - hash: 202a61438370a34bd63ba871838f697a85f0888b
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.16.1
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.16.1"
+- commits:
+    - body: Update balena-yocto-scripts from v1.16.0 to v1.16.1
+- version: 2.85.2+rev2
+- date: 2021-12-30T19:22:56Z
+- commits:
+    - hash: 37a2b4ee8dd1eaa5c743d6b3d1b16f4426e173eb
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.16.0
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.16.0"
+- commits:
+    - body: Update balena-yocto-scripts from v1.15.5 to v1.16.0
+- version: 2.85.2+rev1
+- date: 2021-10-21T14:40:45Z
+- commits:
+    - hash: fbe606aff52c152a3b093fe7ae4707b3a39d915f
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "iot-gate-imx8.coffee: Remove private flag"
+- commits:
+    - body: The public / private status is now used from the hw contracts.
+- commits:
+    - hash: 50ee82d8045444a54de70e3cc7172a936a566adf
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts from v1.14.7 to v1.15.5
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update to v1.15.5"
+- commits:
+    - body: Update balena-yocto-scripts from 1.14.7 to 1.15.5
+- commits:
+    - hash: 7ffde1e7a8b27cceb32270ef44376ef38c0a9553
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        changelog-entry: Update meta-balena from v2.82.10 to v2.85.2
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.85.2"
+- commits:
+    - body: Update meta-balena from 2.82.10 to 2.85.2
+- commits:
+    - hash: 7be2dd6a1d53241e2fcd0dd77a14858f0b676328
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "resin-info: Renamed to balena-info"
+- commits:
+    - body: |-
+        In meta-balena there has been a rename from resin* to balena* so let's
+        follow-up with these changes here also.
+- commits:
+    - hash: 6715d40f9c95ca275960ab26cb8ec2a7c31778e1
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "linux-firmware_%.bbappend: Remove obsolete append"
+- commits:
+    - body: Since we do not know why this was brought in let's remove it for now
+- commits:
+    - hash: 4621cd7a2c483fe92555c5520759ab935a70b850
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "meta-compulab-bsp: Update the BSP layer to a newer revision"
+- commits:
+    - body: |-
+        We need to update this in order to fix a linux-firmware compile error
+        related to files checksum (the BSP used to override these for some
+        reason but the version we are updating to now fixes this problem).
+- version: 2.82.10+rev2
+- date: 2021-10-20T16:58:20Z
+- commits:
+    - hash: 48f6b45232c6e130b0842cf696d3e76a1f90f94a
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        changelog-entry: Add NFSDv3/v4 support
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "linux-compulab: Add NFSDv3/v4 support"
+- commits:
+    - body: "Fixes #26"
+- version: 2.82.10+rev1
+- date: 2021-08-13T10:32:06Z
+- commits:
+    - hash: 6ad926edcc2a55e9b436d9d58d5b773665ca5b45
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: Update meta-balena from v2.82.2 to v2.82.10
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.82.10"
+- commits:
+    - body: Update meta-balena from 2.82.2 to 2.82.10
+- version: 2.82.2+rev2
+- date: 2021-08-12T14:44:00Z
+- commits:
+    - hash: 9bd71b6a4a321c542962796dbe51b0240456f818
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Add NFSD built-in module
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "linux-compulab: Add NFSD built-in module"
+- commits:
+    - body: "Fixes #20"
+- version: 2.82.2+rev1
+- date: 2021-07-13T08:01:27Z
+- commits:
+    - hash: 205f155a8b70e92d2ddac0f672159af5ba6f1ac5
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: Update meta-balena from v2.80.5 to v2.82.2
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.82.2"
+- commits:
+    - body: Update meta-balena from 2.80.5 to 2.82.2
+- version: 2.80.5+rev5
+- date: 2021-07-12T12:41:51Z
+- commits:
+    - hash: 80953126da4c2546ef8b2fa924a8729658339391
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "conf/layer: Mask upstream BSP recipes"
+- commits:
+    - body: Because we don't want autologin
+- commits:
+    - hash: f8502a4808f88572db07b0796c003c811d9bfc27
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: "balena-image: Install imx-boot in the boot partition"
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "balena-image: Install imx-boot in the boot partition"
+- commits:
+    - body: This is needed for HUP and for provisioning.
+- commits:
+    - hash: 0534d84d2581765320db2a8c5f1a48225c14b116
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "u-boot-compulab: Load kernel and dtb from current selected device"
+- commits:
+    - body: |-
+        This allows flashing BalenaOS from USB when a BalenaOS
+        u-boot is flashed already.
+- commits:
+    - hash: 368918484cb16264c5c7ab409ccb73abc51bba2e
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "resin-info: Specify tty for ascii logo"
+- commits:
+    - body: null
+- version: 2.80.5+rev4
+- date: 2021-07-09T14:27:00Z
+- commits:
+    - hash: b2ffccf17b88220dadae27802dcc442bd1d2e097
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "balena-image-initramfs: Drop append"
+- commits:
+    - body: |-
+        initramfs size is already specified in
+        meta-balena
+- commits:
+    - hash: 09b506c38ef09b171c6053dbf74ff2b8642b9c24
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: "balena-image: Install bootloader for flasher images"
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "balena-image: Install bootloader for flasher images"
+- commits:
+    - body: |-
+        Otherwise the flasher image won't be able to update
+        u-boot on the hw partition.
+- version: 2.80.5+rev3
+- date: 2021-07-09T12:20:01Z
+- commits:
+    - hash: 14eebdc94c9dcf720cd83c48f6e97a25e00e58ec
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: "iot-gate-imx8: Fix provisioning instructions"
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "iot-gate-imx8: Fix provisioning instructions"
+- commits:
+    - body: This device is provisioned via usb, not sd-card.
+- commits:
+    - hash: f16b146641e9d86b39204aaf57861ea930709c65
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "resin-init-flasher: Fix poweroff not working after flashing"
+- commits:
+    - body: |-
+        The flasher script fails before provisioning is
+        completed due to a typo in the bootloader path.
+- version: 2.80.5+rev2
+- date: 2021-07-07T11:43:28Z
+- commits:
+    - hash: c4bbd132673d0943050578460c2bcf47ec7fd89d
+- commits:
+    - author: Alex Gonzalez
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: Add balena-yocto-scripts upstream source
+- commits:
+    - footers:
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+- commits:
+    - subject: "repo.yml: Add balena-yocto-scripts upstream source"
+- commits:
+    - body: >-
+        This allows to add nested changelogs from the balena-yocto-scripts
+        repository
+
+        from version >= 1.14.1
+- version: 2.80.5+rev1
+- date: 2021-07-06T13:54:58Z
+- commits:
+    - hash: 506f55fef076509fbcdc0629a48bcc0c9fb08c4e
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: Update meta-balena from v2.79.7 to v2.80.5
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.80.5"
+- commits:
+    - body: Update meta-balena from 2.79.7 to 2.80.5
+- commits:
+    - hash: 2223619a7389f3d36d0f97102bf606e1516e8eec
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update balena-yocto-scripts to v1.14.7"
+- commits:
+    - body: null
+- commits:
+    - hash: f202fbd33335ca7fde7ad695fadea24ced6f77d1
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "u-boot: Don't run Compulab script with BalenaOS u-boot"
+- commits:
+    - body: |-
+        There's no point in updating the BalenaOS u-boot
+        because it's already updated during HUP.
+- version: 2.79.7+rev1
+- date: 2021-06-02T15:32:04Z
+- commits:
+    - hash: 90aaa28e665815833e2eef36cc67876c31d3df53
+- commits:
+    - author: Mark Corbin
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        changelog-entry: "balena-iot-gate-imx8: rename connectivity packagegroup"
+- commits:
+    - footers:
+        signed-off-by: Mark Corbin <mark@balena.io>
+- commits:
+    - subject: "balena-iot-gate-imx8: rename connectivity packagegroup"
+- commits:
+    - body: Rename the resin-connectivity packagegroup.
+- commits:
+    - hash: f149f68097d57e16d2596947fc7ab0d3ae3f2412
+- commits:
+    - author: Mark Corbin
+- commits:
+    - footers:
+        changelog-entry: Update meta-balena from v2.75.0 to v2.79.7
+- commits:
+    - footers:
+        signed-off-by: Mark Corbin <mark@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.79.7"
+- commits:
+    - body: Update meta-balena from 2.75.0 to 2.79.7
+- version: 2.75.0+rev3
+- date: 2021-05-14T15:59:09Z
+- commits:
+    - hash: 51c99c6ced4906c577372feb5fef415e9fa875a1
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        changelog-entry: Fix typo that prevented setting the preferred provider as
+          u-boot-compulab-fw-utils for u-boot-fw-utils
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "meta-balena-imx8mm:layer.conf: Fix typo for u-boot-fw-utils provider"
+- commits:
+    - body: null
+- version: 2.75.0+rev2
+- date: 2021-05-10T11:24:40Z
+- commits:
+    - hash: 8da81e58188cb89c638ff41977cd9eb477e1e2ab
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: "conf/layer: Remove vendor console resize scripts"
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "conf/layer: Remove vendor console resize scripts"
+- commits:
+    - body: |-
+        The Compulab BSP adds a couple scripts that call
+        resize on the terminal without redirecting stderr.
+        This has the effect of having unwanted output from
+        resize getting printed on the screen, as well as dashboard
+        trigered HUP exiting right at the beginning.
+        Mask these recipes to exclude them from our images.
+- version: 2.75.0+rev1
+- date: 2021-05-07T16:08:07Z
+- commits:
+    - hash: ccbd37a519dd826be02f74aa11def6261023e44e
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update balena-yocto-scripts to v1.11.0"
+- commits:
+    - body: null
+- commits:
+    - hash: d5f71bd35544879dc9d32121bec178b88f816f70
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        changelog-entry: Update meta-balena from v2.71.5 to v2.75.0
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.75.0"
+- commits:
+    - body: Update meta-balena from 2.71.5 to 2.75.0
+- commits:
+    - hash: 61cab5cf55c6f2d2bea00605682b2489a3ec129e
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "iot-gate-imx8: Rename to balena in coffee file"
+- commits:
+    - body: null
+- commits:
+    - hash: eb37ed0b024025924f7ab160a384cf688266f8a3
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "conf/samples: Rename to balena"
+- commits:
+    - body: null
+- commits:
+    - hash: 614c6cef71d38676507e22915d3f7970805b8fb4
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "recipes/core: Rename images to balena"
+- commits:
+    - body: null
+- commits:
+    - hash: 9431295ed1d41bf4ad2196e7950fbb0c7d572d01
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "linux-firmware: Move recipe to kernel layer"
+- commits:
+    - body: null
+- commits:
+    - hash: 564bd7ff7573719fcfff598691c3256e1fc750d2
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "meta-bsp-imx8: Update layer to release 2.3"
+- commits:
+    - body: null
+- commits:
+    - hash: 2e11352d04e375125367613509ec0cb6833aec01
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "u-boot: Rework integration with Balena"
+- commits:
+    - body: |-
+        Swich to loading the kernel and device-tree
+        from the rootfs, squash previous patches.
+- commits:
+    - hash: 47505e819c02ce0738f0676435428973ecb323ec
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "hostapp-update-hooks: Fix bootloader not getting updated"
+- commits:
+    - body: |-
+        Looks like imx-boot is actually loaded from the hw
+        partition mmcblk2boot0. It is loaded from mmcblk2
+        only in recovery mode, with the sd-card in the
+        recovery adapter.
+- commits:
+    - hash: 0adf60572bf44d16f5fa063904051de27931e84d
+- commits:
+    - author: Alexandru Costache
+- commits:
+    - footers:
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+- commits:
+    - subject: "resin-init-flasher-board: Ensure bootloader is written to the boot
+        parition"
+- commits:
+    - body: null
+- version: 2.71.5+rev6
+- date: 2021-03-09T16:19:10Z
+- commits:
+    - hash: 938f2b306297f24735fc93c6aeee5dc43860339e
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Set correct mmcblk device for hostappupdate
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "99-flash-bootloader: Set correct mmcblk device"
+- commits:
+    - body: |-
+        Set /dev/mmcblk2 as the device to be update when
+        running hostappupdate
+- version: 2.71.5+rev5
+- date: 2021-03-09T15:39:12Z
+- commits:
+    - hash: 7956bd4385cac07e1d0ac19fb817a62a614d7fb6
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Add flash_evk to boot partition
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "resin-image.bbappend: Add imx-boot-${MACHINE}-sd.bin-flash_evk to boot
+        partition"
+- commits:
+    - body: |-
+        Add imx-boot-${MACHINE}-sd.bin-flash_evk to the
+        boot partition for the Balena image (non-flasher).
+        This change is needed for the hostupdate hook
+- version: 2.71.5+rev4
+- date: 2021-03-09T15:02:33Z
+- commits:
+    - hash: d1f97d7fd6269d65b387900c5bb1668bceb65d7e
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Update RESIN_BOOT_PARTITION_FILES
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "recipes-core/images: Update RESIN_BOOT_PARTITION_FILES"
+- commits:
+    - body: |-
+        Remove imx-boot-${MACHINE}-sd.bin-flash_evk from boot
+        partition files for the Balena image and add boot.scr
+        to the Balena flasher image.
+        The flash_evk is not used on the boot partition of the
+        flasher image. The boot.scr is the script that re-writes
+        the bootloader using the USB as source
+- version: 2.71.5+rev3
+- date: 2021-03-08T15:24:03Z
+- commits:
+    - hash: 8198014c2b5192f98df54dce515d8b7292f26842
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Add u-boot-script for u-boot re-writing
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "u-boot-scr: Add u-boot-script"
+- commits:
+    - body: |-
+        In order to be able to flash the iot-gate-imx8,
+        with the BalenaOS, the Balena u-boot must be
+        written in the internal eMMC board memory.
+        This will be done by u-boot-script which will
+        load a script that will do that automatically
+        without the need for user intervention
+- version: 2.71.5+rev2
+- date: 2021-03-07T17:11:46Z
+- commits:
+    - hash: 91d203846eab55c26c6590602a50b6d7948fcdfa
+- commits:
+    - author: Florin Sarbu
+- commits:
+    - footers:
+        changelog-entry: Fix u-boot compile error that needed bison-native dependency
+- commits:
+    - footers:
+        signed-off-by: Florin Sarbu <florin@balena.io>
+- commits:
+    - subject: "u-boot-compulab_2020.04: Add bison as compile dependency"
+- commits:
+    - body: |-
+        Compilation of u-boot needs bison either as a host tool or as a native
+        package so let's add a compile dependency on bison-native here.
+- version: 2.71.5+rev1
+- date: 2021-03-05T15:26:56Z
+- commits:
+    - hash: 02c6a52256ccfdd128b849156897b9c995946ac9
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Update meta-balena from v2.71.4 to v2.71.5
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "layers/meta-balena: Update to v2.71.5"
+- commits:
+    - body: Update meta-balena from 2.71.4 to 2.71.5
+- commits:
+    - hash: 78d3d93ec8170d1a04e7fcb0fe66579ea2843897
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Update balena-yocto-scripts to v1.10.3
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "balena-yocto-scripts: Update balena-yocto-scripts to v1.10.3"
+- commits:
+    - body: null
+- commits:
+    - hash: d25e8f7ad288182cc88d305e2568bee7ac429ddb
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "conf/layer.conf: Remove HOSTTOOLS git-lfs bison deps"
+- commits:
+    - body: Remove git-lfs and bison dependencies
+- version: 2.71.4+rev2
+- date: 2021-03-04T12:17:10Z
+- commits:
+    - hash: 74683652663eda8feec29fc0ddb5253955be285a
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Add svg icon for iot-gate-imx8
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: Add correct svg file for the iot-gate-imx8
+- commits:
+    - body: null
+- version: 2.71.4+rev1
+- date: 2021-03-02T16:54:31Z
+- commits:
+    - hash: 94ef75f78ba0b074e9c65cee29793525faf51f91
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: "repo.yml: Remove obsolete Resin reference"
+- commits:
+    - body: null
+- commits:
+    - hash: 3abeac2e1368ccab7f509e7c5f0eb47ea7c10a7c
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: Add .gitignore file
+- commits:
+    - body: null
+- commits:
+    - hash: 782bb1d1f4e0676d650471fc1d05bd4ae9edc67c
+- commits:
+    - author: Vicentiu Galanopulo
+- commits:
+    - footers:
+        changelog-entry: Add needed versionist files
+- commits:
+    - footers:
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+- commits:
+    - subject: Add CHANGELOG files
+- commits:
+    - body: These files are needed for the versionist
