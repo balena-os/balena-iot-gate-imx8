@@ -1,6 +1,25 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.105.12
+## (2022-10-17)
+
+
+<details>
+<summary> Update layers/meta-balena to bfb53e361ce9a3205e9c468f7c83b614acb3c52e [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.12
+> ### (2022-10-17)
+> 
+> * classes: kernel-balena: Allow aufs patching to use network [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.11
+> ### (2022-10-13)
+> 
+> * Update balena-os/balena-supervisor to v14.2.10 [renovate[bot]]
+> 
+</details>
+
 # v2.105.10+rev2
 ## (2022-10-15)
 
