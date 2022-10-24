@@ -1,6 +1,20 @@
 # v2.71.4+rev1
 ## (2021-03-02)
 
+# v2.105.17
+## (2022-10-24)
+
+
+<details>
+<summary> Update layers/meta-balena to 5c78a62b8409752294e244bd1ecc111b4b969da7 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.17
+> ### (2022-10-21)
+> 
+> * tests: hup: reduce num. flashes and  hostapp sends [rcooke-warwick]
+> 
+</details>
+
 # v2.105.16+rev3
 ## (2022-10-24)
 
