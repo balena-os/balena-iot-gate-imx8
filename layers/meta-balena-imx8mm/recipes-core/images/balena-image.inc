@@ -2,7 +2,6 @@ IMAGE_FSTYPES_append = " balenaos-img"
 
 
 BALENA_BOOT_PARTITION_FILES = " \
-    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/Image.gz \
     ucm-imx8m-mini.dtb:/ucm-imx8m-mini.dtb \
     sb-iotgimx8.dtb:/sb-iotgimx8.dtb \
     sb-iotgimx8-can.dtb:/sb-iotgimx8-can.dtb \
@@ -15,3 +14,4 @@ IMAGE_CMD_balenaos-img_append () {
 }
 
 IMAGE_INSTALL_append = " linux-firmware-imx-sdma-imx7d "
+IMAGE_INSTALL_remove = "kernel-image"
