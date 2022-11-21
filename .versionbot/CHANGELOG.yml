@@ -1,4 +1,36 @@
 - commits:
+    - subject: "conf/layer: Enable firmware compression"
+      hash: a1292eb551d77ad9aaabecc497dd559083150023
+      body: |
+        The rootfs became full, so we need to enable firmware
+        compression for this DT.
+      footer:
+        Changelog-entry: "conf/layer: Enable firmware compression"
+        changelog-entry: "conf/layer: Enable firmware compression"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+    - subject: "conf/layer: unmask connectivity packagegroup"
+      hash: 1e44b933cd0d6df6552bb25296613288cc1ff048
+      body: |
+        This package has been masked previously in commit
+        90aaa28e, which described this change as a rename.
+
+        This description is not very clear about the reason
+        for masking the package, so let's bring this package
+        back into the OS so that wireless-regdb gets included.
+      footer:
+        Changelog-entry: "conf/layer: unmask connectivity packagegroup"
+        changelog-entry: "conf/layer: unmask connectivity packagegroup"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.107.4+rev1
+  title: ""
+  date: 2022-11-21T15:22:10.337Z
+- commits:
     - subject: Update layers/meta-balena to 62205779cf90d2ea1c05e95c0a27074822e6e10f
       hash: 7d2440e28c7a9a33a120caf86838f6dd7b65230c
       body: Update layers/meta-balena

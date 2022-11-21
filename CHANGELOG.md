@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.107.4+rev1
+## (2022-11-21)
+
+* conf/layer: Enable firmware compression [Alexandru Costache]
+* conf/layer: unmask connectivity packagegroup [Alexandru Costache]
+
 # v2.107.4
 ## (2022-11-20)
 
