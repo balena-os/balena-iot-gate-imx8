@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update layers/meta-balena to 581e322552bf300bc136f2bc553558d020cc313c
+      hash: d7b70450d33f59d53562e0febf57cbc801ea9d7c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 581e322552bf300bc136f2bc553558d020cc313c
+        changelog-entry: Update layers/meta-balena to 581e322552bf300bc136f2bc553558d020cc313c
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "patch: Add product documentation"
+              hash: a081ff2439838073afbaa28f38f3e7f6850dddfe
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.107.23
+          title: ""
+          date: 2022-12-09T14:41:44.836Z
+  version: 2.107.23
+  title: ""
+  date: 2022-12-09T19:45:58.991Z
+- commits:
     - subject: Update layers/meta-balena to 0b95d62f50f71a7aea94e383812cb8fcd0927b0b
       hash: 424da292fbe6a8493b3cd6352986bc46a097b4c4
       body: Update layers/meta-balena
