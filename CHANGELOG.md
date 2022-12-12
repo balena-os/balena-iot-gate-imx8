@@ -1,6 +1,33 @@
 Change log
 -----------
 
+# v2.107.27
+## (2022-12-12)
+
+
+<details>
+<summary> Update layers/meta-balena to 2ad93348592235ec26760b9f4e3f8b21f0d1d03f [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.27
+> ### (2022-12-12)
+> 
+> * chrony: disable reverse dns lookups in healthcheck [Ken Bannister]
+> 
+
+</details>
+
+
+<details>
+<summary> Update layers/meta-balena to d5e33e207a60caaf8fe6b83326cad8b6e94a47e5 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.27
+> ### (2022-12-12)
+> 
+> * chrony: disable reverse dns lookups in healthcheck [Ken Bannister]
+> 
+
+</details>
+
 # v2.107.23+rev1
 ## (2022-12-10)
 
