@@ -31,3 +31,6 @@
 [submodule "contracts"]
 	path = contracts
 	url = https://github.com/balena-io/contracts.git
+[submodule "meta-bsp-imx8mp"]
+	path = layers/meta-bsp-imx8mp
+	url = git@github.com:compulab-yokneam/meta-bsp-imx8mp.git
