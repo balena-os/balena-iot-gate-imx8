@@ -1,6 +1,89 @@
 Change log
 -----------
 
+# v2.108.13
+## (2023-01-04)
+
+
+<details>
+<summary> Update layers/meta-balena to 7aaa2abec902574d9e777a88464eda5be2810666 [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.13
+> ### (2023-01-04)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 44dceb4 [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.14.3
+>> #### (2023-01-04)
+>> 
+>> * chore(deps): update dependency eslint to 8.31.0 [renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 4383482 [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.14.3
+>> #### (2023-01-04)
+>> 
+>> * chore(deps): update dependency eslint to 8.31.0 [renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.108.12
+> ### (2023-01-04)
+> 
+> * tests/hup: Avoid an old engine bug when pulling multiarch images on rpi [Kyle Harding]
+> 
+
+</details>
+
+
+<details>
+<summary> Update layers/meta-balena to df321d4ad4831d27188ac9bf538600ccaaabc9b3 [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.13
+> ### (2023-01-04)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 44dceb4 [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.14.3
+>> #### (2023-01-04)
+>> 
+>> * chore(deps): update dependency eslint to 8.31.0 [renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 4383482 [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.14.3
+>> #### (2023-01-04)
+>> 
+>> * chore(deps): update dependency eslint to 8.31.0 [renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.108.12
+> ### (2023-01-04)
+> 
+> * tests/hup: Avoid an old engine bug when pulling multiarch images on rpi [Kyle Harding]
+> 
+
+</details>
+
 # v2.108.10
 ## (2022-12-30)
 
