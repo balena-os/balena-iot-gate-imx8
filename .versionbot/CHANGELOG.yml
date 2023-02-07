@@ -1,4 +1,18 @@
 - commits:
+    - subject: "layers/meta-balena: Update to v2.108.29"
+      hash: d56eed50e1d6d95a1c65537d1aef9212d9cf4f23
+      body: ""
+      footer:
+        Changelog-entry: "layers/meta-balena: Update to v2.108.29"
+        changelog-entry: "layers/meta-balena: Update to v2.108.29"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.108.29
+  title: ""
+  date: 2023-02-07T14:36:39.064Z
+- commits:
     - subject: add meta-perl to bblayers.conf
       hash: 581396a2daf0c167652347ba15fd5e08db421284
       body: |
