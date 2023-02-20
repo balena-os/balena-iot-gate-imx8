@@ -1,6 +1,58 @@
 Change log
 -----------
 
+# v2.112.11
+## (2023-02-20)
+
+
+<details>
+<summary> Update layers/meta-balena to d21da1fc034f4e0b09a457d0ed5eda47d0a18e13 [Renovate Bot] </summary>
+
+> ## meta-balena-2.112.11
+> ### (2023-02-20)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 84c2b96 [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.22.0
+>> #### (2023-02-20)
+>> 
+>> * Update core/contracts digest to 93ba80c [Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.112.10
+> ### (2023-02-20)
+> 
+> * tests: os: secureboot: skip if system is not locked down [Joseph Kogut]
+> 
+> ## meta-balena-2.112.9
+> ### (2023-02-20)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 8a7bdcc [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.21.0
+>> #### (2023-02-20)
+>> 
+>> * Update core/contracts digest to 103037c [Renovate Bot]
+>> 
+>> ### leviathan-2.20.1
+>> #### (2023-02-20)
+>> 
+>> * client: throw errors instead of blanket handling [Joseph Kogut]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.112.8+rev2
 ## (2023-02-20)
 
