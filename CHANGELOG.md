@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.112.14+rev2
+## (2023-03-18)
+
+* balena-image-flasher: Remove kernel from boot partition [Alexandru Costache]
+
 # v2.112.14+rev1
 ## (2023-03-16)
 

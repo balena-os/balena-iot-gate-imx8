@@ -1,4 +1,23 @@
 - commits:
+    - subject: "balena-image-flasher: Remove kernel from boot partition"
+      hash: 1997365cc30083399c85f767f717fb3b4d33fe6d
+      body: |
+        This DT can boot the flasher image only with a balena
+        u-boot. Since balena u-boot knows how to load the image
+        from the rootfs, the kernel can be removed from the
+        boot partition, because the total size of the contents
+        there now exceed half of the filesystem size.
+      footer:
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+        Changelog-entry: "balena-image-flasher: Remove kernel from boot partition"
+        changelog-entry: "balena-image-flasher: Remove kernel from boot partition"
+      author: Alexandru Costache
+      nested: []
+  version: 2.112.14+rev2
+  title: ""
+  date: 2023-03-18T17:22:27.402Z
+- commits:
     - subject: Prevent duplicate CI workflow executions
       hash: 4bf0e85338efdf5381423c965ec81f0c543a65a1
       body: ""
