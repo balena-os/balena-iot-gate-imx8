@@ -1,4 +1,201 @@
 - commits:
+    - subject: Update layers/meta-balena to 71c0d9581c2d5285b91c66675317edbcbb7b8ef9
+      hash: 28bbcc4b8323543f4473875c7590e10e5d67c1d4
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 71c0d9581c2d5285b91c66675317edbcbb7b8ef9
+        changelog-entry: Update layers/meta-balena to 71c0d9581c2d5285b91c66675317edbcbb7b8ef9
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "kernel-balena: Include NFS V2, V3 and V4 client and server modules"
+              hash: 54c4090b518bccfdba0b635ead129502572685be
+              body: >
+                As per internal discussion thread
+
+                https://balena.zulipchat.com/#narrow/stream/345882-_help/topic/.E2.9C.94.20nfs.20.283.20or.204.29.20on.20jetson.20nano/near/342072698
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.113.25
+          title: ""
+          date: 2023-03-23T19:39:38.006Z
+        - commits:
+            - subject: "dunfell+: remove obsolete systemd patch"
+              hash: f649288c2b284cb06081d296e52b4562f512107b
+              body: >
+                The patch applied to systemd addressed this upstream moby issue:
+
+                https://github.com/moby/moby/issues/27202
+
+
+                This was fixed in containerd 1.0.2:
+
+                https://github.com/containerd/console/pull/10/commits/c358734ec94e72903243bd1c9034874a1de09424
+
+
+                This fix is present in balena engine since v17.13.5, which has been in
+
+                use since commit 53ce147. Drop this patch from meta-balena-dunfell and
+
+                later.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "plymouth: replace duplicated patches w/ shared drop-ins"
+              hash: 72706964b8dd308b6c1772fa22c4e89d1680d205
+              body: >
+                Plymouth services are modified in the installation directory with balena
+
+                specific customizations using patches. This increases the manual intervention necessary
+
+                when adding support for a new version of this package or Yocto. Replace
+
+                the patches with equivalent drop-in configs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "systemd: mask systemd-getty-generator instead of patching"
+              hash: e54f4c5d49d1aa18a3544ab8c7e46aef8e366a0a
+              body: >
+                We disable systemd-getty-generator to allow explicit control over when
+
+                we setup getty to create consoles. Previously, this was done using a
+
+                patch to systemd, removing this generator. Mask this instead so we can
+
+                consolidate this configuration in meta-balena-common.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "systemd: replace duplicated patch w/ shared drop-ins"
+              hash: 1481e83e225a341da13c7b7a60d8c96865a458de
+              body: >
+                Certain services, such as getty@.service, and systemd-logind.service are
+
+                disabled when running in a container using a patch to the source files.
+
+                This increases the manual intervention necessary when adding support for
+
+                a new version of systemd. Replace the patch with drop-in configs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.113.24
+          title: ""
+          date: 2023-03-22T14:23:33.694Z
+        - commits:
+            - subject: "pyro/sumo: initrdscripts: fix migrate module for older Yocto versions"
+              hash: 4eca2991ce9433ad5291af6e17887815db068ca9
+              body: >
+                In old Yocto versions the util-linux recipe has not yet been split into
+
+                individual packages.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "networkmanager: do not update to latest version in sumo"
+              hash: 75311179f65172d2ca38f74b4487fe812b691a46
+              body: >
+                Hold the networkmanager update for older Yocto version as the new meson
+
+                based build system in newer versions is broken.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.113.23
+          title: ""
+          date: 2023-03-22T09:22:48.249Z
+        - commits:
+            - subject: Update tests/leviathan digest to ad4f908
+              hash: 92086f551ef3714f76432e66c09ce305a1de0e07
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: "compose: qemu: add FLASHER_SECUREBOOT var"
+                      hash: 51977e109069f08f0364eed208fab2e01c104284
+                      body: >
+                        This environment variable is passed through to the suite to preconfigure
+
+                        a flasher image to enable secure boot for testing.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Joseph Kogut <joseph@balena.io>
+                        signed-off-by: Joseph Kogut <joseph@balena.io>
+                      author: Joseph Kogut
+                      nested: []
+                    - subject: "swtpm: fix abort on exit"
+                      hash: fc65360ae7896545bdcaad0d37f1345a447251f4
+                      body: >
+                        Some incoming tests require QEMU to exit, simulating a device powering
+
+                        off, before starting QEMU again. This is used to "reflash" a virtualized
+
+                        device before continuing with testing, for instance after tampering with
+
+                        boot files on a secure boot enabled device to verify secure boot checks.
+
+
+                        However, swtpm will exit when QEMU disconnects. The `--exit-code-from`
+
+                        compose argument implies `--abort-on-container-exit`, so this results
+
+                        in the test run aborting prematurely.
+
+
+                        Adapt the entrypoint and command of the swtpm container to always
+
+                        restart the program without exiting the container.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Joseph Kogut <joseph@balena.io>
+                        signed-off-by: Joseph Kogut <joseph@balena.io>
+                      author: Joseph Kogut
+                      nested: []
+                  version: leviathan-2.23.1
+                  title: ""
+                  date: 2023-03-14T01:58:44.771Z
+          version: meta-balena-2.113.22
+          title: ""
+          date: 2023-03-21T15:17:11.571Z
+  version: 2.113.25
+  title: ""
+  date: 2023-03-23T22:17:41.447Z
+- commits:
     - subject: Update layers/meta-balena to 7fc00f6017dbc346bff72c54b33e6f77f7924413
       hash: 12eb8e6b5a3c5c9199ab63ffc5c3e1e1b693faff
       body: Update layers/meta-balena
