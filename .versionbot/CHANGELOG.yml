@@ -1,4 +1,22 @@
 - commits:
+    - subject: Update meta-freescale submodule to latest dunfell branch
+      hash: bb8af2d5a544e2927aefaf907753da629ca253e0
+      body: |
+        CodeAurora has shutdown https://bye.codeaurora.org/
+
+        The submodule update makes source code fetching work again
+        with the move from codeaurora to github.
+      footer:
+        Changelog-entry: Update meta-freescale submodule to latest dunfell branch
+        changelog-entry: Update meta-freescale submodule to latest dunfell branch
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.114.9+rev1
+  title: ""
+  date: 2023-04-24T07:32:20.973Z
+- commits:
     - subject: Update layers/meta-balena to e2663a747325b2cb71476fde889244ad424ec8a4
       hash: 1b9b875efaddcf2df54f1c66291a33c10f8d5978
       body: Update layers/meta-balena
