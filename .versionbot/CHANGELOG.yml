@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update layers/meta-balena to 6dea3e6c37f789704d95485ed1ddab2b63226111
+      hash: c0c274a205abfef5c7cf246932fbb9117e2e7210
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6dea3e6c37f789704d95485ed1ddab2b63226111
+        changelog-entry: Update layers/meta-balena to 6dea3e6c37f789704d95485ed1ddab2b63226111
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "patch: Add additional logs when logging in using balenaSDK"
+              hash: 2c607e878de285f30baab3c94605ca8d151ac597
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.114.15
+          title: ""
+          date: 2023-04-28T13:49:31.011Z
+  version: 2.114.15
+  title: ""
+  date: 2023-04-28T15:55:20.418Z
+- commits:
     - subject: Update layers/meta-balena to e610a1f7d15aaf3795b335e0773680561bee054b
       hash: 4c28cc74409f609f3d827fa2fcd8d4dd09ab7ebf
       body: Update layers/meta-balena
