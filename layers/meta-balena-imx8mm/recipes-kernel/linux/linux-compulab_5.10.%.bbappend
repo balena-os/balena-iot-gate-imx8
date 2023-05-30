@@ -19,4 +19,16 @@ BALENA_CONFIGS[ath10k] = " \
     CONFIG_ATH10K_PCI=m \
 "
 
+BALENA_CONFIGS_append = " tpm"
+BALENA_CONFIGS_DEPS[tpm] = " \
+    CONFIG_HW_RANDOM_TPM=y \
+    CONFIG_SECURITYFS=y \
+"
+BALENA_CONFIGS[tpm] = " \
+    CONFIG_TCG_TPM=m \
+    CONFIG_TCG_TIS_CORE=m \
+    CONFIG_TCG_TIS=m \
+    CONFIG_TCG_CRB=m \
+"
+
 SCMVERSION="n"
