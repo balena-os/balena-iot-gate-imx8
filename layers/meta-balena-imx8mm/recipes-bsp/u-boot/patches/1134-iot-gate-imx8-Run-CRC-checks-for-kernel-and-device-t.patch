@@ -1,0 +1,38 @@
+From cfe3bdf3c2eb6fd84311a2afb4b7c83340cd0360 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Wed, 31 May 2023 16:42:14 +0200
+Subject: [PATCH] iot-gate-imx8: Run CRC checks for kernel and device-tree
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ include/configs/iot-gate-imx8.h | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index c847be3387..4d7725da5a 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -39,8 +39,8 @@
+ 	"setenv iface usb; setenv dev 0; setenv part 1; " \
+ 	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
+-	"ulimage=load ${iface} ${dev}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr}\0" \
+-	"ulfdt=load ${iface} ${dev}:${resin_root_part} ${fdt_addr} boot/${fdt_file};\0" \
++	"ulimage=load ${iface} ${dev}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save;\0" \
++	"ulfdt=load ${iface} ${dev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}; run balena_fdt_load_crc_save;\0" \
+ 	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
+ 	"source;\0" \
+ 	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
+@@ -55,6 +55,8 @@
+ 		"run ${src}; " \
+ 			"if run ulimage; then " \
+ 				"if run ulfdt; then " \
++					"run balena_kernel_load_crc_check; " \
++					"run balena_fdt_load_crc_check; " \
+ 					"echo Booting from ${boot_dev_str} script ...; " \
+ 					"booti ${loadaddr} - ${fdt_addr}; " \
+ 				"fi; " \
+-- 
+2.37.2
+
