@@ -1,0 +1,44 @@
+From 83ef5501723628121de4ea04e312847e4803ad9a Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Wed, 31 May 2023 16:17:05 +0200
+Subject: [PATCH] iot-gate-imx8: Increase fdt address
+
+To fix booting with the newer kernel
+which has increased in size
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ include/configs/cpl-imx8m-mini.h | 2 +-
+ include/configs/iot-gate-imx8.h  | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/include/configs/cpl-imx8m-mini.h b/include/configs/cpl-imx8m-mini.h
+index 0215f04210..16eea2b7b1 100644
+--- a/include/configs/cpl-imx8m-mini.h
++++ b/include/configs/cpl-imx8m-mini.h
+@@ -92,7 +92,7 @@
+ 		"g_mass_storage.iSerialNumber=\"\" "\
+ 		"clk_ignore_unused "\
+ 		"\0" \
+-	"initrd_addr=0x43800000\0" \
++	"initrd_addr=0x44B60000\0" \
+ 	"initrd_high=0xffffffff\0" \
+ 	"emmc_dev=2\0" \
+ 	"sd_dev=1\0" \
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index 1fab1658c6..c847be3387 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -26,7 +26,7 @@
+ 	"script=boot.scr\0" \
+ 	"image=Image.gz\0" \
+ 	"zip_addr=0x70480000\0" \
+-	"fdt_addr=0x43000000\0"	\
++	"fdt_addr=0x44360000\0"	\
+ 	"fdt_high=0xffffffffffffffff\0"	\
+ 	"initrd_high=0xffffffffffffffff\0" \
+ 	"root_opt=rootwait rw\0" \
+-- 
+2.37.2
+

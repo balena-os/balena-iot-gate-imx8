@@ -7,10 +7,6 @@ DEPENDS = "bison-native"
 
 PV_append ="+git${SRCPV}"
 
-SRC_URI_remove = " \
-	file://resin-specific-env-integration-kconfig.patch \
-"
-
 do_compile_prepend() {
     if [ ${BUILD_REPRODUCIBLE_BINARIES} -eq 1 ];then
         export SOURCE_DATE_EPOCH=$(date +%s)
@@ -55,8 +51,8 @@ SRC_URI_append = " \
 	file://1127-Revert-remove-include-config_defaults.h.patch \
 	file://1128-Integrate-with-Balena-u-boot-environment.patch \
 	file://1129-iot-gate-imx8-Load-kernel-and-fdt-from-root-partitio.patch \
-	file://1130-rework-resin-specific-env-integration-kconfig.patch \
 	file://1132-u-boot-compulab-Don-t-run-script-if-booting-with-Bal.patch \
+	file://1133-iot-gate-imx8-Increase-fdt-address.patch \
 "
 
 do_configure[nostamp] = "1"
