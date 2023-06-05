@@ -1,4 +1,23 @@
 - commits:
+    - subject: "u-boot: Fix various boot issues"
+      hash: 9e3881eb5753f8911b1e0fa9a73e3fb44e54c36c
+      body: |
+        - remove reworked kconfig patch - was doubling the
+          environment size, causing the board to fail booting
+        - increase fdt address - the kernel was being relocated
+          to 0x40600000 ending at 0x43ae0000, overwriting the fdt
+          at 0x43000000.
+      footer:
+        Changelog-entry: "u-boot: Fix various boot issues"
+        changelog-entry: "u-boot: Fix various boot issues"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.115.4+rev1
+  title: ""
+  date: 2023-06-05T12:15:04.672Z
+- commits:
     - subject: Update layers/meta-balena to f06ec1fc32f6c5baa0c734eaf9e94ee88f7993bb
       hash: 99835f5941518bc309222a8fe9f315a982274c71
       body: Update layers/meta-balena

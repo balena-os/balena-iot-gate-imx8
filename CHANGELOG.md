@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.115.4+rev1
+## (2023-06-05)
+
+* u-boot: Fix various boot issues [Alexandru Costache]
+
 # v2.115.4
 ## (2023-06-01)
 
