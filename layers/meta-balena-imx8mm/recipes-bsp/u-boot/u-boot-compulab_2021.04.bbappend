@@ -47,6 +47,10 @@ do_configure () {
 
 BALENA_UBOOT_DEVICE_TYPES_prepend = " usb "
 
+# Fixes SPL crash with CRC32 checks PR in meta-balena.
+# CRC32 checks on kernel image and fdt run fine with the above.
+UBOOT_VARS_remove = "CONFIG_CMD_HASH"
+
 SRC_URI_append = " \
 	file://1127-Revert-remove-include-config_defaults.h.patch \
 	file://1128-Integrate-with-Balena-u-boot-environment.patch \
