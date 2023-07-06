@@ -1,6 +1,48 @@
 Change log
 -----------
 
+# v3.0.5
+## (2023-07-06)
+
+
+<details>
+<summary> Update layers/meta-balena to 5fca7f6bd85c00824689bedb2ceb4ee3fb5faad2 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.0.5
+> ### (2023-07-06)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.11.10 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.11.10
+>> #### (2023-07-05)
+>> 
+>> * Add revpi-connect-s to Raspberry Pi variants [Florin Sarbu]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-3.0.4
+> ### (2023-07-05)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.38 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.38
+>> #### (2023-07-03)
+>> 
+>> * Document a couple of troubleshooting tips [Leandro Motta Barros]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v3.0.3
 ## (2023-07-05)
 
