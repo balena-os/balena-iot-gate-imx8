@@ -1,4 +1,20 @@
 - commits:
+    - subject: "u-boot: Run CRC32 checks"
+      hash: 9f25c7750cfb5ffcf189821b66a9ad10d9905807
+      body: |
+        to determine if any overlapp occured between the kernel
+        and the fdt.
+      footer:
+        Changelog-entry: "u-boot: Run CRC32 checks"
+        changelog-entry: "u-boot: Run CRC32 checks"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 3.0.6+rev1
+  title: ""
+  date: 2023-07-10T08:09:47.114Z
+- commits:
     - subject: Update layers/meta-balena to f7963b6b6d2cafd4d2b9ab4cfb12052d1afa0e53
       hash: 50d5dd221dbdf76a86f07e7ead60bd9042af2846
       body: Update layers/meta-balena

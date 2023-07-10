@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.0.6+rev1
+## (2023-07-10)
+
+* u-boot: Run CRC32 checks [Alexandru Costache]
+
 # v3.0.6
 ## (2023-07-06)
 
