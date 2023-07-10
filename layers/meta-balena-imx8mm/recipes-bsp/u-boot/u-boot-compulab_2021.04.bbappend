@@ -47,12 +47,17 @@ do_configure () {
 
 BALENA_UBOOT_DEVICE_TYPES_prepend = " usb "
 
+# Fixes SPL crash with CRC32 checks PR in meta-balena.
+# CRC32 checks on kernel image and fdt run fine with the above.
+UBOOT_VARS_remove = "CONFIG_CMD_HASH"
+
 SRC_URI_append = " \
 	file://1127-Revert-remove-include-config_defaults.h.patch \
 	file://1128-Integrate-with-Balena-u-boot-environment.patch \
 	file://1129-iot-gate-imx8-Load-kernel-and-fdt-from-root-partitio.patch \
 	file://1132-u-boot-compulab-Don-t-run-script-if-booting-with-Bal.patch \
 	file://1133-iot-gate-imx8-Increase-fdt-address.patch \
+	file://1134-iot-gate-imx8-Run-CRC-checks-for-kernel-and-device-t.patch \
 "
 
 do_configure[nostamp] = "1"
