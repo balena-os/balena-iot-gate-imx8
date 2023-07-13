@@ -1,4 +1,19 @@
 - commits:
+    - subject: "recipes-connectivity: Port ModemManager update"
+      hash: 73055ce3d91afb3d4be7f7d235680a5d5df233b0
+      body: |
+        Until it gets merged in meta-balena
+      footer:
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+        Changelog-entry: "recipes-connectivity: Port ModemManager update"
+        changelog-entry: "recipes-connectivity: Port ModemManager update"
+      author: Alexandru Costache
+      nested: []
+  version: 3.0.8+rev2
+  title: ""
+  date: 2023-07-13T05:47:24.014Z
+- commits:
     - subject: Update balena-yocto-scripts to 45e32821ac6e3efba81e24a21e417a375da5e154
       hash: 02ed88df5feee575c1f91962288cde20485c4c44
       body: Update balena-yocto-scripts

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.0.8+rev2
+## (2023-07-13)
+
+* recipes-connectivity: Port ModemManager update [Alexandru Costache]
+
 # v3.0.8+rev1
 ## (2023-07-12)
 
