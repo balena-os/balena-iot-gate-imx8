@@ -1,7 +1,7 @@
-IMAGE_FSTYPES_append = " balenaos-img"
+IMAGE_FSTYPES:append = " balenaos-img"
 
 
-BALENA_BOOT_PARTITION_FILES = " \
+BALENA_BOOT_PARTITION_FILES += " \
     ucm-imx8m-mini.dtb:/ucm-imx8m-mini.dtb \
     sb-iotgimx8.dtb:/sb-iotgimx8.dtb \
     sb-iotgimx8-can.dtb:/sb-iotgimx8-can.dtb \
@@ -9,9 +9,9 @@ BALENA_BOOT_PARTITION_FILES = " \
     imx-boot-${MACHINE}-sd.bin-flash_evk:/imx-boot-${MACHINE}-sd.bin-flash_evk \
 "
 
-IMAGE_CMD_balenaos-img_append () {
+IMAGE_CMD:balenaos-img:append () {
     dd if=${DEPLOY_DIR_IMAGE}/imx-boot-${MACHINE}-sd.bin-flash_evk of=${BALENA_RAW_IMG} conv=notrunc seek=33 bs=1K
 }
 
-IMAGE_INSTALL_append = " linux-firmware-imx-sdma-imx7d "
-IMAGE_INSTALL_remove = "kernel-image"
+IMAGE_INSTALL:append = " linux-firmware-imx-sdma-imx7d "
+IMAGE_INSTALL:remove = "kernel-image"
