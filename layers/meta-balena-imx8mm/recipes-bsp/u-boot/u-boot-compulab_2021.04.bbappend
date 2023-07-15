@@ -1,13 +1,12 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/patches:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/patches:"
 
-UBOOT_KCONFIG_SUPPORT = "1"
 inherit resin-u-boot
 
 DEPENDS = "bison-native"
 
-PV_append ="+git${SRCPV}"
+PV:append ="+git${SRCPV}"
 
-do_compile_prepend() {
+do_compile:prepend() {
     if [ ${BUILD_REPRODUCIBLE_BINARIES} -eq 1 ];then
         export SOURCE_DATE_EPOCH=$(date +%s)
     fi
@@ -45,13 +44,13 @@ do_configure () {
     fi
 }
 
-BALENA_UBOOT_DEVICE_TYPES_prepend = " usb "
+BALENA_UBOOT_DEVICE_TYPES:prepend = " usb "
 
 # Fixes SPL crash with CRC32 checks PR in meta-balena.
 # CRC32 checks on kernel image and fdt run fine with the above.
-UBOOT_VARS_remove = "CONFIG_CMD_HASH"
+UBOOT_VARS:remove = "CONFIG_CMD_HASH"
 
-SRC_URI_append = " \
+SRC_URI:append = " \
 	file://1127-Revert-remove-include-config_defaults.h.patch \
 	file://1128-Integrate-with-Balena-u-boot-environment.patch \
 	file://1129-iot-gate-imx8-Load-kernel-and-fdt-from-root-partitio.patch \

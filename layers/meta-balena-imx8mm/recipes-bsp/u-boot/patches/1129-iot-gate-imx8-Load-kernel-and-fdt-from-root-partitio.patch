@@ -19,8 +19,8 @@ index 16cf6f7dcc..e536a5f7a6 100644
  	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
 -	"ulimage=load ${iface} ${dev}:${part} ${zip_addr} ${image}; unzip ${zip_addr} ${loadaddr}\0" \
 -	"ulfdt=load ${iface} ${dev}:${part} ${fdt_addr} ${fdt_file};\0" \
-+	"ulimage=load ${iface} ${dev}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr}\0" \
-+	"ulfdt=load ${iface} ${dev}:${resin_root_part} ${fdt_addr} boot/${fdt_file};\0" \
++	"ulimage=load ${iface} ${resin_dev_index}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr}\0" \
++	"ulfdt=load ${iface} ${resin_dev_index}:${resin_root_part} ${fdt_addr} boot/${fdt_file};\0" \
  	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
  	"source;\0" \
  	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
