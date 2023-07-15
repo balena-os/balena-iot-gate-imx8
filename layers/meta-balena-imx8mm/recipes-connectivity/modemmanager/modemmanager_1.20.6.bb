@@ -41,7 +41,7 @@ EXTRA_OEMESON = " \
     -Dqrtr=false \
 "
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${datadir}/icons \
     ${datadir}/polkit-1 \
     ${datadir}/dbus-1 \
@@ -50,4 +50,4 @@ FILES_${PN} += " \
     ${systemd_unitdir}/system \
 "
 
-SYSTEMD_SERVICE_${PN} = "ModemManager.service"
+SYSTEMD_SERVICE:${PN} = "ModemManager.service"
