@@ -38,12 +38,12 @@ do_install() {
     cp ${S}/cl-stest.desktop ${D}/usr/share/applications/
 }
 
-FILES_${PN} = " \
+FILES:${PN} = " \
 	/opt/compulab/cl-stest/* \
 	/usr/share/applications/* \
 "
 
-RDEPENDS_${PN} = "bash xz memtester"
-RDEPENDS_${PN}_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xterm', '', d)}"
-RDEPENDS_${PN}_append = " ${@bb.utils.contains('MACHINE', 'cl-som-imx7', '', 'imx-gpu-viv-demos', d)}"
+RDEPENDS:${PN} = "bash xz memtester"
+RDEPENDS:${PN}:append = " ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xterm', '', d)}"
+RDEPENDS:${PN}:append = " ${@bb.utils.contains('MACHINE', 'cl-som-imx7', '', 'imx-gpu-viv-demos', d)}"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
