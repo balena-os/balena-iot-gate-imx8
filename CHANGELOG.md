@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.0.8+rev3
+## (2023-07-16)
+
+* u-boot: check if kernel and dtb have been loaded before crc checks [Alexandru Costache]
+
 # v3.0.8+rev2
 ## (2023-07-13)
 

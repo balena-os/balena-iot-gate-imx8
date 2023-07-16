@@ -1,4 +1,18 @@
 - commits:
+    - subject: "u-boot: check if kernel and dtb have been loaded before crc checks"
+      hash: 143f8602bd35971155d270f6454e20645702d458
+      body: ""
+      footer:
+        Changelog-entry: "u-boot: check if kernel and dtb have been loaded before crc checks"
+        changelog-entry: "u-boot: check if kernel and dtb have been loaded before crc checks"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 3.0.8+rev3
+  title: ""
+  date: 2023-07-16T23:34:31.718Z
+- commits:
     - subject: "recipes-connectivity: Port ModemManager update"
       hash: 73055ce3d91afb3d4be7f7d235680a5d5df233b0
       body: |
