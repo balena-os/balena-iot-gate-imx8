@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.0.12+rev1
+## (2023-07-17)
+
+* recipes-bsp/u-boot: Rework patches for Kirkstone [Alexandru Costache]
+
 # v3.0.12
 ## (2023-07-17)
 

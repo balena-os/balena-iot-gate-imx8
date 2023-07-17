@@ -1,4 +1,18 @@
 - commits:
+    - subject: "recipes-bsp/u-boot: Rework patches for Kirkstone"
+      hash: 02a6004f8e97feaab372546bd88e4ac70ba1fce8
+      body: ""
+      footer:
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+        Changelog-entry: "recipes-bsp/u-boot: Rework patches for Kirkstone"
+        changelog-entry: "recipes-bsp/u-boot: Rework patches for Kirkstone"
+      author: Alexandru Costache
+      nested: []
+  version: 3.0.12+rev1
+  title: ""
+  date: 2023-07-17T18:37:42.742Z
+- commits:
     - subject: Update layers/meta-balena to 31843b108269c3147c8ae14b75ec533ea1b52ca5
       hash: b7c2be4a3daf00dc78716dfcad336a07a315d006
       body: Update layers/meta-balena
