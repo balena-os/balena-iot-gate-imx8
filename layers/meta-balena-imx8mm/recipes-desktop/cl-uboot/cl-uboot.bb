@@ -26,11 +26,11 @@ do_install() {
 	cp ${S}/cl-uboot.desktop ${D}/usr/share/applications/
 }
 
-FILES_${PN} = " \
+FILES:${PN} = " \
 	/usr/local/bin/* \
 	/usr/share/applications/* \
 "
 
-RDEPENDS_${PN} = "bash pv dialog mtd-utils"
-#RDEPENDS_${PN}_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xterm', '', d)}"
+RDEPENDS:${PN} = "bash pv dialog mtd-utils"
+#RDEPENDS:${PN}:append = " ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xterm', '', d)}"
 PACKAGE_ARCH = "all"

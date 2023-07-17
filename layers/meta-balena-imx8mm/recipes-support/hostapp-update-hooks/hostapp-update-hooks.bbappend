@@ -1,6 +1,6 @@
-FILESEXTRAPATHS_append := ":${THISDIR}/files"
+FILESEXTRAPATHS:append := ":${THISDIR}/files"
 
-HOSTAPP_HOOKS_append = " \
+HOSTAPP_HOOKS:append = " \
     99-resin-uboot \
     99-flash-bootloader \
 "

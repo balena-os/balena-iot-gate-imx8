@@ -25,10 +25,10 @@ do_install() {
 	cp ${S}/cl-cleanup.desktop ${D}/usr/share/applications/
 }
 
-FILES_${PN} = " \
+FILES:${PN} = " \
 	/usr/local/bin/* \
 	/usr/share/applications/* \
 "
 
-ALLOW_EMPTY_${PN} = "1"
-RDEPENDS_${PN} = "bash"
+ALLOW_EMPTY:${PN} = "1"
+RDEPENDS:${PN} = "bash"

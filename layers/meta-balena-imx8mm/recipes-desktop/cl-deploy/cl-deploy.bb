@@ -29,7 +29,7 @@ SRC_URI = " \
 	file://COPYING \
 "
 
-SRC_URI_append_cl-som-imx6ul = " \
+SRC_URI:append_cl-som-imx6ul = " \
 	file://cl-deploy.cl-som-imx6ul \
 "
 
@@ -62,27 +62,27 @@ do_mtd_copy() {
 	[ -f ${S}/cl-deploy.mtd ] && install -m 0755 ${S}/cl-deploy.mtd ${D}/usr/local/bin/
 }
 
-do_install_append_cm-fx6-evk() {
+do_install:append_cm-fx6-evk() {
 	do_mtd_copy
 }
 
-do_install_append_cl-som-imx6() {
+do_install:append_cl-som-imx6() {
 	do_mtd_copy
 }
 
-do_install_append_cl-som-imx7() {
+do_install:append_cl-som-imx7() {
 	do_mtd_copy
 }
 
-do_install_append_cl-som-imx6ul() {
+do_install:append_cl-som-imx6ul() {
 	cp ${S}/cl-deploy.cl-som-imx6ul ${D}/usr/local/bin/cl-deploy.platform
 }
 
-FILES_${PN} = " \
+FILES:${PN} = " \
 	/usr/local/bin/* \
 	/usr/share/* \
 "
 
-RDEPENDS_${PN} = "bash pv dialog file gzip bzip2 dosfstools util-linux xz e2fsprogs parted"
-RDEPENDS_${PN}_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xterm', '', d)}"
+RDEPENDS:${PN} = "bash pv dialog file gzip bzip2 dosfstools util-linux xz e2fsprogs parted"
+RDEPENDS:${PN}:append = " ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xterm', '', d)}"
 PACKAGE_ARCH = "all"

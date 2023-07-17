@@ -1,6 +1,6 @@
-From cfbd831f0301b0bc3bfd2becace8e4d223bb5680 Mon Sep 17 00:00:00 2001
+From 372cb1487a231e0c8cfc466a14ee0c16ef9767b4 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Mon, 16 May 2022 16:12:16 +0200
+Date: Fri, 14 Jul 2023 13:55:51 +0200
 Subject: [PATCH] Integrate with Balena u-boot environment
 
 Integrated u-boot with Balena environment
@@ -10,21 +10,14 @@ Increased default env size.
 Upstream-Status: Inappropriate [configuration]
 Signed-off-by: Vicentiu Galanopulo  <vicentiu@balena.io>
 ---
- configs/iot-gate-imx8.config    | 10 +++++++++-
+ configs/iot-gate-imx8.config    |  8 ++++++++
  include/configs/iot-gate-imx8.h | 19 ++++++++++++++-----
- 2 files changed, 23 insertions(+), 6 deletions(-)
+ 2 files changed, 22 insertions(+), 5 deletions(-)
 
 diff --git a/configs/iot-gate-imx8.config b/configs/iot-gate-imx8.config
-index ebaa232b88..cb4d5fe548 100644
+index 208ef299d3..b92adfa002 100644
 --- a/configs/iot-gate-imx8.config
 +++ b/configs/iot-gate-imx8.config
-@@ -1,5 +1,5 @@
- CONFIG_TARGET_IOT_GATE_IMX8=y
--CONFIG_LOCALVERSION="-iot-gate-imx8-3.0"
-+CONFIG_LOCALVERSION="-iot-gate-imx8-3.0 Balena build"
- CONFIG_DEFAULT_FDT_FILE="sb-iotgimx8-can.dtb"
- CONFIG_DEFAULT_DEVICE_TREE="iot-gate-imx8"
- CONFIG_DM_PCA953X=n
 @@ -16,3 +16,11 @@ CONFIG_CMD_PCA953X=y
  CONFIG_DM_PCA953X=y
  CONFIG_SYS_PROMPT="IOT-GATE-iMX8 => "
@@ -38,7 +31,7 @@ index ebaa232b88..cb4d5fe548 100644
 +CONFIG_CMD_FS_UUID=y
 +
 diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
-index 9774949456..16cf6f7dcc 100644
+index 9774949456..0a5325b97f 100644
 --- a/include/configs/iot-gate-imx8.h
 +++ b/include/configs/iot-gate-imx8.h
 @@ -17,12 +17,15 @@
@@ -88,5 +81,5 @@ index 9774949456..16cf6f7dcc 100644
  		"run ${src}; " \
  		"if run ulbootscript; then " \
 -- 
-2.17.1
+2.37.2
 
