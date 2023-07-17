@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-os/github-workflows to
+      hash: 85d12895380d90501f137adaebda7e2a06fa0f65
+      body: Update balena-os/github-workflows
+      footer:
+        Changelog-entry: Update balena-os/github-workflows to
+        changelog-entry: Update balena-os/github-workflows to
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 3.0.12+rev2
+  title: ""
+  date: 2023-07-17T21:40:32.435Z
+- commits:
     - subject: "recipes-bsp/u-boot: Rework patches for Kirkstone"
       hash: 02a6004f8e97feaab372546bd88e4ac70ba1fce8
       body: ""
