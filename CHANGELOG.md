@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.0.12+rev3
+## (2023-07-19)
+
+* conf/layer: Mask meta-balena ModemManager recipes [Alexandru Costache]
+
 # v3.0.12+rev2
 ## (2023-07-17)
 

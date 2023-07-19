@@ -1,4 +1,22 @@
 - commits:
+    - subject: "conf/layer: Mask meta-balena ModemManager recipes"
+      hash: 060df2477d4a99b2351b7ae1663513c17d95bc0d
+      body: |
+        Until they are merged and we can remove the existing
+        recipes in this repository. Without this, the MM update
+        PR cannot be built because the patches would be applied
+        twice.
+      footer:
+        Changelog-entry: "conf/layer: Mask meta-balena ModemManager recipes"
+        changelog-entry: "conf/layer: Mask meta-balena ModemManager recipes"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 3.0.12+rev3
+  title: ""
+  date: 2023-07-19T13:47:59.795Z
+- commits:
     - subject: Update balena-os/github-workflows to
       hash: 85d12895380d90501f137adaebda7e2a06fa0f65
       body: Update balena-os/github-workflows
