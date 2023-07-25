@@ -1,4 +1,66 @@
 - commits:
+    - subject: Update layers/meta-balena to 424c259104716586e450738c7de6fb7ef3472a02
+      hash: 3d60e1c01d01fb1cb1d98adf2882ec397328f85a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 424c259104716586e450738c7de6fb7ef3472a02
+        changelog-entry: Update layers/meta-balena to 424c259104716586e450738c7de6fb7ef3472a02
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "balena-image: Install extra_uEnv for all boards that use u-boot"
+              hash: c9d665f0c2a0454a84d9890d56e4d93f57bf93ad
+              body: >
+                Some board BSPs may define UBOOT_MACHINE, others UBOOT_CONFIG,
+
+                let's make sure we include the extra_uEnv.txt file in the non-flasher
+
+                image for both cases.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-3.0.17
+          title: ""
+          date: 2023-07-25T13:45:11.862Z
+        - commits:
+            - subject: "modemmanager: increase qmi port open timeout"
+              hash: d3358a33b29cf1c8404f2a0c266bbb2023235f84
+              body: |
+                The SIM7600G modem will fail to connect using
+                QMI and the default 45s timeout, nor will it work
+                with a 65s one. The value we found to work consistently
+                with this modem connected over pcie is 95s.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+            - subject: Update ModemManager to v1.20.6
+              hash: 0d629552a0caf3745e9e3738b3e74bbf802b020c
+              body: |
+                Also updated are the dependencies libqmi and libmbim.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update ModemManager to v1.20.6
+                changelog-entry: Update ModemManager to v1.20.6
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-3.0.16
+          title: ""
+          date: 2023-07-22T05:19:59.203Z
+  version: 3.0.17
+  title: ""
+  date: 2023-07-25T18:25:05.570Z
+- commits:
     - subject: Update layers/meta-balena to a20f839eb56d1636e9905c4809e27c4c318977e8
       hash: b5ca7200cc715f76161bfb4236b756f166847183
       body: Update layers/meta-balena
