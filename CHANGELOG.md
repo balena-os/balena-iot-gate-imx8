@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v3.1.6
+## (2023-08-02)
+
+
+<details>
+<summary> Update layers/meta-balena to a84dc6fbc5967f67acf0d12f4fe5a9081a70cb63 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.1.6
+> ### (2023-08-02)
+> 
+> * resin-init-flasher: Allow background device registration [Michal Toman]
+> 
+> ## meta-balena-3.1.5
+> ### (2023-08-01)
+> 
+> * Reduce scope of app token used for backports and ESR [Kyle Harding]
+> 
+> ## meta-balena-3.1.4
+> ### (Invalid date)
+> 
+> * kernel-balena: remove mispelled config setting [Alex Gonzalez]
+> 
+
+</details>
+
 # v3.1.3+rev1
 ## (2023-08-01)
 
