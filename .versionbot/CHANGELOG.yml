@@ -1,4 +1,36 @@
 - commits:
+    - subject: Update layers/meta-balena to eeb57a87d32b9dafb4656a5a598a57da425892e4
+      hash: bd27466ca1caea2e44fcfc645918545930975599
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to eeb57a87d32b9dafb4656a5a598a57da425892e4
+        changelog-entry: Update layers/meta-balena to eeb57a87d32b9dafb4656a5a598a57da425892e4
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "Integration layers: mobile-broadband-provider: fix fetch failure"
+              hash: 38cd8393b4a69b78a348e15176c232244e67bdb2
+              body: >
+                mobile-broadband-provider-info 'master' branch was renamed to
+                'main',
+
+                causing do_fetch() to fail before it was changes in Yocto Kirkstone
+
+                commit e4795393c4882cf38273521539cc255a4ffcb34a.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-3.1.13
+          title: ""
+          date: 2023-08-16T13:31:36.723Z
+  version: 3.1.13
+  title: ""
+  date: 2023-08-16T17:54:49.061Z
+- commits:
     - subject: Update layers/meta-balena to 07e9c06daa0b46154a241b448569c89ab307b6e7
       hash: 475bfcb102024770f8488604623dc97c886d3eaf
       body: Update layers/meta-balena
