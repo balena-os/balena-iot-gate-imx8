@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v4.0.15+rev4
+## (2023-10-09)
+
+
+<details>
+<summary> Update contracts to a06c0ccb61620b3a805339c523f85f69a780b6a5 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.77
+> ### (2023-10-09)
+> 
+> * hw.device-type: Add bluechiptechnology-tm3 [crichardson]
+> 
+> ## contracts-2.0.76
+> ### (2023-10-02)
+> 
+> * hw.device-type: Add Eurotec Lowpad lcbzu9 device [Francois Loubser]
+> 
+> ## contracts-2.0.75
+> ### (2023-09-28)
+> 
+> * raspberrypi5: remove reference to 64bits in display name [Alex Gonzalez]
+> 
+> ## contracts-2.0.74
+> ### (2023-09-28)
+> 
+> * raspberrypi5: Explicitly flag as public for the switch to apply [Alex Gonzalez]
+> 
+
+</details>
+
 # v4.0.15+rev3
 ## (2023-10-02)
 
