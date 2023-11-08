@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to 109179385bb4b862cd7572be14d4c5edddbd93c9
+      hash: eb05653cee243b48f8e913524535455c4d967fde
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 109179385bb4b862cd7572be14d4c5edddbd93c9
+        changelog-entry: Update contracts to 109179385bb4b862cd7572be14d4c5edddbd93c9
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "hw.device-type: Add imx8mm-lpddr4-evk device"
+              hash: 2ecc1b82d8a5e3d4a39e3d200a6c39d748c4d737
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+                signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+              author: Alex J Lennon
+          version: contracts-2.0.81
+          title: ""
+          date: 2023-10-26T06:31:05.497Z
+  version: 4.1.3+rev2
+  title: ""
+  date: 2023-11-08T22:52:25.060Z
+- commits:
     - subject: Update layers/meta-openembedded to
         7da6cb848bc42b3e6bd5d2b37b52ba75510a6ca0
       hash: abda90f5a566d6fe4c3408777638d952b7c70057
