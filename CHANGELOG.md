@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v4.1.5+rev2
+## (2023-11-23)
+
+* recipes-connectivity: Remove ModemManager and related Yocto recipes [Alexandru Costache]
+
 # v4.1.5+rev1
 ## (2023-11-22)
 

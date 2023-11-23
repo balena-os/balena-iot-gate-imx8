@@ -1,4 +1,20 @@
 - commits:
+    - subject: "recipes-connectivity: Remove ModemManager and related Yocto recipes"
+      hash: 87ec3dd4f4b07dd53eaf8489126ccd3004e3c1a4
+      body: |
+        These are now present in meta-balena, so we can remove them
+        from here.
+      footer:
+        Changelog-entry: "recipes-connectivity: Remove ModemManager and related Yocto recipes"
+        changelog-entry: "recipes-connectivity: Remove ModemManager and related Yocto recipes"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 4.1.5+rev2
+  title: ""
+  date: 2023-11-23T13:53:54.954Z
+- commits:
     - subject: Update contracts to c45079c380048f9f65967a68cf30f1654195384f
       hash: fe2f3df332a92c356475d6053f3cbe4e46c450fd
       body: Update contracts
