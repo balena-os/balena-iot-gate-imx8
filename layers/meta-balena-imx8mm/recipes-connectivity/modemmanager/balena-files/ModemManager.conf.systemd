@@ -1,5 +1,0 @@
-[Service]
-ExecStart=
-ExecStart=/usr/sbin/ModemManager --log-journal
-Restart=always
-RestartSec=10s
