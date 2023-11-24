@@ -1,4 +1,161 @@
 - commits:
+    - subject: Update layers/meta-balena to ea2f9c49095dcc6cfb2ad7289780a7b84f32d031
+      hash: dca79f3577dfefcc3525ede9ceeb5c4936cd1afb
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ea2f9c49095dcc6cfb2ad7289780a7b84f32d031
+        changelog-entry: Update layers/meta-balena to ea2f9c49095dcc6cfb2ad7289780a7b84f32d031
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: allow for multiple worker fleets"
+              hash: 7797aa081ab0a5339eea6e2fd326947d9e6ec6f1
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-4.1.9
+          title: ""
+          date: 2023-11-24T15:52:04.744Z
+        - commits:
+            - subject: Update tests/leviathan digest to 935f8ef
+              hash: 8b9f83c774bd7df17714dfa5443cf41822702ad6
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 3a19b6a005b2354d247e43ee63f374fd2822e4ef
+                      body: |
+                        Update
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Self-hosted Renovate Bot
+                      nested: []
+                  version: leviathan-2.29.16
+                  title: ""
+                  date: 2023-11-22T11:32:22.495Z
+                - commits:
+                    - subject: Update core/contracts digest to c45079c
+                      hash: 1d890adc096a64d8a7766ca22ffe4e11d8933434
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Self-hosted Renovate Bot
+                      nested: []
+                  version: leviathan-2.29.15
+                  title: ""
+                  date: 2023-11-22T10:35:34.292Z
+          version: meta-balena-4.1.8
+          title: ""
+          date: 2023-11-22T15:44:31.064Z
+        - commits:
+            - subject: "meta-balena-common: Move code from meta-balena-kirkstone"
+              hash: a8098360caf7ec3c6ede8aa953361fab2004b766
+              body: >
+                The code moved from meta-balena-kirkstone was not really
+                specific to
+
+                kirkstone so let's move it here so that future branches for newer yocto
+
+                releases which we'll base off kirkstone don't continue to add this
+
+                unneeded  duplication.
+
+                There are other meta-balena-* directories that still contain the
+
+                duplication we moved from meta-balena-kirkstone but we're not really
+
+                concerned with that because going forward those old directories will
+
+                naturally get deprecated.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-4.1.7
+          title: ""
+          date: 2023-11-17T10:23:11.798Z
+        - commits:
+            - subject: Update tests/leviathan digest to 30c115d
+              hash: 910c9b89c2c867b48b2e47a9a3775249e0211329
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: "patch: Add support for local autokit support"
+                      hash: 0c9fa8af880987316dbb0ca096ae15522784735b
+                      body: ""
+                      footer:
+                        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                      author: Vipul Gupta (@vipulgupta2048)
+                      nested: []
+                  version: leviathan-2.29.14
+                  title: ""
+                  date: 2023-11-15T19:24:24.674Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 1bd306de3510c8da83b42f87f49905fc532cfaf5
+                      body: |
+                        Update
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Self-hosted Renovate Bot
+                      nested: []
+                  version: leviathan-2.29.13
+                  title: ""
+                  date: 2023-11-13T03:35:12.022Z
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.9.25
+                      hash: 0e6357d94d2e05d8cef28dfc5f09e8fceea49114
+                      body: |
+                        Update balena-os/leviathan-worker from 2.9.24 to 2.9.25
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Self-hosted Renovate Bot
+                      nested: []
+                  version: leviathan-2.29.12
+                  title: ""
+                  date: 2023-11-13T01:58:28.069Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 4699166b073f9a6912b51e2814a38f1c9d8955d7
+                      body: |
+                        Update
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Self-hosted Renovate Bot
+                      nested: []
+                  version: leviathan-2.29.11
+                  title: ""
+                  date: 2023-11-13T00:59:30.237Z
+          version: meta-balena-4.1.6
+          title: ""
+          date: 2023-11-17T10:10:54.558Z
+  version: 4.1.9
+  title: ""
+  date: 2023-11-24T22:02:37.518Z
+- commits:
     - subject: Update contracts to 9a8805526c0fbe4aa1477f32b23c3d0e3647792a
       hash: 82b7e1d2801df0be3b0610281414860b1451f07f
       body: Update contracts

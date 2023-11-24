@@ -1,6 +1,78 @@
 Change log
 -----------
 
+# v4.1.9
+## (2023-11-24)
+
+
+<details>
+<summary> Update layers/meta-balena to ea2f9c49095dcc6cfb2ad7289780a7b84f32d031 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.1.9
+> ### (2023-11-24)
+> 
+> * tests: allow for multiple worker fleets [rcooke-warwick]
+> 
+> ## meta-balena-4.1.8
+> ### (2023-11-22)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 935f8ef [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.16
+>> #### (2023-11-22)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.15
+>> #### (2023-11-22)
+>> 
+>> * Update core/contracts digest to c45079c [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.1.7
+> ### (2023-11-17)
+> 
+> * meta-balena-common: Move code from meta-balena-kirkstone [Florin Sarbu]
+> 
+> ## meta-balena-4.1.6
+> ### (2023-11-17)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 30c115d [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.14
+>> #### (2023-11-15)
+>> 
+>> * patch: Add support for local autokit support [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.29.13
+>> #### (2023-11-13)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.12
+>> #### (2023-11-13)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.25 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.11
+>> #### (2023-11-13)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v4.1.5+rev3
 ## (2023-11-24)
 
