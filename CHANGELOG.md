@@ -1,6 +1,52 @@
 Change log
 -----------
 
+# v5.0.1
+## (2023-11-29)
+
+
+<details>
+<summary> Update layers/meta-balena to 0fed99ef0c338962d463b38eb58cd64cdf5804ae [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.0.1
+> ### (2023-11-29)
+> 
+> * Make Engine healthcheck performance test aware of device type [Leandro Motta Barros]
+> 
+> ## meta-balena-5.0.0
+> ### (2023-11-28)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v15 [Felipe Lalanne] </summary>
+> 
+>> ### balena-supervisor-15.0.1
+>> #### (2023-10-25)
+>> 
+>> * Expose ports from port mappings on services [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-15.0.0
+>> #### (2023-10-23)
+>> 
+>> * Ignore `expose` service compose configuration [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.13.14
+>> #### (2023-10-23)
+>> 
+>> * Add note regading API jitter on target state poll [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.1.11
+> ### (2023-11-27)
+> 
+> * tests: os: safe-reboot: wait for SV to start [rcooke-warwick]
+> 
+
+</details>
+
 # v4.1.10
 ## (2023-11-27)
 
