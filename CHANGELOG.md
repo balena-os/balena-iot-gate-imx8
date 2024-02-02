@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v5.1.21+rev1
+## (2024-02-02)
+
+
+<details>
+<summary> Update contracts to 75a97647a44cfe534f93926ab039afca6570cb86 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.92
+> ### (2024-02-01)
+> 
+> * hw.device-type: Add phyboard-lyra-am62xx-2 device [Atanas Bunchev]
+> 
+> ## contracts-2.0.91
+> ### (2024-02-01)
+> 
+> * Remove generic-amd64-fde device type [Michal Toman]
+> 
+
+</details>
+
 # v5.1.21
 ## (2024-02-02)
 
