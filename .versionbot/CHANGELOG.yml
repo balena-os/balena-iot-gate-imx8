@@ -1,4 +1,51 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 6ccd3b1013b6d25ea9990a07a06bee864fe0a172
+      hash: 7bc2d6d03fd126800eba9835aef075fdd3e4fd8e
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 6ccd3b1013b6d25ea9990a07a06bee864fe0a172
+        changelog-entry: Update balena-yocto-scripts to 6ccd3b1013b6d25ea9990a07a06bee864fe0a172
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "automation/include: Pass helper image version"
+              hash: 2a8e25e0d0b46b3249c1c77b0c38219ebcdea1f0
+              body: >
+                This is needed by the balena-push-env helper image that needs
+                the
+
+                balena-yocto-scripts version but has no way of getting that info
+
+                otherwise.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: balena-yocto-scripts-1.21.2
+          title: ""
+          date: 2024-02-08T07:44:50.538Z
+        - commits:
+            - subject: "balena-deploy: Remove docker.io when pulling image"
+              hash: bd23b9ad59a1645bce79b0df5ef3879d10774a3a
+              body: |
+                This seems to cause docker images --format to fail
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+              nested: []
+          version: balena-yocto-scripts-1.21.1
+          title: ""
+          date: 2024-02-07T12:39:41.622Z
+  version: 5.1.24+rev2
+  title: ""
+  date: 2024-02-08T12:43:45.062Z
+- commits:
     - subject: Update layers/meta-openembedded to
         ce9c0d76171ce9d07e4bcb702b750416b265562a
       hash: c694d292fda0642884a48aa763d4741a1b1c1ee2
