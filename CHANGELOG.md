@@ -1,6 +1,101 @@
 Change log
 -----------
 
+# v5.1.54
+## (2024-03-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 2cef02167e0e780d1e96da0f801f1f4d5e27e79f [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.54
+> ### (2024-03-13)
+> 
+> * mkfs-hostapp-native: Disable iptables features in yocto balena daemon [Kyle Harding]
+> 
+> ## meta-balena-5.1.53
+> ### (2024-03-12)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.1.5 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-16.1.5
+>> #### (2024-03-12)
+>> 
+>> * Update fatrw to v0.2.21 [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.52
+> ### (2024-03-11)
+> 
+> * images: balena-image-initramfs: remove uneeded kernel image [Alex Gonzalez]
+> * classes: kernel-balena-noimage: add extra space [Alex Gonzalez]
+> 
+> ## meta-balena-5.1.51
+> ### (2024-03-08)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.1.4 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-16.1.4
+>> #### (2024-03-08)
+>> 
+>> * Update balena-register-device and its deps [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.1.3
+>> #### (2024-03-07)
+>> 
+>> * Remove dependency on @balena/happy-eyeballs [Felipe Lalanne]
+>> * Update Node to v20 [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.1.2
+>> #### (2024-03-06)
+>> 
+>> * Update typescript to v5 [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.1.1
+>> #### (2024-03-04)
+>> 
+>> * Update @balena/lint to v7 [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.50
+> ### (2024-03-07)
+> 
+> * tests/device-tree: Rework to account for new form of setting dtoverlay in config.txt by the supervisor [Florin Sarbu]
+> 
+> ## meta-balena-5.1.49
+> ### (2024-03-06)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to a677d89 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.64
+>> #### (2024-03-04)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.48
+> ### (2024-03-06)
+> 
+> * hostapp-update-hooks: Soft include balena-config-defaults [Michal Toman]
+> 
+
+</details>
+
 # v5.1.47+rev3
 ## (2024-03-14)
 
