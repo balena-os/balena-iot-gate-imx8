@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v5.2.2+rev2
+## (2024-03-21)
+
+
+<details>
+<summary> Update contracts to 2de35264348458938cf5c85c28660a58a1e8066a [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.97
+> ### (2024-03-21)
+> 
+> * hw.device-type: Add beagleplay device [delhiryder]
+> 
+> ## contracts-2.0.96
+> ### (2024-03-14)
+> 
+> * hw.device-type: Add beaglebone-play device [delhiryder]
+> 
+
+</details>
+
 # v5.2.2+rev1
 ## (2024-03-21)
 
