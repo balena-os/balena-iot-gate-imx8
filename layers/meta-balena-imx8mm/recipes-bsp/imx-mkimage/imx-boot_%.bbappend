@@ -9,8 +9,8 @@ SRC_URI = "git://github.com/nxp-imx/imx-mkimage.git;protocol=https;branch=${SRCB
 "
 
 DEPENDS:append = " \
-    virtual/bootloader \
+    u-boot-compulab \
 "
 do_configure[nostamp] = "1"
-do_compile[depends] += "virtual/bootloader:do_deploy"
+do_compile[depends] += "u-boot-compulab:do_deploy"
 do_compile[nostamp] = "1"
