@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v5.2.2+rev4
+## (2024-05-07)
+
+* Update BSP layer to Compulab 3.2.2 [Alexandru Costache]
+* conf/layer: Remove leftover MM libraries pinning [Alexandru Costache]
+
 # v5.2.2+rev3
 ## (2024-05-07)
 

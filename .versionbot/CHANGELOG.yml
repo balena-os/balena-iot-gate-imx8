@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update BSP layer to Compulab 3.2.2
+      hash: 88fc0ce3ca77cbc38e91fcc58acd32e988875c7f
+      body: >
+        as per the XML at
+        https://github.com/compulab-yokneam/meta-bsp-imx8mm/blob/iot-gate-imx8-r3.2.2/scripts/imx_5.15.32-2.0.0-compulab.xml
+      footer:
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+        Changelog-entry: Update BSP layer to Compulab 3.2.2
+        changelog-entry: Update BSP layer to Compulab 3.2.2
+      author: Alexandru Costache
+      nested: []
+    - subject: "conf/layer: Remove leftover MM libraries pinning"
+      hash: e96c9b758f5cf69d2bb2d1cfd806b3458e8daa20
+      body: >
+        Because these pinning could cause problems when MM or one of it's
+        dependencies get updated in meta-balena.
+      footer:
+        Changelog-entry: "conf/layer: Remove leftover MM libraries pinning"
+        changelog-entry: "conf/layer: Remove leftover MM libraries pinning"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 5.2.2+rev4
+  title: ""
+  date: 2024-05-07T17:26:38.562Z
+- commits:
     - subject: Update balena-yocto-scripts to 466d6ec592656bb950a393fc1c7a5d5ff4cf3455
       hash: b4ada6a74526964b2342686b4f8ff2cf089309b4
       body: Update balena-yocto-scripts
