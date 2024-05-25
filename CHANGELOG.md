@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.10+rev2
+## (2024-05-25)
+
+* Update layers/meta-openembedded to 70b217ecc812296d98e1aa027a7d182a8019dded [Self-hosted Renovate Bot]
+
 # v5.3.10+rev1
 ## (2024-05-25)
 
