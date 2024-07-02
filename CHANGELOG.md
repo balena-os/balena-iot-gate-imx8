@@ -1,6 +1,37 @@
 Change log
 -----------
 
+# v5.3.19+rev5
+## (2024-07-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 64c93852695af74dc1ddb355da0c8e2ff464638c [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.24.2
+> ### (2024-07-02)
+> 
+> * Fix quoting of $GITHUB_OUTPUT [Leandro Motta Barros]
+> 
+> ## balena-yocto-scripts-1.24.1
+> ### (2024-06-27)
+> 
+> * Simplify check for secure boot [Leandro Motta Barros]
+> 
+> ## balena-yocto-scripts-1.24.0
+> ### (2024-06-26)
+> 
+> * Support runner selection in the test matrix [Kyle Harding]
+> * Allow both combinatorial and include syntax for test_matrix [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.23.1
+> ### (2024-06-26)
+> 
+> * Refactor secrets and variables to use environments [Kyle Harding]
+> 
+
+</details>
+
 # v5.3.19+rev4
 ## (2024-06-20)
 
