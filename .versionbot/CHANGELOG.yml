@@ -1,4 +1,215 @@
 - commits:
+    - subject: Update layers/meta-balena to e6c2037615db74af70250c5d3351c44e2ee31fbb
+      hash: ec4bf2e6466db15f888a906b92b88ac5a524e204
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e6c2037615db74af70250c5d3351c44e2ee31fbb
+        changelog-entry: Update layers/meta-balena to e6c2037615db74af70250c5d3351c44e2ee31fbb
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v16.3.17
+              hash: 521d51db1023846cf95e40a9f2b0a514ec8aea6d
+              body: |
+                Update balena-supervisor from 16.3.15 to 16.3.17
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: Fix engine deadlock on network+service change
+                      hash: ede27b63cecc2a9ae3139a905d9c6ab32418a72b
+                      body: >
+                        This fixes a regression on the supervisor state engine
+                        computation
+
+                        (added on v16.2.0) when
+
+                        the target state removes a network at the same time that
+                        a service
+
+                        referencing that network is changed. Example going from
+
+
+                        ```
+
+                        services:
+                           one:
+                              image: alpine: 3.18
+                              networks: ['balena']
+
+                        networks:
+                           balena:
+                        ```
+
+
+                        to
+
+
+                        ```
+
+                        services:
+                           one:
+                              image: alpine: latest
+                        ```
+
+
+                        Would never reach the target state as killing the
+                        service in order to
+
+                        remove the network is prioritized, but one of the
+                        invariants in the target state calculation is
+
+                        to not kill any services until all images have been
+                        downloaded. These
+
+                        two instructions were in contradiction leading to a
+                        deadlock.
+
+
+                        The fix involves only adding removal steps for services
+                        depending on a
+
+                        changing network or volume if the service container is
+                        not being removed
+
+                        already.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-16.3.17
+                  title: ""
+                  date: 2024-06-25T01:03:26.734Z
+                - commits:
+                    - subject: Update balena-io/deploy-to-balena-action action to v2.0.72
+                      hash: 170733422a7a8fb2e58482508fe74dc2fcb282a5
+                      body: >
+                        Update balena-io/deploy-to-balena-action from 2.0.71 to
+                        2.0.72
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Self-hosted Renovate Bot
+                      nested: []
+                  version: balena-supervisor-16.3.16
+                  title: ""
+                  date: 2024-06-17T01:56:08.257Z
+          version: meta-balena-5.3.23
+          title: ""
+          date: 2024-07-02T14:03:58.762Z
+        - commits:
+            - subject: "initrdscripts: make the kexec script fail hard in unexpected states"
+              hash: 0b6199dddbb52e963d7b6e5feb5771f2b61a0f35
+              body: >
+                At this moment the kexec initrd script is skipped when
+                ROOTFS_DIR
+
+                is not defined or if the new rootfs is mounted, but does not
+                contain
+
+                a kernel image in the expected place. This is undesirable as we
+
+                assume this is the last script executed by the balena
+                bootloader.
+
+
+                This patch makes the kexec script always execute in the balena
+
+                bootloader and makes it fail hard in unexpected states, which
+                means
+
+                the script is always an exit point for the balena bootloader,
+
+                whether the actual kexec call succeeds or not.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-5.3.22
+          title: ""
+          date: 2024-07-01T15:01:00.393Z
+        - commits:
+            - subject: "initrdscripts: Allow passing extra kernel arguments to kexec"
+              hash: 02d42d3cc887fb761da348f86bf5e13f1dacaeb2
+              body: >
+                At this moment the kexec initrd script just takes the original
+                kernel
+
+                command line, replaces root with UUID and removes bootloader
+                args.
+
+
+                We have found at least one use-case (on the Pi4 and firmware
+                GPIOs),
+
+                where a different initrd script needs to pass extra arguments
+
+                to the kexec'd kernel. With this patch it will append the
+                contents
+
+                of the KEXEC_EXTRA_ARGS variable to the kernel command line.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-5.3.21
+          title: ""
+          date: 2024-06-13T10:02:03.824Z
+        - commits:
+            - subject: "hostapp-update-hooks: Re-add check for UEFI to signed-update hook"
+              hash: 972ef5f6090fc48a94a313bf01d8d59c6a3570d9
+              body: >
+                In 328222014146f0116e0208443f3e255d0e85ef15 we have removed
+
+                the signed-update hook from systems that do not have EFI
+
+                in MACHINE_FEATURES. This on its own makes sense, however
+                together
+
+                with it we have also removed the runtime check for whether the
+                running
+
+                system is actually booted in UEFI mode.
+
+
+                This effectively means it is no longer possible to update the
+                host OS
+
+                on a device type able to boot in both UEFI and BIOS modes
+
+                (intel-nuc and genericx86-64-ext) when booted in BIOS mode,
+
+                as the signed-update hook is executed unconditionally and fails
+
+                if the device is not running UEFI.
+
+
+                This patch re-adds the runtime check to only execute the hook
+
+                if the system is actually booted in UEFI mode.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-5.3.20
+          title: ""
+          date: 2024-06-11T12:55:22.727Z
+  version: 5.3.23
+  title: ""
+  date: 2024-07-03T08:07:29.846Z
+- commits:
     - subject: Update balena-yocto-scripts to da6fe23e89509549866b16cbc6ff404980a189c0
       hash: 9a189cdaaadb3f4e325a56c15a9ce66f1b9b0388
       body: Update balena-yocto-scripts

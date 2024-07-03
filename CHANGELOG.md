@@ -1,6 +1,52 @@
 Change log
 -----------
 
+# v5.3.23
+## (2024-07-03)
+
+
+<details>
+<summary> Update layers/meta-balena to e6c2037615db74af70250c5d3351c44e2ee31fbb [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.23
+> ### (2024-07-02)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.3.17 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-16.3.17
+>> #### (2024-06-25)
+>> 
+>> * Fix engine deadlock on network+service change [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.3.16
+>> #### (2024-06-17)
+>> 
+>> * Update balena-io/deploy-to-balena-action action to v2.0.72 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.3.22
+> ### (2024-07-01)
+> 
+> * initrdscripts: make the kexec script fail hard in unexpected states [Michal Toman]
+> 
+> ## meta-balena-5.3.21
+> ### (2024-06-13)
+> 
+> * initrdscripts: Allow passing extra kernel arguments to kexec [Michal Toman]
+> 
+> ## meta-balena-5.3.20
+> ### (2024-06-11)
+> 
+> * hostapp-update-hooks: Re-add check for UEFI to signed-update hook [Michal Toman]
+> 
+
+</details>
+
 # v5.3.19+rev7
 ## (2024-07-03)
 
