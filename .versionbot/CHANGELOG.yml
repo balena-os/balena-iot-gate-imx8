@@ -1,4 +1,67 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 32b15f1729158dec8046b9861da37062c68ff292
+      hash: f5f61960f787137361648deee3e0e8ebdd6a2263
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 32b15f1729158dec8046b9861da37062c68ff292
+        changelog-entry: Update balena-yocto-scripts to 32b15f1729158dec8046b9861da37062c68ff292
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Remove dry-run flag from S3 upload
+              hash: cf0301996022ef58a9c19d40d002d72a1bbcf705
+              body: |
+                We are publishing hostapp releases to staging already, we should
+                start including the associated S3 files as well.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.2
+          title: ""
+          date: 2024-07-03T21:19:20.964Z
+        - commits:
+            - subject: Fix actionlint errors and warnings in shell steps
+              hash: da910ed9ac6fdd70bd0ebd1beb0dbbd1248517fd
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.1
+          title: ""
+          date: 2024-07-03T18:33:05.802Z
+        - commits:
+            - subject: Do not run any tests by default unless provided by calling workflow
+              hash: d0cfc42cf8a17ef6b5f2ac4eed6f84d1581435e6
+              body: >
+                As there are currently more device types without tests than
+                with,
+
+                and some of those with tests need to provide overrides anyway,
+                it's
+
+                simpler to assume an empty test matrix unless provided.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.0
+          title: ""
+          date: 2024-07-03T15:44:25.729Z
+  version: 5.3.24+rev1
+  title: ""
+  date: 2024-07-05T06:14:40.455Z
+- commits:
     - subject: Update layers/meta-balena to e1d709a6f00e8dd3271a3c84d9fb6430cedec485
       hash: afb3fb162f932b6a727b7928bc421cf683adf3f2
       body: Update layers/meta-balena
