@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v5.3.28+rev1
+## (2024-07-11)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 09a174bf33ea56788ac4b483fdf1b7828c118f23 [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.25.5
+> ### (2024-07-08)
+> 
+> * only login to s3 if deploying to s3 [rcooke-warwick]
+> 
+> ## balena-yocto-scripts-1.25.4
+> ### (2024-07-06)
+> 
+> * balena-deploy: deploy secure boot lock artifacts if available [Alex Gonzalez]
+> 
+
+</details>
+
 # v5.3.28
 ## (2024-07-11)
 

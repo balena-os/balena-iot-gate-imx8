@@ -1,4 +1,44 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 09a174bf33ea56788ac4b483fdf1b7828c118f23
+      hash: 921a46fcc1ed6f096e0a301abaf237c3c0c8f1b1
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 09a174bf33ea56788ac4b483fdf1b7828c118f23
+        changelog-entry: Update balena-yocto-scripts to 09a174bf33ea56788ac4b483fdf1b7828c118f23
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: only login to s3 if deploying to s3
+              hash: a23ed7074fd2af18b952b9d0f6ee2623dd6a76f8
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.25.5
+          title: ""
+          date: 2024-07-08T16:52:21.474Z
+        - commits:
+            - subject: "balena-deploy: deploy secure boot lock artifacts if available"
+              hash: 01378a49b0b2264afcf6d2dc4d016e2be206fde7
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.25.4
+          title: ""
+          date: 2024-07-06T09:01:53.726Z
+  version: 5.3.28+rev1
+  title: ""
+  date: 2024-07-11T09:38:03.358Z
+- commits:
     - subject: Update layers/meta-balena to 4c376535a83f0b22b9757d835c4a7029cd758a77
       hash: a48a1b8eaff57d5f545cf1daf703d12db7382827
       body: Update layers/meta-balena
