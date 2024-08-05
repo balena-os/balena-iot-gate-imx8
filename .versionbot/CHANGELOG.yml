@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update contracts to 1d499fe7d33791e1ac6dccfe031e178b7d520bb4
+      hash: 516018fbb8775c4914443445d11cc5b9f643b2a3
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 1d499fe7d33791e1ac6dccfe031e178b7d520bb4
+        changelog-entry: Update contracts to 1d499fe7d33791e1ac6dccfe031e178b7d520bb4
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Add new device-type Jetson AGX Orin 64GB Devkit"
+              hash: b329046af8d6427955627231ba0d332d23dc0f87
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.108
+          title: ""
+          date: 2024-07-25T08:53:00.318Z
+        - commits:
+            - subject: "beagleplay: Fix provisioning instructions"
+              hash: 996350221bcc6ff73d83239af7ffd96653d36a2c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.107
+          title: ""
+          date: 2024-07-15T10:43:40.476Z
+  version: 6.0.6+rev3
+  title: ""
+  date: 2024-08-05T16:16:09.177Z
+- commits:
     - subject: Update balena-yocto-scripts to 730286256ce2ff6db73bce2b8289d2199596269e
       hash: 3d12a18ac996c0969e8274c99b154a13361995b2
       body: Update balena-yocto-scripts
