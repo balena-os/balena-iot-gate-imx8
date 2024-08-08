@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.0.6+rev6
+## (2024-08-08)
+
+
+<details>
+<summary> Update contracts to bb77690aa0498f1060b64bebc183aea4fafb57e7 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.111
+> ### (2024-08-08)
+> 
+> * patch: Add versionList to OpenJDK [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## contracts-2.0.110
+> ### (2024-08-07)
+> 
+> * Add CompuLab iotdin-imx8p to harware contract. [Valentin Raevsky]
+> 
+
+</details>
+
 # v6.0.6+rev5
 ## (2024-08-07)
 

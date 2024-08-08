@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update contracts to bb77690aa0498f1060b64bebc183aea4fafb57e7
+      hash: 9b8ff1e618c7e0564a4856fec6898a420b1e6b61
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to bb77690aa0498f1060b64bebc183aea4fafb57e7
+        changelog-entry: Update contracts to bb77690aa0498f1060b64bebc183aea4fafb57e7
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "patch: Add versionList to OpenJDK"
+              hash: a06af4e592ce4ce552e9d055a07eb1964cbbdb2d
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+          version: contracts-2.0.111
+          title: ""
+          date: 2024-08-08T14:50:47.699Z
+        - commits:
+            - subject: Add CompuLab iotdin-imx8p to harware contract.
+              hash: 2b0148ba2c6b34d8f74a5b2afe9405419f81e7ab
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+                signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+              author: Valentin Raevsky
+          version: contracts-2.0.110
+          title: ""
+          date: 2024-08-07T13:28:36.285Z
+  version: 6.0.6+rev6
+  title: ""
+  date: 2024-08-08T20:32:37.332Z
+- commits:
     - subject: Update contracts to 6d69a05508a9232ba593962c62dc9dd133dee616
       hash: d5903c6c36d77cc32ca3748a494c68bf1f7146af
       body: Update contracts
