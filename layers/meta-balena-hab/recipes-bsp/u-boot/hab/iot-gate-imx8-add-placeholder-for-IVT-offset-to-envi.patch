@@ -1,0 +1,22 @@
+From: Alex Gonzalez <alexg@balena.io>
+Date: Thu, 15 Aug 2024 18:33:47 +0200
+Subject: [PATCH] iot-gate-imx8: add placeholder for IVT offset to environment
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alex Gonzalez <alexg@balena.io>
+---
+ include/configs/iot-gate-imx8.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index 70e4bc6700fc..fbe155f19652 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -30,6 +30,7 @@
+ 	"fdt_high=0xffffffffffffffff\0"	\
+ 	"initrd_high=0xffffffffffffffff\0" \
+ 	"root_opt=rootwait rw\0" \
++	"ivt_offset="__stringify(KERNEL_SIGN_IVT_OFFSET)"\0" \
+ 	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0\0" \
+ 	"emmc_ul=setenv boot_dev_str eMMC; run boot_try_msg; " \
+ 	"setenv iface mmc; setenv dev 2; setenv part 1;" \
