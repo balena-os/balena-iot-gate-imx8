@@ -45,3 +45,6 @@
 	branch = honister
 [submodule "layers/meta-compulab-bsp"]
 	branch = honister
+[submodule "layers/meta-balena-hab"]
+	path = layers/meta-balena-hab
+	url = git@github.com:balena-os/meta-balena-hab.git
