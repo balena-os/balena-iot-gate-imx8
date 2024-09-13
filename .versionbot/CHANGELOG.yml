@@ -1,4 +1,47 @@
 - commits:
+    - subject: Update layers/meta-balena to 743309ff6019a6b956ad21f73ced5ae5673f2b1b
+      hash: 7f1d03a96652f2e1d8c1cd8f7c12fc5c23be1046
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 743309ff6019a6b956ad21f73ced5ae5673f2b1b
+        changelog-entry: Update layers/meta-balena to 743309ff6019a6b956ad21f73ced5ae5673f2b1b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "initrdscripts: Make cryptsetup fail hard in unexpected conditions"
+              hash: c1bccdbd95bcb0202c4b80679ade0967df643342
+              body: >
+                This patch adds a set of checks that make sure that the
+                partition
+
+                layout is as expected on a system with encrypted disks. Namely
+                it
+
+                * Checks that the boot partition is split
+
+                * Checks that it can find the correct amount of encrypted
+                partitions
+
+                * Checks that the label on the unlocked filesystem matches the
+                label
+                  on the encrypted partition
+                * Checks that system is not mixing encrypted and unencrypted
+                  partitions
+                * Checks there are no ambiguities or duplicit partitions
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.0.25
+          title: ""
+          date: 2024-09-13T16:23:25.632Z
+  version: 6.0.25
+  title: ""
+  date: 2024-09-13T23:55:52.451Z
+- commits:
     - subject: Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632
       hash: fcbd74fe63976def62a55594c776bec5563ffd29
       body: Update layers/meta-balena
