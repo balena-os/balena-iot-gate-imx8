@@ -1,6 +1,96 @@
 Change log
 -----------
 
+# v6.0.23+rev1
+## (2024-09-13)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 0684ef25f676baddd6c55a504b575776269588de [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.25.41
+> ### (2024-09-12)
+> 
+> * Update balena-os/leviathan action to v2.31.40 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.40
+> ### (2024-09-12)
+> 
+> * Update balena-os/leviathan action to v2.31.37 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.39
+> ### (2024-09-11)
+> 
+> * Update actions/create-github-app-token action to v1.11.0 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.38
+> ### (2024-09-09)
+> 
+> * Include semver when bumping leviathan action [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.25.37
+> ### (2024-09-05)
+> 
+> * Update balena-os/leviathan digest to 8fb47f2 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.36
+> ### (2024-09-05)
+> 
+> * Update balena-os/leviathan digest to 5db2b5d [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.35
+> ### (2024-09-04)
+> 
+> * Update balena-os/leviathan digest to da52396 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.34
+> ### (2024-09-04)
+> 
+> * Update actions/create-github-app-token action to v1.10.4 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.33
+> ### (2024-09-02)
+> 
+> * Update balena-os/leviathan digest to d8572e2 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.32
+> ### (2024-09-02)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.31
+> ### (2024-09-01)
+> 
+> * Update actions/upload-artifact action to v4.4.0 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.30
+> ### (2024-09-01)
+> 
+> * Update balena-os/leviathan digest to ff6a079 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.29
+> ### (2024-09-01)
+> 
+> * Restrict runners via yocto label, not 16cpu [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.25.28
+> ### (Invalid date)
+> 
+> * checkout private contracts for test job [rcooke-warwick]
+> 
+> ## balena-yocto-scripts-1.25.27
+> ### (2024-08-29)
+> 
+> * use apt-get to install s4cmd instead of pip [rcooke-warwick]
+> 
+> ## balena-yocto-scripts-1.25.26
+> ### (2024-08-27)
+> 
+> * Fix if condition for checking merge commit test results [rcooke-warwick]
+> 
+
+</details>
+
 # v6.0.23
 ## (2024-09-13)
 
