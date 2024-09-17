@@ -58,6 +58,7 @@ SRC_URI:append = " \
 	file://1133-iot-gate-imx8-Increase-fdt-address.patch \
 	file://1134-iot-gate-imx8-Run-CRC-checks-for-kernel-and-device-t.patch \
 	file://1135-iot-gate-imx8-modify-configuration-to-fetch-kernel-b.patch \
+	file://1136-configs-cl-imx8m-mini_defconfig-increase-the-default.patch \
 "
 
 do_configure[nostamp] = "1"
