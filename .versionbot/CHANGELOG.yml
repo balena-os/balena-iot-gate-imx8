@@ -1,4 +1,28 @@
 - commits:
+    - subject: adapt to updated meta layers
+      hash: 632701abeb95065b7f67b71afe2a6a71233de4cf
+      body: |
+        The update to the head of the stable meta branches pushed the initramfs
+        size and 32M.
+      footer:
+        Changelog-entry: adapt to updated meta layers
+        changelog-entry: adapt to updated meta layers
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Update layers/meta-compulab to 9279f5645b6984d93996b19b3bfb02d7abc68b76
+      hash: 7d2387b03602202b4135fea22021e0ab18c90d1d
+      body: Update layers/meta-compulab
+      footer:
+        Changelog-entry: Update layers/meta-compulab to 9279f5645b6984d93996b19b3bfb02d7abc68b76
+        changelog-entry: Update layers/meta-compulab to 9279f5645b6984d93996b19b3bfb02d7abc68b76
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.0.31+rev1
+  title: ""
+  date: 2024-09-21T14:19:45.316Z
+- commits:
     - subject: Update layers/meta-balena to b3ab5311c0ad999dc896ab5b9a85e48098ddd3dc
       hash: 6482fdfbfd2c5d0dc35f2fe0221c78d476ae07fe
       body: Update layers/meta-balena
