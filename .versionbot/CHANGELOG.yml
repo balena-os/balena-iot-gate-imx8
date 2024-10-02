@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add GHA Built Test Deploy workflows
+      hash: 5e4b929eb2b66f15f71c6cf1824ee96c8d9fda66
+      body: ""
+      footer:
+        Changelog-entry: Add GHA Built Test Deploy workflows
+        changelog-entry: Add GHA Built Test Deploy workflows
+        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+      author: Vipul Gupta (@vipulgupta2048)
+      nested: []
+  version: 6.0.33+rev1
+  title: ""
+  date: 2024-10-02T15:29:48.323Z
+- commits:
     - subject: Update layers/meta-balena to f2c72d6bbd312821f0bb97897fe7836c525950f7
       hash: 74b027febad4143b38336747ac860364eb8e9f1f
       body: Update layers/meta-balena
