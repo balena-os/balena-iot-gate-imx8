@@ -47,6 +47,11 @@ require recipes-kernel/linux/compulab/imx8mm.inc
 
 BALENA_DEFCONFIG_NAME = "cl-imx8m-mini_defconfig"
 
+SRC_URI:append = " \
+    file://Revert-arm64-Drop-support-for-CMDLINE_EXTEND.patch \
+    file://defconfig-cl-imx8m-mini-extend-bootloader-command-li.patch \
+"
+
 do_configure() {
     oe_runmake -C ${S} O=${B} ${BALENA_DEFCONFIG_NAME} ${MACHINE}.config ${KBUILD_DEFCONFIG_EXTRA_FRAGMENTS}
 }
