@@ -50,6 +50,8 @@ BALENA_DEFCONFIG_NAME = "cl-imx8m-mini_defconfig"
 SRC_URI:append = " \
     file://Revert-arm64-Drop-support-for-CMDLINE_EXTEND.patch \
     file://defconfig-cl-imx8m-mini-extend-bootloader-command-li.patch \
+    file://arm64-kexec_file-use-more-system-keyrings-to-verify-.patch \
+    file://kexec-KEYS-make-the-code-in-bzImage64_verify_sig-gen.patch \
 "
 
 do_configure() {
