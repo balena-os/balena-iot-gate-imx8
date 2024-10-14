@@ -1,6 +1,14 @@
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-compulab:"
+
 inherit kernel-resin
 
 DEPENDS += "rsync-native"
+
+SRC_URI:append = " \
+    file://soc-imx8m-Enable-OCOTP-clock-before-reading-the-regi.patch \
+    file://soc-imx8m-Fix-incorrect-check-for-of_clk_get_by_name.patch \
+    file://soc-imx8m-Enable-OCOTP-clock-for-imx8mm-before-readi.patch \
+"
 
 # Fixes issue where cryptodev module is installed
 # along with the kernel image in the initramfs
