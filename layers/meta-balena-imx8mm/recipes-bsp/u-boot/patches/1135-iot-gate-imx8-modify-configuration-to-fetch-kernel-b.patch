@@ -1,0 +1,38 @@
+From afe4d7f4db67d56833894efb7725ccd14cfd461e Mon Sep 17 00:00:00 2001
+From: Alex Gonzalez <alexg@balena.io>
+Date: Fri, 20 Sep 2024 18:24:18 +0200
+Subject: [PATCH] iot-gate-imx8: modify configuration to fetch kernel bundle
+ from boot partition
+
+Also fallback to fetching artifacts from root partition as this allows
+older flasher images to still work.
+
+Signed-off-by: Alex Gonzalez <alexg@balena.io>
+---
+ include/configs/iot-gate-imx8.h | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index 1a6d513150c8..399147063946 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -39,8 +39,8 @@
+ 	"setenv iface usb; setenv dev 0; setenv part 1; " \
+ 	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
+-	"ulimage=if load ${iface} ${dev}:${resin_root_part} ${zip_addr} boot/${image}; then unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save; else false; fi; \0" \
+-	"ulfdt=if load ${iface} ${dev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}; then run balena_fdt_load_crc_save; else false; fi; \0" \
++	"ulimage=if load ${iface} ${dev}:${resin_boot_part} ${zip_addr} ${image}; then unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save; else if load ${iface} ${dev}:${resin_root_part} ${zip_addr} boot/${image}; then unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save; else false; fi; fi; \0" \
++	"ulfdt=if load ${iface} ${dev}:${resin_boot_part} ${fdt_addr} ${fdt_file}; then run balena_fdt_load_crc_save; else if load ${iface} ${dev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}; then run balena_fdt_load_crc_save; else false; fi; fi;\0" \
+ 	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
+ 	"source;\0" \
+ 	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
+@@ -50,7 +50,7 @@
+ 	"setenv usbdev ${resin_dev_index};" \
+ 	"setenv usbbootpart ${resin_boot_part};" \
+ 	"setenv mmcdev ${resin_dev_index};" \
+-	"setenv mmcbootpart ${resin_root_part};" \
++	"setenv mmcbootpart ${resin_boot_part};" \
+ 	"for src in usb_ul emmc_ul; do " \
+ 		"run ${src}; " \
+ 			"if run ulimage; then " \
