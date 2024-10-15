@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# shellcheck disable=SC1091
+. /usr/libexec/os-helpers-logging
+
+OLDROOT_MOUNT=/oldrootfs
+BOOTDEV=mmcblk2boot0
+
+rollback_enabled() {
+    if [ "$bootparam_balena_stage2" != "true" ]
+    then
+        return 1
+    fi
+
+    if [ "$bootparam_flasher" = "true" ]
+    then
+        return 1
+    fi
+
+    if [ "$bootparam_rollback" = "true" ]
+    then
+        # shellcheck disable=SC2154
+        ROOT_UUID=$(echo "${bootparam_root}" | cut -d '=' -f2)
+        if [ -z "${ROOT_UUID}" ]
+        then
+            return 1
+        fi
+    else
+        return 1
+    fi
+
+    return 0
+}
+
+rollback_run() {
+    UBOOT_FILE=imx-boot-iot-gate-imx8-sd.bin-flash_evk
+
+    mkdir -p "${OLDROOT_MOUNT}"
+    mount "/dev/disk/by-uuid/${ROOT_UUID}" "${OLDROOT_MOUNT}"
+    # Check whethr the old system does not use balena bootloader
+    if [ ! -f "${OLDROOT_MOUNT}/resin-boot/bootenv" ]; then
+        # Re-program the old U-boot to bypass balena bootloader as the old kernel
+        # might not be able to kexec without patches.
+        warn "Rolling back U-boot"
+        echo 0 > /sys/block/${BOOTDEV}/force_ro
+        dd if="${OLDROOT_MOUNT}/resin-boot/${UBOOT_FILE}" of=/dev/${BOOTDEV} conv=fdatasync seek=33 bs=1024
+        echo 1 > /sys/block/${BOOTDEV}/force_ro
+    fi
+    umount "${OLDROOT_MOUNT}"
+    # This will reboot
+    exit 1
+}
