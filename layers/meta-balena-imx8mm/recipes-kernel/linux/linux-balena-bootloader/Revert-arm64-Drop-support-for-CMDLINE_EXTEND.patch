@@ -1,0 +1,58 @@
+From: Alex Gonzalez <alexg@balena.io>
+Date: Tue, 8 Oct 2024 17:11:23 +0200
+Subject: [PATCH] Revert "arm64: Drop support for CMDLINE_EXTEND"
+
+This reverts commit cae118b6acc309539b33339e846cbb19187c164c.
+
+The CMDLINE_EXTEND support was removed as it did not order the arguments
+in the expected way and work was in progress to use
+CMDLINE_APPEND/PREPEND.
+
+However, those changes have never merged, and we need the balena
+bootloader to always boot with `balena_stage2` independently of the
+bootloader that launches it.
+
+For example, a flasher image might boot from a bootloader in internal
+storage which is not configured to pass any extra argument.
+
+Upstream-status: Inappropriate
+Signed-off-by: Alex Gonzalez <alexg@balena.io>
+---
+ arch/arm64/Kconfig                 | 6 ++++++
+ arch/arm64/kernel/idreg-override.c | 5 ++++-
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm64/Kconfig b/arch/arm64/Kconfig
+index ac07edab7974..c076d9316753 100644
+--- a/arch/arm64/Kconfig
++++ b/arch/arm64/Kconfig
+@@ -1863,6 +1863,12 @@ config CMDLINE_FROM_BOOTLOADER
+ 	  the boot loader doesn't provide any, the default kernel command
+ 	  string provided in CMDLINE will be used.
+ 
++config CMDLINE_EXTEND
++	bool "Extend bootloader kernel arguments"
++	help
++	  The command-line arguments provided by the boot loader will be
++	  appended to the default kernel command string.
++
+ config CMDLINE_FORCE
+ 	bool "Always use the default kernel command string"
+ 	help
+diff --git a/arch/arm64/kernel/idreg-override.c b/arch/arm64/kernel/idreg-override.c
+index d8e606fe3c21..c2b0bfe72839 100644
+--- a/arch/arm64/kernel/idreg-override.c
++++ b/arch/arm64/kernel/idreg-override.c
+@@ -214,8 +214,11 @@ static __init void parse_cmdline(void)
+ {
+ 	const u8 *prop = get_bootargs_cmdline();
+ 
+-	if (IS_ENABLED(CONFIG_CMDLINE_FORCE) || !prop)
++	if (IS_ENABLED(CONFIG_CMDLINE_EXTEND) ||
++	    IS_ENABLED(CONFIG_CMDLINE_FORCE) ||
++	    !prop) {
+ 		__parse_cmdline(CONFIG_CMDLINE, true);
++	}
+ 
+ 	if (!IS_ENABLED(CONFIG_CMDLINE_FORCE) && prop)
+ 		__parse_cmdline(prop, true);
