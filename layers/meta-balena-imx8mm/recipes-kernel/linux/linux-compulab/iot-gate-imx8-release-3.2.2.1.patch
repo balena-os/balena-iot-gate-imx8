@@ -1,0 +1,23 @@
+From: Alex Gonzalez <alexg@balena.io>
+Date: Wed, 16 Oct 2024 11:32:04 +0000
+Subject: [PATCH] iot-gate-imx8: release 3.2.2.1
+
+Increase local version so we can identify at which point the kernel got
+the kexec fixes. This allows runtime to know whether it's safe to kexec
+into the kernel.
+
+Signed-off-by: Alex Gonzalez <alexg@balena.io>
+---
+ arch/arm64/configs/iot-gate-imx8.config | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm64/configs/iot-gate-imx8.config b/arch/arm64/configs/iot-gate-imx8.config
+index 56802059df32..34741b8e8e23 100644
+--- a/arch/arm64/configs/iot-gate-imx8.config
++++ b/arch/arm64/configs/iot-gate-imx8.config
+@@ -1,4 +1,4 @@
+-CONFIG_LOCALVERSION="-iot-gate-imx8m-3.2.2"
++CONFIG_LOCALVERSION="-iot-gate-imx8m-3.2.2.1"
+ CONFIG_LOCALVERSION_AUTO=n
+ CONFIG_BT_BCM=n
+ CONFIG_BT_HCIBTUSB_BCM=n
