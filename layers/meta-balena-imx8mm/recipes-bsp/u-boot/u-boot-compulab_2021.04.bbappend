@@ -2,6 +2,9 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/patches:"
 
 inherit resin-u-boot
 
+BALENA_STAGE2 = "balena_stage2"
+UBOOT_VARS += "BALENA_STAGE2"
+
 DEPENDS = "bison-native"
 
 PV:append ="+git${SRCPV}"
@@ -59,6 +62,7 @@ SRC_URI:append = " \
 	file://1134-iot-gate-imx8-Run-CRC-checks-for-kernel-and-device-t.patch \
 	file://1135-iot-gate-imx8-modify-configuration-to-fetch-kernel-b.patch \
 	file://1136-configs-cl-imx8m-mini_defconfig-increase-the-default.patch \
+	file://1137-iot-gate-imx8-enable-balena-second-stage-bootloader.patch \
 "
 
 do_configure[nostamp] = "1"
