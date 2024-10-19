@@ -1,6 +1,82 @@
 Change log
 -----------
 
+# v6.0.46
+## (2024-10-19)
+
+
+<details>
+<summary> Update layers/meta-balena to 95f1922c199e99e1cfaddceee5392e16e14ee018 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.46
+> ### (2024-10-19)
+> 
+> * balena-units-conf: Add os-fan-profile to units conf [Alexandru Costache]
+> 
+> ## meta-balena-6.0.45
+> ### (2024-10-18)
+> 
+> * workflows/meta-balena-esr: fix version creation bash [Ryan Cooke]
+> 
+> ## meta-balena-6.0.44
+> ### (2024-10-10)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to cf58b57 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.59
+>> #### (2024-10-10)
+>> 
+>> * add secureboot identifier into report name [Ryan Cooke]
+>> 
+>> ### leviathan-2.31.58
+>> #### (2024-10-10)
+>> 
+>> * Update core/contracts digest to 5ac053b [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.57
+>> #### (2024-10-10)
+>> 
+>> * Update actions/upload-artifact digest to b4b15b8 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.56
+>> #### (2024-10-09)
+>> 
+>> * compose: map qemu volume into worker [Joseph Kogut]
+>> 
+>> ### leviathan-2.31.55
+>> #### (2024-10-08)
+>> 
+>> * Update actions/upload-artifact digest to 8448086 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.54
+>> #### (2024-10-08)
+>> 
+>> * Update balena-io/balena-cli to v19.0.18 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.53
+>> #### (2024-10-08)
+>> 
+>> * Update actions/checkout digest to eef6144 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.52
+>> #### (2024-10-08)
+>> 
+>> * Update balena-io/balena-cli to v19.0.17 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.51
+>> #### (2024-10-07)
+>> 
+>> * Update actions/upload-artifact digest to 604373d [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.0.43+rev2
 ## (2024-10-13)
 
