@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v6.0.46+rev3
+## (2024-10-20)
+
+
+<details>
+<summary> Update contracts to 88fb8adfa09a1a270d9cd5d59627255298e1684e [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.116
+> ### (2024-10-17)
+> 
+> * Add alpine 3.20 [Otavio Jacobi]
+> 
+> ## contracts-2.0.115
+> ### (2024-10-17)
+> 
+> * Add alpine 3.19 [Otavio Jacobi]
+> 
+> ## contracts-2.0.114
+> ### (2024-10-09)
+> 
+> * sw.os+hw.device-type: Update all Orin devices to r36.3 in sources.list [Alexandru Costache]
+> * hw.device-type: Remove superfluous instructions for beagleplay [Alexandru]
+> 
+
+</details>
+
 # v6.0.46+rev2
 ## (2024-10-20)
 
