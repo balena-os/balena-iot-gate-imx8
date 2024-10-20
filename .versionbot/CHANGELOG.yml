@@ -1,4 +1,75 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21
+      hash: 8747bc9d331fec645b19ff7cdabdc566778361af
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21
+        changelog-entry: Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Expose secure boot testing features via matrix input
+              hash: 922d1dd1e09c74e393962069bdac0ce69c17e9cb
+              body: >
+                Some device types (generic-armd64) need to run the test
+
+                suites twice for the same base image, once with secure boot
+
+                vars enabled in Leviathan, and once without.
+
+
+                Rather than run the suites in series, or require building the
+
+                image twice, we can allow the test matrix to define separate
+                runs
+
+                for the two modes.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.26.0
+          title: ""
+          date: 2024-10-15T14:38:39.423Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.60
+              hash: 9911262656b19e657578bb97c2e39a7c0580ac97
+              body: |
+                Update balena-os/leviathan from 2.31.59 to 2.31.60
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.63
+          title: ""
+          date: 2024-10-11T15:36:10.972Z
+        - commits:
+            - subject: Fix concurrency and cancel in progress contexts
+              hash: 912b07647f7d0114d53b5971e653a65ed6fedd67
+              body: |
+                When evaluating expressions for cancel-in-progress, certain
+                parameters may not be available at the time of evaluation.
+
+                For instance, the github.job context is not accessible, as it's
+                specific to the running job and not the concurrency group.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.62
+          title: ""
+          date: 2024-10-11T13:09:20.324Z
+  version: 6.0.46+rev2
+  title: ""
+  date: 2024-10-20T06:39:29.483Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.26.0
       hash: 51ecebc04759e6803f24be76dd97181d810ac49e
       body: Update balena-os/balena-yocto-scripts

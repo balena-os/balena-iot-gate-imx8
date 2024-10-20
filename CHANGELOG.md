@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.0.46+rev2
+## (2024-10-20)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.26.0
+> ### (2024-10-15)
+> 
+> * Expose secure boot testing features via matrix input [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.25.63
+> ### (2024-10-11)
+> 
+> * Update balena-os/leviathan action to v2.31.60 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.62
+> ### (2024-10-11)
+> 
+> * Fix concurrency and cancel in progress contexts [Kyle Harding]
+> 
+
+</details>
+
 # v6.0.46+rev1
 ## (2024-10-20)
 
