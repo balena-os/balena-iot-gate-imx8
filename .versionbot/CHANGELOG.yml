@@ -1,4 +1,31 @@
 - commits:
+    - subject: increase linux-compulab local version to 3.2.2.1
+      hash: 68920d5740ebf79971b00fae2660ce643a11502d
+      body: |
+        This allows runtime to identify when a kernel is safe to kexec into.
+      footer:
+        Changelog-entry: increase linux-compulab local version to 3.2.2.1
+        changelog-entry: increase linux-compulab local version to 3.2.2.1
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: fix kexec freeze by enabling ocotp clocks
+      hash: 05cf3f354fbb034267ea76526c495236fd28fab1
+      body: |
+        This fixes a freeze on kexec as the kernel was expecting the bootloader
+        to enable the ocotp clocks and the first kernel does not.
+      footer:
+        Changelog-entry: fix kexec freeze by enabling ocotp clocks
+        changelog-entry: fix kexec freeze by enabling ocotp clocks
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.0.46+rev4
+  title: ""
+  date: 2024-10-21T17:23:39.910Z
+- commits:
     - subject: Update contracts to 88fb8adfa09a1a270d9cd5d59627255298e1684e
       hash: f3309f380e4fafefeaa1797eba9467801c3ba99d
       body: Update contracts

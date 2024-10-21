@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v6.0.46+rev4
+## (2024-10-21)
+
+* increase linux-compulab local version to 3.2.2.1 [Alex Gonzalez]
+* fix kexec freeze by enabling ocotp clocks [Alex Gonzalez]
+
 # v6.0.46+rev3
 ## (2024-10-20)
 
