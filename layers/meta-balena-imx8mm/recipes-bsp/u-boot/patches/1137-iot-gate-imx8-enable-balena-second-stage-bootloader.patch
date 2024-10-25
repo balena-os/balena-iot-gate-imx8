@@ -1,0 +1,22 @@
+From: Alex Gonzalez <alexg@balena.io>
+Date: Thu, 17 Oct 2024 13:45:33 +0000
+Subject: [PATCH] iot-gate-imx8: enable balena second stage bootloader
+
+Signed-off-by: Alex Gonzalez <alexg@balena.io>
+---
+ include/configs/iot-gate-imx8.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
+index 399147063946..f37bd1afec11 100644
+--- a/include/configs/iot-gate-imx8.h
++++ b/include/configs/iot-gate-imx8.h
+@@ -30,7 +30,7 @@
+ 	"fdt_high=0xffffffffffffffff\0"	\
+ 	"initrd_high=0xffffffffffffffff\0" \
+ 	"root_opt=rootwait rw\0" \
+-	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0\0" \
++	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0 "__stringify(BALENA_STAGE2)" \0" \
+ 	"emmc_ul=setenv boot_dev_str eMMC; run boot_try_msg; " \
+ 	"setenv iface mmc; setenv dev 2; setenv part 1;" \
+ 	"setenv bootargs ${bootargs_common} " \
