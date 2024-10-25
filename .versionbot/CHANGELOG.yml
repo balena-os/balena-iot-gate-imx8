@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update layers/meta-openembedded to
+        4ad41baed6236d499804cbfc4f174042d84fce97
+      hash: 750bdae20ea56ed10272a8e79a09e157dd04adaf
+      body: Update layers/meta-openembedded
+      footer:
+        Changelog-entry: Update layers/meta-openembedded to
+          4ad41baed6236d499804cbfc4f174042d84fce97
+        changelog-entry: Update layers/meta-openembedded to
+          4ad41baed6236d499804cbfc4f174042d84fce97
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.0.47+rev2
+  title: ""
+  date: 2024-10-25T12:45:13.591Z
+- commits:
     - subject: allow abroot to detect an unbootable rollback and fix it up
       hash: 3c894fded47f24cb042480923fccb3ea1f2b0cd1
       body: >
