@@ -1,4 +1,135 @@
 - commits:
+    - subject: allow abroot to detect an unbootable rollback and fix it up
+      hash: 3c894fded47f24cb042480923fccb3ea1f2b0cd1
+      body: >
+        The current linux-compulab kernel freezes when booting from kexec as
+
+        the ocotp clocks are accessed before being enabled - this is a problem
+
+        when trying to rollback from altboot failed HUP to a balena bootloader
+        enabled
+
+        image as the old kernel will freeze on the kexec.
+
+
+        This commit adds a rollback function that on partition switch reinstates
+
+        the old OS U-boot which bypasses the balena bootloader.
+      footer:
+        Changelog-entry: allow abroot to detect an unbootable rollback and fix it up
+        changelog-entry: allow abroot to detect an unbootable rollback and fix it up
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: add conv support to busybox dd for more reliable writes
+      hash: 7c5f4beb25a5f1172086e5a2e6fc5b056aa8a8e0
+      body: ""
+      footer:
+        Changelog-entry: add conv support to busybox dd for more reliable writes
+        changelog-entry: add conv support to busybox dd for more reliable writes
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: configure balena bootloader boot in u-boot
+      hash: 6a8f7fcc8e5e3044bf8eb8b089fe7c01b1109e63
+      body: |
+        Append the balena_stage2 argument to the booting kernel. This will get
+        used only if booting the balena bootloader kernel to kexec into the
+        final kernel from the root partition.
+      footer:
+        Changelog-entry: configure balena bootloader boot in u-boot
+        changelog-entry: configure balena bootloader boot in u-boot
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: increase default environment size for cl-imx8m-mini
+      hash: 6158f7dbe2e64b463e87f926fedec4a2abb3ecde
+      body: |
+        The compulab BSP has moved this from the iot-gate-imx8 specific
+        defconfig to the compulab SOM.
+      footer:
+        Changelog-entry: increase default environment size for cl-imx8m-mini
+        changelog-entry: increase default environment size for cl-imx8m-mini
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: use balena bootloader in update hooks
+      hash: 1fa8c916b8a333677c38e10d6bbfa0cdd559e4d0
+      body: ""
+      footer:
+        Changelog-entry: use balena bootloader in update hooks
+        changelog-entry: use balena bootloader in update hooks
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: modify u-boot boot command to fetch balena bootloader
+      hash: 7283d0a6279346001b17e6bbc26cb0ec0f47efca
+      body: |
+        The balena bootloader lives in the boot partition.
+      footer:
+        Changelog-entry: modify u-boot boot command to fetch balena bootloader
+        changelog-entry: modify u-boot boot command to fetch balena bootloader
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: deploy balena bootloader in images
+      hash: 515e9c25d0ca04b5ff43af7cb955a2a11f7ea031
+      body: |
+        Deploy the balena bootloader to the boot partition.
+      footer:
+        Changelog-entry: deploy balena bootloader in images
+        changelog-entry: deploy balena bootloader in images
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: fix kexec authentication in balena bootloader
+      hash: b0c14440340605ff1c711462d2f9a614e0ea7908
+      body: |
+        Backport upstream patches from 5.15.y for kexec to authenticate images.
+      footer:
+        Changelog-entry: fix kexec authentication in balena bootloader
+        changelog-entry: fix kexec authentication in balena bootloader
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: configure linux-compulab with EFI support
+      hash: 8cc274430738724d8270b092ef051a89f86d1ffc
+      body: |
+        This is required for the balena bootloader to kexec into it.
+      footer:
+        Changelog-entry: configure linux-compulab with EFI support
+        changelog-entry: configure linux-compulab with EFI support
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: add balena bootloader recipe
+      hash: 790b64f166308a0fffcc70e3c34fb53f4dde0516
+      body: |
+        This is the Linux based balena bootloader which provides a central place
+        for a/b rollback support and bootloader customization.
+
+        It is also used in secure boot systems to mount and decrypt root
+        filesystems and kexec into the final kernel.
+      footer:
+        Changelog-entry: add balena bootloader recipe
+        changelog-entry: add balena bootloader recipe
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.0.47+rev1
+  title: ""
+  date: 2024-10-25T05:27:02.131Z
+- commits:
     - subject: Update layers/meta-balena to d6ed535df8dc0cf2b928a7f2f908568702ecb2f2
       hash: 4099cc47fd390d2e2ade46bc05fda9227c40fc34
       body: Update layers/meta-balena

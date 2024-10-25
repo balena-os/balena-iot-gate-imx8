@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v6.0.47+rev1
+## (2024-10-25)
+
+* allow abroot to detect an unbootable rollback and fix it up [Alex Gonzalez]
+* add conv support to busybox dd for more reliable writes [Alex Gonzalez]
+* configure balena bootloader boot in u-boot [Alex Gonzalez]
+* increase default environment size for cl-imx8m-mini [Alex Gonzalez]
+* use balena bootloader in update hooks [Alex Gonzalez]
+* modify u-boot boot command to fetch balena bootloader [Alex Gonzalez]
+* deploy balena bootloader in images [Alex Gonzalez]
+* fix kexec authentication in balena bootloader [Alex Gonzalez]
+* configure linux-compulab with EFI support [Alex Gonzalez]
+* add balena bootloader recipe [Alex Gonzalez]
+
 # v6.0.47
 ## (2024-10-22)
 
