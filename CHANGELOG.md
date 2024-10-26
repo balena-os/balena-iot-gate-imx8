@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.0.49
+## (2024-10-26)
+
+
+<details>
+<summary> Update layers/meta-balena to 1f8d8cd8886b4e78762eb491eb5b00be6400ad4d [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.49
+> ### (2024-10-25)
+> 
+> * tests/os: Add Jetson Orin device-specific fan and power mode smoke tests [Alexandru Costache]
+> 
+> ## meta-balena-6.0.48
+> ### (2024-10-24)
+> 
+> * os-helpers-fs: introduce a script to split boot partitions [Alex Gonzalez]
+> * os-helpers-fs: add a shared script to deploy non-encrypted boot file [Alex Gonzalez]
+> * systemd: disable systemd-gpt-generator [Alex Gonzalez]
+> * resin-mounts: generalize non-enc boot partition mounter [Alex Gonzalez]
+> * classes: kernel-balena: do not remove whole build directory [Alex Gonzalez]
+> * efitools: Fix syntax [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.0.47+rev3
 ## (2024-10-25)
 
