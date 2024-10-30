@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 9ae5d6075069f8e5dec053701e2a1c6173bf78d7
+      hash: d8dce66f17b15102960edde2597e6dabe7e9eb34
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 9ae5d6075069f8e5dec053701e2a1c6173bf78d7
+        changelog-entry: Update balena-yocto-scripts to 9ae5d6075069f8e5dec053701e2a1c6173bf78d7
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Add pull request write permissions for workflow approvals
+              hash: 5e07998255f053630c5cce03057a64ac6ee27802
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.27.3
+          title: ""
+          date: 2024-10-29T15:54:58.766Z
+  version: 6.0.50+rev2
+  title: ""
+  date: 2024-10-30T12:31:08.020Z
+- commits:
     - subject: fix imx-boot not to use remove on the install task
       hash: 9899f85a81e3c4422f231560442ec534713ca80e
       body: |
