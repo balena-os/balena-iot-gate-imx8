@@ -1,4 +1,23 @@
 - commits:
+    - subject: fix imx-boot not to use remove on the install task
+      hash: 9899f85a81e3c4422f231560442ec534713ca80e
+      body: |
+        The :remove bitbake keyword is meant to do word removals and here it is
+        used to remove a whole line, which works, but could break at any time.
+
+        Replace by a prepend that defines the missing variables to fix the
+        original install task.
+      footer:
+        Changelog-entry: fix imx-boot not to use remove on the install task
+        changelog-entry: fix imx-boot not to use remove on the install task
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.0.50+rev1
+  title: ""
+  date: 2024-10-30T09:30:37.855Z
+- commits:
     - subject: Update layers/meta-balena to bbfe78062182eaacc9a524383144a24b731a7372
       hash: 88d158488ddec16ebc15822863496fd86f1ec6f8
       body: Update layers/meta-balena

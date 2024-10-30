@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.50+rev1
+## (2024-10-30)
+
+* fix imx-boot not to use remove on the install task [Alex Gonzalez]
+
 # v6.0.50
 ## (2024-10-28)
 
