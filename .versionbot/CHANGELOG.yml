@@ -1,4 +1,113 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 2543e49b79e8161d5d2d9f4625ac70101594cd76
+      hash: bd2bb32ec1dc1d04bf84bff7dbe9dde8e3cc91be
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 2543e49b79e8161d5d2d9f4625ac70101594cd76
+        changelog-entry: Update balena-yocto-scripts to 2543e49b79e8161d5d2d9f4625ac70101594cd76
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Set explicit permissions at the job level
+              hash: 9dc5aacccbd5ffdb154df3a1db172736cca36145
+              body: |
+                This is the more secure approach that defaults
+                to lowest possible permissions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.27.10
+          title: ""
+          date: 2024-11-11T19:16:32.044Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 271d9ee084c71d4eb128948b15ea3bf9150a0a39
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.9
+          title: ""
+          date: 2024-11-11T01:34:43.508Z
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.1.7
+              hash: 004842cbb18903272ec44e4231cb9dc414c97e80
+              body: |
+                Update product-os/review-commit-action from 0.1.4 to 0.1.7
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.8
+          title: ""
+          date: 2024-11-04T20:59:02.375Z
+        - commits:
+            - subject: Update Pin product-os/review-commit-action action to 81db18c
+              hash: f8438cfe5656c7c50498dc697252553e4acafec7
+              body: |
+                Update product-os/review-commit-action
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.7
+          title: ""
+          date: 2024-11-04T18:29:00.633Z
+        - commits:
+            - subject: Use official aws cli binaries and commands
+              hash: 654d96e4746f42065d24d5fe47f0fd3fb54741e1
+              body: |
+                The modern awscli command is optimized for these
+                tasks and better maintained.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.27.6
+          title: ""
+          date: 2024-11-04T17:10:05.029Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 682f9788db9491cbbb583524c1795b9c537c0239
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.5
+          title: ""
+          date: 2024-11-04T01:27:08.934Z
+        - commits:
+            - subject: Update actions/checkout action to v4.2.2
+              hash: d89823d9ca73820021f78f917c383edd4a274407
+              body: |
+                Update actions/checkout from 4.2.1 to 4.2.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.4
+          title: ""
+          date: 2024-11-01T14:36:07.101Z
+  version: 6.0.50+rev6
+  title: ""
+  date: 2024-11-16T22:52:46.678Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.27.10
       hash: 03f203221730bcfb83ab609325deb82c80bfbfeb
       body: Update balena-os/balena-yocto-scripts
