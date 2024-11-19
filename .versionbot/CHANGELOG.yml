@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-os/balena-yocto-scripts to v1.27.13
+      hash: 529adb67ccd5b415114b6dbfea1b7e39e5d726df
+      body: Update balena-os/balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-os/balena-yocto-scripts to v1.27.13
+        changelog-entry: Update balena-os/balena-yocto-scripts to v1.27.13
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.1.10+rev2
+  title: ""
+  date: 2024-11-19T19:26:37.820Z
+- commits:
     - subject: Update layers/meta-compulab to a9ef2a47c3ca56f985174b6781882db457bd389f
       hash: b8f1e76031db17b496bf732b65e6c067ccbb5710
       body: Update layers/meta-compulab
