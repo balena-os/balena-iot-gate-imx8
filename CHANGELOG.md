@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.1.10+rev3
+## (2024-11-19)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 55e707dc405e13428fa3abdf594c2828ad0053b0 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.27.13
+> ### (2024-11-18)
+> 
+> * Explicitly set GH_TOKEN permissions [Anton Belodedenko]
+> 
+> ## balena-yocto-scripts-1.27.12
+> ### (2024-11-18)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.27.11
+> ### (2024-11-17)
+> 
+> * github/workflows/yocto-build-deploy.yml: Add hostapp metadata to OS release [Florin Sarbu]
+> 
+
+</details>
+
 # v6.1.10+rev2
 ## (2024-11-19)
 
