@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update layers/meta-compulab-bsp to
+        3e7050b60551f0d4d9505e1e5f202ad548a7a7a4
+      hash: ff38295251034c3d830c3e0a9a8d228670167dbd
+      body: Update layers/meta-compulab-bsp
+      footer:
+        Changelog-entry: Update layers/meta-compulab-bsp to
+          3e7050b60551f0d4d9505e1e5f202ad548a7a7a4
+        changelog-entry: Update layers/meta-compulab-bsp to
+          3e7050b60551f0d4d9505e1e5f202ad548a7a7a4
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.1.13+rev3
+  title: ""
+  date: 2024-11-28T12:19:33.447Z
+- commits:
     - subject: Update contracts to 01757392e1088465b996fb9e92e1b6ab8a45d3b1
       hash: 06594ab9e9d2aad392a99a07281ddea144065621
       body: Update contracts
