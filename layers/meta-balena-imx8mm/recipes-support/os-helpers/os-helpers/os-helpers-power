@@ -1,0 +1,5 @@
+os_helpers_shutdown() {
+	poweroff -f
+	sleep 30
+	fail "Unable to shutdown or reboot"
+}
