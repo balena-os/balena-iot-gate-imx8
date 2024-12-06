@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v6.1.21+rev1
+## (2024-12-06)
+
+* customize shutdown on initramfs [Alex Gonzalez]
+* customize shutdown [Alex Gonzalez]
+
 # v6.1.21
 ## (2024-12-05)
 

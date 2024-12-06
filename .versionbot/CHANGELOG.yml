@@ -1,4 +1,36 @@
 - commits:
+    - subject: customize shutdown on initramfs
+      hash: 161ad3ae3aa753d4ebc5386fa4c2c2e596a4375a
+      body: |
+        This allows the flasher script to correctly power off the device after
+        programming.
+      footer:
+        Changelog-entry: customize shutdown on initramfs
+        changelog-entry: customize shutdown on initramfs
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: customize shutdown
+      hash: a71af8228f24bc77f3636fca620913a0367c74a8
+      body: |
+        The flasher script in meta-balena calls `poweroff` and expects it to
+        fail if the device cannot be powered off. However on this device type
+        the call returns success but the device is not powered off.
+
+        This commit uses a custom shutdown that effectively shuts down this
+        device type.
+      footer:
+        Changelog-entry: customize shutdown
+        changelog-entry: customize shutdown
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.1.21+rev1
+  title: ""
+  date: 2024-12-06T14:16:45.955Z
+- commits:
     - subject: Update layers/meta-balena to e6d699bfffea71667b9551a93f6ee40f56a8ad79
       hash: d9a240b52f3bea9b03b2d42ac9fe55774cfbf298
       body: Update layers/meta-balena
