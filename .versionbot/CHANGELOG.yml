@@ -1,4 +1,58 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 4b3036aab57f3a204049d79f38fc013302f66c12
+      hash: a097ef22792a5a4daeaf0526e4c6264737bac47a
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 4b3036aab57f3a204049d79f38fc013302f66c12
+        changelog-entry: Update balena-yocto-scripts to 4b3036aab57f3a204049d79f38fc013302f66c12
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update the App Id and Private Key for ephemeral app tokens
+              hash: 583241b9d2ae902b302fd00bb037ef0c844ca289
+              body: |
+                This changes the yocto scripts workflow to use a dedicated
+                balenaOS CI app, rather than the Flowzone app.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.28.0
+          title: ""
+          date: 2024-12-09T16:21:11.861Z
+        - commits:
+            - subject: "barys: add support for scarthgap"
+              hash: fa730241fc31bf1cda183e4e42f733372948a4fd
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "barys: make honister+ syntax default"
+              hash: 8d9f26fb9f11b32aba1b0c364a093415be90b576
+              body: |
+                Rather than require new Yocto versions to be added to
+                NEW_SYNTAX_RELEASES, make the new syntax the default.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.27.20
+          title: ""
+          date: 2024-12-09T09:35:53.011Z
+  version: 6.1.21+rev3
+  title: ""
+  date: 2024-12-09T21:51:22.964Z
+- commits:
     - subject: Update balena-yocto-scripts to cece7bfab266136d81db610c3b22dae221ee7682
       hash: e28901ec17b4cc0ee54809eff896d13bd494ee7d
       body: Update balena-yocto-scripts
