@@ -1,6 +1,113 @@
 Change log
 -----------
 
+# v6.1.26
+## (2024-12-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 5523e50b280d0182421b7d39392a61c253f00b79 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.26
+> ### (2024-12-12)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to f308947 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.70
+>> #### (2024-12-12)
+>> 
+>> * Update balena-io/balena-cli to v20.1.0 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.1.25
+> ### (2024-12-11)
+> 
+> * github/workflows: Add yocto label to runs_on [Alexandru Costache]
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 3a37005 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.69
+>> #### (2024-12-10)
+>> 
+>> * os/balenaos: Update Xavier and Xavier NX boot partitions for JP5 [Alexandru]
+>> 
+>> ### leviathan-2.31.68
+>> #### (2024-12-07)
+>> 
+>> * Update balena-io/balena-cli to v20.0.9 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.67
+>> #### (2024-12-06)
+>> 
+>> * Make leviathan worker ref configurable via env var [Ryan Cooke]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.1.24
+> ### (2024-12-11)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.10.1 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.10.1
+>> #### (2024-12-11)
+>> 
+>> * Specify `/tmp/balena|resin` directories as necessary [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.10.0
+>> #### (2024-12-10)
+>> 
+>> * Add PowerFanConfig config backend [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.1.23
+> ### (2024-12-06)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.9.0 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.9.0
+>> #### (2024-12-06)
+>> 
+>> * Add ability to stream logs from host services to cloud [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.8.0
+>> #### (2024-12-05)
+>> 
+>> * Take update locks for host-config changes [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.7.8
+>> #### (2024-11-28)
+>> 
+>> * Clean up remaining locks on state settle [Felipe Lalanne]
+>> * Refactor update-locks implementation [Felipe Lalanne]
+>> * Refactor lockfile module [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.1.22
+> ### (2024-12-05)
+> 
+> * os-helpers-fs: add function to erase disks [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.1.21+rev4
 ## (2024-12-14)
 
