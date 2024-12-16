@@ -1,4 +1,58 @@
 - commits:
+    - subject: Update layers/meta-balena to 3033e1adebd2ec79f9528e83d616ccf27bee4035
+      hash: ad0512d58d4f4b613de8a9e8458032d78a7ea842
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 3033e1adebd2ec79f9528e83d616ccf27bee4035
+        changelog-entry: Update layers/meta-balena to 3033e1adebd2ec79f9528e83d616ccf27bee4035
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "resin-init-flasher: with secure boot, authenticate the inner image"
+              hash: 1ae37ac158b93df836126030abec8c3d3f69d92b
+              body: >
+                At this moment resin-init-flasher just takes whatever image lies
+                in /opt
+
+                and dd's it to the target drive. This is fine for general use,
+                but with
+
+                secure boot enabled, we want to perform at least basic
+                authentication
+
+                of the image being written.
+
+
+                This patch gets the image signed at build time and makes flasher
+                verify
+
+                the signature against a key built-in the kernel trust store. At
+                this
+
+                very moment it fails hard if the signature does not match, but
+                this may
+
+                change in the future. Technically we only want to know if we are
+                about
+
+                to flash a balena-provided image or not, we might want to
+                support both
+
+                but behave slightly differently in each scenario.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.2.0
+          title: ""
+          date: 2024-12-16T14:06:35.499Z
+  version: 6.2.0
+  title: ""
+  date: 2024-12-16T18:20:29.810Z
+- commits:
     - subject: Update layers/meta-balena to 000eb51f9196fe15bbefa8c4ae7639639ccc8e48
       hash: 72bf0c203b3b1159b74d5a828968a681eb838687
       body: Update layers/meta-balena
