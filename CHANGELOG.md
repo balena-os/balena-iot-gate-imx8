@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.2.0+rev2
+## (2024-12-18)
+
+
+<details>
+<summary> Update contracts to 9ce0ad766c4f9b46cd78462813ff01600a61cde5 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.119
+> ### (2024-12-16)
+> 
+> * contracts/hw.device-type: Update instructions for Orin flasher types [Alexandru Costache]
+> 
+> ## contracts-2.0.118
+> ### (2024-12-04)
+> 
+> * hw.device-type: update logo for nitrogen8M Mini [Jonathan Berger]
+> 
+
+</details>
+
 # v6.2.0+rev1
 ## (2024-12-18)
 

@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update contracts to 9ce0ad766c4f9b46cd78462813ff01600a61cde5
+      hash: 6e21ecd20bb5244e77169b61d78c97eb6736ac10
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 9ce0ad766c4f9b46cd78462813ff01600a61cde5
+        changelog-entry: Update contracts to 9ce0ad766c4f9b46cd78462813ff01600a61cde5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "contracts/hw.device-type: Update instructions for Orin flasher types"
+              hash: 79b1757276a189f0b898903f5d85658e0b5c478a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.119
+          title: ""
+          date: 2024-12-16T04:57:49.690Z
+        - commits:
+            - subject: "hw.device-type: update logo for nitrogen8M Mini"
+              hash: 3da872b57b5e5ff700410e0ceda9ac5bdac208e7
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Jonathan Berger
+          version: contracts-2.0.118
+          title: ""
+          date: 2024-12-04T16:14:00.912Z
+  version: 6.2.0+rev2
+  title: ""
+  date: 2024-12-18T06:26:00.253Z
+- commits:
     - subject: Update balena-yocto-scripts to 1c15d4194787879aeec7a84c22bf3dd2712f239a
       hash: 6a1d1b9d8c882b5855956e6e5460131f4391ca4c
       body: Update balena-yocto-scripts
