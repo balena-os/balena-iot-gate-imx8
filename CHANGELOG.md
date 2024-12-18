@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.2.0+rev1
+## (2024-12-18)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 1c15d4194787879aeec7a84c22bf3dd2712f239a [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.29.7
+> ### (2024-12-17)
+> 
+> * Unset AWS credentials to avoid overriding MinIO credentials [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.29.6
+> ### (2024-12-17)
+> 
+> * Update balena-os/leviathan action to v2.31.71 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.29.5
+> ### (2024-12-16)
+> 
+> * Remove hostapp creation step [Ryan Cooke]
+> 
+
+</details>
+
 # v6.2.0
 ## (2024-12-16)
 
