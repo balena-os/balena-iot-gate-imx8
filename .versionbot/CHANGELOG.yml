@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update layers/meta-balena to aa715d098183a09e3f52467f5118f51646c796f6
+      hash: 344b2f41bae4ae7b093ebe0d9b273d3dac6ec39d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to aa715d098183a09e3f52467f5118f51646c796f6
+        changelog-entry: Update layers/meta-balena to aa715d098183a09e3f52467f5118f51646c796f6
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "classes: kernel-balena: configure reset on oops"
+              hash: dc2c8fc20d27d269d0132981ab03e62c882a9e8b
+              body: >
+                This is specially useful to prevent devices freezing at boot on
+                errors,
+
+                for example when the initramfs fail() is called allowing the
+                device to
+
+                reboot and rollback.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.2.1
+          title: ""
+          date: 2024-12-19T11:55:56.499Z
+  version: 6.2.1
+  title: ""
+  date: 2024-12-19T16:07:57.233Z
+- commits:
     - subject: Update contracts to 9383b369225a93451dcb595930106a36f5b2dc45
       hash: dfbb1eac9b3cde299cbf809055cc7aa7401652d1
       body: Update contracts
