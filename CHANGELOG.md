@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v6.2.1+rev2
+## (2024-12-20)
+
+
+<details>
+<summary> Update balena-yocto-scripts to eaab5a2fccab6406d5f75a11d9a0575fd675c197 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.30.2
+> ### (2024-12-20)
+> 
+> * Update actions/upload-artifact action to v4.5.0 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.1
+> ### (2024-12-19)
+> 
+> * Update balena-os/leviathan action to v2.31.76 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.0
+> ### (2024-12-19)
+> 
+> * Append to MIRRORS instead of PREMIRRORS to limit egress [Kyle Harding]
+> * Use dedicated AWS S3 buckets for download mirrors [Kyle Harding]
+> 
+
+</details>
+
 # v6.2.1+rev1
 ## (2024-12-19)
 
