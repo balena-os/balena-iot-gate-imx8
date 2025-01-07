@@ -1,6 +1,37 @@
 Change log
 -----------
 
+# v6.2.6
+## (2025-01-07)
+
+
+<details>
+<summary> Update layers/meta-balena to 6917dadbeaae7d949db55eac399b84c27a7e8035 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.2.6
+> ### (2025-01-03)
+> 
+> * workflows/meta-balena-esr: fix version array bash [Ryan Cooke]
+> 
+> ## meta-balena-6.2.5
+> ### (Invalid date)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to c4feff6 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.77
+>> #### (Invalid date)
+>> 
+>> * Update core/contracts digest to 8bd5651 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.2.4+rev2
 ## (2025-01-07)
 

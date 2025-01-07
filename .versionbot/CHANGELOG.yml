@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update layers/meta-balena to 6917dadbeaae7d949db55eac399b84c27a7e8035
+      hash: 7fb416aa56291b452b19aa0642ff129a023b547d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6917dadbeaae7d949db55eac399b84c27a7e8035
+        changelog-entry: Update layers/meta-balena to 6917dadbeaae7d949db55eac399b84c27a7e8035
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "workflows/meta-balena-esr: fix version array bash"
+              hash: 11c8daa43e30749fa943d142f787da64fda2882c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.2.6
+          title: ""
+          date: 2025-01-03T14:01:19.378Z
+        - commits:
+            - subject: Update tests/leviathan digest to c4feff6
+              hash: 9595de8e0767d34c5be5ca0e6f76e6b8b7ae6225
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update core/contracts digest to 8bd5651
+                      hash: a336cde18c85bd8c01a8bdebbe8a7f6ef0c311be
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.77
+                  title: ""
+                  date: 2024-12-30T10:17:33.420Z
+          version: meta-balena-6.2.5
+          title: ""
+          date: 2024-12-30T15:34:25.474Z
+  version: 6.2.6
+  title: ""
+  date: 2025-01-07T09:22:23.699Z
+- commits:
     - subject: Update balena-yocto-scripts to 8d8a26d86da4a0b87f71d27f9b4504023491063e
       hash: afa6a40e1485e285fc5615907659627a87264bc7
       body: Update balena-yocto-scripts
