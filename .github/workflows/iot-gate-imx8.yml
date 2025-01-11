@@ -50,6 +50,7 @@ jobs:
     secrets: inherit
     with:
       machine: iot-gate-imx8
+      build-args: '--templates-path layers/meta-balena-imx8mm'
       # worker_type defaults to testbot
       # worker_fleets defaults to balena/testbot-rig,balena/testbot-rig-partners,balena/testbot-rig-x86,balena/testbot-rig-partners-x86
       test_matrix: >
