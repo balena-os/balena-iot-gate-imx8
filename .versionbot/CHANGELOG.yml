@@ -1,4 +1,61 @@
 - commits:
+    - subject: Update layers/meta-balena to 59f6652dcaa645cbd629ed1199d1de956d2deab0
+      hash: 31f0db7ccd32196c6482af67ab3704a6f605e90c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 59f6652dcaa645cbd629ed1199d1de956d2deab0
+        changelog-entry: Update layers/meta-balena to 59f6652dcaa645cbd629ed1199d1de956d2deab0
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "peak: Update to version 8.19.0"
+              hash: dc52e74c24bb84b8c2ec38b334fbbf8d9e1df3c4
+              body: >
+                This is needed to have it compiled against kernel version
+                6.12.3,
+
+                which we will include in balena-generic.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.1
+          title: ""
+          date: 2025-01-13T06:54:44.804Z
+        - commits:
+            - subject: Update usb-modeswitch to version 2.6.1
+              hash: 54b5b72a879e942e4b907e49e7387b505772dc55
+              body: >
+                Version 2.5.2 of usb-modeswitch contained a local 0.72 jimtcl
+                copy which was used
+
+                when the static version of the dispatcher was being compiled.
+                Version 2.6.1 removed
+
+                this copy of jimtcl from the source package so we add it back
+                ourselves because it's
+
+                easier to have libjim.a compiled here rather than add a whole
+                new Yocto recipe just for it.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update usb-modeswitch to version 2.6.1
+                changelog-entry: Update usb-modeswitch to version 2.6.1
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.0
+          title: ""
+          date: 2025-01-09T14:29:56.985Z
+  version: 6.3.1
+  title: ""
+  date: 2025-01-14T11:19:21.358Z
+- commits:
     - subject: Update balena-yocto-scripts to f5ec6993fd683b9a933bda067594ae5de6208fbd
       hash: f064f08c9d56b38017027cad4adb0df2bce81696
       body: Update balena-yocto-scripts

@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.3.1
+## (2025-01-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 59f6652dcaa645cbd629ed1199d1de956d2deab0 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.3.1
+> ### (2025-01-13)
+> 
+> * peak: Update to version 8.19.0 [Florin Sarbu]
+> 
+> ## meta-balena-6.3.0
+> ### (2025-01-09)
+> 
+> * Update usb-modeswitch to version 2.6.1 [Florin Sarbu]
+> 
+
+</details>
+
 # v6.2.8+rev2
 ## (2025-01-14)
 
