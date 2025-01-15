@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v6.3.2+rev1
+## (2025-01-15)
+
+* add custom template path to iot-gate-imx8 [Alex Gonzalez]
+* add IOT Gate i.MX8 secure boot variant [Alex Gonzalez]
+* add HAB support [Alex Gonzalez]
+
 # v6.3.2
 ## (2025-01-15)
 
