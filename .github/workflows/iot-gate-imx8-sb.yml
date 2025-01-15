@@ -1,4 +1,4 @@
-name: Compulab IOT-GATE-iMX8
+name: Compulab IOT-GATE-iMX8-SB
 
 on:
   # https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#onpushbranchestagsbranches-ignoretags-ignore
@@ -29,7 +29,7 @@ on:
         description: Environment to use for build and deploy
         required: false
         type: string
-        default: balena-staging.com
+        default: balena-staging.com+sign-api-key
 
 permissions:
   id-token: write # This is required for requesting the JWT #https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#requesting-the-access-token
@@ -41,7 +41,7 @@ permissions:
 jobs:
   yocto:
     name: Yocto
-    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@f5ec6993fd683b9a933bda067594ae5de6208fbd
+    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@3a78c259d96823f6d31477f802cfde2b72bc3b5a
     # Prevent duplicate workflow executions for pull_request (PR) and pull_request_target (PRT) events.
     # Both PR and PRT will be triggered for the same pull request, whether it is internal or from a fork.
     # This condition will prevent the workflow from running twice for the same pull request while
@@ -50,16 +50,18 @@ jobs:
     secrets: inherit
     with:
       machine: iot-gate-imx8
-      build-args: '--templates-path layers/meta-balena-imx8mm'
+      build-args: '--templates-path layers/meta-balena-hab'
       # worker_type defaults to testbot
       # worker_fleets defaults to balena/testbot-rig,balena/testbot-rig-partners,balena/testbot-rig-x86,balena/testbot-rig-partners-x86
       test_matrix: >
         {
           "test_suite": ["os","cloud","hup"],
           "environment": ["bm.balena-dev.com"],
-          "runs_on": [["ubuntu-latest"]]
+          "runs_on": [["ubuntu-latest"]],
+          "secure_boot": ["sb",""]
         }
       # Allow manual workflow runs to force finalize without checking previous test runs
       force-finalize: ${{ inputs.force-finalize || false }}
-      # Default to balena-staging.com for workflow dispatch, but balena-cloud.com for other events
-      deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
+      # Default to balena-staging.com for workflow dispatch, but balena-cloud.com+sign-api-key for other events
+      deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com+sign-api-key' }}
+      sign-image: true
