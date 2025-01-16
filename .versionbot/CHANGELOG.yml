@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update balena-os/balena-yocto-scripts to
+        f5ec6993fd683b9a933bda067594ae5de6208fbd
+      hash: 1bdb078e012650d1ad334db85682212ae559c81c
+      body: Update balena-os/balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-os/balena-yocto-scripts to
+          f5ec6993fd683b9a933bda067594ae5de6208fbd
+        changelog-entry: Update balena-os/balena-yocto-scripts to
+          f5ec6993fd683b9a933bda067594ae5de6208fbd
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.3.2+rev2
+  title: ""
+  date: 2025-01-16T02:13:38.885Z
+- commits:
     - subject: add custom template path to iot-gate-imx8
       hash: e1cd253428cd746287cfb4119867fc720c9af375
       body: |
