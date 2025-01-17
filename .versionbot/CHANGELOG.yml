@@ -1,4 +1,110 @@
 - commits:
+    - subject: Update layers/meta-balena to a65d804761370a77ce74c65db7a553ec8bfbe8da
+      hash: b25a941eb665315affe5130bb83b2454f747b525
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a65d804761370a77ce74c65db7a553ec8bfbe8da
+        changelog-entry: Update layers/meta-balena to a65d804761370a77ce74c65db7a553ec8bfbe8da
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "images: balena-image*: Set balenaos-img.sig image type for signed
+                builds"
+              hash: c7c2fb62abbda3008e73e9ef72d771fb7a43498f
+              body: |
+                This triggers the signing of images for secure boot builds.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "classes: balenaos-img.sig: Rename the sign image type to
+                balenaos-img.sig"
+              hash: e283eb7898ee8f0b5f3df50e6dcb747da1def443
+              body: >
+                This creates the symlinks and images with the expected
+                extensions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "image_types_balena.bbclass: Move image signing code here"
+              hash: c3fc5563a54c3e5c35b7cab02bc4e2ef74c6fa64
+              body: |
+                This fixes the following error:
+
+                cp: cannot stat '/work/build/tmp/deploy/images/generic-amd64/balena-image-generic-amd64.balenaos-img.sig': No such file or directory
+
+                The signed image symlink is not generated before the flasher needs it so we avoid this dependency issue by
+                defining a new image type for which the build system will automatically create the appropriate symlink.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.6
+          title: ""
+          date: 2025-01-17T03:52:47.961Z
+        - commits:
+            - subject: "classes/kernel-balena: Avoid re-building kernel modules when not
+                signed"
+              hash: 729490be46acc63b00d842dd8174ad0f03e5e55f
+              body: >
+                Setting the nostamp flag to any value, even if it is an empty
+                string, causes
+
+                the kernel modules to be rebuilt, which is contrary to the
+
+                documentation:
+                https://lists.openembedded.org/g/bitbake-devel/message/12359
+
+
+                Let's avoid setting it altogether on kernels which are not
+                signed,
+
+                to speed up builds.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.3.5
+          title: ""
+          date: 2025-01-16T19:38:46.906Z
+        - commits:
+            - subject: "workflows: iot-gate-imx8: add custom template path"
+              hash: f206ad55df30f4939cbd2498fd6494aa8d05c60b
+              body: >
+                With the addition of the meta-balena-hab submodule there are
+                multiple
+
+                balena layers with custom templates - specify which one to use
+                to avoid
+
+                a build error.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.3.4
+          title: ""
+          date: 2025-01-16T16:14:51.120Z
+  version: 6.3.6
+  title: ""
+  date: 2025-01-17T10:24:03.550Z
+- commits:
     - subject: Update layers/meta-balena to d752abb95a6c7b66777d348ccb9076e87e15fbe1
       hash: 298bea3037358e3f3ae021f905b42eae09d20700
       body: Update layers/meta-balena
