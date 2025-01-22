@@ -33,9 +33,11 @@ for i in $update_files; do
 
         if [ ! "$existing_md5sum" = "$update_md5sum" ]; then
                 echo "Flashing $current_update_file to $device"
-		echo 0 > /sys/block/mmcblk2boot0/force_ro
+                echo 0 > /sys/block/mmcblk2boot0/force_ro
                 dd if=/resin-boot/$current_update_file of=$device conv=fdatasync seek=$seek_blocks bs=$block_size
-		echo 1 > /sys/block/mmcblk2boot0/force_ro
+                echo 1 > /sys/block/mmcblk2boot0/force_ro
+                # Make sure to configure the eMMC to boot from the boot0 partition
+                mmc bootpart enable 1 0 ${device%boot0}
         fi
 done
 
