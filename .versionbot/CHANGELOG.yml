@@ -1,4 +1,55 @@
 - commits:
+    - subject: make sure emmc boots from partition boot0
+      hash: a5e40aec9270ff5eede935aeb22a536f5da372f1
+      body: |
+        Make sure the emmc partition config is set to look for the bootloader
+        in the boot0 partition. This is set on Compulab's boot script when
+        updating u-boot but we stopped using it for balenaOS in
+        f202fbd33335ca7fde7ad695fadea24ced6f77d1.
+      footer:
+        Changelog-entry: make sure emmc boots from partition boot0
+        changelog-entry: make sure emmc boots from partition boot0
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: make sure emmc boots from partition boot0
+      hash: 731a964f1124389243fc80349db853d8d974fa3d
+      body: |
+        Make sure the emmc partition config is set to look for the bootloader
+        in the boot0 partition. This is set on Compulab's boot script when
+        updating u-boot but we stopped using it for balenaOS in
+        f202fbd33335ca7fde7ad695fadea24ced6f77d1.
+      footer:
+        Changelog-entry: make sure emmc boots from partition boot0
+        changelog-entry: make sure emmc boots from partition boot0
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: let the iot-gate-imx8-sb workflow deploy to a specified slug
+      hash: 4b7be73ded4d4d71f10c518e872729312644742b
+      body: |
+        The iot-gate-imx8-sb workflow builds an iot-gate-imx8 with secure boot
+        support, the machine is still iot-gate-imx8, but it's meant to deploy
+        to its own iot-gate-imx8-sb device type as the original iot-gate-imx8
+        device type rootfs does not fit the secure boot support and there is
+        no migration path at the moment.
+
+        However, it's desired to keep this a single machine as once there is a
+        migration path the same device type will support both secure boot and
+        non secure boot enabled variants.
+      footer:
+        Changelog-entry: let the iot-gate-imx8-sb workflow deploy to a specified slug
+        changelog-entry: let the iot-gate-imx8-sb workflow deploy to a specified slug
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.3.7+rev1
+  title: ""
+  date: 2025-01-23T11:43:35.390Z
+- commits:
     - subject: Update layers/meta-balena to 015a967f1e4a442bf7211cf9fcf9e8739c5cabf4
       hash: d7de69a471b5c3e862453a3c68fc3102cdf79f9d
       body: Update layers/meta-balena

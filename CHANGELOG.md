@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v6.3.7+rev1
+## (2025-01-23)
+
+* make sure emmc boots from partition boot0 [Alex Gonzalez]
+* make sure emmc boots from partition boot0 [Alex Gonzalez]
+* let the iot-gate-imx8-sb workflow deploy to a specified slug [Alex Gonzalez]
+
 # v6.3.7
 ## (2025-01-21)
 
