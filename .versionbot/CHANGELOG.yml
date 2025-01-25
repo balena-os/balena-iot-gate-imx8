@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update layers/meta-freescale-3rdparty to
+        48516272d97f9415e0ee3ab54a923e4c40143e69
+      hash: 749385c92a5f2386c27dfdf37d1dd18c00f890cf
+      body: Update layers/meta-freescale-3rdparty
+      footer:
+        Changelog-entry: Update layers/meta-freescale-3rdparty to
+          48516272d97f9415e0ee3ab54a923e4c40143e69
+        changelog-entry: Update layers/meta-freescale-3rdparty to
+          48516272d97f9415e0ee3ab54a923e4c40143e69
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.3.8+rev1
+  title: ""
+  date: 2025-01-25T11:28:03.453Z
+- commits:
     - subject: Update layers/meta-balena to 15c5d3177f936cbe7dbe03141d46476cebc57c36
       hash: fa4fd5b502902055b7c9fc6a2aa2013881775292
       body: Update layers/meta-balena
