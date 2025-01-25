@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.3.8+rev3
+## (2025-01-25)
+
+* Update layers/meta-balena-hab to 83c4e925031775d14ff694befb791897840848ba [balena-renovate[bot]]
+
 # v6.3.8+rev2
 ## (2025-01-25)
 
