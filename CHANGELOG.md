@@ -1,6 +1,34 @@
 Change log
 -----------
 
+# v6.3.8+rev2
+## (2025-01-25)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 72f8fda1568907e4e8bf0c759a7047f60ee12be6 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.30.19
+> ### (2025-01-24)
+> 
+> * Update balena-os/leviathan action to v2.31.85 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.18
+> ### (2025-01-23)
+> 
+> * barys: allow to specify custom templates paths directly [Alex Gonzalez]
+> * generate-conf-notes: simplify arguments [Alex Gonzalez]
+> * barys: do not build duplicated machines [Alex Gonzalez]
+> * workflows: yocto-build-deploy: distinguish machine from slug [Alex Gonzalez]
+> 
+> ## balena-yocto-scripts-1.30.17
+> ### (2025-01-20)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.3.8+rev1
 ## (2025-01-25)
 
