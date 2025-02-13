@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.3.12+rev4
+## (2025-02-13)
+
+* Update layers/meta-compulab-bsp to 95c7bd9d9fb768bc39ab1ac2735fddb835c5fcbb [balena-renovate[bot]]
+
 # v6.3.12+rev3
 ## (2025-02-11)
 
