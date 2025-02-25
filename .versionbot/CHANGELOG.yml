@@ -1,4 +1,79 @@
 - commits:
+    - subject: Update layers/meta-balena to 5dfed54ec4ffcfb78d1af5a53a8cb8d7e569a806
+      hash: e67ac7ca819a31f917f0699cfe712b2ab76755dd
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5dfed54ec4ffcfb78d1af5a53a8cb8d7e569a806
+        changelog-entry: Update layers/meta-balena to 5dfed54ec4ffcfb78d1af5a53a8cb8d7e569a806
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-devsrc.bb: Use recipe from Poky for 6.12+ kernels"
+              hash: 1eb52a251cfd48d32a4dce2ee01b54e791d7b4ea
+              body: >
+                This is taken from Poky rev
+                ae8fe5b896a1f6bd0740d1fa6638b9d9377a8d28 in master.
+
+
+                It is required for being able to compile kernel modules for
+                6.12+ kernels.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.22
+          title: ""
+          date: 2025-02-24T09:34:34.666Z
+        - commits:
+            - subject: "kernel-balena.bbclass: Add aufs patches for 6.12 kernels"
+              hash: 21469a4d0fb4ddf15d17ec1cff3687329abea018
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.21
+          title: ""
+          date: 2025-02-21T20:03:08.166Z
+        - commits:
+            - subject: "resin-mounts: only run non-encrypted mount if partition exists"
+              hash: 8af007811087416a98826d138d6e654941d9716c
+              body: >
+                When signed images are used without opting in secure boot, we
+                don't want
+
+                the encrypted mount service to run and fail as there is no
+                encrypted
+
+                boot partition.
+
+
+                This commit adds a condition to the encrypted boot mount service
+                to only
+
+                run if the encrypted boot partition exists, similarly to what is
+
+                already done for EFI builds.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.3.20
+          title: ""
+          date: 2025-02-18T17:33:52.196Z
+  version: 6.3.22
+  title: ""
+  date: 2025-02-25T08:33:15.686Z
+- commits:
     - subject: Update balena-yocto-scripts to 2620a0faf744cb9561c6e0b402c913c19b251ff6
       hash: bee83b887f7e0a653c52b7959ea296bc14b3d50a
       body: Update balena-yocto-scripts
