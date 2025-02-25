@@ -1,4 +1,80 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 2620a0faf744cb9561c6e0b402c913c19b251ff6
+      hash: bee83b887f7e0a653c52b7959ea296bc14b3d50a
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 2620a0faf744cb9561c6e0b402c913c19b251ff6
+        changelog-entry: Update balena-yocto-scripts to 2620a0faf744cb9561c6e0b402c913c19b251ff6
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Remove legacy yocto NFS cache host setup
+              hash: 3554f19eecca29a7c7af2d73693b1238a787bfb9
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.30.33
+          title: ""
+          date: 2025-02-24T16:35:19.346Z
+        - commits:
+            - subject: Update actions/upload-artifact action to v4.6.1
+              hash: 037fd9d652c03dd37eaa24ec1babddb24556457f
+              body: |
+                Update actions/upload-artifact from 4.6.0 to 4.6.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.30.32
+          title: ""
+          date: 2025-02-21T22:28:54.769Z
+        - commits:
+            - subject: "barys: build unique machine-image combinations"
+              hash: 290992af63811118ef49a1059f78c1395066a279
+              body: >
+                Keep track of the different machine-image combos being built not
+                to
+
+                duplicate fields.
+
+
+                This allows to have multiple device types that build the same
+                machine,
+
+                for example if they have different feature layers.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.30.31
+          title: ""
+          date: 2025-02-21T13:29:22.936Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 8e7c1a346f5014efb14fd4d7cb5072861cce4087
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.30.30
+          title: ""
+          date: 2025-02-17T01:26:27.806Z
+  version: 6.3.19+rev2
+  title: ""
+  date: 2025-02-25T05:58:30.358Z
+- commits:
     - subject: Update layers/meta-compulab-bsp to
         18ad7cc27ad2dc461e5fd2e04ac51c0c9df7354e
       hash: c8415e94ef8eb5caca6b4331c6192a423e09bca9
