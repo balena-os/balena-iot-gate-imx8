@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 33d6b312a06377c8ac14855dd17143f0a91eb99d
+      hash: 5490022117a9d31f092e43bb0dedf38b70c4588b
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 33d6b312a06377c8ac14855dd17143f0a91eb99d
+        changelog-entry: Update balena-yocto-scripts to 33d6b312a06377c8ac14855dd17143f0a91eb99d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.2.0
+              hash: 946ce45bf57dde1c3d390e566f34732d42f349c2
+              body: |
+                Update product-os/review-commit-action from 0.1.12 to 0.2.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.11
+          title: ""
+          date: 2025-03-03T17:15:01.189Z
+        - commits:
+            - subject: Update aws-actions/configure-aws-credentials action to v4.1.0
+              hash: 8d02327368ce46acefed4700d14997911733cfae
+              body: |
+                Update aws-actions/configure-aws-credentials from 4.0.2 to 4.1.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.10
+          title: ""
+          date: 2025-03-03T13:56:03.329Z
+  version: 6.3.23+rev6
+  title: ""
+  date: 2025-03-03T22:21:07.566Z
+- commits:
     - subject: Update layers/poky to 47cb7bfa667b6dad7c44ba62b0689ea303a19dce
       hash: 3962eea26ae6b99ce3a2fcc061e126181333ae06
       body: Update layers/poky
