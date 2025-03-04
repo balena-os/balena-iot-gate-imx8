@@ -29,7 +29,7 @@ on:
         description: Environment to use for build and deploy
         required: false
         type: string
-        default: balena-staging.com+sign-api-key
+        default: balena-staging.com
 
 permissions:
   id-token: write # This is required for requesting the JWT #https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#requesting-the-access-token
@@ -63,6 +63,7 @@ jobs:
         }
       # Allow manual workflow runs to force finalize without checking previous test runs
       force-finalize: ${{ inputs.force-finalize || false }}
-      # Default to balena-staging.com for workflow dispatch, but balena-cloud.com+sign-api-key for other events
-      deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com+sign-api-key' }}
+      # Default to balena-staging.com for workflow dispatch, but balena-cloud.com for other events
+      deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
       sign-image: true
+      signing-environment: sign.balena-cloud.com
