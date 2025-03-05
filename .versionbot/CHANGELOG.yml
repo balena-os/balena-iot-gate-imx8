@@ -1,4 +1,18 @@
 - commits:
+    - subject: Provide signing environments to secure boot yocto workflows
+      hash: 69223a5a05855d32217139f8f79df3aabda00ded
+      body: ""
+      footer:
+        Changelog-entry: Provide signing environments to secure boot yocto workflows
+        changelog-entry: Provide signing environments to secure boot yocto workflows
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 6.4.1+rev4
+  title: ""
+  date: 2025-03-05T18:59:13.949Z
+- commits:
     - subject: Update layers/poky to 9c934f60ce05ba23e9ecaa1e5d540b3baae9a540
       hash: c23caba7f0c7073037ea2903564ff56a8c17a8e0
       body: Update layers/poky

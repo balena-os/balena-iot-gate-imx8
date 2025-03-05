@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.4.1+rev4
+## (2025-03-05)
+
+* Provide signing environments to secure boot yocto workflows [Kyle Harding]
+
 # v6.4.1+rev3
 ## (2025-03-05)
 
