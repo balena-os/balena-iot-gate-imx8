@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.4.1+rev6
+## (2025-03-06)
+
+* add signing environment to workflow dispatch [Alex Gonzalez]
+
 # v6.4.1+rev5
 ## (2025-03-06)
 

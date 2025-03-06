@@ -1,4 +1,18 @@
 - commits:
+    - subject: add signing environment to workflow dispatch
+      hash: 957b4dbf63104ef69b0b76f62a31b1700d5268c5
+      body: ""
+      footer:
+        Changelog-entry: add signing environment to workflow dispatch
+        changelog-entry: add signing environment to workflow dispatch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.4.1+rev6
+  title: ""
+  date: 2025-03-06T19:45:01.456Z
+- commits:
     - subject: Update balena-yocto-scripts to 7fca80265b4273a246413445cd390f7652857bf7
       hash: c3f63d7941a53f81db4883d7e2de9e0a1ec09c26
       body: Update balena-yocto-scripts
