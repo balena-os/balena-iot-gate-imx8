@@ -30,6 +30,11 @@ on:
         required: false
         type: string
         default: balena-staging.com
+      signing-environment:
+        description: The signing environment to use for the bitbake build - includes the related vars and secrets
+        required: false
+        type: string
+        default: ''
 
 permissions:
   id-token: write # This is required for requesting the JWT #https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#requesting-the-access-token
@@ -63,3 +68,4 @@ jobs:
       force-finalize: ${{ inputs.force-finalize || false }}
       # Default to balena-staging.com for workflow dispatch, but balena-cloud.com for other events
       deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
+      signing-environment: ${{ inputs.signing-environment }}
