@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 7fca80265b4273a246413445cd390f7652857bf7
+      hash: c3f63d7941a53f81db4883d7e2de9e0a1ec09c26
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 7fca80265b4273a246413445cd390f7652857bf7
+        changelog-entry: Update balena-yocto-scripts to 7fca80265b4273a246413445cd390f7652857bf7
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.24.18
+              hash: bc515af1521bc980f0b37d9baffedcc2bca11d32
+              body: |
+                Update aws/aws-cli from 2.24.17 to 2.24.18
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.15
+          title: ""
+          date: 2025-03-05T23:54:15.694Z
+  version: 6.4.1+rev5
+  title: ""
+  date: 2025-03-06T03:43:16.734Z
+- commits:
     - subject: Provide signing environments to secure boot yocto workflows
       hash: 69223a5a05855d32217139f8f79df3aabda00ded
       body: ""
