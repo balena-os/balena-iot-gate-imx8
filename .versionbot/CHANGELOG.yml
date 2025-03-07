@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 2dac8b83fc45756b7ff1327c71b15930281ba2c5
+      hash: 3c6768f77a629c8ff59e9cb7094490c60f313309
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 2dac8b83fc45756b7ff1327c71b15930281ba2c5
+        changelog-entry: Update balena-yocto-scripts to 2dac8b83fc45756b7ff1327c71b15930281ba2c5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.2.2
+              hash: c4c49385484bf0249ca880ae242cf20a583367c3
+              body: |
+                Update product-os/review-commit-action from 0.2.0 to 0.2.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.17
+          title: ""
+          date: 2025-03-07T02:43:19.020Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.24.19
+              hash: 9eb99f99b792bae15a6ea088f968a03fbf404e0b
+              body: |
+                Update aws/aws-cli from 2.24.18 to 2.24.19
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.16
+          title: ""
+          date: 2025-03-06T23:25:01.683Z
+  version: 6.4.1+rev7
+  title: ""
+  date: 2025-03-07T07:01:39.975Z
+- commits:
     - subject: add signing environment to workflow dispatch
       hash: 957b4dbf63104ef69b0b76f62a31b1700d5268c5
       body: ""
