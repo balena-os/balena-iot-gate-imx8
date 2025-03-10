@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update layers/meta-balena-hab to 06e52d36548700ae3df5d214e1a2045c181c54ff
+      hash: 2bbdd1cfe8dba972759bc30c8d0e69df5afc74af
+      body: Update layers/meta-balena-hab
+      footer:
+        Changelog-entry: Update layers/meta-balena-hab to
+          06e52d36548700ae3df5d214e1a2045c181c54ff
+        changelog-entry: Update layers/meta-balena-hab to
+          06e52d36548700ae3df5d214e1a2045c181c54ff
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.4.2+rev7
+  title: ""
+  date: 2025-03-10T16:30:41.601Z
+- commits:
     - subject: Update layers/poky to d103d2df505abd76f75e75114905062503a6bcc8
       hash: f44f14f4093e669fa2dce7ed7c20baadf1777fbb
       body: Update layers/poky
