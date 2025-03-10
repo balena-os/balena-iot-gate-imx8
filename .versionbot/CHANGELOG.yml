@@ -1,4 +1,48 @@
 - commits:
+    - subject: Update layers/meta-balena to 20cbd5aa6f9896b32256a2e6f68cc0b4b55a7650
+      hash: fc21788f8d5798d8b09b95ac2885f3ce03801e29
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 20cbd5aa6f9896b32256a2e6f68cc0b4b55a7650
+        changelog-entry: Update layers/meta-balena to 20cbd5aa6f9896b32256a2e6f68cc0b4b55a7650
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "secureboot: imx: program bootloader in integrity check"
+              hash: 436297c86c5607985bda16fb156d8f360984c78f
+              body: >
+                After modifying the bootloader binary to corrupt the signature
+                it needs
+
+                to be programmed into disk.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "secureboot: imx: increase kernel headers required version"
+              hash: 58f5ad1b243e99a49fad724180f518ffd1adeb01
+              body: >
+                The chosen version has available releases for the devices that
+                make use
+
+                of the imx secure boot tests.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.4.3
+          title: ""
+          date: 2025-03-10T15:11:23.005Z
+  version: 6.4.3
+  title: ""
+  date: 2025-03-10T20:33:30.031Z
+- commits:
     - subject: Update layers/meta-balena-hab to 06e52d36548700ae3df5d214e1a2045c181c54ff
       hash: 2bbdd1cfe8dba972759bc30c8d0e69df5afc74af
       body: Update layers/meta-balena-hab
