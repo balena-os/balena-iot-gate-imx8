@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.4.4
+## (2025-03-12)
+
+
+<details>
+<summary> Update layers/meta-balena to 0d774efb495bf46ca48abb0aea94667825d74804 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.4.4
+> ### (2025-03-12)
+> 
+> * Differentiate MACHINE from DEVICE_TYPE [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.4.3+rev1
 ## (2025-03-12)
 
