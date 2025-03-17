@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 4b227c3a9518939cd0860f062a9d4da6cbecfeef
+      hash: 4f4d1bf4874ed2a91303d8f27a26bc51810a35a0
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 4b227c3a9518939cd0860f062a9d4da6cbecfeef
+        changelog-entry: Update balena-yocto-scripts to 4b227c3a9518939cd0860f062a9d4da6cbecfeef
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.2.4
+              hash: 152ebc760b0786e21ba34c4ef9e275aeb52d6a41
+              body: |
+                Update product-os/review-commit-action from 0.2.3 to 0.2.4
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.30
+          title: ""
+          date: 2025-03-17T04:55:12.812Z
+  version: 6.5.1+rev5
+  title: ""
+  date: 2025-03-17T08:50:34.020Z
+- commits:
     - subject: Update balena-yocto-scripts to 67ed08ab80835b69252ca7fbe0bad7eb405ed81e
       hash: 998520c8b6e64f2b49322fcb3d029bd7ba3f244f
       body: Update balena-yocto-scripts

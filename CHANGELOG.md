@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.1+rev5
+## (2025-03-17)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 4b227c3a9518939cd0860f062a9d4da6cbecfeef [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.31.30
+> ### (2025-03-17)
+> 
+> * Update product-os/review-commit-action action to v0.2.4 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.1+rev4
 ## (2025-03-15)
 
