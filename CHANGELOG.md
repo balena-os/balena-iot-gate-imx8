@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v6.5.1+rev7
+## (2025-03-18)
+
+* iot-gate-imx8-sb: use balena-cloud.com test environment [Alex Gonzalez]
+* provide full paths to templates in workflows [Alex Gonzalez]
+
 # v6.5.1+rev6
 ## (2025-03-18)
 

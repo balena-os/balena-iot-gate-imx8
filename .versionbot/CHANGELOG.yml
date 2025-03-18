@@ -1,4 +1,30 @@
 - commits:
+    - subject: "iot-gate-imx8-sb: use balena-cloud.com test environment"
+      hash: b20dc9396f0cb4ab4991b72e97b0ae9f4255d709
+      body: >
+        Currently only public device types can be tested against
+        bm.balena-dev.com
+      footer:
+        Changelog-entry: "iot-gate-imx8-sb: use balena-cloud.com test environment"
+        changelog-entry: "iot-gate-imx8-sb: use balena-cloud.com test environment"
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: provide full paths to templates in workflows
+      hash: 9de5bf922b3c544c6235f2125048d47681bea469
+      body: ""
+      footer:
+        Changelog-entry: provide full paths to templates in workflows
+        changelog-entry: provide full paths to templates in workflows
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.5.1+rev7
+  title: ""
+  date: 2025-03-18T14:21:09.184Z
+- commits:
     - subject: Update balena-yocto-scripts to aec51ff806e5d3a99e8e282f0f6c942b61029712
       hash: 0c01bb565a703301a34ab48857605eb6ab807bac
       body: Update balena-yocto-scripts
