@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 01049fdfdc3ab64c734ed00a9746d9e2522225e6
+      hash: 09f341366f085f68e04d2d2e525842e2d5655ecc
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 01049fdfdc3ab64c734ed00a9746d9e2522225e6
+        changelog-entry: Update balena-yocto-scripts to 01049fdfdc3ab64c734ed00a9746d9e2522225e6
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.24.26
+              hash: e11a00565bc8a4f4efaddf2948c5d2d077cac193
+              body: |
+                Update aws/aws-cli from 2.24.25 to 2.24.26
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.33
+          title: ""
+          date: 2025-03-18T21:31:54.822Z
+        - commits:
+            - subject: Update actions/download-artifact digest to b14cf4c
+              hash: 2c37a1957a5953dc1911d468a2cd5ea1272049f0
+              body: |
+                Update actions/download-artifact
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.32
+          title: ""
+          date: 2025-03-18T19:10:58.460Z
+  version: 6.5.1+rev8
+  title: ""
+  date: 2025-03-19T01:15:40.527Z
+- commits:
     - subject: "iot-gate-imx8-sb: use balena-cloud.com test environment"
       hash: b20dc9396f0cb4ab4991b72e97b0ae9f4255d709
       body: >
