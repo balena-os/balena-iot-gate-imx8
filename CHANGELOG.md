@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.2+rev6
+## (2025-03-26)
+
+* remove non-sb test runs for iot-gate-imx8-sb [Alex Gonzalez]
+
 # v6.5.2+rev5
 ## (2025-03-26)
 
