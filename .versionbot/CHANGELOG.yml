@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update layers/meta-balena to 5393bc5f097a6e03e605abf7211625a02d11133c
+      hash: f3a8536f68527ea1d7c13ae541f3be15797e2eaf
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5393bc5f097a6e03e605abf7211625a02d11133c
+        changelog-entry: Update layers/meta-balena to 5393bc5f097a6e03e605abf7211625a02d11133c
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "classes: kernel-balena: enable CONFIG_MEMCG_V1 when needed"
+              hash: b7d69ac707a1c1ce58e28033d8a5aeeaaf542c27
+              body: >
+                From kernel v6.11 the memory controller for cgroups v1 has to be
+
+                explicitely selected or its compiled out.
+
+
+                This is required for the engine to apply memory resource
+                constraints.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.5.4
+          title: ""
+          date: 2025-03-27T22:08:15.577Z
+  version: 6.5.4
+  title: ""
+  date: 2025-03-28T03:54:13.964Z
+- commits:
     - subject: Update balena-yocto-scripts to 0fd0f900fb47221150a2eb5a0c5701486f5a89a5
       hash: de3adb71bc36923e86c19de7f41c5b2f19ce1e37
       body: Update balena-yocto-scripts
