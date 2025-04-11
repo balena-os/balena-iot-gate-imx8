@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v6.5.8+rev6
+## (2025-04-11)
+
+* Switch to using nonarch_base_libdir in the linux-balena-bootloader recipe [Florin Sarbu]
+* Package the kernel modules using the nonarch_base_libdir variable instead of hardcoding the path to the modules [Florin Sarbu]
+
 # v6.5.8+rev5
 ## (2025-04-11)
 

@@ -1,4 +1,43 @@
 - commits:
+    - subject: Switch to using nonarch_base_libdir in the linux-balena-bootloader recipe
+      hash: 0c0148e237658087e4411284f78d131f3d500578
+      body: >
+        When enabling the usrmerge feature we will have /usr/lib populated.
+
+        So until then, we need to prepare for it by changing the modules removal
+
+        code to use a variable for doing that and also explicitly remove /usr
+        also.
+      footer:
+        Changelog-entry: Switch to using nonarch_base_libdir in the
+          linux-balena-bootloader recipe
+        changelog-entry: Switch to using nonarch_base_libdir in the
+          linux-balena-bootloader recipe
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Package the kernel modules using the nonarch_base_libdir variable
+        instead of hardcoding the path to the modules
+      hash: 00db94976736701d91b9fad11d6d8b626ac5efd8
+      body: >
+        Use a variable to select from where to package the kernel modules from
+        instead of hardcoding this path.
+
+        This is going to be of use when we enable the usrmerge feature.
+      footer:
+        Changelog-entry: Package the kernel modules using the nonarch_base_libdir
+          variable instead of hardcoding the path to the modules
+        changelog-entry: Package the kernel modules using the nonarch_base_libdir
+          variable instead of hardcoding the path to the modules
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.5.8+rev6
+  title: ""
+  date: 2025-04-11T19:44:54.347Z
+- commits:
     - subject: Update layers/poky to d70d287a77d5026b698ac237ab865b2dafd36bb8
       hash: f02983b19171b72b212da17b0b52f38ee2d99e01
       body: Update layers/poky
