@@ -90,7 +90,7 @@ do_install:append() {
     # Module support is needed as a dependency for kexec image authentication
     # specifically CONFIG_SYSTEM_DATA_VERIFICATION
     # But we remove modules here
-    rm -rf ${D}/etc ${D}/lib
+    rm -rf ${D}/etc ${D}${nonarch_base_libdir} ${D}${exec_prefix}
 }
 
 do_deploy:append () {
