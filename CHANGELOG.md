@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.8+rev7
+## (2025-04-11)
+
+
+<details>
+<summary> Update contracts to 34033e690fc5b1c194114c3aab492036db837bd2 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.131
+> ### (2025-04-03)
+> 
+> * Add EDATEC Sensing contract and logo [RayX123456]
+> 
+
+</details>
+
 # v6.5.8+rev6
 ## (2025-04-11)
 
