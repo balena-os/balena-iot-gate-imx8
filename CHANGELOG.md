@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.24+rev11
+## (2025-05-02)
+
+* recipes-kernel: Add wireless regdb recipe used with kernel 5.15 [Alexandru Costache]
+
 # v6.5.24+rev10
 ## (2025-05-02)
 

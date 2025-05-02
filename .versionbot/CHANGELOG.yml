@@ -1,4 +1,28 @@
 - commits:
+    - subject: "recipes-kernel: Add wireless regdb recipe used with kernel 5.15"
+      hash: ebc5ed26c6a1f772d0f8e6675954af1056a3ff98
+      body: |
+        The recipe was taken from the poky version used by NXP
+        for the 5.15.32 kernel:
+        https://github.com/nxp-imx/imx-manifest/blob/imx-linux-kirkstone/imx-5.15.32-2.0.0.xml
+
+        and fixes the following error in dmesg:
+
+        cfg80211: loaded regulatory.db is malformed or signature is missing/invalid
+
+        After the kernel will be updated, this recipe
+        can be dropped.
+      footer:
+        Changelog-entry: "recipes-kernel: Add wireless regdb recipe used with kernel 5.15"
+        changelog-entry: "recipes-kernel: Add wireless regdb recipe used with kernel 5.15"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 6.5.24+rev11
+  title: ""
+  date: 2025-05-02T17:22:27.523Z
+- commits:
     - subject: Update balena-yocto-scripts to f82136ae1c5d5550ee18f105a5d8552433fe1932
       hash: afb8f478b303580080b4613939416136a19fe1c3
       body: Update balena-yocto-scripts
