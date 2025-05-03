@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update balena-yocto-scripts to aa6876601b1190c26d56eae2cd7c6074be96df31
+      hash: 6d623fdb84ba972037b768587ad1df4d6f9da9e0
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to aa6876601b1190c26d56eae2cd7c6074be96df31
+        changelog-entry: Update balena-yocto-scripts to aa6876601b1190c26d56eae2cd7c6074be96df31
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.105
+              hash: 006cd48fca912e52e3e4c7c0d99347bd0a3e5c1b
+              body: |
+                Update balena-os/leviathan from 2.31.104 to 2.31.105
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.89
+          title: ""
+          date: 2025-05-03T00:26:33.350Z
+        - commits:
+            - subject: Update actions/create-github-app-token action to v2.0.5
+              hash: 828ae57f475b1c393280f9fc1596372dc2c7b36f
+              body: |
+                Update actions/create-github-app-token from 2.0.3 to 2.0.5
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.88
+          title: ""
+          date: 2025-05-02T21:56:33.610Z
+  version: 6.5.24+rev12
+  title: ""
+  date: 2025-05-03T03:22:41.145Z
+- commits:
     - subject: "recipes-kernel: Add wireless regdb recipe used with kernel 5.15"
       hash: ebc5ed26c6a1f772d0f8e6675954af1056a3ff98
       body: |
