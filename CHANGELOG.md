@@ -1,6 +1,29 @@
 Change log
 -----------
 
+# v6.5.29+rev3
+## (2025-05-09)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 449116e7aa0d02a3a27147d4570bc6929bc71732 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.32.3
+> ### (2025-05-09)
+> 
+> * Update aws/aws-cli to v2.27.11 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.2
+> ### (2025-05-09)
+> 
+> * Use GH CLI to download build artifacts [Kyle Harding]
+> * Disable GHA compression for build artifacts [Kyle Harding]
+> * Provide yocto scripts ref to test build pipeline [Kyle Harding]
+> * Remove leviathan test suites from build artifacts [Kyle Harding]
+> 
+
+</details>
+
 # v6.5.29+rev2
 ## (2025-05-09)
 
