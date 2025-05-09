@@ -1,4 +1,58 @@
 - commits:
+    - subject: Update balena-yocto-scripts to af5a025a8c9dd192c5470cf4ef8b9ef9a22e5572
+      hash: 0d938888fa892cbe5d9766e3c56c627c7c2a6515
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to af5a025a8c9dd192c5470cf4ef8b9ef9a22e5572
+        changelog-entry: Update balena-yocto-scripts to af5a025a8c9dd192c5470cf4ef8b9ef9a22e5572
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.10
+              hash: ad04c2a299700fa469039114ee97c9daf091cafd
+              body: |
+                Update aws/aws-cli from 2.27.8 to 2.27.10
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.32.1
+          title: ""
+          date: 2025-05-07T22:45:59.670Z
+        - commits:
+            - subject: Remove legacy Jenkins deploy scripts
+              hash: 43645a8075784913dfa522ea60b14ab4556f21e9
+              body: |
+                These scripts have been unrolled into the GitHub Action workflow
+                and are no longer kept up-to-date or tested.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.32.0
+          title: ""
+          date: 2025-05-07T18:38:01.404Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v21.1.11
+              hash: 51790edaaab7338e3df08c3b28a22a3b27cd2803
+              body: |
+                Update balena-io/balena-cli from 21.1.10 to 21.1.11
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.97
+          title: ""
+          date: 2025-05-07T08:16:54.469Z
+  version: 6.5.29+rev1
+  title: ""
+  date: 2025-05-09T04:52:45.206Z
+- commits:
     - subject: Update layers/meta-balena to 72bb35f5fa5b006033f2e360f7464abaed48e2c3
       hash: 0ce725c0fcb952bab363ed0d9c98435199432e2e
       body: Update layers/meta-balena

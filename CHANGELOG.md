@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.5.29+rev1
+## (2025-05-09)
+
+
+<details>
+<summary> Update balena-yocto-scripts to af5a025a8c9dd192c5470cf4ef8b9ef9a22e5572 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.32.1
+> ### (2025-05-07)
+> 
+> * Update aws/aws-cli to v2.27.10 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.0
+> ### (2025-05-07)
+> 
+> * Remove legacy Jenkins deploy scripts [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.31.97
+> ### (2025-05-07)
+> 
+> * Update balena-io/balena-cli to v21.1.11 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.29
 ## (2025-05-09)
 
