@@ -1,4 +1,36 @@
 - commits:
+    - subject: Update layers/meta-balena to ea86709a93ff8615c3b28cfccedba7546ae6ba3a
+      hash: aaa2eac714847c7ae2ae4289dad2ed767c58b8f2
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ea86709a93ff8615c3b28cfccedba7546ae6ba3a
+        changelog-entry: Update layers/meta-balena to ea86709a93ff8615c3b28cfccedba7546ae6ba3a
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: Include 802.1q VLAN driver"
+              hash: edf1db17820be0689799c73a68b4bd72c593fb98
+              body: >
+                On most devices this is already included but we want it
+                everywhere,
+
+                NetworkManager provides native support and it can't work without
+
+                the kernel driver.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.5.32
+          title: ""
+          date: 2025-05-17T16:27:22.273Z
+  version: 6.5.32
+  title: ""
+  date: 2025-05-17T21:08:09.311Z
+- commits:
     - subject: Update layers/poky to ab9a994a8cd8e06b519a693db444030999d273b7
       hash: 0c8c2bde80c82863d5cd5759d82c6c6188db8831
       body: Update layers/poky
