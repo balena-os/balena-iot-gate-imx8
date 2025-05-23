@@ -1,4 +1,59 @@
 - commits:
+    - subject: Update layers/meta-balena to 8ac612e8067ccf04a437a4213e9d0d8704c094b9
+      hash: e00189848cf8aa677e216e49f1b16fb61e38c2ab
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 8ac612e8067ccf04a437a4213e9d0d8704c094b9
+        changelog-entry: Update layers/meta-balena to 8ac612e8067ccf04a437a4213e9d0d8704c094b9
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Increases persistent logs size to 128M
+              hash: ffe62ab787a0d50bf48fea0d9a9c28fb9f163221
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.5.34
+          title: ""
+          date: 2025-05-23T08:18:21.963Z
+        - commits:
+            - subject: Update balena-supervisor to v17.0.3
+              hash: 85752e8323d83b7ed8fc705df7239157bf0640c6
+              body: |
+                Update balena-supervisor from 17.0.2 to 17.0.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Simplify contract validation module
+                      hash: 7c83eaef8024cec9052eb0051a1a1f47e238c690
+                      body: >
+                        Use `satisfiesChildContract` instead of Blueprints as
+                        the previous
+
+                        implementation did.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-17.0.3
+                  title: ""
+                  date: 2025-05-13T14:50:13.303Z
+          version: meta-balena-6.5.33
+          title: ""
+          date: 2025-05-21T07:30:02.404Z
+  version: 6.5.34
+  title: ""
+  date: 2025-05-23T14:28:20.962Z
+- commits:
     - subject: Update balena-yocto-scripts to daf7b30838848a5072a4ee76abcc86887e0f775f
       hash: a816064bde7964b72cc27385a1c775600cb07a23
       body: Update balena-yocto-scripts
