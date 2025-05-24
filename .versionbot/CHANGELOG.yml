@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update balena-yocto-scripts to e91b984e6b39e277d440cf810c461e07fc8e8772
+      hash: 8cb387de0276a090526a7b73b4eed3d18d694928
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to e91b984e6b39e277d440cf810c461e07fc8e8772
+        changelog-entry: Update balena-yocto-scripts to e91b984e6b39e277d440cf810c461e07fc8e8772
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io/balena-cli to v21.1.14
+              hash: acb026e4d6f113b1bddec15aa9901afc0cf025cd
+              body: |
+                Update balena-io/balena-cli from 21.1.13 to 21.1.14
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.32.24
+          title: ""
+          date: 2025-05-24T13:12:08.421Z
+        - commits:
+            - subject: Update balena-io-examples/setup-balena-action action to v0.0.9
+              hash: cf09a541e049893ec3b69f3bad04112c4c649ee2
+              body: >
+                Update balena-io-examples/setup-balena-action from 0.0.6 to 0.0.9
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.32.23
+          title: ""
+          date: 2025-05-24T10:35:48.878Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.32.1
+              hash: 4d4c0949f6003ec7748236fc59b124b84af6651d
+              body: |
+                Update balena-os/leviathan from 2.31.111 to 2.32.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.32.22
+          title: ""
+          date: 2025-05-24T06:22:18.832Z
+  version: 6.5.34+rev3
+  title: ""
+  date: 2025-05-24T16:39:37.597Z
+- commits:
     - subject: Update balena-yocto-scripts to a63b6341b2830ddd045dce37070f4f6e34265a8f
       hash: 4dd6105612adb4df5af9ecee4bd51faf0af6c792
       body: Update balena-yocto-scripts
