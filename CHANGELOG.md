@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.5.34+rev8
+## (2025-05-28)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 4e3439795f4cad6905beb051e8897ef2350dfc69 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.33.0
+> ### (2025-05-28)
+> 
+> * Make hostapp-deploy depend on a successful s3-deploy [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.32.30
+> ### (2025-05-28)
+> 
+> * Update aws/aws-cli to v2.27.23 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.29
+> ### (2025-05-27)
+> 
+> * Update balena-io/balena-cli to v22 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.34+rev7
 ## (2025-05-27)
 
