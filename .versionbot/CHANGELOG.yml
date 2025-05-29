@@ -1,4 +1,56 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 2ca21a201236a14a7ab7adc9324cfc69adb01264
+      hash: 3e41fb45c2a1c09f1ecb69d5b7605f56a8c672c4
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 2ca21a201236a14a7ab7adc9324cfc69adb01264
+        changelog-entry: Update balena-yocto-scripts to 2ca21a201236a14a7ab7adc9324cfc69adb01264
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io-examples/setup-balena-action action to v0.0.16
+              hash: 25603d6b153b249e03e8a640cbc15b866ceb98ff
+              body: >
+                Update balena-io-examples/setup-balena-action from 0.0.12 to
+                0.0.16
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.3
+          title: ""
+          date: 2025-05-29T14:59:53.816Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.24
+              hash: 7c618a33f828d42bd33dd47f02f1b4b4f29c403a
+              body: |
+                Update aws/aws-cli from 2.27.23 to 2.27.24
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.2
+          title: ""
+          date: 2025-05-28T23:45:40.417Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v22.0.1
+              hash: f5ebc1dac3a572de018319620ef6a8839bac875a
+              body: |
+                Update balena-io/balena-cli from 22.0.0 to 22.0.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.1
+          title: ""
+          date: 2025-05-28T19:01:41.439Z
+  version: 6.5.34+rev10
+  title: ""
+  date: 2025-05-29T19:35:17.322Z
+- commits:
     - subject: Update layers/meta-freescale to ccb66d5754fb3027670e15d33b5dd63daffaf2eb
       hash: 7317dd33d5007b49d7c2bcbb86dd868cf5842ef2
       body: Update layers/meta-freescale
