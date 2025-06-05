@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update layers/meta-balena to 3c38e8730a7ab77734a4f1119783a9ce7d460a05
+      hash: 312e2cc63a7bbd52ce003d0c2adf979b952ddad1
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 3c38e8730a7ab77734a4f1119783a9ce7d460a05
+        changelog-entry: Update layers/meta-balena to 3c38e8730a7ab77734a4f1119783a9ce7d460a05
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "classes: Make sure we disable debug info for newer kernels"
+              hash: 22494caa4284a15d9f707f22d0a03f546de85f47
+              body: |
+                Starting with https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f9b3cd24578401e7a392974b3353277286e49cee
+                we also need to enable CONFIG_DEBUG_INFO_NONE to properly disable debug info for the kernel.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.5.36
+          title: ""
+          date: 2025-06-04T15:07:17.703Z
+  version: 6.5.36
+  title: ""
+  date: 2025-06-05T01:39:27.610Z
+- commits:
     - subject: Update layers/meta-openembedded to
         45bddd258a3d1ded925faf8389e01bb948dc7f5b
       hash: 2108382f41b789b0cbcbdfa162ce293d6e4bf3e4
