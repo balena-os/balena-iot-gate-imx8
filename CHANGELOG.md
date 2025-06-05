@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v6.5.36+rev2
+## (2025-06-05)
+
+
+<details>
+<summary> Update balena-yocto-scripts to a6359835067e3d0b03ee8040feeedc9f7bba35bc [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.33.15
+> ### (2025-06-05)
+> 
+> * Update balena-os/leviathan action to v2.32.6 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.14
+> ### (2025-06-04)
+> 
+> * Update aws/aws-cli to v2.27.29 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.13
+> ### (2025-06-04)
+> 
+> * AMI deploy: remove secureboot reference from AMI name [Ryan Cooke]
+> 
+> ## balena-yocto-scripts-1.33.12
+> ### (2025-06-03)
+> 
+> * Update aws/aws-cli to v2.27.28 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.36+rev1
 ## (2025-06-05)
 

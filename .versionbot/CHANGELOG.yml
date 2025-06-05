@@ -1,4 +1,72 @@
 - commits:
+    - subject: Update balena-yocto-scripts to a6359835067e3d0b03ee8040feeedc9f7bba35bc
+      hash: ada6f21dc2ef036339173fa3a1bb54d844dd5b7a
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to a6359835067e3d0b03ee8040feeedc9f7bba35bc
+        changelog-entry: Update balena-yocto-scripts to a6359835067e3d0b03ee8040feeedc9f7bba35bc
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.32.6
+              hash: 84bea7722f0255f3e14267384dd5e2ed8d09af3b
+              body: |
+                Update balena-os/leviathan from 2.32.5 to 2.32.6
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.15
+          title: ""
+          date: 2025-06-05T03:27:31.429Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.29
+              hash: da15c785cfee37528b3ac91a175a9eff21de5dcf
+              body: |
+                Update aws/aws-cli from 2.27.28 to 2.27.29
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.14
+          title: ""
+          date: 2025-06-04T22:44:26.972Z
+        - commits:
+            - subject: "AMI deploy: remove secureboot reference from AMI name"
+              hash: ed09169ad436883013d57a378b699f80d2c32386
+              body: >
+                We have disabled secureboot AMIs in
+                31b55b59824a4e7a20ee223fe9d4d6fd5e7aa5e4 - so we need to remove
+                it from the AMI name
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.33.13
+          title: ""
+          date: 2025-06-04T14:12:03.067Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.28
+              hash: e0fb43d4fb3c84b6d94456e90ffc6f6ce45954f9
+              body: |
+                Update aws/aws-cli from 2.27.27 to 2.27.28
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.12
+          title: ""
+          date: 2025-06-03T21:24:44.995Z
+  version: 6.5.36+rev2
+  title: ""
+  date: 2025-06-05T15:24:39.787Z
+- commits:
     - subject: Update layers/poky to 81e0dc80d72d66b7f15a34c0da7a0a8c58809056
       hash: 487e74f57a68d0686c39554f68d80533ade40176
       body: Update layers/poky
