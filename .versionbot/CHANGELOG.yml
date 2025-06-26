@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/meta-compulab to e8bb0006fcc0e82dcfd6f82530073a2c76c0dfca
+      hash: a07681f1df5c6e84b6afa485481b7710d457d03c
+      body: Update layers/meta-compulab
+      footer:
+        Changelog-entry: Update layers/meta-compulab to e8bb0006fcc0e82dcfd6f82530073a2c76c0dfca
+        changelog-entry: Update layers/meta-compulab to e8bb0006fcc0e82dcfd6f82530073a2c76c0dfca
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.39+rev5
+  title: ""
+  date: 2025-06-26T13:11:05.761Z
+- commits:
     - subject: Update balena-yocto-scripts to 6a62b91cf338fc28febdf26e7d72df329930a943
       hash: 430218a7c2367258f4b1534e6d7d1f4fbc454909
       body: Update balena-yocto-scripts
