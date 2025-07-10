@@ -32,5 +32,4 @@ else
     echo ##BOOTLOADER## file not found
 fi
 
-setenv script
-boot
+echo "Continue with the balena boot flow ..."

@@ -1,0 +1,26 @@
+From 4349dc619f1315106eebae6d02c13f755e9a4e55 Mon Sep 17 00:00:00 2001
+From: Valentin Raevsky <valentin@compulab.co.il>
+Date: Fri, 27 Jun 2025 22:41:08 +0300
+Subject: [PATCH 2/4] Balena: Fix build error env/mmc.c
+
+Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+---
+ env/mmc.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/env/mmc.c b/env/mmc.c
+index 7a5836ad66..568215ff6f 100644
+--- a/env/mmc.c
++++ b/env/mmc.c
+@@ -490,7 +490,7 @@ U_BOOT_ENV_LOCATION(mmc) = {
+ 	.location	= ENVL_MMC,
+ 	ENV_NAME("MMC")
+ 	.load		= env_mmc_load,
+-#ifndef CONFIG_SPL_BUILD
++#if defined(CONFIG_CMD_SAVEENV) && !defined(CONFIG_SPL_BUILD)
+ 	.save		= env_save_ptr(env_mmc_save),
+ 	.erase		= ENV_ERASE_PTR(env_mmc_erase)
+ #endif
+-- 
+2.34.1
+

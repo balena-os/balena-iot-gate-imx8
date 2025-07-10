@@ -66,3 +66,5 @@ HOSTTOOLS:remove = "cc"
 HOSTTOOLS += "docker iptables"
 
 ACCEPT_FSL_EULA = "1"
+
+# SOM_SUPPORTS_FASTBOOT = "yes"

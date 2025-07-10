@@ -1,0 +1,154 @@
+From a699678fb00a10d9169a7fb8c51472f52365e253 Mon Sep 17 00:00:00 2001
+From: Valentin Raevsky <valentin@compulab.co.il>
+Date: Fri, 27 Jun 2025 21:52:43 +0300
+Subject: [PATCH 1/4] Balena: Patch for 2023.04
+
+Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+
+%% original patch: 0100-Balena-Patch-for-2023.04.patch
+
+Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+---
+ configs/cl-imx8m-mini_defconfig  |  2 +-
+ configs/iot-gate-imx8.config     | 13 ++++--
+ include/configs/cpl-imx8m-mini.h | 74 +++++++++++++++++---------------
+ 3 files changed, 51 insertions(+), 38 deletions(-)
+
+diff --git a/configs/cl-imx8m-mini_defconfig b/configs/cl-imx8m-mini_defconfig
+index 43091edf47..8a697e1158 100644
+--- a/configs/cl-imx8m-mini_defconfig
++++ b/configs/cl-imx8m-mini_defconfig
+@@ -2,7 +2,7 @@ CONFIG_ARM=y
+ CONFIG_SPL_SYS_ICACHE_OFF=y
+ CONFIG_SPL_SYS_DCACHE_OFF=y
+ CONFIG_ARCH_IMX8M=y
+-CONFIG_ENV_SIZE=0x4000
++CONFIG_ENV_SIZE=0x5000
+ CONFIG_ENV_OFFSET=0x4400
+ CONFIG_SPL_GPIO=y
+ CONFIG_DM_GPIO=y
+diff --git a/configs/iot-gate-imx8.config b/configs/iot-gate-imx8.config
+index 7de48a1049..0c0d48c9da 100644
+--- a/configs/iot-gate-imx8.config
++++ b/configs/iot-gate-imx8.config
+@@ -1,9 +1,9 @@
+ CONFIG_TARGET_IOT_GATE_IMX8=y
+ CONFIG_LOCALVERSION="-iot-gate-imx8-4.0.1"
+ CONFIG_DEFAULT_DEVICE_TREE="iot-gate-imx8"
+-# CONFIG_DM_RESET is not set
+-# CONFIG_SYSRESET is not set
+-# CONFIG_SYSRESET_PSCI is not set
++CONFIG_DM_RESET=n
++CONFIG_SYSRESET=n
++CONFIG_SYSRESET_PSCI=n
+ CONFIG_DM_VIDEO=n
+ CONFIG_SYS_WHITE_ON_BLACK=n
+ CONFIG_VIDEO_LCD_STARTEK_ILI9881C=n
+@@ -14,3 +14,10 @@ CONFIG_CMD_PCA953X=y
+ CONFIG_DM_PCA953X=y
+ CONFIG_SYS_PROMPT="IOT-GATE-iMX8 => "
+ CONFIG_USB_ETHER_SMSC95XX=y
++CONFIG_CMD_UNZIP=y
++CONFIG_CMD_IMPORTENV=y
++CONFIG_CMD_EXPORTENV=y
++CONFIG_CMD_SETEXPR=y
++CONFIG_PARTITION_UUIDS=y
++CONFIG_CMD_PART=y
++CONFIG_CMD_FS_UUID=y
+diff --git a/include/configs/cpl-imx8m-mini.h b/include/configs/cpl-imx8m-mini.h
+index 03dfbefc5a..550a84e75f 100644
+--- a/include/configs/cpl-imx8m-mini.h
++++ b/include/configs/cpl-imx8m-mini.h
+@@ -100,49 +100,55 @@
+ 	"autoload=off\0" \
+ 	"script=boot.scr\0" \
+ 	"kernel_addr_r=" __stringify(CONFIG_SYS_LOAD_ADDR) "\0" \
+-	"image=Image\0" \
+ 	"console=ttymxc2,115200 earlycon=ec_imx6q,0x30880000,115200\0" \
+-	"fdt_addr=0x43000000\0"			\
++	"image=Image.gz\0" \
++	"zip_addr=0x70480000\0" \
++	"fdt_addr=0x44360000\0"	\
+ 	"fdt_high=0xffffffffffffffff\0"		\
+ 	"boot_fdt=yes\0" \
+ 	"fdt_file="CONFIG_DEFAULT_FDT_FILE"\0" \
+-	"initrd_addr=0x43800000\0"		\
++	"initrd_addr=0x44B60000\0" \
+ 	"initrd_high=0xffffffffffffffff\0" \
+ 	"mmcautodetect=yes\0" \
+ 	"root_opt=rootwait rw\0" \
+-	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0\0" \
+-	"emmc_ul=setenv iface mmc; setenv dev 2; setenv part 1;" \
+-	"setenv bootargs ${bootargs_common} root=/dev/mmcblk2p2 ${root_opt};\0" \
+-	"sd_ul=setenv iface mmc; setenv dev 1; setenv part 1;" \
+-	"setenv bootargs ${bootargs_common} root=/dev/mmcblk1p2 ${root_opt};\0" \
+-	"usb_ul=usb start; setenv iface usb; setenv dev 0; setenv part 1;" \
+-	"setenv bootargs ${bootargs_common}  root=/dev/sda2 ${root_opt};\0" \
++	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0 "__stringify(BALENA_STAGE2)" \0" \
++	"emmc_ul=setenv boot_dev_str eMMC; run boot_try_msg; " \
++	"setenv iface mmc; setenv dev 2; setenv part 1;" \
++	"setenv bootargs ${bootargs_common} " \
++	"${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
++	"usb_ul=setenv boot_dev_str USB; run boot_try_msg; usb reset; " \
++	"setenv iface usb; setenv dev 0; setenv part 1; " \
++	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
+-	"ulimage=load ${iface} ${dev}:${part} ${loadaddr} ${image}\0" \
+-	"ulfdt=if test ${boot_fdt} = yes || test ${boot_fdt} = try; then " \
+-		"load ${iface} ${dev}:${part} ${fdt_addr} ${fdt_file}; fi;\0" \
+-	"bootscript=echo Running bootscript from mmc ...; " \
+-		"source\0" \
+-	"netargs=setenv bootargs console=${console} " \
+-		"root=/dev/nfs " \
+-		"ip=dhcp nfsroot=${serverip}:${nfsroot},v3,tcp\0" \
+-	"netboot=echo Booting from net ...; " \
+-		"run netargs;  " \
+-		"if test ${ip_dyn} = yes; then " \
+-			"setenv get_cmd dhcp; " \
+-		"else " \
+-			"setenv get_cmd tftp; " \
+-		"fi; " \
+-		"${get_cmd} ${loadaddr} ${image}; " \
+-		"if test ${boot_fdt} = yes || test ${boot_fdt} = try; then " \
+-			"if ${get_cmd} ${fdt_addr} ${fdt_file}; then " \
+-				"booti ${loadaddr} - ${fdt_addr}; " \
+-			"else " \
+-				"echo WARN: Cannot load the DT; " \
++	"ulimage=if load ${iface} ${dev}:${resin_boot_part} ${zip_addr} ${image}; then unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save; else if load ${iface} ${dev}:${resin_root_part} ${zip_addr} boot/${image}; then unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save; else false; fi; fi; \0" \
++	"ulfdt=if load ${iface} ${dev}:${resin_boot_part} ${fdt_addr} ${fdt_file}; then run balena_fdt_load_crc_save; else if load ${iface} ${dev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}; then run balena_fdt_load_crc_save; else false; fi; fi;\0" \
++	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
++	"source;\0" \
++	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
++#ifdef CONFIG_BOOTCOMMAND
++#undef CONFIG_BOOTCOMMAND
++#endif
++#define CONFIG_BOOTCOMMAND \
++	"setenv resin_kernel_load_addr ${loadaddr};" \
++	"run resin_set_kernel_root; run set_os_cmdline; " \
++	"setenv usbdev ${resin_dev_index};" \
++	"setenv usbbootpart ${resin_boot_part};" \
++	"setenv mmcdev ${resin_dev_index};" \
++	"setenv mmcbootpart ${resin_boot_part};" \
++	"for src in usb_ul emmc_ul; do " \
++		"run ${src}; " \
++			"if run ulbootscript; then " \
++				"run bootscript; " \
+ 			"fi; " \
+-		"else " \
+-			"booti; " \
+-		"fi;\0"
++			"if run ulimage; then " \
++				"if run ulfdt; then " \
++					"run balena_kernel_load_crc_check; " \
++					"run balena_fdt_load_crc_check; " \
++					"echo Booting from ${boot_dev_str} script ...; " \
++					"booti ${loadaddr} - ${fdt_addr}; " \
++				"fi; " \
++			"fi; " \
++	"done; "
+ 
+ /* Link Definitions */
+ 
+-- 
+2.34.1
+
