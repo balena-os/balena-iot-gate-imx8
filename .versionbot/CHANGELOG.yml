@@ -1,4 +1,785 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 972d8235cfde35394f24df80486c6e8ba5e056e5
+      hash: 6cdf7d1f7ce7edfa95b9dd39686f6c180ce0f748
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 972d8235cfde35394f24df80486c6e8ba5e056e5
+        changelog-entry: Update balena-yocto-scripts to 972d8235cfde35394f24df80486c6e8ba5e056e5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.53
+              hash: 00df051abb4c2f5cd58d58dea6ccd6d65fe56da2
+              body: |
+                Update aws/aws-cli from 2.27.52 to 2.27.53
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.7
+          title: ""
+          date: 2025-07-16T23:58:55.907Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.52
+              hash: 5863314e2f0fb2665ef9b7aff939c44d414f72d1
+              body: |
+                Update aws/aws-cli from 2.27.51 to 2.27.52
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.6
+          title: ""
+          date: 2025-07-16T05:36:50.240Z
+  version: 6.5.44+rev6
+  title: ""
+  date: 2025-07-17T05:26:48.904Z
+- commits:
+    - subject: Update balena-yocto-scripts to 9ca780a7bda76f50ce9527fc2bb062115e2594bf
+      hash: 5936f37e2795a020131416e5f94bb5a5ac9aefc6
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 9ca780a7bda76f50ce9527fc2bb062115e2594bf
+        changelog-entry: Update balena-yocto-scripts to 9ca780a7bda76f50ce9527fc2bb062115e2594bf
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.51
+              hash: 9e42d7cef2de41a9d08c9de7af4c08b71b61c20c
+              body: |
+                Update aws/aws-cli from 2.27.50 to 2.27.51
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.5
+          title: ""
+          date: 2025-07-15T21:55:14.789Z
+  version: 6.5.44+rev5
+  title: ""
+  date: 2025-07-16T01:12:44.907Z
+- commits:
+    - subject: Update layers/poky to 4ee43d7d686836b27d4f6c075915b7a2e14db997
+      hash: d4a644496b047b9a37458b0233dc3b112ad84f4b
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 4ee43d7d686836b27d4f6c075915b7a2e14db997
+        changelog-entry: Update layers/poky to 4ee43d7d686836b27d4f6c075915b7a2e14db997
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.44+rev4
+  title: ""
+  date: 2025-07-15T16:48:58.383Z
+- commits:
+    - subject: Update balena-yocto-scripts to 145071d2de92dfc79e548b5ef8810cd30afd0f43
+      hash: 90ebacfb2c1b98c6da516489ae6c0c418d2cfbd2
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 145071d2de92dfc79e548b5ef8810cd30afd0f43
+        changelog-entry: Update balena-yocto-scripts to 145071d2de92dfc79e548b5ef8810cd30afd0f43
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io-examples/setup-balena-action action to v0.0.21
+              hash: 67a845896016fcc7237c552777c982bdc2811a8a
+              body: >
+                Update balena-io-examples/setup-balena-action from 0.0.20 to
+                0.0.21
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.4
+          title: ""
+          date: 2025-07-15T05:20:47.150Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v22.1.2
+              hash: d59b676f60a64037e261e1d69a981ea28903aa35
+              body: |
+                Update balena-io/balena-cli from 22.1.1 to 22.1.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.3
+          title: ""
+          date: 2025-07-15T02:51:16.793Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.50
+              hash: ed8b39f870f7bbf323f71d124647430554d890ad
+              body: |
+                Update aws/aws-cli from 2.27.49 to 2.27.50
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.2
+          title: ""
+          date: 2025-07-10T23:05:43.420Z
+        - commits:
+            - subject: Update balena-io/upload-balena-release-asset action to v0.1.4
+              hash: 8c86439772badada857f6c982a77d9ce0ae6b8fc
+              body: |
+                Update balena-io/upload-balena-release-asset from 0.1.3 to 0.1.4
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.1
+          title: ""
+          date: 2025-07-10T18:37:30.402Z
+  version: 6.5.44+rev3
+  title: ""
+  date: 2025-07-15T14:03:40.374Z
+- commits:
+    - subject: Update layers/poky to 3171dcc835afe49ab49847bdd6bf0d6d392fad03
+      hash: becdb412e90a003ea1e008fce2b62dabf4efa13d
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 3171dcc835afe49ab49847bdd6bf0d6d392fad03
+        changelog-entry: Update layers/poky to 3171dcc835afe49ab49847bdd6bf0d6d392fad03
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.44+rev2
+  title: ""
+  date: 2025-07-10T11:34:32.809Z
+- commits:
+    - subject: Update balena-yocto-scripts to ccb8899d87c181fa3198a496fe1a514a93de90e5
+      hash: 12525e10e8e020d9196230c575bcf7b84929b1a3
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to ccb8899d87c181fa3198a496fe1a514a93de90e5
+        changelog-entry: Update balena-yocto-scripts to ccb8899d87c181fa3198a496fe1a514a93de90e5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "minor: upload cyclonedx bom.json and vex.json as independend files"
+              hash: f0302f4e650d917c71b846014e4fed65a7916c3a
+              body: ""
+              footer: {}
+              author: Edwin Joassart
+              nested: []
+            - subject: Generate SBOM and VEX (cycloneDX)
+              hash: a534b99e565c2854af0a790c96706f7a348df447
+              body: |
+                https://balena.fibery.io/Work/Project/balenaos-SBOM-as-release-asset-1515
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Generate SBOM and VEX (cycloneDX)
+                changelog-entry: Generate SBOM and VEX (cycloneDX)
+                Signed-off-by: Edwin Joassart <edwin.joassart@balena.io>
+                signed-off-by: Edwin Joassart <edwin.joassart@balena.io>
+              author: Edwin Joassart
+              nested: []
+          version: balena-yocto-scripts-1.36.0
+          title: ""
+          date: 2025-07-09T18:11:19.397Z
+  version: 6.5.44+rev1
+  title: ""
+  date: 2025-07-10T03:39:26.072Z
+- commits:
+    - subject: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+      hash: c295837b72b3a7fec72647cd84edbf44156b6a77
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+        changelog-entry: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "meta-balena-YOCTO_RELEASE: update bmap-tools branch name"
+              hash: ca3e8df431c811088982050c5053d4fb5ca46499
+              body: |
+                In Nov 2024 bmap-tools  master branch was renamed to main
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.5.44
+          title: ""
+          date: 2025-07-09T16:53:56.590Z
+  version: 6.5.44
+  title: ""
+  date: 2025-07-09T23:42:59.566Z
+- commits:
+    - subject: Update layers/meta-balena to 6a98d389b14082f43e6078deed2aaec990f0222e
+      hash: 8704e18bd53ec88479511143c9ff7a6672cafc93
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6a98d389b14082f43e6078deed2aaec990f0222e
+        changelog-entry: Update layers/meta-balena to 6a98d389b14082f43e6078deed2aaec990f0222e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "meta-balena-esr: fall back to current minor"
+              hash: b04c4769fdffb61e65c365aad7cea8907991cb2d
+              body: >
+                If an esr branch for a previous minor already exists, then fall
+                back to the current minor
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.5.43
+          title: ""
+          date: 2025-07-07T10:43:40.599Z
+  version: 6.5.43
+  title: ""
+  date: 2025-07-07T16:17:03.417Z
+- commits:
+    - subject: Update layers/meta-openembedded to
+        058249f9a836e3aa866436aa6e37d6d48ff768fd
+      hash: 2929b2f58193e3b96173200d980b5385d84fffa3
+      body: Update layers/meta-openembedded
+      footer:
+        Changelog-entry: Update layers/meta-openembedded to
+          058249f9a836e3aa866436aa6e37d6d48ff768fd
+        changelog-entry: Update layers/meta-openembedded to
+          058249f9a836e3aa866436aa6e37d6d48ff768fd
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.42+rev3
+  title: ""
+  date: 2025-07-06T10:15:26.601Z
+- commits:
+    - subject: Update balena-yocto-scripts to 76b9918f23e4b100bef64a2ce4ecb3bca70ee5fa
+      hash: 9055dc3316d69b160171ae150d6a34be19c3f092
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 76b9918f23e4b100bef64a2ce4ecb3bca70ee5fa
+        changelog-entry: Update balena-yocto-scripts to 76b9918f23e4b100bef64a2ce4ecb3bca70ee5fa
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 1aa6e302995bdc9c32e70d51d535a2721df0dca9
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.35.5
+          title: ""
+          date: 2025-07-04T06:33:15.250Z
+  version: 6.5.42+rev2
+  title: ""
+  date: 2025-07-04T11:16:13.676Z
+- commits:
+    - subject: Update balena-yocto-scripts to 81e74066e57a1994324bc3b4dc8e3e1390613909
+      hash: fe26584ed22c4cc6762aea7921055f980b369e67
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 81e74066e57a1994324bc3b4dc8e3e1390613909
+        changelog-entry: Update balena-yocto-scripts to 81e74066e57a1994324bc3b4dc8e3e1390613909
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.49
+              hash: aebc370b9ee1e741a9901c9af3da8f37eaf229c6
+              body: |
+                Update aws/aws-cli from 2.27.47 to 2.27.49
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.35.4
+          title: ""
+          date: 2025-07-03T22:38:08.681Z
+  version: 6.5.42+rev1
+  title: ""
+  date: 2025-07-04T03:25:54.918Z
+- commits:
+    - subject: Update layers/meta-balena to ee3fe620d7465af3eb3cbac007b315c9cfdbd2bc
+      hash: fdda7e75d59fe5335a5192acddcaa452fab5d51f
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ee3fe620d7465af3eb3cbac007b315c9cfdbd2bc
+        changelog-entry: Update layers/meta-balena to ee3fe620d7465af3eb3cbac007b315c9cfdbd2bc
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Enable zram zstd compression for 6.12+ kernels
+              hash: ffafb1007a8deab5bd80de5cb65fbc81c18f4e7d
+              body: >
+                Kernels 6.12+ need the corresponding CONFIG_ZRAM_BACKEND_* linux
+
+                kernel config item enabled for the respective compression
+                support
+
+                to be available for zram.
+
+
+                For the flasher we need zram zstd support so we need to enable
+                the new
+
+                CONFIG_ZRAM_BACKEND_ZSTD option.
+
+
+                This fixes the following error when booting a flasher image
+                running a 6.12+ kernel:
+
+                zramctl: /dev/zram1: failed to set algorithm: Invalid argument
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Enable zram zstd compression for 6.12+ kernels
+                changelog-entry: Enable zram zstd compression for 6.12+ kernels
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.5.42
+          title: ""
+          date: 2025-07-03T13:05:08.986Z
+  version: 6.5.42
+  title: ""
+  date: 2025-07-03T17:47:08.761Z
+- commits:
+    - subject: Update balena-yocto-scripts to 598619c6eba6296f69dacf2f66eb9b7bcc9539c2
+      hash: 6a9a93366d81f5f06768a5df9d70d3336100115b
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 598619c6eba6296f69dacf2f66eb9b7bcc9539c2
+        changelog-entry: Update balena-yocto-scripts to 598619c6eba6296f69dacf2f66eb9b7bcc9539c2
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update Pin balena-io/upload-balena-release-asset action to ad48340
+              hash: d982b942ed18465825eb06dce6060078a6b7b500
+              body: |
+                Update balena-io/upload-balena-release-asset
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.35.3
+          title: ""
+          date: 2025-07-03T05:53:43.594Z
+  version: 6.5.41+rev5
+  title: ""
+  date: 2025-07-03T09:18:52.937Z
+- commits:
+    - subject: Update balena-yocto-scripts to 18462571a18f554d6003ef43f3abfe4564edace0
+      hash: a36b939eb87df38388b33277c548aa3054dc8a9b
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 18462571a18f554d6003ef43f3abfe4564edace0
+        changelog-entry: Update balena-yocto-scripts to 18462571a18f554d6003ef43f3abfe4564edace0
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.33.8
+              hash: 308fd6665af01e3f2dd3412578da5ad98b21e716
+              body: |
+                Update balena-os/leviathan from 2.33.7 to 2.33.8
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.35.2
+          title: ""
+          date: 2025-07-03T01:03:49.115Z
+  version: 6.5.41+rev4
+  title: ""
+  date: 2025-07-03T06:00:22.597Z
+- commits:
+    - subject: Update balena-yocto-scripts to 8d43b5b5bec783ee6e65d6e784e83023139f8147
+      hash: 88e3345a25c120dc1e9b9ad0fd222b6a93962bf1
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 8d43b5b5bec783ee6e65d6e784e83023139f8147
+        changelog-entry: Update balena-yocto-scripts to 8d43b5b5bec783ee6e65d6e784e83023139f8147
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "workflows: yocto-build-deploy: pass RSA key if available"
+              hash: 01e03fb1543d9f78c320d783f842eaa805908ba6
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "workflows: yocto-build-deploy: deploy RPI locking artifacts as assets
+                if available"
+              hash: 32e0a048ec36eca7da143cc457dc35a60a5fc648
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-deploy: compress RPI secure boot locking artifacts"
+              hash: 1fbeda7cbd6fa3b83779b127b19026b7f4837257
+              body: |
+                These allows to upload them as a single release asset artifact.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.35.1
+          title: ""
+          date: 2025-07-02T19:27:05.989Z
+  version: 6.5.41+rev3
+  title: ""
+  date: 2025-07-02T23:02:16.848Z
+- commits:
+    - subject: Update balena-yocto-scripts to fe84fecc16b4461a562f6987f8f00d700e9800a8
+      hash: 8ef17640ef9610080ee8845b4c38ae8c5c00b454
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to fe84fecc16b4461a562f6987f8f00d700e9800a8
+        changelog-entry: Update balena-yocto-scripts to fe84fecc16b4461a562f6987f8f00d700e9800a8
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Remove .img and .img.zip files from hostapp artifacts
+              hash: d71961bc5e83d44199abc059ffa9a7ab06eba02d
+              body: |
+                These artifacts are no longer used by any of the download
+                endpoints of backend, so we can stop uploading them to save time
+                and S3 costs.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Remove old manual uploads of licenses and changelog
+              hash: bd42aab51cf4cc3e4744c60e071ed40d660ceb61
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Upload release assets to hostapp on merge
+              hash: 1fefde01ecce8d7210acc18285773197f1754d55
+              body: |
+                Release assets will replace the manual S3 deploy job
+                once we have the rest of the pipline in place.
+
+                For now we are uploading in duplicate to test workflow
+                under load, and start developing the client changes.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.35.0
+          title: ""
+          date: 2025-07-02T15:53:44.684Z
+  version: 6.5.41+rev2
+  title: ""
+  date: 2025-07-02T20:25:19.934Z
+- commits:
+    - subject: Update contracts to fc76558c384c10bf228b10909eca346ee9d6b564
+      hash: 928e8f022ec07c0dc1ad3991ef5de424d8e7859b
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to fc76558c384c10bf228b10909eca346ee9d6b564
+        changelog-entry: Update contracts to fc76558c384c10bf228b10909eca346ee9d6b564
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Update J4012 device type name"
+              hash: b28727f64f2838069caf0c7fae213d6b01f20741
+              body: >
+                ... to specify that this is the Classic revision of the carrier
+                board,
+
+                which does not support the SUPER mode.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.137
+          title: ""
+          date: 2025-07-02T09:19:48.336Z
+  version: 6.5.41+rev1
+  title: ""
+  date: 2025-07-02T13:41:26.372Z
+- commits:
+    - subject: Update layers/meta-balena to ed8866d6a0b4de8bb40dfd35fbdd465c8814bb57
+      hash: 4845145f2c6d0bbc4a491f87a7804e98c7244ebd
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ed8866d6a0b4de8bb40dfd35fbdd465c8814bb57
+        changelog-entry: Update layers/meta-balena to ed8866d6a0b4de8bb40dfd35fbdd465c8814bb57
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update outdated context of efitools patches
+              hash: de30667d5b7548ea6381978c45d7ae3bdeb3b10c
+              body: >
+                Patches with outdated context will trigger fatal build errors in
+                Yocto Scarthgap
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update outdated context of efitools patches
+                changelog-entry: Update outdated context of efitools patches
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.5.41
+          title: ""
+          date: 2025-07-02T00:16:55.553Z
+  version: 6.5.41
+  title: ""
+  date: 2025-07-02T06:34:50.464Z
+- commits:
+    - subject: Update balena-yocto-scripts to 654190bb76676ef6cd25f50791ec6ce678eae789
+      hash: baa6da762c47251cdc21c9213787edfb7102b92b
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 654190bb76676ef6cd25f50791ec6ce678eae789
+        changelog-entry: Update balena-yocto-scripts to 654190bb76676ef6cd25f50791ec6ce678eae789
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.47
+              hash: 57d6c2406a476cd7bf7156be1f922850cdb265b5
+              body: |
+                Update aws/aws-cli from 2.27.46 to 2.27.47
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.34.15
+          title: ""
+          date: 2025-07-01T21:08:30.140Z
+  version: 6.5.40+rev4
+  title: ""
+  date: 2025-07-02T02:25:57.339Z
+- commits:
+    - subject: Update layers/meta-compulab-bsp to
+        c77e4fa9eaef554929e339703468f6457d24c488
+      hash: db762640a3178575e863e360b72d2671956ce51f
+      body: Update layers/meta-compulab-bsp
+      footer:
+        Changelog-entry: Update layers/meta-compulab-bsp to
+          c77e4fa9eaef554929e339703468f6457d24c488
+        changelog-entry: Update layers/meta-compulab-bsp to
+          c77e4fa9eaef554929e339703468f6457d24c488
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.40+rev3
+  title: ""
+  date: 2025-07-01T08:55:33.371Z
+- commits:
+    - subject: Update balena-yocto-scripts to 0a17c0b8f820a88f8e070c9880ca961094de7328
+      hash: b9a4d2ff8e057eb43134acb0d3bd5bf208d4ac7c
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 0a17c0b8f820a88f8e070c9880ca961094de7328
+        changelog-entry: Update balena-yocto-scripts to 0a17c0b8f820a88f8e070c9880ca961094de7328
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.46
+              hash: b5b6785bcd1db2324442ec93740bbd672e79489b
+              body: |
+                Update aws/aws-cli from 2.27.44 to 2.27.46
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.34.14
+          title: ""
+          date: 2025-06-30T22:26:49.670Z
+  version: 6.5.40+rev2
+  title: ""
+  date: 2025-07-01T04:56:55.949Z
+- commits:
+    - subject: Update layers/poky to 78c9cb3eaf071932567835742608404d5ce23cc4
+      hash: 509db15c508f8912c88aa1760f59bc5ec6006fb5
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 78c9cb3eaf071932567835742608404d5ce23cc4
+        changelog-entry: Update layers/poky to 78c9cb3eaf071932567835742608404d5ce23cc4
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.40+rev1
+  title: ""
+  date: 2025-06-28T11:37:55.980Z
+- commits:
+    - subject: Update layers/meta-balena to 39e4434dbaaf6b15e5487740c51d3f1a17cb530f
+      hash: ea4cecd95e188debeb72d36a55be23beead20fa7
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 39e4434dbaaf6b15e5487740c51d3f1a17cb530f
+        changelog-entry: Update layers/meta-balena to 39e4434dbaaf6b15e5487740c51d3f1a17cb530f
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "busybox: add conv support in dd"
+              hash: b2b69965b8c955ef099e5b4bfcf13ea9bdfb835c
+              body: >
+                This is used from the initramfs of flasher devices to erase the
+                disk
+
+                of secrets.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "initrdscripts: cryptsetup-efi-tmp: use common encrypted partition
+                asserts"
+              hash: b1e95e0114a34f8c8241db6455c772c6b24b9a30
+              body: >
+                Use the shared helper functions to assert encrypted partitions.
+
+
+                Note that the new functions have introduced some refactoring so
+                that
+
+                they can be used in the general case.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "os-helpers-fs: move logic to assert luks encrypted partitions"
+              hash: 9671276855e76cd296e5c077af4653b3c88188f9
+              body: >
+                The logic to assert encrypted partitions was being implemented
+                in a
+
+                device specific way as part of cryptsetup - move it to common
+                code so
+
+                that this does not need to be re-implemented for every device
+                type.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "initrdscripts: migrate: use an estimated compressed size for raw
+                image"
+              hash: f712bab8bb2df75fbb5a5d37c809f6f9a6c9f5d1
+              body: >
+                The memory check before a migration run was not taking into
+                account
+
+                that the tmp directory is now compressed ram.
+
+
+                This change approximates the compressed size of the raw image
+                which is
+
+                the biggest in the calculation. The rest of the file sizes are
+                left as
+
+                is to provide some buffer for approximation failures and not to
+                complicate
+
+                the logic excessively.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "os-helpers-fs: add a function to estimate zram compression sizes"
+              hash: 91c07c0f263c5e63d46b438aa6b972458f8f5182
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.5.40
+          title: ""
+          date: 2025-06-26T14:04:59.217Z
+  version: 6.5.40
+  title: ""
+  date: 2025-06-27T09:08:36.018Z
+- commits:
+    - subject: Update balena-yocto-scripts to 88de5690d31ba3bd1c9fb661b59e538785eadaec
+      hash: 7a60e0fecafc123028bda1e438cec6343635a280
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 88de5690d31ba3bd1c9fb661b59e538785eadaec
+        changelog-entry: Update balena-yocto-scripts to 88de5690d31ba3bd1c9fb661b59e538785eadaec
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.44
+              hash: 2c7415ecb38ee2587a965ba9bcd6cd1a0180777b
+              body: |
+                Update aws/aws-cli from 2.27.43 to 2.27.44
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.34.13
+          title: ""
+          date: 2025-06-26T22:34:56.504Z
+  version: 6.5.39+rev6
+  title: ""
+  date: 2025-06-27T06:07:24.533Z
+- commits:
+    - subject: Update layers/meta-compulab to e8bb0006fcc0e82dcfd6f82530073a2c76c0dfca
+      hash: a07681f1df5c6e84b6afa485481b7710d457d03c
+      body: Update layers/meta-compulab
+      footer:
+        Changelog-entry: Update layers/meta-compulab to e8bb0006fcc0e82dcfd6f82530073a2c76c0dfca
+        changelog-entry: Update layers/meta-compulab to e8bb0006fcc0e82dcfd6f82530073a2c76c0dfca
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.39+rev5
+  title: ""
+  date: 2025-06-26T13:11:05.761Z
+- commits:
     - subject: Update balena-yocto-scripts to 6a62b91cf338fc28febdf26e7d72df329930a943
       hash: 430218a7c2367258f4b1534e6d7d1f4fbc454909
       body: Update balena-yocto-scripts

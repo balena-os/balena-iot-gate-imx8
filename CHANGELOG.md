@@ -1,6 +1,350 @@
 Change log
 -----------
 
+# v6.5.44+rev6
+## (2025-07-17)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 972d8235cfde35394f24df80486c6e8ba5e056e5 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.36.7
+> ### (2025-07-16)
+> 
+> * Update aws/aws-cli to v2.27.53 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.36.6
+> ### (2025-07-16)
+> 
+> * Update aws/aws-cli to v2.27.52 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.44+rev5
+## (2025-07-16)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 9ca780a7bda76f50ce9527fc2bb062115e2594bf [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.36.5
+> ### (2025-07-15)
+> 
+> * Update aws/aws-cli to v2.27.51 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.44+rev4
+## (2025-07-15)
+
+* Update layers/poky to 4ee43d7d686836b27d4f6c075915b7a2e14db997 [balena-renovate[bot]]
+
+# v6.5.44+rev3
+## (2025-07-15)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 145071d2de92dfc79e548b5ef8810cd30afd0f43 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.36.4
+> ### (2025-07-15)
+> 
+> * Update balena-io-examples/setup-balena-action action to v0.0.21 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.36.3
+> ### (2025-07-15)
+> 
+> * Update balena-io/balena-cli to v22.1.2 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.36.2
+> ### (2025-07-10)
+> 
+> * Update aws/aws-cli to v2.27.50 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.36.1
+> ### (2025-07-10)
+> 
+> * Update balena-io/upload-balena-release-asset action to v0.1.4 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.44+rev2
+## (2025-07-10)
+
+* Update layers/poky to 3171dcc835afe49ab49847bdd6bf0d6d392fad03 [balena-renovate[bot]]
+
+# v6.5.44+rev1
+## (2025-07-10)
+
+
+<details>
+<summary> Update balena-yocto-scripts to ccb8899d87c181fa3198a496fe1a514a93de90e5 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.36.0
+> ### (2025-07-09)
+> 
+> * minor: upload cyclonedx bom.json and vex.json as independend files [Edwin Joassart]
+> * Generate SBOM and VEX (cycloneDX) [Edwin Joassart]
+> 
+
+</details>
+
+# v6.5.44
+## (2025-07-09)
+
+
+<details>
+<summary> Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.44
+> ### (2025-07-09)
+> 
+> * meta-balena-YOCTO_RELEASE: update bmap-tools branch name [Ryan Cooke]
+> 
+
+</details>
+
+# v6.5.43
+## (2025-07-07)
+
+
+<details>
+<summary> Update layers/meta-balena to 6a98d389b14082f43e6078deed2aaec990f0222e [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.43
+> ### (2025-07-07)
+> 
+> * meta-balena-esr: fall back to current minor [Ryan Cooke]
+> 
+
+</details>
+
+# v6.5.42+rev3
+## (2025-07-06)
+
+* Update layers/meta-openembedded to 058249f9a836e3aa866436aa6e37d6d48ff768fd [balena-renovate[bot]]
+
+# v6.5.42+rev2
+## (2025-07-04)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 76b9918f23e4b100bef64a2ce4ecb3bca70ee5fa [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.35.5
+> ### (2025-07-04)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.42+rev1
+## (2025-07-04)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 81e74066e57a1994324bc3b4dc8e3e1390613909 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.35.4
+> ### (2025-07-03)
+> 
+> * Update aws/aws-cli to v2.27.49 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.42
+## (2025-07-03)
+
+
+<details>
+<summary> Update layers/meta-balena to ee3fe620d7465af3eb3cbac007b315c9cfdbd2bc [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.42
+> ### (2025-07-03)
+> 
+> * Enable zram zstd compression for 6.12+ kernels [Florin Sarbu]
+> 
+
+</details>
+
+# v6.5.41+rev5
+## (2025-07-03)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 598619c6eba6296f69dacf2f66eb9b7bcc9539c2 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.35.3
+> ### (2025-07-03)
+> 
+> * Update Pin balena-io/upload-balena-release-asset action to ad48340 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.41+rev4
+## (2025-07-03)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 18462571a18f554d6003ef43f3abfe4564edace0 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.35.2
+> ### (2025-07-03)
+> 
+> * Update balena-os/leviathan action to v2.33.8 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.41+rev3
+## (2025-07-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 8d43b5b5bec783ee6e65d6e784e83023139f8147 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.35.1
+> ### (2025-07-02)
+> 
+> * workflows: yocto-build-deploy: pass RSA key if available [Alex Gonzalez]
+> * workflows: yocto-build-deploy: deploy RPI locking artifacts as assets if available [Alex Gonzalez]
+> * balena-deploy: compress RPI secure boot locking artifacts [Alex Gonzalez]
+> 
+
+</details>
+
+# v6.5.41+rev2
+## (2025-07-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to fe84fecc16b4461a562f6987f8f00d700e9800a8 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.35.0
+> ### (2025-07-02)
+> 
+> * Remove .img and .img.zip files from hostapp artifacts [Kyle Harding]
+> * Remove old manual uploads of licenses and changelog [Kyle Harding]
+> * Upload release assets to hostapp on merge [Kyle Harding]
+> 
+
+</details>
+
+# v6.5.41+rev1
+## (2025-07-02)
+
+
+<details>
+<summary> Update contracts to fc76558c384c10bf228b10909eca346ee9d6b564 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.137
+> ### (2025-07-02)
+> 
+> * hw.device-type: Update J4012 device type name [Alexandru]
+> 
+
+</details>
+
+# v6.5.41
+## (2025-07-02)
+
+
+<details>
+<summary> Update layers/meta-balena to ed8866d6a0b4de8bb40dfd35fbdd465c8814bb57 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.41
+> ### (2025-07-02)
+> 
+> * Update outdated context of efitools patches [Florin Sarbu]
+> 
+
+</details>
+
+# v6.5.40+rev4
+## (2025-07-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 654190bb76676ef6cd25f50791ec6ce678eae789 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.34.15
+> ### (2025-07-01)
+> 
+> * Update aws/aws-cli to v2.27.47 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.40+rev3
+## (2025-07-01)
+
+* Update layers/meta-compulab-bsp to c77e4fa9eaef554929e339703468f6457d24c488 [balena-renovate[bot]]
+
+# v6.5.40+rev2
+## (2025-07-01)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 0a17c0b8f820a88f8e070c9880ca961094de7328 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.34.14
+> ### (Invalid date)
+> 
+> * Update aws/aws-cli to v2.27.46 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.40+rev1
+## (2025-06-28)
+
+* Update layers/poky to 78c9cb3eaf071932567835742608404d5ce23cc4 [balena-renovate[bot]]
+
+# v6.5.40
+## (2025-06-27)
+
+
+<details>
+<summary> Update layers/meta-balena to 39e4434dbaaf6b15e5487740c51d3f1a17cb530f [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.40
+> ### (2025-06-26)
+> 
+> * busybox: add conv support in dd [Alex Gonzalez]
+> * initrdscripts: cryptsetup-efi-tmp: use common encrypted partition asserts [Alex Gonzalez]
+> * os-helpers-fs: move logic to assert luks encrypted partitions [Alex Gonzalez]
+> * initrdscripts: migrate: use an estimated compressed size for raw image [Alex Gonzalez]
+> * os-helpers-fs: add a function to estimate zram compression sizes [Alex Gonzalez]
+> 
+
+</details>
+
+# v6.5.39+rev6
+## (2025-06-27)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 88de5690d31ba3bd1c9fb661b59e538785eadaec [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.34.13
+> ### (2025-06-26)
+> 
+> * Update aws/aws-cli to v2.27.44 [balena-renovate[bot]]
+> 
+
+</details>
+
+# v6.5.39+rev5
+## (2025-06-26)
+
+* Update layers/meta-compulab to e8bb0006fcc0e82dcfd6f82530073a2c76c0dfca [balena-renovate[bot]]
+
 # v6.5.39+rev4
 ## (2025-06-26)
 
