@@ -1,0 +1,26 @@
+From b8b19beed3396240e877fe49d28ef12159edde63 Mon Sep 17 00:00:00 2001
+From: Valentin Raevsky <valentin@compulab.co.il>
+Date: Sun, 29 Jun 2025 17:03:21 +0300
+Subject: [PATCH 3/4] Balen: Reduce BOOT_TARGET_DEVICES list to emmc only
+
+Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+---
+ include/configs/cpl-imx8m-mini.h | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/include/configs/cpl-imx8m-mini.h b/include/configs/cpl-imx8m-mini.h
+index 550a84e75f..2256f370ef 100644
+--- a/include/configs/cpl-imx8m-mini.h
++++ b/include/configs/cpl-imx8m-mini.h
+@@ -37,8 +37,6 @@
+ 
+ #ifdef CONFIG_DISTRO_DEFAULTS
+ #define BOOT_TARGET_DEVICES(func) \
+-	func(USB, usb, 0) \
+-	func(MMC, mmc, 1) \
+ 	func(MMC, mmc, 2)
+ 
+ #include <config_distro_bootcmd.h>
+-- 
+2.34.1
+
