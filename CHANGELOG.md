@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.45+rev2
+## (2025-07-24)
+
+* Switch meta-compulab-bsp to kirkstone [Florin Sarbu]
+
 # v6.5.45+rev1
 ## (2025-07-24)
 

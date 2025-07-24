@@ -1,4 +1,19 @@
 - commits:
+    - subject: Switch meta-compulab-bsp to kirkstone
+      hash: 56650958c68d6fe9603deecd5fe9476791e6f556
+      body: |
+        The hw vendor has now created a kirkstone branch so let's use it
+      footer:
+        Changelog-entry: Switch meta-compulab-bsp to kirkstone
+        changelog-entry: Switch meta-compulab-bsp to kirkstone
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.5.45+rev2
+  title: ""
+  date: 2025-07-24T14:24:10.664Z
+- commits:
     - subject: Update balena-yocto-scripts to 80684fb1a29b96849b2d8bf6693ea1eb2d3f9acb
       hash: d327d3047c95c6030110fd1527fd408c35deaebe
       body: Update balena-yocto-scripts
