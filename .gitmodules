@@ -21,9 +21,11 @@
 [submodule "meta-compulab"]
 	path = layers/meta-compulab
 	url = https://github.com/compulab-yokneam/meta-compulab.git
+	branch = kirkstone
 [submodule "meta-compulab-bsp"]
 	path = layers/meta-compulab-bsp
 	url = https://github.com/compulab-yokneam/meta-compulab-bsp.git
+	branch = kirkstone
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
@@ -39,12 +41,6 @@
 	path = contracts
 	url = https://github.com/balena-io/contracts.git
 	branch = master
-[submodule "layers/meta-freescale-distro"]
-	branch = kirkstone
-[submodule "layers/meta-compulab"]
-	branch = honister
-[submodule "layers/meta-compulab-bsp"]
-	branch = honister
 [submodule "layers/meta-balena-hab"]
 	path = layers/meta-balena-hab
 	url = git@github.com:balena-os/meta-balena-hab.git
