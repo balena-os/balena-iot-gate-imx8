@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.48+rev9
+## (2025-08-07)
+
+* Generate SBOM and VEX (cycloneDX) [Edwin Joassart]
+
 # v6.5.48+rev8
 ## (2025-08-07)
 

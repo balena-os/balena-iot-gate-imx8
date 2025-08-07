@@ -1,4 +1,19 @@
 - commits:
+    - subject: Generate SBOM and VEX (cycloneDX)
+      hash: 777a010e071027437c0e4609ae6c78b2ed3f0b0f
+      body: >
+        https://balena.fibery.io/Work/Project/balenaos-SBOM-as-release-asset-1515
+      footer:
+        Changelog-entry: Generate SBOM and VEX (cycloneDX)
+        changelog-entry: Generate SBOM and VEX (cycloneDX)
+        Signed-off-by: Edwin Joassart <edwin.joassart@balena.io>
+        signed-off-by: Edwin Joassart <edwin.joassart@balena.io>
+      author: Edwin Joassart
+      nested: []
+  version: 6.5.48+rev9
+  title: ""
+  date: 2025-08-07T15:02:36.422Z
+- commits:
     - subject: Update balena-yocto-scripts to b3ac171bd72f031b9701c875650bf6bec908414d
       hash: 51be19d92f8b91e0989457b05d049be563082137
       body: Update balena-yocto-scripts
