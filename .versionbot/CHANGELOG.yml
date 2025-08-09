@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/poky to 81ab000fa437ca04f584a3327b076f7a512dc6d0
+      hash: 5b10b3e11557c9bc67d10f8380193eaff4f5a26b
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 81ab000fa437ca04f584a3327b076f7a512dc6d0
+        changelog-entry: Update layers/poky to 81ab000fa437ca04f584a3327b076f7a512dc6d0
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.48+rev10
+  title: ""
+  date: 2025-08-09T11:52:32.865Z
+- commits:
     - subject: Generate SBOM and VEX (cycloneDX)
       hash: 777a010e071027437c0e4609ae6c78b2ed3f0b0f
       body: >
