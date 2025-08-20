@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update layers/meta-freescale to dd7a8a50025c3bc8925d59f818bafbdae4e2001c
+      hash: 3b6b3f1b6745cf44e6cf5db507e623d2b057e433
+      body: Update layers/meta-freescale
+      footer:
+        Changelog-entry: Update layers/meta-freescale to
+          dd7a8a50025c3bc8925d59f818bafbdae4e2001c
+        changelog-entry: Update layers/meta-freescale to
+          dd7a8a50025c3bc8925d59f818bafbdae4e2001c
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.53+rev6
+  title: ""
+  date: 2025-08-20T22:34:51.405Z
+- commits:
     - subject: Update layers/meta-cyclonedx to 61c6b6be40daa132beef72a3e04dc97337ef17c1
       hash: 08175303cdf80ec1dddc1ed68466e20562b642b3
       body: Update layers/meta-cyclonedx
