@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update layers/meta-compulab-bsp to
+        244b352f3923145009dfa6c50eded0e7c5cad3a7
+      hash: 7637492842a24db00f8fe306810f56a4671329a0
+      body: Update layers/meta-compulab-bsp
+      footer:
+        Changelog-entry: Update layers/meta-compulab-bsp to
+          244b352f3923145009dfa6c50eded0e7c5cad3a7
+        changelog-entry: Update layers/meta-compulab-bsp to
+          244b352f3923145009dfa6c50eded0e7c5cad3a7
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.55+rev3
+  title: ""
+  date: 2025-08-24T14:52:00.540Z
+- commits:
     - subject: Update layers/meta-cyclonedx to 175bc45b40ea2da00baefb5b532176694d70596d
       hash: 72d3ae93e709034ad342c6b5becaf51f92c96ad1
       body: Update layers/meta-cyclonedx
