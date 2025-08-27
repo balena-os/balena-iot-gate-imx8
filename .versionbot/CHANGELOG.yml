@@ -1,4 +1,26 @@
 - commits:
+    - subject: "recipes-core/images/balena-image-initramfs: remove migrate and
+        recovery modules"
+      hash: d3d17448ddf4a3b234a52501bbe5889ea5114503
+      body: |
+        ... to decrease the rootfs contents size from 296M to
+        286M out of the total 300M. This device type has a UART
+        debug port and can be flashed using a USB flasher key.
+
+        Removing these modules allow for future OS updates.
+      footer:
+        Changelog-entry: "recipes-core/images/balena-image-initramfs: remove migrate and
+          recovery modules"
+        changelog-entry: "recipes-core/images/balena-image-initramfs: remove migrate and
+          recovery modules"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 6.5.55+rev6
+  title: ""
+  date: 2025-08-27T13:00:22.160Z
+- commits:
     - subject: Update balena-yocto-scripts to 488e344cd11e0aa8ca9ff0bdbfd365704910461e
       hash: 68807000ea7663a5c09d0e4f23340318e5541f5b
       body: Update balena-yocto-scripts

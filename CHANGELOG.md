@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.55+rev6
+## (2025-08-27)
+
+* recipes-core/images/balena-image-initramfs: remove migrate and recovery modules [Alexandru Costache]
+
 # v6.5.55+rev5
 ## (2025-08-27)
 
