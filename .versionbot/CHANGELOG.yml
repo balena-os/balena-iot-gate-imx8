@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/meta-compulab to de3d77baf46a8adf1c7e39e41c7070415692aa30
+      hash: 1dd92d7bba5266cf30b80956cbda5f04f8213fd3
+      body: Update layers/meta-compulab
+      footer:
+        Changelog-entry: Update layers/meta-compulab to de3d77baf46a8adf1c7e39e41c7070415692aa30
+        changelog-entry: Update layers/meta-compulab to de3d77baf46a8adf1c7e39e41c7070415692aa30
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.55+rev10
+  title: ""
+  date: 2025-09-10T22:53:09.761Z
+- commits:
     - subject: Update layers/meta-compulab to cbecda0e3f33169f651996de9880efe7a5358098
       hash: 21387b17cbf7e49b9367674ca181b642b3be4cc6
       body: Update layers/meta-compulab
