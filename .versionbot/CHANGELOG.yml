@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 59b3f3e5df5480fc2f26b93482af390f3f7dee8c
+      hash: 0a04a94a7f9c4bd5ecb0f6d676d39be5ff6b81a1
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 59b3f3e5df5480fc2f26b93482af390f3f7dee8c
+        changelog-entry: Update balena-yocto-scripts to 59b3f3e5df5480fc2f26b93482af390f3f7dee8c
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io/balena-cli to v22.4.5
+              hash: b06cbe0da3eec785d33f45ce4790e2c47ac7f680
+              body: |
+                Update balena-io/balena-cli from 22.4.4 to 22.4.5
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.31
+          title: ""
+          date: 2025-09-17T17:55:52.817Z
+  version: 6.6.6+rev2
+  title: ""
+  date: 2025-09-17T21:04:38.147Z
+- commits:
     - subject: Update layers/meta-freescale to 7286bef07802fc493894c5917a315d53c8fe2191
       hash: 718a33c9efa3250d0b48760f0e1df8e4d0815bee
       body: Update layers/meta-freescale
