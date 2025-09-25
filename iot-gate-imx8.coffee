@@ -37,7 +37,7 @@ module.exports =
                 machine: 'iot-gate-imx8'
                 image: 'balena-image-flasher'
                 fstype: 'balenaos-img'
-                version: 'yocto-dunfell'
+                version: 'yocto-scarthgap'
                 deployArtifact: 'balena-image-flasher-iot-gate-imx8.balenaos-img'
                 compressed: true
 
