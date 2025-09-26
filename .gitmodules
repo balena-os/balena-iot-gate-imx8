@@ -5,31 +5,31 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-freescale"]
 	path = layers/meta-freescale
 	url = https://github.com/Freescale/meta-freescale.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-freescale-3rdparty"]
 	path = layers/meta-freescale-3rdparty
 	url = https://github.com/Freescale/meta-freescale-3rdparty.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "meta-freescale-distro"]
 	path = layers/meta-freescale-distro
 	url = https://github.com/Freescale/meta-freescale-distro.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "meta-compulab"]
 	path = layers/meta-compulab
 	url = https://github.com/compulab-yokneam/meta-compulab.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "meta-compulab-bsp"]
 	path = layers/meta-compulab-bsp
 	url = https://github.com/compulab-yokneam/meta-compulab-bsp.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git
@@ -47,4 +47,4 @@
 [submodule "layers/meta-cyclonedx"]
 	path = layers/meta-cyclonedx
 	url = https://github.com/balena-os/meta-cyclonedx
-	branch = kirkstone
+	branch = scarthgap
