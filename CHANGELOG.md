@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.6.10+rev3
+## (2025-10-07)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 9664fd5cd9042a86b28054958f906210c4e951ea [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.38.37
+> ### (2025-10-07)
+> 
+> * Update aws/aws-cli to v2.30.7 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.36
+> ### (2025-10-07)
+> 
+> * Fix check for present test matrix when checking test results [Ryan Cooke]
+> 
+
+</details>
+
 # v6.6.10+rev2
 ## (2025-10-07)
 
