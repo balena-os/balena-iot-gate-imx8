@@ -35,6 +35,11 @@ on:
         required: false
         type: string
         default: 'sign.balena-cloud.com'
+      meta-balena-ref:
+        description: meta-balena ref if not the currently pinned version
+        required: false
+        type: string
+        default: ''
 
 permissions:
   id-token: write # This is required for requesting the JWT #https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#requesting-the-access-token
@@ -72,3 +77,5 @@ jobs:
       deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
       sign-image: true
       signing-environment: ${{ inputs.signing-environment || 'sign.balena-cloud.com' }}
+      # Allow overriding the meta-balena ref for workflow dispatch events
+      meta-balena-ref: ${{ inputs.meta-balena-ref || '' }}
