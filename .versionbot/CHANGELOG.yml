@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update layers/meta-balena to ffa081034b9066c287cb23020c03354bed643ac9
+      hash: ab69cdf3c6a16551bf5c0d24e2295603851db9ff
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ffa081034b9066c287cb23020c03354bed643ac9
+        changelog-entry: Update layers/meta-balena to ffa081034b9066c287cb23020c03354bed643ac9
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/setup-python action to v6
+              hash: 00de2112bdc41a488ab09eaec47015b88caa3fa5
+              body: |
+                Update actions/setup-python from v5 to v6
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: meta-balena-6.7.6
+          title: ""
+          date: 2025-11-13T06:31:58.282Z
+  version: 6.7.6
+  title: ""
+  date: 2025-11-14T09:18:52.505Z
+- commits:
     - subject: Update balena-yocto-scripts to 3340f57f091c22cd00aafe15c2d4fa17661afe2c
       hash: 97a6ec98162efc3ccda74ec625bafd731887711b
       body: Update balena-yocto-scripts
