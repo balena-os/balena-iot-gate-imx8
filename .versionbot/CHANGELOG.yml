@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 3655901b8a00af49ac09037f45f17227628eefc5
+      hash: 132f5662412c67ae1edab62a302c1fa536684704
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 3655901b8a00af49ac09037f45f17227628eefc5
+        changelog-entry: Update layers/meta-balena to 3655901b8a00af49ac09037f45f17227628eefc5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: simplify disk watchdog tests
+              hash: 2216355d073162c79748367f49d4a1294ede7796
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.7.7
+          title: ""
+          date: 2025-11-18T17:31:09.706Z
+  version: 6.7.7
+  title: ""
+  date: 2025-11-19T19:30:58.772Z
+- commits:
     - subject: Update balena-yocto-scripts to 67b90ae49c2a0b5384617deae749f452e689323e
       hash: f1850b741b0accf8de1262b207caf10bfcdc417d
       body: Update balena-yocto-scripts
