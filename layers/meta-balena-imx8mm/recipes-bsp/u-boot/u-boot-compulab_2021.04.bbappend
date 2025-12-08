@@ -7,7 +7,7 @@ UBOOT_VARS += "BALENA_STAGE2"
 
 DEPENDS = "bison-native"
 
-PV:append ="+git${SRCPV}"
+PV = "2021.04"
 
 do_compile:prepend() {
     if [ ${BUILD_REPRODUCIBLE_BINARIES} -eq 1 ];then
