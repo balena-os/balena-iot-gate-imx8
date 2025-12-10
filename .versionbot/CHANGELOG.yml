@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update layers/meta-balena to 2e6f430bd9727edef17e6a268e461bca3a2bdb0e
+      hash: 6f86c24927125971463d7d71bdc4913a061cde4c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 2e6f430bd9727edef17e6a268e461bca3a2bdb0e
+        changelog-entry: Update layers/meta-balena to 2e6f430bd9727edef17e6a268e461bca3a2bdb0e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/checkout action to v6
+              hash: a9116ae98349e3f2a545f5728f8e803b69344a01
+              body: |
+                Update actions/checkout from v4 to v6
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: meta-balena-6.9.4
+          title: ""
+          date: 2025-12-10T10:45:18.733Z
+  version: 6.9.4
+  title: ""
+  date: 2025-12-10T16:26:27.654Z
+- commits:
     - subject: Update layers/meta-balena-hab to cf1811d6e3b9a74acf1229d222a0a19303b65b26
       hash: eeaf1351826de3ad0d45907faed7bf1c4184ee7f
       body: Update layers/meta-balena-hab
