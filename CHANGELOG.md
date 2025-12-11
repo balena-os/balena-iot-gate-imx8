@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.10.0
+## (2025-12-11)
+
+
+<details>
+<summary> Update layers/meta-balena to df3211d5c6f07b9732f5d9a69087bccc0b55d022 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.0
+> ### (2025-12-11)
+> 
+> * networkmanager: update to 1.52.0 [Michal Toman]
+> 
+> ## meta-balena-6.9.6
+> ### (2025-12-11)
+> 
+> * renovate.json: Remove custom balena-git package rules [Kyle Harding]
+> 
+
+</details>
+
 # v6.9.5
 ## (2025-12-11)
 
