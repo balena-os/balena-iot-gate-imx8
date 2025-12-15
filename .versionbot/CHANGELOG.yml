@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 560b3c5c44d1c99dfb8fdd2cb790d28e366374f1
+      hash: e01de960a0e3c38feb0bf1184c9d98a91489073e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 560b3c5c44d1c99dfb8fdd2cb790d28e366374f1
+        changelog-entry: Update layers/meta-balena to 560b3c5c44d1c99dfb8fdd2cb790d28e366374f1
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: remove disk watchdog logs
+              hash: 426c342e1c3ee87b752c88ef6805da093249bd51
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.10.3
+          title: ""
+          date: 2025-12-15T18:38:40.829Z
+  version: 6.10.3
+  title: ""
+  date: 2025-12-15T23:24:30.924Z
+- commits:
     - subject: Update layers/poky to 2c05660b21c7cc1082aeac8b75d8a2d82e249f63
       hash: 2aa404167478be0c334888f71c97811773371abd
       body: Update layers/poky
