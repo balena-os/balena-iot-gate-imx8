@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.10.6+rev4
+## (2026-01-09)
+
+* adapt to meta-balena-hab additions [Alex Gonzalez]
+
 # v6.10.6+rev3
 ## (2025-12-31)
 

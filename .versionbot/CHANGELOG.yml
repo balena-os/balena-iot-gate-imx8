@@ -1,4 +1,18 @@
 - commits:
+    - subject: adapt to meta-balena-hab additions
+      hash: 15f98fe0a8e6fe44877620caa791fd419e151689
+      body: ""
+      footer:
+        Changelog-entry: adapt to meta-balena-hab additions
+        changelog-entry: adapt to meta-balena-hab additions
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 6.10.6+rev4
+  title: ""
+  date: 2026-01-09T11:43:42.903Z
+- commits:
     - subject: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
       hash: f6f5fc0e0a4c1e2bd9e2aa12377e0a0518b11f30
       body: Update balena-yocto-scripts
