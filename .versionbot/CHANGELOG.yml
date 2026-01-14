@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 829fc3c99e238dd8a4f2c4bbfa84fac209e2b351
+      hash: 02246ca0c4494f63b83d73f0985a9926c426fcc1
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 829fc3c99e238dd8a4f2c4bbfa84fac209e2b351
+        changelog-entry: Update balena-yocto-scripts to 829fc3c99e238dd8a4f2c4bbfa84fac209e2b351
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/upload-artifact action to v6
+              hash: f29e9ca8e2677d74543a9c8f8bdb849240a3fae5
+              body: |
+                Update actions/upload-artifact from 5.0.0 to 6.0.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.11
+          title: ""
+          date: 2026-01-14T11:48:56.107Z
+  version: 6.10.15+rev4
+  title: ""
+  date: 2026-01-14T15:39:39.508Z
+- commits:
     - subject: Update layers/meta-openembedded to
         7d4507f226bd2af939d4482fb14a809867ece939
       hash: c3dd0893d40969b4f1d8c9c55c1597cf5226415b
