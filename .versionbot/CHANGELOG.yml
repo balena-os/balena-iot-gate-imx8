@@ -1,4 +1,45 @@
 - commits:
+    - subject: Update layers/meta-balena to 5fdbeb1984d50a9f7c9a5e5404771838c2670d67
+      hash: aabc1a9350b7fbdb9e927c79855836f9fac26558
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5fdbeb1984d50a9f7c9a5e5404771838c2670d67
+        changelog-entry: Update layers/meta-balena to 5fdbeb1984d50a9f7c9a5e5404771838c2670d67
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update vacuum-size to 128M to match vacuum.conf and
+                journald-balena-os.conf
+              hash: 42ac8ca0096c93c486ea29f2de4cd3bacd0460ff
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Chris Sawer <chris.sawer@demandlogic.co.uk>
+                signed-off-by: Chris Sawer <chris.sawer@demandlogic.co.uk>
+              author: Chris Sawer
+              nested: []
+          version: meta-balena-6.10.17
+          title: ""
+          date: 2026-01-21T11:49:44.917Z
+        - commits:
+            - subject: "os-helpers: safe-reboot: always sync filesystem before reboot"
+              hash: 69066785bef32cf64471f4e999d771dfd4d009fb
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.10.16
+          title: ""
+          date: 2026-01-20T11:56:13.550Z
+  version: 6.10.17
+  title: ""
+  date: 2026-01-21T18:14:26.151Z
+- commits:
     - subject: Update balena-yocto-scripts to a64a7325c164749c5fcdd46468d29b43f232c733
       hash: 5d633e3aaeef8361fc93dbdccad75400f5556d50
       body: Update balena-yocto-scripts
