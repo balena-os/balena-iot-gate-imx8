@@ -1,4 +1,68 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d24e4721220e297b44aa4ce3678a9d1324d0e58d
+      hash: cfe5114d936fc3630247c4e3074e954181963ffc
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d24e4721220e297b44aa4ce3678a9d1324d0e58d
+        changelog-entry: Update balena-yocto-scripts to d24e4721220e297b44aa4ce3678a9d1324d0e58d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.33.17
+              hash: 7f31be022b971a55da4d7deec0efd783e7fcda1d
+              body: |
+                Update aws/aws-cli from 2.33.14 to 2.33.17
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.23
+          title: ""
+          date: 2026-02-06T23:36:29.035Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.33.14
+              hash: 15940b831e234f904a5c92ed275a5c4eb810d6f3
+              body: |
+                Update aws/aws-cli from 2.33.12 to 2.33.14
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.22
+          title: ""
+          date: 2026-02-04T01:00:13.803Z
+        - commits:
+            - subject: Update docker/login-action action to v3.7.0
+              hash: 1f8710f576ade4a457410417f163d2a36c8a5e14
+              body: |
+                Update docker/login-action from 3.6.0 to 3.7.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.21
+          title: ""
+          date: 2026-01-31T03:36:59.713Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.33.12
+              hash: 8c64daf7020916835abafcc4b89fa70942cbd764
+              body: |
+                Update aws/aws-cli from 2.33.7 to 2.33.12
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.20
+          title: ""
+          date: 2026-01-31T00:05:43.325Z
+  version: 6.10.25+rev1
+  title: ""
+  date: 2026-02-07T05:01:09.382Z
+- commits:
     - subject: Update layers/meta-balena to 98fc1f506f9a2d33106eb4e60073f2dab057e196
       hash: 40c8663ed24774e075729b6f5954d8c225aee554
       body: Update layers/meta-balena
