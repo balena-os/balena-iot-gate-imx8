@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.11.1
+## (2026-02-17)
+
+
+<details>
+<summary> Update layers/meta-balena to f37c4fd776dfcec74405e137fe79e24a7a92a924 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.11.1
+> ### (2026-02-17)
+> 
+> * peak: Update to version 9.0 [Florin Sarbu]
+> 
+> ## meta-balena-6.11.0
+> ### (2026-02-11)
+> 
+> * openssh: Add sshd.socket burst protection recovery timer [Kyle Harding]
+> 
+
+</details>
+
 # v6.10.26+rev1
 ## (2026-02-13)
 

@@ -1,4 +1,65 @@
 - commits:
+    - subject: Update layers/meta-balena to f37c4fd776dfcec74405e137fe79e24a7a92a924
+      hash: 2be759c959cdcefe02f286ce4ee3a7e386dea362
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to f37c4fd776dfcec74405e137fe79e24a7a92a924
+        changelog-entry: Update layers/meta-balena to f37c4fd776dfcec74405e137fe79e24a7a92a924
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "peak: Update to version 9.0"
+              hash: 37ab4aef27be7c9042757b3f3d2b91080a5b4259
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.11.1
+          title: ""
+          date: 2026-02-17T13:05:12.004Z
+        - commits:
+            - subject: "openssh: Add sshd.socket burst protection recovery timer"
+              hash: 4ddde103fb870b36943f01fb0544c76617eef3d8
+              body: >
+                Devices with public-facing SSH ports can lose SSH access
+                permanently
+
+                when systemd's trigger rate limiting stops sshd.socket due to
+
+                connection floods from automated scanners. Since there is no
+                built-in
+
+                recovery, headless devices remain unreachable until manual
+                intervention.
+
+
+                Add a systemd timer that checks sshd.socket every 15 minutes and
+
+                restarts it only if Result=trigger-limit-hit — the specific
+                state
+
+                systemd sets when TriggerLimitBurst is exceeded. Manual stops
+                and
+
+                other failure states are left alone.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-6.11.0
+          title: ""
+          date: 2026-02-11T18:34:06.783Z
+  version: 6.11.1
+  title: ""
+  date: 2026-02-17T19:47:49.913Z
+- commits:
     - subject: Update layers/poky to 58f9b898daef8272184b1be176a18428f9f9d9b3
       hash: 0e104528f996851e2bca25e701fd939414c4a1a2
       body: Update layers/poky
