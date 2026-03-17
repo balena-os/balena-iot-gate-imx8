@@ -1,4 +1,51 @@
 - commits:
+    - subject: Update layers/meta-balena to bb0a239a4af553121713ddbb527cf445105c197d
+      hash: 990ac779516c990ec4b97ac84533aa45496db59e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to bb0a239a4af553121713ddbb527cf445105c197d
+        changelog-entry: Update layers/meta-balena to bb0a239a4af553121713ddbb527cf445105c197d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "wpa-supplicant: Align to recipe from Scarthgap"
+              hash: bd8979799b88c68b40892af469d0fe1da5a7d791
+              body: >
+                We add the recipe with the patches from Scarthgap revision
+                97f732ce9b914ea4022c9425611c16d333c2787b
+
+
+                This is the same package version but adds additional CVE
+                patches.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.11.14
+          title: ""
+          date: 2026-03-16T13:02:38.469Z
+        - commits:
+            - subject: "tcgtool: update to v0.1.4"
+              hash: e87d51dcafe025009a86c18b757dbea6ebbaf6fe
+              body: |
+                This should fix hash calculation for kernel 6.18 binaries
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.11.13
+          title: ""
+          date: 2026-03-14T22:54:14.152Z
+  version: 6.11.14
+  title: ""
+  date: 2026-03-17T07:13:58.418Z
+- commits:
     - subject: Update layers/meta-freescale to f1ecdeec20dd95d2eab6c6d9036b2a2309b7d862
       hash: b6fb678273c9193abbf83fcf0e951bda64ccd7bf
       body: Update layers/meta-freescale
