@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to fac181a337cfca547ebc14dbdccabe055c78b2de
+      hash: 7e3f37bea30d1308b365c59f871aa97504f9446f
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to fac181a337cfca547ebc14dbdccabe055c78b2de
+        changelog-entry: Update layers/meta-balena to fac181a337cfca547ebc14dbdccabe055c78b2de
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: add flock and lockfile documentation
+              hash: d5ae3bea0cce63d60e5048fe696c655a666b9550
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.12.0
+          title: ""
+          date: 2026-03-17T10:38:00.364Z
+  version: 6.12.0
+  title: ""
+  date: 2026-03-17T23:43:45.783Z
+- commits:
     - subject: Update layers/poky to 02c15addea7c3303552df5994ce0616b2059388c
       hash: a4100d5a691718aadcec1b6c72a0fe8543af4ac6
       body: Update layers/poky
