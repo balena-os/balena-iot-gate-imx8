@@ -1,4 +1,48 @@
 - commits:
+    - subject: Update layers/meta-balena to f3eea3ba73b68ef4cb633efc6077ac5baced1fe1
+      hash: 59450c7391ed8de81068b91cd225faeb67c3b88a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to f3eea3ba73b68ef4cb633efc6077ac5baced1fe1
+        changelog-entry: Update layers/meta-balena to f3eea3ba73b68ef4cb633efc6077ac5baced1fe1
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "initrdscripts: Unmount the state partition before kexec"
+              hash: 44c8cdf321581634f562ffb4c836cf00d7d72cf8
+              body: >
+                At this moment we only attempt to unmount boot and root
+                partitions
+
+                in the kexec script as the assumption was nothing else is
+                mounted
+
+                at that point. But this is not true, the machineid script mounts
+
+                the state partition and bind-mounts /etc/machine-id from it. As
+                a side
+
+                effect, the root partition won't properly unmount either.
+
+
+                This patch changes the kexec script to unmount the state
+                partition
+
+                before trying to unmount root.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.12.3
+          title: ""
+          date: 2026-03-26T13:52:27.431Z
+  version: 6.12.3
+  title: ""
+  date: 2026-03-27T02:03:35.503Z
+- commits:
     - subject: Update layers/meta-balena to 0cc73f5481ae9ac26369e78806fd7c907a6a4aeb
       hash: 9dfc1e80b5c29aa3d218c9ae1de4305333c5ade4
       body: Update layers/meta-balena
