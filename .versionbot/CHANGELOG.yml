@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-os/github-workflows to
+      hash: 44395849aabcfcca4ba82ce649e8d46dbb9f9dc0
+      body: Update balena-os/github-workflows
+      footer:
+        Changelog-entry: Update balena-os/github-workflows to
+        changelog-entry: Update balena-os/github-workflows to
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.12.3+rev2
+  title: ""
+  date: 2026-03-28T04:26:03.378Z
+- commits:
     - subject: Update layers/poky to cf615e1d3bde7e5cb53b56b67954bc6e75bbb1d6
       hash: 8c682adfebd9779f47acfa90305be57813611452
       body: Update layers/poky
