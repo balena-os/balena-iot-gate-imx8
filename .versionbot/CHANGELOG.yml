@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 108f3c8fd68bcc4c09b015cafab1db722fdf71d5
+      hash: 9e3fdc5ae225e0e6cf64286a566fd8e062a0f7eb
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 108f3c8fd68bcc4c09b015cafab1db722fdf71d5
+        changelog-entry: Update balena-yocto-scripts to 108f3c8fd68bcc4c09b015cafab1db722fdf71d5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io/balena-cli to v24
+              hash: e5c4beeab5837fda8514834663ede9098ccd6cea
+              body: |
+                Update balena-io/balena-cli from 23.2.30 to 24.0.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.30
+          title: ""
+          date: 2026-04-01T07:52:47.775Z
+  version: 6.12.3+rev5
+  title: ""
+  date: 2026-04-01T11:58:27.387Z
+- commits:
     - subject: Update layers/meta-openembedded to
         9d8ef26a9693e2c70ae34abe1a753873d42ec588
       hash: 4a9066104ff52fb2fec82747ee244f39d30898bf
