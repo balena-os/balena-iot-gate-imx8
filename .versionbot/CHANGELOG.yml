@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update layers/meta-freescale-3rdparty to
+        738a0022b709feebf1672cbe574bc987933b806f
+      hash: 0b526b8785b0e0c30a50dfe638ec3b5b0749b025
+      body: Update layers/meta-freescale-3rdparty
+      footer:
+        Changelog-entry: Update layers/meta-freescale-3rdparty to
+          738a0022b709feebf1672cbe574bc987933b806f
+        changelog-entry: Update layers/meta-freescale-3rdparty to
+          738a0022b709feebf1672cbe574bc987933b806f
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.12.3+rev6
+  title: ""
+  date: 2026-04-04T00:58:42.830Z
+- commits:
     - subject: Update balena-yocto-scripts to 108f3c8fd68bcc4c09b015cafab1db722fdf71d5
       hash: 9e3fdc5ae225e0e6cf64286a566fd8e062a0f7eb
       body: Update balena-yocto-scripts
