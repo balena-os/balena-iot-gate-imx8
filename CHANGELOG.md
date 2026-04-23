@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.12.11+rev2
+## (2026-04-23)
+
+
+<details>
+<summary> Update contracts to 7c3bf64c92a839dcbf02cfd69367392e7728fcde [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.143
+> ### (2026-04-22)
+> 
+> * hw.device-type: Add new device-type Compulab IOT-LINK Gateway [Florin Sarbu]
+> 
+> ## contracts-2.0.142
+> ### (2026-04-09)
+> 
+> * Update iot-gate-imx8plus-d1d8 to remove Wifi and BT [Alexandru Costache]
+> 
+
+</details>
+
 # v6.12.11+rev1
 ## (2026-04-23)
 
