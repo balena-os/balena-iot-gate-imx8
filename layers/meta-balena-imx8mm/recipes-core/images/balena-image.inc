@@ -19,3 +19,17 @@ IMAGE_INSTALL:remove = "kernel-image"
 
 do_rootfs[depends] += " virtual/balena-bootloader:do_deploy"
 do_image_balenaos_img[depends] += " virtual/balena-bootloader:do_deploy"
+
+ALLOWED_FIRMWARE_PACKAGES = " \
+    linux-firmware-ax200 \
+    linux-firmware-ax210 \
+"
+
+BALENA_ALLOWED_FIRMWARE_PACKAGES:append = "${ALLOWED_FIRMWARE_PACKAGES}"
+
+TEMPORARILY_ALLOWED_PACKAGES = " \
+    linux-firmware-ibt-20 \
+    linux-firmware-qca \
+"
+
+BALENA_ALLOWED_FIRMWARE_PACKAGES:append = "${TEMPORARILY_ALLOWED_PACKAGES}"
