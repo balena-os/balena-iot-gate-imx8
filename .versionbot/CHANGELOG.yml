@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update layers/meta-balena to 40263171117a11d10fcf1469214588e65a77b8d0
+      hash: 9b5784a767308517b0c257ec92fa239f7c8d04cd
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 40263171117a11d10fcf1469214588e65a77b8d0
+        changelog-entry: Update layers/meta-balena to 40263171117a11d10fcf1469214588e65a77b8d0
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "mobynit: update to v1.0.0"
+              hash: d3c6c79ec6ff747fdcec1534bd704950b163f63b
+              body: >
+                This mobynit version mounts the rootfs as lowerdirs and is
+                intrinsically
+
+                read-only.
+              footer:
+                Change-type: major
+                change-type: major
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-7.0.0
+          title: ""
+          date: 2026-04-24T18:34:48.170Z
+  version: 7.0.0
+  title: ""
+  date: 2026-04-29T16:09:30.137Z
+- commits:
     - subject: Update balena-os/github-workflows to
         6fdae9ec102bb2deaa0bd767155687fafd538436
       hash: b0a7b9b76969a2a5184617d5e5ec3d985553501a
