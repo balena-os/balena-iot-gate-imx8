@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone to 7e10a76d99df42af630a4fcade4bde64f36a151d
+      hash: ef9ebbf9fe6c294614c628914c91855ee4e48190
+      body: Update product-os/flowzone
+      footer:
+        Changelog-entry: Update product-os/flowzone to 7e10a76d99df42af630a4fcade4bde64f36a151d
+        changelog-entry: Update product-os/flowzone to 7e10a76d99df42af630a4fcade4bde64f36a151d
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.0.0+rev4
+  title: ""
+  date: 2026-05-02T17:42:53.103Z
+- commits:
     - subject: Update product-os/flowzone to 4b69bf10c6a124979d7c283321f65dd96a6ae09b
       hash: f9f619795a4037106d07d3f8a3b6baf05c3ca844
       body: Update product-os/flowzone
