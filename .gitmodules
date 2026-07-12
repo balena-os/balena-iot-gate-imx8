@@ -37,6 +37,7 @@
 [submodule "layers/meta-bsp-imx8mm"]
 	path = layers/meta-bsp-imx8mm
 	url = https://github.com/compulab-yokneam/meta-bsp-imx8mm.git
+	branch = iot-gate-imx8-r3.2-balena
 [submodule "contracts"]
 	path = contracts
 	url = https://github.com/balena-io/contracts.git
