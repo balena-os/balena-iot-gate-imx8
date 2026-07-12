@@ -1,26 +1,50 @@
-From 372cb1487a231e0c8cfc466a14ee0c16ef9767b4 Mon Sep 17 00:00:00 2001
-From: Alexandru Costache <alexandru@balena.io>
-Date: Fri, 14 Jul 2023 13:55:51 +0200
-Subject: [PATCH] Integrate with Balena u-boot environment
+From 20029ff0fc28cb45c21217f63f88350dc6219479 Mon Sep 17 00:00:00 2001
+From: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+Date: Mon, 29 Jun 2026 22:05:48 +0300
+Subject: [PATCH 1128/1128] Integrate with Balena u-boot environment
 
 Integrated u-boot with Balena environment
 and added unzipping of the kernel image.
 Increased default env size.
 
-Upstream-Status: Inappropriate [configuration]
-Signed-off-by: Vicentiu Galanopulo  <vicentiu@balena.io>
+Signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
 ---
- configs/iot-gate-imx8.config    |  8 ++++++++
- include/configs/iot-gate-imx8.h | 19 ++++++++++++++-----
- 2 files changed, 22 insertions(+), 5 deletions(-)
+ configs/cl-imx8m-mini_defconfig  |  6 +++---
+ configs/iot-gate-imx8.config     |  7 +++++++
+ include/configs/cpl-imx8m-mini.h | 19 ++++++++++++-------
+ 3 files changed, 22 insertions(+), 10 deletions(-)
 
+diff --git a/configs/cl-imx8m-mini_defconfig b/configs/cl-imx8m-mini_defconfig
+index 9d00d812844..3b060919da3 100644
+--- a/configs/cl-imx8m-mini_defconfig
++++ b/configs/cl-imx8m-mini_defconfig
+@@ -2,7 +2,7 @@ CONFIG_ARM=y
+ CONFIG_SPL_SYS_ICACHE_OFF=y
+ CONFIG_SPL_SYS_DCACHE_OFF=y
+ CONFIG_ARCH_IMX8M=y
+-CONFIG_ENV_SIZE=0x4000
++CONFIG_ENV_SIZE=0x5000
+ CONFIG_ENV_OFFSET=0x4400
+ CONFIG_SPL_GPIO=y
+ CONFIG_DM_GPIO=y
+@@ -73,8 +73,8 @@ CONFIG_DM_REGULATOR_GPIO=y
+ CONFIG_MXC_UART=y
+ CONFIG_DM_THERMAL=y
+ CONFIG_NXP_TMU=y
+-CONFIG_USE_BOOTCOMMAND=y
+-CONFIG_BOOTCOMMAND="run bsp_bootcmd"
++CONFIG_USE_BOOTCOMMAND=n
++# CONFIG_BOOTCOMMAND is not set
+ CONFIG_USB=y
+ CONFIG_USB_EHCI_HCD=y
+ CONFIG_USB_GADGET=y
 diff --git a/configs/iot-gate-imx8.config b/configs/iot-gate-imx8.config
-index 208ef299d3..b92adfa002 100644
+index d1c119ccdb4..7ff997e6c88 100644
 --- a/configs/iot-gate-imx8.config
 +++ b/configs/iot-gate-imx8.config
-@@ -16,3 +16,11 @@ CONFIG_CMD_PCA953X=y
+@@ -13,3 +13,10 @@ CONFIG_LED_GPIO=n
+ CONFIG_CMD_PCA953X=y
  CONFIG_DM_PCA953X=y
- CONFIG_SYS_PROMPT="IOT-GATE-iMX8 => "
  CONFIG_USB_ETHER_SMSC95XX=y
 +CONFIG_CMD_UNZIP=y
 +CONFIG_CMD_IMPORTENV=y
@@ -29,57 +53,57 @@ index 208ef299d3..b92adfa002 100644
 +CONFIG_PARTITION_UUIDS=y
 +CONFIG_CMD_PART=y
 +CONFIG_CMD_FS_UUID=y
-+
-diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
-index 9774949456..0a5325b97f 100644
---- a/include/configs/iot-gate-imx8.h
-+++ b/include/configs/iot-gate-imx8.h
-@@ -17,12 +17,15 @@
- #undef CONFIG_EXTRA_ENV_SETTINGS
- #undef CONFIG_BOOTCOMMAND
+diff --git a/include/configs/cpl-imx8m-mini.h b/include/configs/cpl-imx8m-mini.h
+index 4447463aca5..bebf50d3baf 100644
+--- a/include/configs/cpl-imx8m-mini.h
++++ b/include/configs/cpl-imx8m-mini.h
+@@ -54,8 +54,13 @@
+ #define BOOT_CANDIDATE_LIST sd_ul usb_ul emmc_ul
+ #endif
  
-+#define CONFIG_ENV_SIZE 0x5000
-+
- #define ENV_CONSOLE console=ttymxc2,115200 earlycon=ec_imx6q,0x30880000,115200
- #define CONFIG_EXTRA_ENV_SETTINGS		\
- 	CONFIG_MFG_ENV_SETTINGS \
- 	"autoload=off\0" \
- 	"script=boot.scr\0" \
--	"image=Image\0" \
-+	"image=Image.gz\0" \
-+	"zip_addr=0x70480000\0" \
- 	"fdt_addr=0x43000000\0"	\
- 	"fdt_high=0xffffffffffffffff\0"	\
- 	"initrd_high=0xffffffffffffffff\0" \
-@@ -30,18 +33,24 @@
- 	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0\0" \
- 	"emmc_ul=setenv boot_dev_str eMMC; run boot_try_msg; " \
- 	"setenv iface mmc; setenv dev 2; setenv part 1;" \
--	"setenv bootargs ${bootargs_common} root=/dev/mmcblk2p2 " \
--	"${root_opt};\0" \
-+	"setenv bootargs ${bootargs_common} " \
-+	"${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
- 	"usb_ul=setenv boot_dev_str USB; run boot_try_msg; usb reset; " \
- 	"setenv iface usb; setenv dev 0; setenv part 1; " \
--	"setenv bootargs ${bootargs_common} root=/dev/sda2 ${root_opt};\0" \
-+	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
- 	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
--	"ulimage=load ${iface} ${dev}:${part} ${loadaddr} ${image}\0" \
-+	"ulimage=load ${iface} ${dev}:${part} ${zip_addr} ${image}; unzip ${zip_addr} ${loadaddr}\0" \
- 	"ulfdt=load ${iface} ${dev}:${part} ${fdt_addr} ${fdt_file};\0" \
- 	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
- 	"source;\0" \
- 	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
- #define CONFIG_BOOTCOMMAND \
+-#define BSP_BOOTCOMMAND \
+-	"bsp_bootcmd=echo Running BSP bootcmd ...; " \
++#define CONFIG_BOOTCOMMAND \
 +	"setenv resin_kernel_load_addr ${loadaddr};" \
 +	"run resin_set_kernel_root; run set_os_cmdline; " \
 +	"setenv usbdev ${resin_dev_index};" \
 +	"setenv usbbootpart ${resin_boot_part};" \
 +	"setenv mmcdev ${resin_dev_index};" \
 +	"setenv mmcbootpart ${resin_boot_part};" \
- 	"for src in usb_ul emmc_ul; do " \
+ 	"for src in "__stringify(BOOT_CANDIDATE_LIST)"; do " \
  		"run ${src}; " \
  		"if run ulbootscript; then " \
+@@ -96,11 +101,11 @@
+ 	CFG_MFG_ENV_SETTINGS \
+ 	BOOTENV \
+ 	MACHINE_EXTRA_ENV_SETTINGS \
+-	BSP_BOOTCOMMAND \
+ 	"autoload=off\0" \
+ 	"script=boot.scr\0" \
+ 	"kernel_addr_r=" __stringify(CONFIG_SYS_LOAD_ADDR) "\0" \
+-	"image=Image\0" \
++	"image=Image.gz\0" \
++	"zip_addr=0x70480000\0" \
+ 	"console=ttymxc2,115200 earlycon=ec_imx6q,0x30880000,115200\0" \
+ 	"fdt_addr=0x43000000\0"			\
+ 	"fdt_high=0xffffffffffffffff\0"		\
+@@ -112,13 +117,13 @@
+ 	"root_opt=rootwait rw\0" \
+ 	"bootargs_common="__stringify(ENV_CONSOLE)" net.ifnames=0\0" \
+ 	"emmc_ul=setenv iface mmc; setenv dev 2; setenv part 1;" \
+-	"setenv bootargs ${bootargs_common} root=/dev/mmcblk2p2 ${root_opt};\0" \
++	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"sd_ul=setenv iface mmc; setenv dev 1; setenv part 1;" \
+ 	"setenv bootargs ${bootargs_common} root=/dev/mmcblk1p2 ${root_opt};\0" \
+ 	"usb_ul=usb start; setenv iface usb; setenv dev 0; setenv part 1;" \
+-	"setenv bootargs ${bootargs_common}  root=/dev/sda2 ${root_opt};\0" \
++	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
+ 	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
+-	"ulimage=load ${iface} ${dev}:${part} ${loadaddr} ${image}\0" \
++	"ulimage=load ${iface} ${dev}:${part} ${zip_addr} ${image}; unzip ${zip_addr} ${loadaddr}\0" \
+ 	"ulfdt=if test ${boot_fdt} = yes || test ${boot_fdt} = try; then " \
+ 		"load ${iface} ${dev}:${part} ${fdt_addr} ${fdt_file}; fi;\0" \
+ 	"bootscript=echo Running bootscript from mmc ...; " \
 -- 
-2.37.2
+2.34.1
 

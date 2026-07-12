@@ -1,38 +1,38 @@
-From 5b91fef66c51cd533db15eeb45dc889dd583731a Mon Sep 17 00:00:00 2001
-From: Alexandru Costache <alexandru@balena.io>
-Date: Mon, 17 Jul 2023 11:10:48 +0200
-Subject: [PATCH] iot-gate-imx8: Run CRC checks for kernel and device-tree
+From e716f22faade7a9babc77446cdf0e7d11446ddc3 Mon Sep 17 00:00:00 2001
+From: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+Date: Sat, 20 Jun 2026 22:40:50 +0300
+Subject: [PATCH 1134/1134] iot-gate-imx8: Run CRC checks for kernel and
+ device-tree
 
-Upstream-status: Inappropriate [configuration]
-Signed-off-by: Alexandru Costache <alexandru@balena.io>
+Signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
 ---
- include/configs/iot-gate-imx8.h | 6 ++++--
+ include/configs/cpl-imx8m-mini.h | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
-index 5c9987691c..1a6d513150 100644
---- a/include/configs/iot-gate-imx8.h
-+++ b/include/configs/iot-gate-imx8.h
-@@ -39,8 +39,8 @@
- 	"setenv iface usb; setenv dev 0; setenv part 1; " \
+diff --git a/include/configs/cpl-imx8m-mini.h b/include/configs/cpl-imx8m-mini.h
+index 82d0e586086..92e2c9df000 100644
+--- a/include/configs/cpl-imx8m-mini.h
++++ b/include/configs/cpl-imx8m-mini.h
+@@ -66,6 +66,8 @@
+ 		"run ${src}; " \
+ 		"if run ulimage; then " \
+ 			"if run ulfdt; then " \
++				"run balena_kernel_load_crc_check; " \
++				"run balena_fdt_load_crc_check; " \
+ 				"booti ${loadaddr} - ${fdt_addr}; " \
+ 			"else " \
+ 				"if test ${boot_fdt} != yes; then " \
+@@ -121,8 +123,8 @@
+ 	"usb_ul=usb start; setenv iface usb; setenv dev 0; setenv part 1;" \
  	"setenv bootargs ${bootargs_common} ${resin_kernel_root} ${root_opt} ${os_cmdline};\0" \
  	"ulbootscript=load ${iface} ${dev}:${part} ${loadaddr} ${script};\0" \
 -	"ulimage=load ${iface} ${resin_dev_index}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr}\0" \
 -	"ulfdt=load ${iface} ${resin_dev_index}:${resin_root_part} ${fdt_addr} boot/${fdt_file};\0" \
 +	"ulimage=if load ${iface} ${dev}:${resin_root_part} ${zip_addr} boot/${image}; then unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save; else false; fi; \0" \
 +	"ulfdt=if load ${iface} ${dev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}; then run balena_fdt_load_crc_save; else false; fi; \0" \
- 	"bootscript=echo Running bootscript from ${boot_dev_str} ...; " \
- 	"source;\0" \
- 	"boot_try_msg=echo Trying to boot from ${boot_dev_str} ...;\0"
-@@ -55,6 +55,8 @@
- 		"run ${src}; " \
- 			"if run ulimage; then " \
- 				"if run ulfdt; then " \
-+					"run balena_kernel_load_crc_check; " \
-+					"run balena_fdt_load_crc_check; " \
- 					"echo Booting from ${boot_dev_str} script ...; " \
- 					"booti ${loadaddr} - ${fdt_addr}; " \
- 				"fi; " \
+ 	"bootscript=echo Running bootscript from mmc ...; " \
+ 		"source\0" \
+ 	"netargs=setenv bootargs console=${console} " \
 -- 
-2.37.2
+2.34.1
 

@@ -1,6 +1,6 @@
-From 0033cfa66e1add321e8798cf8a03f6c09f892e53 Mon Sep 17 00:00:00 2001
-From: Alexandru Costache <alexandru@balena.io>
-Date: Mon, 16 May 2022 10:04:46 +0200
+From c8b61cdd4dafd1435f9329e8af474141956c2e3b Mon Sep 17 00:00:00 2001
+From: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+Date: Mon, 29 Jun 2026 20:44:26 +0300
 Subject: [PATCH] u-boot-compulab: Don't run script if booting with Balena 
  u-boot
 
@@ -14,29 +14,38 @@ u-boot.
 
 Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
+Signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
 ---
- include/configs/iot-gate-imx8.h | 4 ----
- 1 file changed, 4 deletions(-)
+ include/configs/cpl-imx8m-mini.h | 16 ++++++----------
+ 1 file changed, 6 insertions(+), 10 deletions(-)
 
-diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
-index e536a5f7a6..1fab1658c6 100644
---- a/include/configs/iot-gate-imx8.h
-+++ b/include/configs/iot-gate-imx8.h
-@@ -53,14 +53,10 @@
+diff --git a/include/configs/cpl-imx8m-mini.h b/include/configs/cpl-imx8m-mini.h
+index ebf73db7f1e..88c17cb2602 100644
+--- a/include/configs/cpl-imx8m-mini.h
++++ b/include/configs/cpl-imx8m-mini.h
+@@ -63,16 +63,12 @@
  	"setenv mmcbootpart ${resin_root_part};" \
- 	"for src in usb_ul emmc_ul; do " \
+ 	"for src in "__stringify(BOOT_CANDIDATE_LIST)"; do " \
  		"run ${src}; " \
 -		"if run ulbootscript; then " \
 -			"run bootscript; " \
 -		"else " \
- 			"if run ulimage; then " \
- 				"if run ulfdt; then " \
- 					"echo Booting from ${boot_dev_str} script ...; " \
- 					"booti ${loadaddr} - ${fdt_addr}; " \
+-			"if run ulimage; then " \
+-				"if run ulfdt; then " \
+-					"booti ${loadaddr} - ${fdt_addr}; " \
+-				"else " \
+-					"if test ${boot_fdt} != yes; then " \
+-						"booti ${loadaddr}; " \
+-					"fi; " \
++		"if run ulimage; then " \
++			"if run ulfdt; then " \
++				"booti ${loadaddr} - ${fdt_addr}; " \
++			"else " \
++				"if test ${boot_fdt} != yes; then " \
++					"booti ${loadaddr}; " \
  				"fi; " \
  			"fi; " \
--		"fi; " \
- 	"done; "
+ 		"fi; " \
 -- 
-2.17.1
+2.34.1
 
