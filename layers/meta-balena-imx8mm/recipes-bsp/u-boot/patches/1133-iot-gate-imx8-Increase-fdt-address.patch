@@ -1,23 +1,21 @@
-From 83ef5501723628121de4ea04e312847e4803ad9a Mon Sep 17 00:00:00 2001
-From: Alexandru Costache <alexandru@balena.io>
-Date: Wed, 31 May 2023 16:17:05 +0200
-Subject: [PATCH] iot-gate-imx8: Increase fdt address
+From 6ae8ecf6ba01e0a7bd7e0dfce1f7d670a504453a Mon Sep 17 00:00:00 2001
+From: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+Date: Sat, 20 Jun 2026 22:22:17 +0300
+Subject: [PATCH 1133/1133] iot-gate-imx8: Increase fdt address
 
 To fix booting with the newer kernel
 which has increased in size
 
-Upstream-status: Inappropriate [configuration]
-Signed-off-by: Alexandru Costache <alexandru@balena.io>
+Signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
 ---
- include/configs/cpl-imx8m-mini.h | 2 +-
- include/configs/iot-gate-imx8.h  | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
+ include/configs/cpl-imx8m-mini.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/include/configs/cpl-imx8m-mini.h b/include/configs/cpl-imx8m-mini.h
-index 0215f04210..16eea2b7b1 100644
+index 1b635fd6812..82d0e586086 100644
 --- a/include/configs/cpl-imx8m-mini.h
 +++ b/include/configs/cpl-imx8m-mini.h
-@@ -92,7 +92,7 @@
+@@ -84,7 +84,7 @@
  		"g_mass_storage.iSerialNumber=\"\" "\
  		"clk_ignore_unused "\
  		"\0" \
@@ -26,19 +24,15 @@ index 0215f04210..16eea2b7b1 100644
  	"initrd_high=0xffffffff\0" \
  	"emmc_dev=2\0" \
  	"sd_dev=1\0" \
-diff --git a/include/configs/iot-gate-imx8.h b/include/configs/iot-gate-imx8.h
-index 1fab1658c6..c847be3387 100644
---- a/include/configs/iot-gate-imx8.h
-+++ b/include/configs/iot-gate-imx8.h
-@@ -26,7 +26,7 @@
- 	"script=boot.scr\0" \
+@@ -105,7 +105,7 @@
  	"image=Image.gz\0" \
  	"zip_addr=0x70480000\0" \
--	"fdt_addr=0x43000000\0"	\
+ 	"console=ttymxc2,115200 earlycon=ec_imx6q,0x30880000,115200\0" \
+-	"fdt_addr=0x43000000\0"			\
 +	"fdt_addr=0x44360000\0"	\
- 	"fdt_high=0xffffffffffffffff\0"	\
- 	"initrd_high=0xffffffffffffffff\0" \
- 	"root_opt=rootwait rw\0" \
+ 	"fdt_high=0xffffffffffffffff\0"		\
+ 	"boot_fdt=yes\0" \
+ 	"fdt_file="CONFIG_DEFAULT_FDT_FILE"\0" \
 -- 
-2.37.2
+2.34.1
 
