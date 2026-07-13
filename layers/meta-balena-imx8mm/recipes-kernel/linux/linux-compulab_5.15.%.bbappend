@@ -41,6 +41,59 @@ BALENA_CONFIGS[cf80211] = " \
 	CONFIG_CFG80211=m \
 "
 
+# Safely optimizes code density without touching any kernel features or APIs
+BALENA_CONFIGS:append = " core-optimization"
+BALENA_CONFIGS[core-optimization] = " \
+    CONFIG_CC_OPTIMIZE_FOR_SIZE=y \
+    CONFIG_NUMA=n \
+"
+
+# Strips non-existent hardware drivers and Xen (which requires them to function)
+BALENA_CONFIGS:append = " iommu-smmu"
+BALENA_CONFIGS[iommu-smmu] = " \
+    CONFIG_ARM_SMMU=n \
+    CONFIG_ARM_SMMU_V3=n \
+    CONFIG_IOMMU_IO_PGTABLE=n \
+    CONFIG_IOMMU_IO_PGTABLE_LPAE=n \
+    CONFIG_XEN=n \
+"
+
+# Removes common clock routing trees compiled for alternative family chips (Plus, Nano, etc.)
+BALENA_CONFIGS:append = " alternative-clocks"
+BALENA_CONFIGS[alternative-clocks] = " \
+    CONFIG_CLK_IMX8MN=n \
+    CONFIG_CLK_IMX8MP=n \
+    CONFIG_CLK_IMX8MQ=n \
+    CONFIG_CLK_IMX8QXP=n \
+"
+
+# Disables USB 3.0 frameworks and SATA controllers (IMX8MM is restricted to USB 2.0 and eMMC)
+BALENA_CONFIGS:append = " extra-storage"
+BALENA_CONFIGS[extra-storage] = " \
+    CONFIG_USB_XHCI_HCD=n \
+    CONFIG_USB_DWC3=n \
+    CONFIG_USB_DWC3_IMX8MP=n \
+    CONFIG_SATA_AHCI=n \
+    CONFIG_AHCI_IMX=n \
+"
+
+# Eliminates alternative video processing engines; the i.MX8M Mini exclusively supports the Hantro VPU
+BALENA_CONFIGS:append = " multimedia-vpu"
+BALENA_CONFIGS[multimedia-vpu] = " \
+    CONFIG_MXC_VPU_MALONE=n \
+    CONFIG_MXC_VPU_WINDSOR=n \
+"
+
+# Eliminates enterprise-grade PCIe network adapters
+BALENA_CONFIGS:append = " server-nics"
+BALENA_CONFIGS[server-nics] = " \
+    CONFIG_AMD_XGBE=n \
+    CONFIG_THUNDER_NIC_PF=n \
+    CONFIG_HNS3=n \
+    CONFIG_NET_VENDOR_MELLANOX=n \
+    CONFIG_E1000E=n \
+"
+
 # The merge config performed by the BSP
 # overrides the balena OS config elements,
 # let's remove it and reinstate it before
@@ -68,3 +121,4 @@ addtask do_merge_config_before_resin_inject after do_configure before kernel_res
 
 # meta-bsp-imx8mm explicitly packages for /lib so let's also append the path set by nonarch_base_libdir for future use of usrmerge
 FILES:${KERNEL_PACKAGE_NAME}-modules += "${nonarch_base_libdir}/modules/"
+
