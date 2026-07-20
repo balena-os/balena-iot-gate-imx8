@@ -6,11 +6,11 @@ do_compile[depends] += "u-boot-compulab:do_deploy"
 do_compile[nostamp] = "1"
 
 do_install:prepend() {
-    for type in "${UBOOT_CONFIG}"; do
-        if [ -z "${BOOT_CONFIG_MACHINE}" ]; then
-            BOOT_CONFIG_MACHINE="${BOOT_NAME}-${MACHINE}-${type}.bin"
-        else
-            bbfatal "More than one U-boot is being built - please adapt"
-        fi
+    nconfigs=0
+    for type in ${UBOOT_CONFIG}; do
+        nconfigs=$(expr $nconfigs + 1)
     done
+    if [ "$nconfigs" -gt 1 ]; then
+        bbfatal "More than one U-boot is being built - please adapt. Current configs: ${UBOOT_CONFIG}"
+    fi
 }
