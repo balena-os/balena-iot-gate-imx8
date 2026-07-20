@@ -7,7 +7,7 @@ UBOOT_VARS += "BALENA_STAGE2"
 
 DEPENDS = "bison-native"
 
-PV = "2021.04"
+PV = "2023.04"
 
 do_compile:prepend() {
     if [ ${BUILD_REPRODUCIBLE_BINARIES} -eq 1 ];then
@@ -54,14 +54,12 @@ BALENA_UBOOT_DEVICE_TYPES:prepend = " usb "
 UBOOT_VARS:remove = "CONFIG_CMD_HASH"
 
 SRC_URI:append = " \
-	file://1127-Revert-remove-include-config_defaults.h.patch \
 	file://1128-Integrate-with-Balena-u-boot-environment.patch \
 	file://1129-iot-gate-imx8-Load-kernel-and-fdt-from-root-partitio.patch \
-	file://1132-u-boot-compulab-Don-t-run-script-if-booting-with-Bal.patch \
+	file://1132-u-boot-compulab-Don-t-run-script.patch \
 	file://1133-iot-gate-imx8-Increase-fdt-address.patch \
 	file://1134-iot-gate-imx8-Run-CRC-checks-for-kernel-and-device-t.patch \
 	file://1135-iot-gate-imx8-modify-configuration-to-fetch-kernel-b.patch \
-	file://1136-configs-cl-imx8m-mini_defconfig-increase-the-default.patch \
 	file://1137-iot-gate-imx8-enable-balena-second-stage-bootloader.patch \
 "
 
