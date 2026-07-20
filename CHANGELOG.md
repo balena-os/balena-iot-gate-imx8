@@ -1,6 +1,14 @@
 Change log
 -----------
 
+# v7.5.11+rev1
+## (2026-07-20)
+
+* fix imx-boot configs count check [guille-vega]
+* remove unused wireless firmware except intel and qualcomm [guille-vega]
+* remove Qualcomm & QCA connectivity FW [guille-vega]
+* layers/meta-bsp-imx8mm: Update u-boot-compulab from 3.2 to 4.2.0 [Kirill Kapranov]
+
 # v7.5.11
 ## (2026-07-16)
 

@@ -1,4 +1,67 @@
 - commits:
+    - subject: fix imx-boot configs count check
+      hash: bca8e55d181aaf70123219e0ccdf91ca72d17cd0
+      body: ""
+      footer:
+        Changelog-entry: fix imx-boot configs count check
+        changelog-entry: fix imx-boot configs count check
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: remove unused wireless firmware except intel and qualcomm
+      hash: 445d8eadc53859bc1f68b29968bb2148e1f20f5e
+      body: |
+        Remove all WiFi & Bluetooth firmware but Qualcomm & Intel AX210/AX200
+
+        As per the discussion in
+        https://balena.fibery.io/Work/Project/Unblock-the-release-pipeline-for-iot-gate-imx8-2645/anchor=16-Jul-2026--8991f0c2-d8db-4801-a9fd-2f2fd37e53bf
+      footer:
+        Changelog-entry: remove unused wireless firmware except intel and qualcomm
+        changelog-entry: remove unused wireless firmware except intel and qualcomm
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: remove Qualcomm & QCA connectivity FW
+      hash: 707fcd4beaa8a23397fd1c2e2dcccf36b741e95d
+      body: |
+        Remove Qualcomm/QCA WiFi & Bluetooth
+
+        As per the discussion in
+        https://balena.zulipchat.com/#narrow/channel/345889-balena-io.2Fos/topic/Alternative.20mPCIe.20WiFi.20modules.20for.20the.20Compulab.20iot-gate-imx/near/610435293
+      footer:
+        Changelog-entry: remove Qualcomm & QCA connectivity FW
+        changelog-entry: remove Qualcomm & QCA connectivity FW
+        Signed-off-by: guille-vega <guille-vega@misc1.dev.balena.io>
+        signed-off-by: guille-vega <guille-vega@misc1.dev.balena.io>
+      author: guille-vega
+      nested: []
+    - subject: "layers/meta-bsp-imx8mm: Update u-boot-compulab from 3.2 to 4.2.0"
+      hash: bc59f40d05912487d9dee9825478f2e11fd59af0
+      body: |
+        Update the boot loader to the source tree, based on 2023.04
+        To build the boot loader, the following recipes were updated:
+        	u-boot-compulab
+        	imx-atf
+        	firmware-imx
+        	imx-mkimage
+
+        Rationale: re-engineering of SPL in order to move LPDDR4 timing
+        to a storage. This modification is required, since the footprint
+        of the suite of timing settings of LPDDR chips grew, while more
+        LPDDR chips were introduced.
+      footer:
+        Changelog-entry: "layers/meta-bsp-imx8mm: Update u-boot-compulab from 3.2 to 4.2.0"
+        changelog-entry: "layers/meta-bsp-imx8mm: Update u-boot-compulab from 3.2 to 4.2.0"
+        Signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+        signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+      author: Kirill Kapranov
+      nested: []
+  version: 7.5.11+rev1
+  title: ""
+  date: 2026-07-20T18:47:51.577Z
+- commits:
     - subject: Update layers/meta-balena to 5bf69c082904fa5f585b96325fb66ed72e401674
       hash: 6c1b076ce1d0201dc1d6a9475c8ab62f0080c281
       body: Update layers/meta-balena
