@@ -1,4 +1,60 @@
 - commits:
+    - subject: "packagegroups/packagegroup-balena-connectivity: Install AX210 wifi and
+        bt firmware"
+      hash: cb5ebc5ad636de6a0981367090d1b99d6031655d
+      body: >
+        Starting with balenaOS v6.2 the intel AX210 firmware is
+
+        packaged separately in meta-balena as linux-firmware-iwlwifi-ty-a0.
+
+
+        This causesd the files packaged by linux-firmware-ax210 for this BSP
+
+        to be taken by linux-firmware-iwlwifi-ty-a0, which was not installed
+
+        specifically in this repository, and thus caused the
+        linux-firmware-ax210
+
+        package to become empty.
+
+
+        We now install ax210 firmware through the meta-balena defined package
+
+        linux-firmware-iwlwifi-ty-a0.
+      footer:
+        Changelog-entry: "packagegroups/packagegroup-balena-connectivity: Install AX210
+          wifi and bt firmware"
+        changelog-entry: "packagegroups/packagegroup-balena-connectivity: Install AX210
+          wifi and bt firmware"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+    - subject: "recipes-kernel/linux-firmware: Install AX210 fw version 66"
+      hash: 28bf69157d2da9f26135659de9c561bbf71524bb
+      body: |
+        Starting with balenaOS v6.2 the intel AX210 firmware is
+        packaged separately in meta-balena as linux-firmware-iwlwifi-ty-a0.
+        This causesd the files packaged by linux-firmware-ax210 for this BSP
+        to be taken by linux-firmware-iwlwifi-ty-a0, which is not installed
+        specifically in this repository, and the linux-firmware-ax210 package
+        becoming empty.
+
+        We now add back the ax210 firmware but only version 66, which is
+        the max supported version as reported in the logs from
+        https://balena.zulipchat.com/#narrow/channel/403752-channel.2Fsupport-help/topic/BalenaOS.20on.20IOT-GATE-IMX8/with/611921887
+        to avoid taking up too much space in the rootfs.
+      footer:
+        Changelog-entry: "recipes-kernel/linux-firmware: Install AX210 fw version 66"
+        changelog-entry: "recipes-kernel/linux-firmware: Install AX210 fw version 66"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 7.7.1+rev2
+  title: ""
+  date: 2026-07-22T11:25:53.070Z
+- commits:
     - subject: Update balena-os/github-workflows to
         95c18f8b04886c36223acc04a531c6af10086910
       hash: 29c6d95b890e41429fef326d61a63b6e684c6bbc

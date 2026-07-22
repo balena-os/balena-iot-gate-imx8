@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v7.7.1+rev2
+## (2026-07-22)
+
+* packagegroups/packagegroup-balena-connectivity: Install AX210 wifi and bt firmware [Alexandru Costache]
+* recipes-kernel/linux-firmware: Install AX210 fw version 66 [Alexandru Costache]
+
 # v7.7.1+rev1
 ## (2026-07-22)
 
