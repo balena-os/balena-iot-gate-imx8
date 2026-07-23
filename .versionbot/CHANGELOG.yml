@@ -1,4 +1,33 @@
 - commits:
+    - subject: unpin flowzone, track @master
+      hash: 73ccdd09611e90356ef8577b45f815733a3490fd
+      body: |
+        renovate pinned this to a sha by accident, config is fixed now. dropping
+        the `# master` comment since the ref self-documents.
+
+        See: https://balena.fibery.io/Security/Information_Security_and_Reliability_Incident/Renovate-infinite-pinning-actions-PRs-198
+      footer:
+        Changelog-entry: unpin flowzone, track @master
+        changelog-entry: unpin flowzone, track @master
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Update layers/meta-openembedded to
+        ce8539c941f6fcbecaca4d16640ac105c0595589
+      hash: feac1d4b65ee6fdd6c9f7cbf00549ce40f782c0c
+      body: Update layers/meta-openembedded
+      footer:
+        Changelog-entry: Update layers/meta-openembedded to
+          ce8539c941f6fcbecaca4d16640ac105c0595589
+        changelog-entry: Update layers/meta-openembedded to
+          ce8539c941f6fcbecaca4d16640ac105c0595589
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.7.1+rev4
+  title: ""
+  date: 2026-07-23T21:41:57.514Z
+- commits:
     - subject: Set explicit partition size overrides for each machine
       hash: f783bb2fa514c7fbaadced487b112e0a991e2f88
       body: |

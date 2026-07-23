@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v7.7.1+rev4
+## (2026-07-23)
+
+* unpin flowzone, track @master [Kyle Harding]
+* Update layers/meta-openembedded to ce8539c941f6fcbecaca4d16640ac105c0595589 [balena-renovate[bot]]
+
 # v7.7.1+rev3
 ## (2026-07-23)
 
