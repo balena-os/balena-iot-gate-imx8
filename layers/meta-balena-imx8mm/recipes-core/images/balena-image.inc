@@ -19,3 +19,7 @@ IMAGE_INSTALL:remove = "kernel-image"
 
 do_rootfs[depends] += " virtual/balena-bootloader:do_deploy"
 do_image_balenaos_img[depends] += " virtual/balena-bootloader:do_deploy"
+
+IMAGE_ROOTFS_SIZE:iot-gate-imx8 = "327680"
+BALENA_BOOT_SIZE:iot-gate-imx8 = "40960"
+BALENA_STATE_SIZE:iot-gate-imx8 = "20480"
