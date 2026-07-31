@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update layers/meta-balena-hab to 8e9c4cb99a1e17c2cc4217eaf2861e0c13938cbc
+      hash: b47bd7c0f3e102df52e7a57b162d155efe5008f6
+      body: Update layers/meta-balena-hab
+      footer:
+        Changelog-entry: Update layers/meta-balena-hab to
+          8e9c4cb99a1e17c2cc4217eaf2861e0c13938cbc
+        changelog-entry: Update layers/meta-balena-hab to
+          8e9c4cb99a1e17c2cc4217eaf2861e0c13938cbc
+      author: balena-renovate[bot]
+      nested: []
+    - subject: Fix IMAGE_ROOTFS_SIZE override shadowing HAB build
+      hash: d37a73dceff5c74c53c422382f58112333d584e1
+      body: ""
+      footer:
+        Changelog-entry: Fix IMAGE_ROOTFS_SIZE override shadowing HAB build
+        changelog-entry: Fix IMAGE_ROOTFS_SIZE override shadowing HAB build
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+  version: 7.8.0+rev1
+  title: ""
+  date: 2026-07-31T14:00:39.770Z
+- commits:
     - subject: Update layers/meta-balena to 05f71c5607f293a7bc162db6570f40bd5522393f
       hash: b053587c654c6bd8e1bebd83ecb24a6ec194b994
       body: Update layers/meta-balena

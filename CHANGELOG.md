@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v7.8.0+rev1
+## (2026-07-31)
+
+* Update layers/meta-balena-hab to 8e9c4cb99a1e17c2cc4217eaf2861e0c13938cbc [balena-renovate[bot]]
+* Fix IMAGE_ROOTFS_SIZE override shadowing HAB build [guille-vega]
+
 # v7.8.0
 ## (2026-07-29)
 
