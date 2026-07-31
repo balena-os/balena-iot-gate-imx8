@@ -20,6 +20,12 @@ IMAGE_INSTALL:remove = "kernel-image"
 do_rootfs[depends] += " virtual/balena-bootloader:do_deploy"
 do_image_balenaos_img[depends] += " virtual/balena-bootloader:do_deploy"
 
-IMAGE_ROOTFS_SIZE:iot-gate-imx8 = "327680"
+# Only set for the non-signed build - meta-balena-hab sets its own
+# IMAGE_ROOTFS_SIZE for the HAB variant, and an override here would
+# always win over that and shrink it.
+python() {
+    if not d.getVar('SIGN_API'):
+        d.setVar('IMAGE_ROOTFS_SIZE:iot-gate-imx8', '327680')
+}
 BALENA_BOOT_SIZE:iot-gate-imx8 = "40960"
 BALENA_STATE_SIZE:iot-gate-imx8 = "20480"
