@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v7.9.2+rev1
+## (2026-08-08)
+
+* Update layers/meta-cyclonedx to 221bf15bf2081d1d025f069429f1b94a14d520af [balena-renovate[bot]]
+
 # v7.9.2
 ## (2026-08-07)
 
