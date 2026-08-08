@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/poky to 445a6223929b9a7a62b575093659e3d9e1aba982
+      hash: e28e0e4a8d0448c794493f7ec57414a47d5b0075
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 445a6223929b9a7a62b575093659e3d9e1aba982
+        changelog-entry: Update layers/poky to 445a6223929b9a7a62b575093659e3d9e1aba982
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.9.2+rev2
+  title: ""
+  date: 2026-08-08T06:06:44.352Z
+- commits:
     - subject: Update layers/meta-cyclonedx to 221bf15bf2081d1d025f069429f1b94a14d520af
       hash: eaf65dd558a3e083069d6f4d8146bd94adf76312
       body: Update layers/meta-cyclonedx
