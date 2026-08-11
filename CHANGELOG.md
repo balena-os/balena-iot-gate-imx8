@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v7.9.3+rev3
+## (2026-08-11)
+
+* Set branch to master for meta-balena-hab in .gitmodules [Florin Sarbu]
+
 # v7.9.3+rev2
 ## (2026-08-11)
 
