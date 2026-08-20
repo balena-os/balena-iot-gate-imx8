@@ -1,6 +1,53 @@
 Change log
 -----------
 
+# v8.0.0
+## (2026-08-20)
+
+
+<details>
+<summary> Update layers/meta-balena to 9c83231c087d0ff78b943765551e2f061e0e9f72 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-8.0.0
+> ### (2026-08-17)
+> 
+> * image_types_balena: force 4K block size for resin-state ext4 [guille-vega]
+> * Increase default boot, root and state partition sizes [guille-vega]
+> 
+> ## meta-balena-7.9.6
+> ### (2026-08-17)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 4ae6a0e [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.124
+>> #### (2026-08-15)
+>> 
+>> * Update debian:bullseye-slim Docker digest to f313b4b [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.123
+>> #### (2026-08-15)
+>> 
+>> * Update core/contracts digest to 410a252 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.122
+>> #### (2026-08-15)
+>> 
+>> * Update alpine Docker tag to v3.24.1 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.121
+>> #### (2026-08-14)
+>> 
+>> * Core: worker: fix error with custom DT [Ryan Cooke]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v7.9.5
 ## (2026-08-16)
 
