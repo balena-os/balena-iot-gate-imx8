@@ -1,4 +1,108 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 6ea43b88e510d849952538fb77a60544fbfc3b77
+      hash: 1ee26847c8ab8a2396e1119dc0b5e25b6d50ec0e
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 6ea43b88e510d849952538fb77a60544fbfc3b77
+        changelog-entry: Update balena-yocto-scripts to 6ea43b88e510d849952538fb77a60544fbfc3b77
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io/upload-balena-release-asset action to v0.2.0
+              hash: 83044a0832a0266c65e0f8bd75c077743e228aab
+              body: |
+                Update balena-io/upload-balena-release-asset from 0.1.6 to 0.2.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.42.8
+          title: ""
+          date: 2026-08-20T14:34:17.825Z
+        - commits:
+            - subject: Update lodash to v4.18.1 [SECURITY]
+              hash: 0e53b8f952a12c1c928443d57c097c36684eb66e
+              body: |
+                Update lodash from 4.17.21 to 4.18.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.42.7
+          title: ""
+          date: 2026-08-19T21:52:37.501Z
+        - commits:
+            - subject: Update actions/github-script action to v9
+              hash: eef1c91a266b5c4e00de200fe65a46cfca305af0
+              body: |
+                Update actions/github-script from 8.0.0 to 9.0.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.42.6
+          title: ""
+          date: 2026-08-19T15:33:17.799Z
+        - commits:
+            - subject: "yocto-build-deploy: Drop container-path license symlinks before
+                upload"
+              hash: 5d93f21159fafb8867189e797ec5356743b9b94a
+              body: >
+                license_image.bbclass writes licenses/<arch>/<IMAGE_LINK_NAME>
+                as an absolute
+
+                symlink under the build container's /work mount, so the link
+                text is
+
+                /work/build/tmp/deploy/... on every build. Whether it resolves
+                on the runner
+
+                depends on the /work -> workspace symlink, which is created as a
+                side effect of
+
+                "Sync shared downloads to S3" and is skipped for private device
+                types.
+
+
+                Both outcomes are wrong for "Upload release assets", which
+                archives licenses/**
+
+                with tar --dereference. Without /work the link dangles, GNU tar
+                exits 1 ("File
+
+                removed before we read it") and the composite action's pipefail
+                fails the step
+
+                even though 7-Zip wrote a complete archive. With /work present
+                tar follows the
+
+                link and stores every license manifest twice.
+
+
+                Match on the link text rather than on reachability, so public
+                and private device
+
+                types produce the same archive. The links only alias the
+                timestamped manifest
+
+                directories, which are archived in their own right.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.42.5
+          title: ""
+          date: 2026-08-19T08:33:45.321Z
+  version: 8.0.0+rev1
+  title: ""
+  date: 2026-08-20T21:39:44.827Z
+- commits:
     - subject: Update layers/meta-balena to 9c83231c087d0ff78b943765551e2f061e0e9f72
       hash: a881375411a818deaf6ad3f46bb74f8245a4fb7a
       body: Update layers/meta-balena
