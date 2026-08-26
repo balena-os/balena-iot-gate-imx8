@@ -3,7 +3,6 @@ setenv oload ${fdt_addr}
 setenv mmcdev 2
 setenv mmcpart 1
 setenv mmcoff 0x42
-setenv bsize 0xB00
 setenv bootloader ##BOOTLOADER##
 
 # Load the new booloader from the file system
@@ -12,6 +11,10 @@ setenv bootloader ##BOOTLOADER##
 # the same location must have the device bootloader
 if load ${iface} ${dev}:2 ${nload} boot/${bootloader}
 then
+
+    # Calculate the block count, required to store the bootloader
+    setexpr bsize ${filesize} + 1ff
+    setexpr bsize ${bsize} / 200
 
     # Read the current booloader from the boot device
     mmc dev ${mmcdev} ${mmcpart}
