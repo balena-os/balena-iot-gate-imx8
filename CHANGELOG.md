@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v8.0.4+rev2
+## (2026-08-27)
+
+* u-boot-scr: Fix block count calculation [Kirill Kapranov]
+
 # v8.0.4+rev1
 ## (2026-08-27)
 

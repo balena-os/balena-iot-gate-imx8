@@ -1,4 +1,28 @@
 - commits:
+    - subject: "u-boot-scr: Fix block count calculation"
+      hash: b7c84a3c76b09fe0d47e858a1a3110cb25612b8b
+      body: >
+        The update script attempts to write a certain block count of an updated
+        boot
+
+        loader to eMMC.
+
+
+        Replace the hardcoded block count with the value, derived from the file
+        size,
+
+        to avoid data loss.
+      footer:
+        Changelog-entry: "u-boot-scr: Fix block count calculation"
+        changelog-entry: "u-boot-scr: Fix block count calculation"
+        Signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+        signed-off-by: Kirill Kapranov <kirill.kapranov@compulab.co.il>
+      author: Kirill Kapranov
+      nested: []
+  version: 8.0.4+rev2
+  title: ""
+  date: 2026-08-27T15:42:58.886Z
+- commits:
     - subject: Update flowzonify to 0.4.1
       hash: 2ab8ecdfe2da2cf84577f6fb39863f5ce1dffa7c
       body: Update flowzonify
