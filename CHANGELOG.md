@@ -1,6 +1,79 @@
 Change log
 -----------
 
+# v8.0.9
+## (2026-09-07)
+
+
+<details>
+<summary> Update layers/meta-balena to 52a7cea12239941bcf068a78c960e11093db289c [balena-renovate[bot]] </summary>
+
+> ## meta-balena-8.0.9
+> ### (2026-09-07)
+> 
+> * kernel-headers-test: Pin apt to the snapshot archive [Kyle Harding]
+> * kernel-headers-test: Replace deprecated balenalib base with debian:bullseye [Kyle Harding]
+> * .gitmodules: Declare a branch for every submodule [Kyle Harding]
+> 
+> ## meta-balena-8.0.8
+> ### (2026-09-03)
+> 
+> * docs: Fix obsolete link to application update locking documentation [Ken Bannister]
+> 
+> ## meta-balena-8.0.7
+> ### (2026-09-03)
+> 
+> * initrdscripts: more robustness looking for active root [Michal Toman]
+> 
+> ## meta-balena-8.0.6
+> ### (2026-09-02)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to a0fb22f [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.131
+>> #### (2026-09-01)
+>> 
+>> * Update actions/checkout action to v7 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.130
+>> #### (2026-09-01)
+>> 
+>> * Update balena-io/balena-cli to v25.2.6 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.129
+>> #### (2026-09-01)
+>> 
+>> * Update debian:bullseye-slim Docker digest to e5b6442 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.128
+>> #### (2026-09-01)
+>> 
+>> * Update flowzonify to v0.4.2 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.127
+>> #### (2026-09-01)
+>> 
+>> * Update core/contracts digest to 93b3001 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.126
+>> #### (2026-09-01)
+>> 
+>> * Update GitHub Actions [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.125
+>> #### (2026-09-01)
+>> 
+>> * Update docker/dockerfile:1 Docker digest to ecfaec9 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v8.0.5+rev1
 ## (2026-09-04)
 
