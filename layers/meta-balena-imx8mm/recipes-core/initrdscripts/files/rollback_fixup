@@ -1,0 +1,95 @@
+#!/bin/sh
+
+# shellcheck disable=SC1091
+. /usr/libexec/os-helpers-logging
+
+rollback_fixup_enabled() {
+    if [ "$bootparam_balena_stage2" != "true" ]; then
+        return 1
+    fi
+
+    if [ "${IS_ROLLBACK}" != "1" ]; then
+        return 1
+    fi
+
+    return 0
+}
+
+rollback_fixup_run() {
+    OLDROOT_MOUNT="/oldrootfs"
+    BOOTDEV="mmcblk2boot0"
+    BALENA_BOOTLOADER_FILE_NAME="Image.gz"
+
+    UBOOT_FILE="imx-boot-%%MACHINE%%-sd.bin-flash_evk"
+
+    # Check whether the old system does not use balena bootloader
+    mkdir -p "${OLDROOT_MOUNT}"
+
+    # This script, 75-rollback_fixup runs after 74-abroot. The abroot script
+    # has already set IS_ROLLBACK and toggled ROOT_PART, which is the alternate partition
+    # which will be used to rollback to
+    mount "/dev/disk/by-label/resin-root${ROOT_PART}" "${OLDROOT_MOUNT}"
+    if find "${OLDROOT_MOUNT}" -type f -name "$(basename ${BOOTENV_FILE})" | grep -q .; then
+        # Balena bootloader is in use. Let's ensure the balena-bootloader and kernel dtbs are in sync with the old rootfs
+        OLD_BALENA_BOOTLOADER_IMAGE_PATH=$(find "${OLDROOT_MOUNT}" -path "*resin-boot*" -name "$BALENA_BOOTLOADER_FILE_NAME")
+        if [ -n "$OLD_BALENA_BOOTLOADER_IMAGE_PATH" ]; then
+            info "Found old balena bootloader: $OLD_BALENA_BOOTLOADER_IMAGE_PATH"
+            RUNNING_BALENA_BOOTLOADER_IMAGE_PATH="${BOOT_MOUNT}/Image.gz"
+            OLD_MD5=$(md5sum "$OLD_BALENA_BOOTLOADER_IMAGE_PATH" | awk '{print $1}')
+            RUNNING_MD5=$(md5sum "$RUNNING_BALENA_BOOTLOADER_IMAGE_PATH" 2>/dev/null | awk '{print $1}')
+
+            if [ "$OLD_MD5" != "$RUNNING_MD5" ]; then
+                info "MD5 mismatch detected! Replacing $RUNNING_BALENA_BOOTLOADER_IMAGE_PATH with $OLD_BALENA_BOOTLOADER_IMAGE_PATH"
+                cp -f "$OLD_BALENA_BOOTLOADER_IMAGE_PATH" "$RUNNING_BALENA_BOOTLOADER_IMAGE_PATH"
+
+                OLD_RESIN_BOOT=$(dirname "$OLD_BALENA_BOOTLOADER_IMAGE_PATH")
+                info "Copying DTB and DTBO files from $OLD_RESIN_BOOT to $BOOT_MOUNT"
+                find "$OLD_RESIN_BOOT" -maxdepth 1 \( -name "*.dtb" -o -name "*.dtbo" \) -exec cp -f {} "${BOOT_MOUNT}/" \;
+                info "Copied all dtb files from ${OLD_RESIN_BOOT} to the the boot partition for rollback"
+                sync -f "${BOOT_MOUNT}"
+                umount "${OLDROOT_MOUNT}"
+                umount "${BOOT_MOUNT}"
+                info "Re-booting to allow old balena-bootloader to rollback"
+                reboot -f
+            else
+                info "Balena bootloader MD5 sums match ($OLD_MD5). No replacement needed."
+            fi
+        else
+            warn "Could not locate old balena-bootloader! Continuing anyway..."
+        fi
+        umount "${OLDROOT_MOUNT}"
+        return 0
+    fi
+
+    # Re-program the old U-boot to bypass balena bootloader as the old kernel
+    # might not be able to kexec without patches.
+    warn "Rolling back U-boot"
+    echo 0 > "/sys/block/${BOOTDEV}/force_ro"
+    if ! dd if="${OLDROOT_MOUNT}/boot/${UBOOT_FILE}" of="/dev/${BOOTDEV}" conv=fsync bs=1024; then
+        error "Failed to roll back U-boot - system probably won't boot"
+    fi
+    echo 1 > "/sys/block/${BOOTDEV}/force_ro"
+
+    # Configure the old u-boot to perform altboot to restore boot partition contents
+    # Set `resin_root_part` to the partition that failed to boot
+    blockdev=$(lsblk -nlo name "/dev/disk/by-label/resin-root${ROOT_PART}")
+    new_part_idx=$(cat "/sys/class/block/$blockdev/partition")
+    new_part_idx=$(printf "%x" $new_part_idx)
+    info "Setting uboot root partition index to $new_part_idx..."
+    tmpfile="$(mktemp)"
+    echo "resin_root_part=$new_part_idx" > ${tmpfile}
+    echo "upgrade_available=${UPGRADE_AVAILABLE}" >> ${tmpfile}
+    mv "${tmpfile}" "${BOOT_MOUNT}/resinOS_uEnv.txt"
+
+    # And set maximum boot count reached OS_BOOTCOUNT_LIMIT so U-boot will altboot
+    echo "bootcount=3" > ${tmpfile}
+    rm -f "${BOOT_MOUNT}"/*bootcount.env* || true
+    mv "${tmpfile}" "${BOOT_MOUNT}/bootcount.env"
+    rm -f "${BOOT_MOUNT}/bootenv"
+
+    # Reboot into the old u-boot
+    info "Rebooting into rolled back U-boot"
+    umount "${OLDROOT_MOUNT}"
+    umount "${BOOT_MOUNT}"
+    reboot -f
+}
