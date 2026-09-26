@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v8.0.13+rev1
+## (2026-09-26)
+
+* Update layers/meta-freescale-distro to ae3854f4cb08bcdd5fd3526d4f5ba417980c2066 [balena-renovate[bot]]
+
 # v8.0.13
 ## (2026-09-25)
 
