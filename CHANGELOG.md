@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v8.0.13+rev2
+## (2026-09-28)
+
+* Use abroot script from meta-balena [Alexandru Costache]
+
 # v8.0.13+rev1
 ## (2026-09-26)
 

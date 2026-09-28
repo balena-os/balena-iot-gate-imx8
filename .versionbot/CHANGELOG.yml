@@ -1,4 +1,32 @@
 - commits:
+    - subject: Use abroot script from meta-balena
+      hash: 3943139f22899ae7bff2376691d0480a5d01ba89
+      body: |
+        NOTE: This is a port of the following change: https://github.com/balena-os/balena-iot-gate-imx8plus/commit/24bbe98115081ce3b1699f95bc579a74d370129a
+
+        At this moment this repo ships a fork of the abroot script with
+        a custom rollback hook. This was fine until now because abroot was
+        the only script in the balena bootloader and could be replaced
+        as a single artifact.
+
+        A recent refactoring in meta-balena has split abroot into two scripts,
+        mountboot and abroot, expecting to add more in the future. This means
+        the trick with `replacing abroot` <=> `replacing the whole bootloader`
+        doesn't work anymore.
+
+        This patch makes the device use upstream abroot and separates
+        the device-specific rollback hook into a separate script.
+      footer:
+        Changelog-entry: Use abroot script from meta-balena
+        changelog-entry: Use abroot script from meta-balena
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 8.0.13+rev2
+  title: ""
+  date: 2026-09-28T06:11:42.437Z
+- commits:
     - subject: Update layers/meta-freescale-distro to
         ae3854f4cb08bcdd5fd3526d4f5ba417980c2066
       hash: 06a8942e188dc06712037309e35d587ae440ecdd
