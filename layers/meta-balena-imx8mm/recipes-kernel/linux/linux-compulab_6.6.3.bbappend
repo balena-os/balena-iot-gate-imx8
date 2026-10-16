@@ -89,3 +89,16 @@ BALENA_CONFIGS[server-nics] = " \
 "
 
 
+# The 6.6 vendor defconfig sets MEDIA_SUPPORT_FILTER=n, which builds every media subsystem
+# (DVB, analog TV, radio, SDR, CEC, test drivers: ~1.4 MiB of modules). Restore the filtering the 5.15
+# config had and keep only camera/platform capture support.
+BALENA_CONFIGS:append = " media-filter"
+BALENA_CONFIGS[media-filter] = " \
+    CONFIG_MEDIA_SUPPORT_FILTER=y \
+    CONFIG_MEDIA_DIGITAL_TV_SUPPORT=n \
+    CONFIG_MEDIA_ANALOG_TV_SUPPORT=n \
+    CONFIG_MEDIA_RADIO_SUPPORT=n \
+    CONFIG_MEDIA_SDR_SUPPORT=n \
+    CONFIG_MEDIA_CEC_SUPPORT=n \
+    CONFIG_MEDIA_TEST_SUPPORT=n \
+"
