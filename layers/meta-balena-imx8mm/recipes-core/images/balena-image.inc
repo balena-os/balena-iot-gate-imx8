@@ -14,7 +14,7 @@ IMAGE_CMD:balenaos-img:append () {
     dd if=${DEPLOY_DIR_IMAGE}/imx-boot-${MACHINE}-sd.bin-flash_evk of=${BALENA_RAW_IMG} conv=notrunc seek=33 bs=1K
 }
 
-IMAGE_INSTALL:append = " linux-firmware-imx-sdma-imx7d grub-editenv"
+IMAGE_INSTALL:append = " firmware-imx-sdma-imx7d grub-editenv"
 IMAGE_INSTALL:remove = "kernel-image"
 
 do_rootfs[depends] += " virtual/balena-bootloader:do_deploy"
