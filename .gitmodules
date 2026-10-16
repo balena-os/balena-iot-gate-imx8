@@ -5,31 +5,31 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-freescale"]
 	path = layers/meta-freescale
 	url = https://github.com/Freescale/meta-freescale.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-freescale-3rdparty"]
 	path = layers/meta-freescale-3rdparty
 	url = https://github.com/Freescale/meta-freescale-3rdparty.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "meta-freescale-distro"]
 	path = layers/meta-freescale-distro
 	url = https://github.com/Freescale/meta-freescale-distro.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "meta-compulab"]
 	path = layers/meta-compulab
 	url = https://github.com/compulab-yokneam/meta-compulab.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "meta-compulab-bsp"]
 	path = layers/meta-compulab-bsp
 	url = https://github.com/compulab-yokneam/meta-compulab-bsp.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git
@@ -37,7 +37,7 @@
 [submodule "layers/meta-bsp-imx8mm"]
 	path = layers/meta-bsp-imx8mm
 	url = https://github.com/compulab-yokneam/meta-bsp-imx8mm.git
-	branch = iot-gate-imx8-r3.2-balena
+	branch = rel_imx_6.6.3_1.0.0
 [submodule "contracts"]
 	path = contracts
 	url = https://github.com/balena-io/contracts.git
@@ -49,4 +49,12 @@
 [submodule "layers/meta-cyclonedx"]
 	path = layers/meta-cyclonedx
 	url = https://github.com/balena-os/meta-cyclonedx
-	branch = kirkstone
+	branch = scarthgap
+[submodule "layers/meta-imx"]
+	path = layers/meta-imx
+	url = https://github.com/nxp-imx/meta-imx.git
+	branch = scarthgap-6.6.23-2.0.0
+[submodule "layers/meta-arm"]
+	path = layers/meta-arm
+	url = https://git.yoctoproject.org/meta-arm
+	branch = scarthgap
