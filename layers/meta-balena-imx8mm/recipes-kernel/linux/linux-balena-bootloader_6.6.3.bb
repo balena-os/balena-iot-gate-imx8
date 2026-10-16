@@ -5,18 +5,19 @@ inherit kernel-yocto kernel fsl-kernel-localversion balena-bootloader
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
-SRCBRANCH = "lf-5.15.y"
-KERNEL_SRC ?= "git://github.com/nxp-imx/linux-imx.git;protocol=https"
+SRCBRANCH = "linux-compulab_v6.6.3"
+KERNEL_SRC ?= "git://github.com/compulab-yokneam/linux-compulab.git;protocol=https"
 SRC_URI = "${KERNEL_SRC};branch=${SRCBRANCH}"
 
-SRCREV = "fa6c3168595c02bd9d5366fcc28c9e7304947a3d"
+# Same kernel tree as linux-compulab_6.6.3 (the BSP recipe tracks AUTOREV, we pin it)
+SRCREV = "c0f74147d79e65b839284ed41d0ee73cbe483d90"
 
 # PV is defined in the base in linux-imx.inc file and uses the LINUX_VERSION definition
 # required by kernel-yocto.bbclass.
 #
 # LINUX_VERSION define should match to the kernel version referenced by SRC_URI and
 # should be updated once patchlevel is merged.
-LINUX_VERSION = "5.15.32"
+LINUX_VERSION = "6.6.3"
 
 # Tell to kernel class that we would like to use our defconfig to configure the kernel.
 # Otherwise, the --allnoconfig would be used per default which leads to mis-configured
@@ -40,16 +41,13 @@ DEPENDS += "lzop-native bc-native"
 
 KERNEL_VERSION_SANITY_SKIP="1"
 
-# Fetch this from meta-bsp-imx8mm
-FILESEXTRAPATHS:prepend := "${COREBASE}/../meta-bsp-imx8mm/recipes-kernel/linux/compulab/imx8mm:"
-require recipes-kernel/linux/compulab/imx8mm.inc
-
 BALENA_DEFCONFIG_NAME = "cl-imx8m-mini_defconfig"
 
-SRC_URI:append = " \
-    file://arm64-kexec_file-use-more-system-keyrings-to-verify-.patch \
-    file://kexec-KEYS-make-the-code-in-bzImage64_verify_sig-gen.patch \
-"
+# Needed by kernel-yocto's do_kernel_metadata, which otherwise looks for a BSP definition
+KBUILD_DEFCONFIG = "${BALENA_DEFCONFIG_NAME}"
+
+# The kexec signature verification patches carried for 5.15 (more system keyrings,
+# generic PE signature check) are already part of the 6.6 kernel.
 
 do_configure() {
     oe_runmake -C ${S} O=${B} ${BALENA_DEFCONFIG_NAME} ${MACHINE}.config ${KBUILD_DEFCONFIG_EXTRA_FRAGMENTS}
