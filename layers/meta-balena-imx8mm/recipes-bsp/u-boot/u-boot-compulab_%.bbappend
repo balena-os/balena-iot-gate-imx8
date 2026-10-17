@@ -2,6 +2,10 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/patches:"
 
 inherit resin-u-boot
 
+# The BSP recipe tracks AUTOREV, pin it to the revision already validated
+# for this device (SPL with integrated LPDDR4 timing blocks, ucm-imx8mm-rev.4.2.0 and later)
+SRCREV = "facddf8faa629f07cffb2dae8b92d6f6a96e9583"
+
 BALENA_STAGE2 = "balena_stage2"
 UBOOT_VARS += "BALENA_STAGE2"
 
@@ -54,6 +58,7 @@ BALENA_UBOOT_DEVICE_TYPES:prepend = " usb "
 UBOOT_VARS:remove = "CONFIG_CMD_HASH"
 
 SRC_URI:append = " \
+	file://0001-env-Fix-env_mmc_erase.patch \
 	file://1128-Integrate-with-Balena-u-boot-environment.patch \
 	file://1129-iot-gate-imx8-Load-kernel-and-fdt-from-root-partitio.patch \
 	file://1132-u-boot-compulab-Don-t-run-script.patch \
