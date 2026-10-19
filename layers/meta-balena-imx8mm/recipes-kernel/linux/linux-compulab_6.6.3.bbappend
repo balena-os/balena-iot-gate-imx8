@@ -1,3 +1,5 @@
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-compulab:"
+
 inherit kernel-resin
 
 # The BSP recipe tracks AUTOREV, pin it
@@ -20,6 +22,20 @@ BALENA_CONFIGS:append = " ath10k"
 BALENA_CONFIGS[ath10k] = " \
     CONFIG_ATH10K=m \
     CONFIG_ATH10K_PCI=m \
+"
+
+# Frees the uart2/uart4 termination GPIOs claimed by always-on regulators
+# on the IED extension board (carried over from the BSP's balena branch)
+SRC_URI:append = " file://0001-iot-gate-imx8-dts-free-gpio_rs485_trm.patch"
+
+# uart4 shares its pads with ECSPI2, which the PoE extension uses for its
+# SPI Ethernet controller. The -poed DTB is not shipped in the boot
+# partition yet (carried over from the BSP's balena branch)
+SRC_URI:append = " file://0002-iot-gate-imx8-dtb-Fix-PoE-rev1.0.patch"
+
+BALENA_CONFIGS:append = " f81232"
+BALENA_CONFIGS[f81232] = " \
+    CONFIG_USB_SERIAL_F81232=m \
 "
 
 SCMVERSION="n"
