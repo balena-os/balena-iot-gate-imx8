@@ -9,6 +9,10 @@ SRCBRANCH = "linux-compulab_v6.6.3"
 KERNEL_SRC ?= "git://github.com/compulab-yokneam/linux-compulab.git;protocol=https"
 SRC_URI = "${KERNEL_SRC};branch=${SRCBRANCH}"
 
+# meta-balena-hab adds this fix for older kernels, it is already in the
+# Compulab 6.6 tree and the patch does not apply
+SRC_URI:remove = "file://crypto-engine-fix-crypto_queue-backlog-handling.patch"
+
 # Same kernel tree as linux-compulab_6.6.3 (the BSP recipe tracks AUTOREV, we pin it)
 SRCREV = "c0f74147d79e65b839284ed41d0ee73cbe483d90"
 

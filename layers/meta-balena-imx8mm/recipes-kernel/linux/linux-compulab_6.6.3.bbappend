@@ -118,3 +118,7 @@ BALENA_CONFIGS[media-filter] = " \
     CONFIG_MEDIA_CEC_SUPPORT=n \
     CONFIG_MEDIA_TEST_SUPPORT=n \
 "
+
+# meta-balena-hab carries this fix for older kernels, it is already in
+# the Compulab 6.6 tree and the patch does not apply
+SRC_URI:remove = "file://crypto-engine-fix-crypto_queue-backlog-handling.patch"
