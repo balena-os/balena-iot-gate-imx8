@@ -14,3 +14,10 @@ do_install:prepend() {
         bbfatal "More than one U-boot is being built - please adapt. Current configs: ${UBOOT_CONFIG}"
     fi
 }
+
+# Only the generic image, with the timings of all the DRAM sizes, is used by balenaOS
+# (see hostapp-update hooks, rollback_fixup and the flasher). Do not package the per-size
+# images and the tagged copy to save space in the rootfs, the HUP size check is tight.
+do_install:append() {
+    rm -f ${D}/boot/${FLASH_NAME}-[0-9]*.bin-* ${D}/boot/*.tagged
+}
