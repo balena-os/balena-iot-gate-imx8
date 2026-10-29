@@ -2,7 +2,7 @@
 # CompuLab Stress Test Tool
 
 DESCRIPTION = "CompuLab Stress Test Tool"
-LICENSE = "BSD"
+LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING;md5=396ed65bba4045e7a22bcdb2ae6901b8"
 MAINTAINER = "CompuLab <compulab@compulab.com>"
 
