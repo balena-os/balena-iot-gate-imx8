@@ -69,3 +69,6 @@ ACCEPT_FSL_EULA = "1"
 
 # CycloneDX SBOM and VEX generation
 INHERIT += "cyclonedx-export"
+
+# Optimize target code for size instead of the -O2 poky default
+FULL_OPTIMIZATION = "-Os -pipe ${DEBUG_FLAGS}"
