@@ -1,4 +1,228 @@
 - commits:
+    - subject: Remove the unused Compulab cl-* tools
+      hash: 022d2d80453d1307f50f7299e8735487970478df
+      body: >
+        Remove the cl-cleanup, cl-deploy, cl-stest and cl-uboot recipes. They
+        are
+
+        Compulab's interactive provisioning tools, and nothing in balenaOS calls
+
+        them: the flasher and the 99-flash-bootloader hostapp update hook use
+        their
+
+        own scripts and read the bootloader from the boot partition. cl-cleanup
+        and
+
+        cl-stest were not installed in the image at all.
+
+
+        cl-uboot was the only reason the OS image installed mmc-utils, which the
+
+        99-flash-bootloader hook needs for `mmc bootpart enable`. Install it
+
+        explicitly.
+
+
+        Mask the cl-deploy and cl-uboot bbappends of meta-compulab-bsp, which
+        have no
+
+        recipe left to append to.
+      footer:
+        Changelog-entry: Remove the unused Compulab cl-* tools
+        changelog-entry: Remove the unused Compulab cl-* tools
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Carry over the balena branch kernel fixes
+      hash: d69ed28ab5669ae9879066eae83bf3d74771b30b
+      body: |
+        Carry over the changes of the iot-gate-imx8-r3.2-balena BSP branch:
+
+        - Enable the F81232 USB-to-serial driver.
+        - Remove the always-on uart2/uart4 termination regulators from the IED
+          DTB, so that the GPIOs are available from userspace.
+        - Disable uart4 in the PoE DTB, it shares its pads with ECSPI2.
+      footer:
+        Changelog-entry: Carry over the balena branch kernel fixes
+        changelog-entry: Carry over the balena branch kernel fixes
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Update the templates path used by CI
+      hash: a0cc5bd7b1eb67659a3ccb7d50147f69e7c9d38f
+      body: |
+        Use conf/templates/default as the templates path.
+      footer:
+        Changelog-entry: Update the templates path used by CI
+        changelog-entry: Update the templates path used by CI
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Build target code optimizing for size
+      hash: c2cb5a742818819f0c97e9cc6d434c0cd6e4f3cf
+      body: |
+        Use -Os instead of -O2 for the target code, so that the image fits the
+        HUP size check.
+      footer:
+        Changelog-entry: Build target code optimizing for size
+        changelog-entry: Build target code optimizing for size
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Link with 4K max page size to avoid ELF padding
+      hash: b846de1ea6cc0f9ae8b6e584ebf6b8b71b724c22
+      body: |
+        Set the max page size to 4K, the one the kernel uses. With the 64 KiB
+        aarch64 default, binutils 2.42 pads the RELRO region and adds about
+        32 MiB to the rootfs.
+      footer:
+        Changelog-entry: Link with 4K max page size to avoid ELF padding
+        changelog-entry: Link with 4K max page size to avoid ELF padding
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Install the renamed SDMA firmware package
+      hash: c2811f8e7884a7178db7e7611793c66c2ff815af
+      body: |
+        The SDMA firmware package was renamed from
+        linux-firmware-imx-sdma-imx7d.
+      footer:
+        Changelog-entry: Install the renamed SDMA firmware package
+        changelog-entry: Install the renamed SDMA firmware package
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Fix firmware-nxp-wifi packaging
+      hash: 08ecbc22d1d35839e70c0422a29dea1a9c3bd660
+      body: |
+        Add the uartuart files, whose doubled prefix the upstream FILES
+        patterns do not match.
+      footer:
+        Changelog-entry: Fix firmware-nxp-wifi packaging
+        changelog-entry: Fix firmware-nxp-wifi packaging
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Don't package unused imx-boot images
+      hash: a63a16d0552e9751790e9ec28df85ecef7504bb5
+      body: |
+        Package only the generic image, with the timings of all the DRAM
+        sizes, which is the one balenaOS uses.
+      footer:
+        Changelog-entry: Don't package unused imx-boot images
+        changelog-entry: Don't package unused imx-boot images
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Pin u-boot-compulab and fix env_mmc_erase
+      hash: 0f4d772ba1049def35a83e9662288189f911224c
+      body: |
+        Pin SRCREV, as the BSP recipe tracks AUTOREV, and add the
+        env_mmc_erase fix.
+      footer:
+        Changelog-entry: Pin u-boot-compulab and fix env_mmc_erase
+        changelog-entry: Pin u-boot-compulab and fix env_mmc_erase
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Disable unused media drivers in the kernel
+      hash: 887488cd9527192bde510d84fb6fea2b89aadbc9
+      body: |
+        Enable MEDIA_SUPPORT_FILTER, as in the 5.15 config, and disable the
+        DVB, analog TV, radio, SDR, CEC and test drivers, about 1.4 MiB of
+        modules.
+      footer:
+        Changelog-entry: Disable unused media drivers in the kernel
+        changelog-entry: Disable unused media drivers in the kernel
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Update linux-compulab to 6.6.3
+      hash: c305558af6444654213b680239e345ee2d35f628
+      body: |
+        Pin the kernel revision and drop the 5.15 patches, the defconfig merge
+        override and the kernel-modules FILES entry, which left the per-module
+        packages empty.
+      footer:
+        Changelog-entry: Update linux-compulab to 6.6.3
+        changelog-entry: Update linux-compulab to 6.6.3
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Update linux-balena-bootloader to 6.6.3
+      hash: 5983e957ea2f520aa8e48437383f9924be1584fc
+      body: |
+        Use the linux-compulab kernel revision and drop the 5.15 patches.
+      footer:
+        Changelog-entry: Update linux-balena-bootloader to 6.6.3
+        changelog-entry: Update linux-balena-bootloader to 6.6.3
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Make meta-balena-imx8mm compatible with scarthgap
+      hash: 2c5326769a2bae9a10bdce2d76681469e73c9e23
+      body: |
+        Set LAYERSERIES_COMPAT, prefer the 6.6.3 kernel, mask the BSP recipes
+        and bbappends that do not apply or need network access at parse time,
+        and set the md5 of the current NXP EULA.
+      footer:
+        Changelog-entry: Make meta-balena-imx8mm compatible with scarthgap
+        changelog-entry: Make meta-balena-imx8mm compatible with scarthgap
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Move the build templates to conf/templates
+      hash: a76437ab8267568e79bb434aa03e82346951a740
+      body: |
+        Move the templates to conf/templates/default, where scarthgap looks for
+        them, add meta-arm and meta-imx-bsp and use meta-balena-scarthgap.
+      footer:
+        Changelog-entry: Move the build templates to conf/templates
+        changelog-entry: Move the build templates to conf/templates
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Build with yocto-scarthgap
+      hash: 1f8b68e71cc5d995ed26a9effc6306b1abe5fcf0
+      body: ""
+      footer:
+        Changelog-entry: Build with yocto-scarthgap
+        changelog-entry: Build with yocto-scarthgap
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+    - subject: Update the Yocto layers to scarthgap
+      hash: 706e1c706ab1cf7d1f2d140c86c5ebf37a574487
+      body: |
+        Point the Yocto layers to their scarthgap branches and meta-bsp-imx8mm
+        to rel_imx_6.6.3_1.0.0, and add meta-imx and meta-arm, which the BSP
+        depends on.
+      footer:
+        Changelog-entry: Update the Yocto layers to scarthgap
+        changelog-entry: Update the Yocto layers to scarthgap
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+  version: 9.0.5+rev2
+  title: ""
+  date: 2026-11-08T11:53:01.687Z
+- commits:
     - subject: Update contracts to 17d87d30099bcc7bbd457488c19e626dd658ac97
       hash: fdde8bc34d8d22fceb19aa3054ed56f11b126b57
       body: Update contracts

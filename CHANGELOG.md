@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v9.0.5+rev2
+## (2026-11-08)
+
+* Remove the unused Compulab cl-* tools [guille-vega]
+* Carry over the balena branch kernel fixes [guille-vega]
+* Update the templates path used by CI [guille-vega]
+* Build target code optimizing for size [guille-vega]
+* Link with 4K max page size to avoid ELF padding [guille-vega]
+* Install the renamed SDMA firmware package [guille-vega]
+* Fix firmware-nxp-wifi packaging [guille-vega]
+* Don't package unused imx-boot images [guille-vega]
+* Pin u-boot-compulab and fix env_mmc_erase [guille-vega]
+* Disable unused media drivers in the kernel [guille-vega]
+* Update linux-compulab to 6.6.3 [guille-vega]
+* Update linux-balena-bootloader to 6.6.3 [guille-vega]
+* Make meta-balena-imx8mm compatible with scarthgap [guille-vega]
+* Move the build templates to conf/templates [guille-vega]
+* Build with yocto-scarthgap [guille-vega]
+* Update the Yocto layers to scarthgap [guille-vega]
+
 # v9.0.5+rev1
 ## (2026-11-06)
 
