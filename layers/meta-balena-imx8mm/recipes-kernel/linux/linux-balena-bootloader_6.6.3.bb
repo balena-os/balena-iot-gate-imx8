@@ -9,6 +9,10 @@ SRCBRANCH = "linux-compulab_v6.6.3"
 KERNEL_SRC ?= "git://github.com/compulab-yokneam/linux-compulab.git;protocol=https"
 SRC_URI = "${KERNEL_SRC};branch=${SRCBRANCH}"
 
+# CVE-2026-98432: same backport as linux-compulab_6.6.3, sharing its patch file.
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-compulab:"
+SRC_URI += "file://CVE-2026-98432.patch"
+
 # Same kernel tree as linux-compulab_6.6.3 (the BSP recipe tracks AUTOREV, we pin it)
 SRCREV = "c0f74147d79e65b839284ed41d0ee73cbe483d90"
 
