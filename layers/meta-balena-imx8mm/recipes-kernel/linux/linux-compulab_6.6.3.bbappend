@@ -33,6 +33,10 @@ SRC_URI:append = " file://0001-iot-gate-imx8-dts-free-gpio_rs485_trm.patch"
 # partition yet (carried over from the BSP's balena branch)
 SRC_URI:append = " file://0002-iot-gate-imx8-dtb-Fix-PoE-rev1.0.patch"
 
+# CVE-2026-98432: the CompuLab 6.6.3 kernel predates the upstream fix (6.6.159).
+# Stable backport of the IPv4 inet_opt/ireq_opt use-after-free fix.
+SRC_URI:append = " file://CVE-2026-98432.patch"
+
 BALENA_CONFIGS:append = " f81232"
 BALENA_CONFIGS[f81232] = " \
     CONFIG_USB_SERIAL_F81232=m \
