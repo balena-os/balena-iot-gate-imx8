@@ -1,4 +1,30 @@
 - commits:
+    - subject: Backport fix for CVE-2026-98432 to linux-compulab
+      hash: 8bab7f6306236f2316a9462040020c8ea11d5438
+      body: |
+        Add the 6.6 stable fix for CVE-2026-98432 (IPv4 TCP use-after-free of
+        inet_opt/ireq_opt, freed with kfree() while a SYNACK is still being
+        built) to the CompuLab 6.6.3 kernel, and to the linux-balena-bootloader
+        kernel, which is built from the same revision.
+
+        The patch is the 6.6.y backport of upstream e3f33b0a1d89 (6.6.159,
+        742f73df544e): kfree() becomes kfree_rcu() in inet_sock_destruct() and
+        tcp_v4_reqsk_destructor(). It applies cleanly to the pinned
+        linux-compulab revision c0f74147 with an offset of 9 lines. It has not
+        been built or boot-tested.
+
+        CompuLab has no kernel branch at or above the fixed version yet.
+      footer:
+        Changelog-entry: Backport fix for CVE-2026-98432 to linux-compulab
+        changelog-entry: Backport fix for CVE-2026-98432 to linux-compulab
+        Signed-off-by: Ryan Cooke<ryan@balena.io>
+        signed-off-by: Ryan Cooke<ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+  version: 9.1.1+rev2
+  title: ""
+  date: 2026-11-19T20:45:12.734Z
+- commits:
     - subject: Update layers/meta-freescale to 44fb1b899a0405586f576a9ab21c7fe4bc5234c0
       hash: 1bfb327c4bb2d39f7b77df501ab13009ec8aeff8
       body: Update layers/meta-freescale
