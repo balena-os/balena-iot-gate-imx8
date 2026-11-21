@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update balena-os/github-workflows to
+        ab3dfdb723d81d9f3c25b67fee68a74eeb9ac48b
+      hash: 79dab441d8c5a0d8ff872ff302b5ec769e4a3b1a
+      body: Update balena-os/github-workflows
+      footer:
+        Changelog-entry: Update balena-os/github-workflows to
+          ab3dfdb723d81d9f3c25b67fee68a74eeb9ac48b
+        changelog-entry: Update balena-os/github-workflows to
+          ab3dfdb723d81d9f3c25b67fee68a74eeb9ac48b
+      author: balena-renovate[bot]
+      nested: []
+  version: 9.1.1+rev3
+  title: ""
+  date: 2026-11-21T06:14:40.437Z
+- commits:
     - subject: Backport fix for CVE-2026-98432 to linux-compulab
       hash: 8bab7f6306236f2316a9462040020c8ea11d5438
       body: |
