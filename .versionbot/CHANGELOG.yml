@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update layers/meta-freescale to 945dcd1c0c8684e6482cbf44c6b52be3c1c9ef87
+      hash: d2a1a853d0dbb94a6dd5e915508e144ec986d79b
+      body: Update layers/meta-freescale
+      footer:
+        Changelog-entry: Update layers/meta-freescale to
+          945dcd1c0c8684e6482cbf44c6b52be3c1c9ef87
+        changelog-entry: Update layers/meta-freescale to
+          945dcd1c0c8684e6482cbf44c6b52be3c1c9ef87
+      author: balena-renovate[bot]
+      nested: []
+  version: 9.1.1+rev8
+  title: ""
+  date: 2026-11-25T23:33:02.326Z
+- commits:
     - subject: Install the bootloader in the root filesystem
       hash: 12862538ad7b38b9c0057ee9cd5c5a00b92f6b5b
       body: |
