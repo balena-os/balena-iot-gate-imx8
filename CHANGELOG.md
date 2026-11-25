@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v9.1.1+rev7
+## (2026-11-25)
+
+* Install the bootloader in the root filesystem [guille-vega]
+
 # v9.1.1+rev6
 ## (2026-11-24)
 

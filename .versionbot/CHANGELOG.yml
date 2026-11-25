@@ -1,4 +1,22 @@
 - commits:
+    - subject: Install the bootloader in the root filesystem
+      hash: 12862538ad7b38b9c0057ee9cd5c5a00b92f6b5b
+      body: |
+        The boot script of the install medium loads the bootloader from boot/
+        in the second partition. imx-boot was only installed as a dependency of
+        cl-uboot, removed in 022d2d8, so boards with the factory U-Boot cannot
+        start the flasher.
+      footer:
+        Changelog-entry: Install the bootloader in the root filesystem
+        changelog-entry: Install the bootloader in the root filesystem
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+  version: 9.1.1+rev7
+  title: ""
+  date: 2026-11-25T19:22:08.532Z
+- commits:
     - subject: Update balena-yocto-scripts to ac62fde95212b8eb2c40b385b530fefbd765846f
       hash: fc4d07c1d9a08ac7cc4edd4afc633041d3d2ae8a
       body: Update balena-yocto-scripts
